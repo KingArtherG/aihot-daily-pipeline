@@ -14,7 +14,7 @@ from html import escape
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
@@ -161,72 +161,209 @@ def group_items(items: list[NewsItem]) -> dict[str | None, list[NewsItem]]:
     return {key: value for key, value in grouped.items() if value}
 
 
-def render_markdown(date: str, title: str, lead: str, items: list[NewsItem], source: str) -> str:
+def group_indexed_items(
+    indexed_items: list[tuple[int, NewsItem]],
+) -> dict[str | None, list[tuple[int, NewsItem]]]:
+    grouped: dict[str | None, list[tuple[int, NewsItem]]] = {key: [] for key in CATEGORY_ORDER}
+    for index, item in indexed_items:
+        key = item.category if item.category in CATEGORY_LABELS else None
+        grouped.setdefault(key, []).append((index, item))
+    return {key: value for key, value in grouped.items() if value}
+
+
+def render_markdown(
+    date: str,
+    title: str,
+    lead: str,
+    items: list[NewsItem],
+    source: str,
+    base_url: str,
+    output_dir: Path,
+) -> str:
+    card_gallery = output_dir / "card-images" / date / "index.html"
+    card_gallery_url = site_asset_url(base_url, f"card-images/{date}/") if card_gallery.exists() else ""
     lines = [
         f"# {title} {date}",
         "",
         "> 自动生成自 AI HOT。AI 摘要可能存在误差，重要信息请以原文为准。",
         "",
     ]
+    if card_gallery_url:
+        lines.extend([f"**视频卡片**：[查看本期 PNG 卡片]({card_gallery_url})", ""])
+
+    indexed_items = list(enumerate(items, 1))
+    featured = indexed_items[: min(4, len(indexed_items))]
+    featured_indexes = {index for index, _ in featured}
+    remaining = [(index, item) for index, item in indexed_items if index not in featured_indexes]
+
+    lines.extend(["## 概览", ""])
     if lead:
         lines.extend([lead, ""])
     lines.extend([f"数据模式：{'日报' if source == 'daily' else '精选滚动资讯'}", ""])
-    index = 1
-    for category, category_items in group_items(items).items():
-        lines.extend([f"## {CATEGORY_LABELS.get(category, '其他')}", ""])
-        for item in category_items:
-            meta = f" — {item.source}" if item.source else ""
-            when = relative_time(item.published_at)
-            lines.append(f"{index}. **{item.title}**{meta}")
-            if when:
-                lines.append(f"   {when}")
-            if item.summary:
-                lines.append(f"   {item.summary}")
-            lines.append(f"   {item.url}")
-            lines.append("")
-            index += 1
+
+    if featured:
+        lines.extend(["### 要闻", ""])
+        for index, item in featured:
+            lines.append(overview_line(index, item))
+        lines.append("")
+
+    for category, category_items in group_indexed_items(remaining).items():
+        lines.extend([f"### {CATEGORY_LABELS.get(category, '其他')}", ""])
+        for index, item in category_items:
+            lines.append(overview_line(index, item))
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+
+    for index, item in indexed_items:
+        lines.extend(render_item_detail(date, index, item, base_url, output_dir))
     return "\n".join(lines).rstrip() + "\n"
+
+
+def overview_line(index: int, item: NewsItem) -> str:
+    link = f" [↗]({item.url})" if item.url else ""
+    return f"- {item.title}{link} `#{index}`"
+
+
+def render_item_detail(
+    date: str,
+    index: int,
+    item: NewsItem,
+    base_url: str,
+    output_dir: Path,
+) -> list[str]:
+    heading = f"## [{item.title}]({item.url}) `#{index}`" if item.url else f"## {item.title} `#{index}`"
+    lines = [heading]
+    if item.summary:
+        lines.extend(["", f"> {item.summary}"])
+
+    lines.append("")
+    for paragraph in detail_paragraphs(item):
+        lines.extend([paragraph, ""])
+
+    card_image = card_image_url(date, index, base_url, output_dir)
+    if card_image:
+        lines.extend([f"![]({card_image})", ""])
+
+    if item.url:
+        lines.extend(["相关链接：", f"- [{item.url}]({item.url})", ""])
+    lines.extend(["---", ""])
+    return lines
+
+
+def detail_paragraphs(item: NewsItem) -> list[str]:
+    if not item.summary:
+        source_text = f"这条信息来自 **{item.source}**。" if item.source else "AI HOT 暂未提供更长摘要。"
+        return [f"{source_text} 建议打开原文确认完整细节。"]
+
+    sentences = split_sentences(item.summary)
+    if not sentences:
+        return [item.summary]
+
+    paragraphs: list[str] = []
+    current = ""
+    for sentence in sentences:
+        if current and len(current) + len(sentence) > 120:
+            paragraphs.append(current)
+            current = sentence
+        else:
+            current = f"{current}{sentence}" if current else sentence
+    if current:
+        paragraphs.append(current)
+
+    if item.source and paragraphs:
+        paragraphs[0] = f"**{item.source}** 消息，{paragraphs[0]}"
+    return paragraphs[:4]
+
+
+def split_sentences(text: str) -> list[str]:
+    chunks = re.findall(r"[^。！？!?]+[。！？!?]?", text.strip())
+    return [chunk.strip() for chunk in chunks if chunk.strip()]
+
+
+def card_image_url(date: str, index: int, base_url: str, output_dir: Path) -> str:
+    card_dir = output_dir / "card-images" / date
+    if not card_dir.exists():
+        return ""
+    matches = sorted(card_dir.glob(f"{index:02d}-*.png"))
+    if not matches:
+        return ""
+    return site_asset_url(base_url, f"card-images/{date}/{matches[0].name}")
+
+
+def site_asset_url(base_url: str, path: str) -> str:
+    if base_url:
+        return f"{base_url.rstrip('/')}/{quote(path, safe='/')}"
+    return "./" + quote(path, safe="/")
 
 
 def markdown_to_article_html(markdown_text: str) -> str:
     html_lines: list[str] = []
-    in_list = False
+    list_type: str | None = None
+
+    def close_list() -> None:
+        nonlocal list_type
+        if list_type:
+            html_lines.append(f"</{list_type}>")
+            list_type = None
+
+    def open_list(tag: str) -> None:
+        nonlocal list_type
+        if list_type != tag:
+            close_list()
+            html_lines.append(f"<{tag}>")
+            list_type = tag
+
     for raw_line in markdown_text.splitlines():
         line = raw_line.rstrip()
         if not line:
-            if in_list:
-                html_lines.append("</ol>")
-                in_list = False
+            close_list()
             continue
         if line.startswith("# "):
-            html_lines.append(f"<h1>{escape(line[2:])}</h1>")
+            close_list()
+            html_lines.append(f"<h1>{inline_markdown(line[2:])}</h1>")
         elif line.startswith("## "):
-            if in_list:
-                html_lines.append("</ol>")
-                in_list = False
-            html_lines.append(f"<h2>{escape(line[3:])}</h2>")
+            close_list()
+            html_lines.append(f"<h2>{inline_markdown(line[3:])}</h2>")
+        elif line.startswith("### "):
+            close_list()
+            html_lines.append(f"<h3>{inline_markdown(line[4:])}</h3>")
         elif line.startswith("> "):
+            close_list()
             html_lines.append(f"<blockquote>{inline_markdown(line[2:])}</blockquote>")
+        elif line == "---":
+            close_list()
+            html_lines.append("<hr>")
+        elif re.match(r"^!\[[^\]]*\]\([^)]+\)$", line):
+            close_list()
+            match = re.match(r"^!\[([^\]]*)\]\(([^)]+)\)$", line)
+            if match:
+                alt, src = match.groups()
+                html_lines.append(f'<p><img src="{escape(src)}" alt="{escape(alt)}"></p>')
         elif re.match(r"^\d+\. ", line):
-            if not in_list:
-                html_lines.append("<ol>")
-                in_list = True
+            open_list("ol")
             item = re.sub(r"^\d+\. ", "", line)
             html_lines.append(f"<li>{inline_markdown(item)}</li>")
+        elif line.startswith("- "):
+            open_list("ul")
+            html_lines.append(f"<li>{inline_markdown(line[2:])}</li>")
         else:
+            close_list()
             text = line.strip()
             if is_url(text):
                 html_lines.append(f'<p><a href="{escape(text)}">{escape(text)}</a></p>')
             else:
                 html_lines.append(f"<p>{inline_markdown(text)}</p>")
-    if in_list:
-        html_lines.append("</ol>")
+    close_list()
     return "\n".join(html_lines)
 
 
 def inline_markdown(text: str) -> str:
     escaped = escape(text)
+    escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
     escaped = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
+    escaped = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', escaped)
     return escaped
 
 
@@ -259,6 +396,9 @@ def html_shell(page_title: str, body: str, site_title: str, base_url: str) -> st
     a {{ color: #0f766e; }}
     h1 {{ font-size: 32px; line-height: 1.25; margin-bottom: 16px; }}
     h2 {{ margin-top: 36px; border-top: 1px solid #d9ded8; padding-top: 20px; }}
+    h3 {{ margin: 24px 0 8px; }}
+    img {{ max-width: 100%; height: auto; border-radius: 8px; }}
+    hr {{ border: 0; border-top: 1px solid #d9ded8; margin: 32px 0; }}
     blockquote {{
       margin: 20px 0;
       padding: 12px 16px;
@@ -272,7 +412,7 @@ def html_shell(page_title: str, body: str, site_title: str, base_url: str) -> st
     @media (prefers-color-scheme: dark) {{
       body {{ background: #111827; color: #e5e7eb; }}
       blockquote {{ background: #132f2d; }}
-      h2 {{ border-color: #374151; }}
+      h2, hr {{ border-color: #374151; }}
       a {{ color: #5eead4; }}
     }}
   </style>
@@ -369,7 +509,22 @@ def write_rss(site_title: str, author: str, base_url: str, backup_dir: Path, out
 def first_summary(markdown_text: str) -> str:
     for line in markdown_text.splitlines():
         clean = line.strip()
-        if clean and not clean.startswith("#") and not clean.startswith(">") and not re.match(r"^\d+\. ", clean):
+        if not clean:
+            continue
+        if (
+            clean.startswith("#")
+            or clean.startswith(">")
+            or clean.startswith("- ")
+            or clean.startswith("!")
+            or clean.startswith("**视频卡片**")
+            or clean.startswith("数据模式")
+            or clean == "---"
+            or clean == "相关链接："
+            or is_url(clean)
+            or re.match(r"^\d+\. ", clean)
+        ):
+            continue
+        if clean:
             return clean[:280]
     return "AI 早报"
 
@@ -401,7 +556,7 @@ def main() -> int:
     else:
         date, lead, items, source_used = load_daily_or_fallback(hours, take)
 
-    markdown_text = render_markdown(date, site_title, lead, items, source_used)
+    markdown_text = render_markdown(date, site_title, lead, items, source_used, base_url, output_dir)
     (backup_dir / f"{date}.md").write_text(markdown_text, encoding="utf-8")
     write_article(site_title, base_url, date, markdown_text, output_dir)
     write_index(site_title, base_url, backup_dir, output_dir)
