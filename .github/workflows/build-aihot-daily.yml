@@ -1,0 +1,72 @@
+name: Build AI HOT Daily
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-aihot-daily.yml"
+      - "scripts/**"
+      - "README.md"
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "daily or selected"
+        required: false
+        default: "daily"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      SITE_TITLE: "我的 AI 早报"
+      AUTHOR_NAME: ${{ github.repository_owner }}
+      BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+      AIHOT_SOURCE: ${{ github.event.inputs.source || 'daily' }}
+      AIHOT_TAKE: "30"
+      AIHOT_HOURS: "24"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build daily content
+        run: python scripts/build_aihot_daily.py
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add BACKUP cards public
+          git commit -m "update AI daily" || echo "nothing to commit"
+          git push || echo "nothing to push"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
