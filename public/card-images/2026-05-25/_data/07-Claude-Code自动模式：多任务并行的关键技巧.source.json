@@ -1,0 +1,8 @@
+{
+  "title": "Claude Code自动模式：多任务并行的关键技巧",
+  "summary": "人们常问我，用好Claude Code的最大技巧是什么。 如今我的头号技巧是：使用自动模式。 自动模式意味着不再有权限提示。它是实现“多Claude并行”的关键构件：启动一个会话，然后在其运行时，并行处理另一个会话。",
+  "source": "X：Boris Cherny (@bcherny)",
+  "url": "https://x.com/bcherny/status/2058519809214607704",
+  "category": "技巧与观点",
+  "publishedAt": null
+}

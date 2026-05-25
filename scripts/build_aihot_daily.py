@@ -293,6 +293,14 @@ def article_url(base_url: str, date: str) -> str:
 
 def write_article(site_title: str, base_url: str, date: str, markdown_text: str, output_dir: Path) -> None:
     body = markdown_to_article_html(markdown_text)
+    card_gallery = output_dir / "card-images" / date / "index.html"
+    if card_gallery.exists():
+        body += (
+            "\n<section>\n"
+            "<h2>视频卡片</h2>\n"
+            f'<p><a href="./card-images/{escape(date)}/">查看本期 PNG 卡片</a></p>\n'
+            "</section>\n"
+        )
     html = html_shell(f"{site_title} {date}", body, site_title, base_url)
     (output_dir / f"{date}.html").write_text(html, encoding="utf-8")
 
@@ -303,7 +311,9 @@ def write_index(site_title: str, base_url: str, backup_dir: Path, output_dir: Pa
     for path in entries[:60]:
         date = path.stem
         href = f"{date}.html"
-        items.append(f'<li><a href="{href}">{escape(site_title)} {escape(date)}</a></li>')
+        card_gallery = output_dir / "card-images" / date / "index.html"
+        card_link = f' · <a href="card-images/{escape(date)}/">卡片</a>' if card_gallery.exists() else ""
+        items.append(f'<li><a href="{href}">{escape(site_title)} {escape(date)}</a>{card_link}</li>')
     body = f"<h1>{escape(site_title)}</h1>\n<ul class=\"archive\">\n" + "\n".join(items) + "\n</ul>"
     (output_dir / "index.html").write_text(
         html_shell(site_title, body, site_title, base_url),

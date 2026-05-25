@@ -1,0 +1,15 @@
+{
+  "mainTitle": "PixVerse 角色设计流程",
+  "cards": [
+    {
+      "title": "视觉形象创建",
+      "desc": "使用 <code>GPT Image 2.0</code> 为角色 <code>Lucas</code> 创建静态概念图，从零生成视觉外观。",
+      "icon": "image"
+    },
+    {
+      "title": "动画制作",
+      "desc": "使用 <code>Seedance 2.0</code> 将静态形象转化为弹跳表演动画，实现电影级动态效果。",
+      "icon": "animation"
+    }
+  ]
+}

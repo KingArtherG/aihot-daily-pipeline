@@ -1,0 +1,30 @@
+{
+  "mainTitle": "Codex 自我优化框架",
+  "cards": [
+    {
+      "title": "框架目标",
+      "desc": "指导 <code>Codex</code> 自动分析历史记录，识别并固化重复工作流，提升效率。",
+      "icon": "auto_awesome"
+    },
+    {
+      "title": "数据来源",
+      "desc": "回顾会话、<code>Memories</code> 等数据，挖掘高频、可复用的任务模式。",
+      "icon": "history"
+    },
+    {
+      "title": "筛选标准",
+      "desc": "任务至少出现 <strong>两次</strong>、输入稳定、有明确复用价值且能提升效率。",
+      "icon": "filter_list"
+    },
+    {
+      "title": "输出形式",
+      "desc": "以“技能”、子智能体或自动化工具等最小实用形式创建资产，避免冗余。",
+      "icon": "widgets"
+    },
+    {
+      "title": "核心流程",
+      "desc": "生成候选清单 → 执行创建 → 汇报结果与待验证项，形成闭环。",
+      "icon": "sync"
+    }
+  ]
+}

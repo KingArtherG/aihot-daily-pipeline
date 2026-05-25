@@ -1,0 +1,233 @@
+{
+  "date": "2026-05-25",
+  "theme": "claudeStyle",
+  "generatedAt": "2026-05-25T14:52:22.308Z",
+  "items": [
+    {
+      "index": 1,
+      "title": "Luma Agents 实现规模化真实 UGC 广告生成",
+      "source": "X：Luma AI (@LumaLabsAI)",
+      "url": "https://x.com/LumaLabsAI/status/2058672731705503959",
+      "png": "01-Luma-Agents-实现规模化真实-UGC-广告生成.png",
+      "generated": {
+        "mainTitle": "Luma Agents 发布 UGC 广告生成",
+        "cards": [
+          {
+            "title": "产品发布",
+            "desc": "<code>Luma Agents</code> 首次亮相，实现规模化生成真实 UGC 风格广告，用户可定义简报并设定风格。",
+            "icon": "new_releases"
+          },
+          {
+            "title": "核心功能",
+            "desc": "用户通过定义简报与设定风格，<code>Luma Agents</code> 能自动构建每一条 UGC 风格的广告内容，让广告显得真实。",
+            "icon": "auto_awesome"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "title": "OpenClaw 2026.5.22发布：性能优化与安全加固",
+      "source": "X：OpenClaw (@openclaw)",
+      "url": "https://x.com/openclaw/status/2058397616124072274",
+      "png": "02-OpenClaw-2026.5.22发布：性能优化与安全加固.png",
+      "generated": {
+        "mainTitle": "OpenClaw 2026.5.22 发布",
+        "cards": [
+          {
+            "title": "发布概述",
+            "desc": "OpenClaw <strong>2026.5.22</strong> 更新上线，聚焦性能优化与安全加固，同步发布 GitHub Release。",
+            "icon": "new_releases"
+          },
+          {
+            "title": "路径精简",
+            "desc": "Gateway 与模型启动路径更精简，减少冗余流程，提升加载效率。",
+            "icon": "route"
+          },
+          {
+            "title": "响应加速",
+            "desc": "<code>/models</code> 接口响应时间降至约 <strong>5</strong> 毫秒，显著降低模型查询延迟。",
+            "icon": "speed"
+          },
+          {
+            "title": "安全加固",
+            "desc": "npm 包提供锁定依赖项，<code>Windows</code> 安装/更新路径更安全，减少意外风险。",
+            "icon": "lock"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "title": "TrapDoor供应链攻击：AI助手成新型攻击面",
+      "source": "X：Kim (@kimmonismus)",
+      "url": "https://x.com/kimmonismus/status/2058584943052161488",
+      "png": "03-TrapDoor供应链攻击：AI助手成新型攻击面.png",
+      "generated": {
+        "mainTitle": "TrapDoor供应链攻击",
+        "cards": [
+          {
+            "title": "攻击规模",
+            "desc": "<strong>34</strong>个恶意包同时袭击npm、PyPI和Crates.io三大注册中心。",
+            "icon": "bug_report"
+          },
+          {
+            "title": "攻击目标",
+            "desc": "窃取AI、安全、加密货币开发者的<code>SSH</code>密钥和云凭证。",
+            "icon": "lock"
+          },
+          {
+            "title": "攻击手法",
+            "desc": "向流行开源项目提交PR，植入被操纵的<code>CLAUDE.md</code>和<code>.cursorrules</code>文件。",
+            "icon": "code"
+          },
+          {
+            "title": "新型攻击面",
+            "desc": "AI助手（Claude Code、Cursor）首次被当作攻击面，将恶意文件视为指令执行。",
+            "icon": "auto_awesome"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "title": "DeepSeek将对其旗舰AI模型实施永久性75%折扣",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-23/deepseek-to-make-permanent-75-discount-on-flagship-ai-model",
+      "png": "04-DeepSeek将对其旗舰AI模型实施永久性75%折扣.png",
+      "generated": {
+        "mainTitle": "DeepSeek 旗舰 AI 模型永久降价 75%",
+        "cards": [
+          {
+            "title": "折扣详情",
+            "desc": "DeepSeek 计划对其旗舰 AI 模型实施永久性 <strong>75%</strong> 折扣，大幅降低用户使用成本。 <code>discount</code>",
+            "icon": "article"
+          },
+          {
+            "title": "永久策略",
+            "desc": "该折扣为永久性调整，而非限时促销，或将引发行业价格竞争。 <code>update</code>",
+            "icon": "article"
+          }
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "title": "面向 Codex 的自我优化提示词框架",
+      "source": "X：Greg Brockman (@gdb)",
+      "url": "https://x.com/gdb/status/2058598608224858442",
+      "png": "05-面向-Codex-的自我优化提示词框架.png",
+      "generated": {
+        "mainTitle": "Codex 自我优化框架",
+        "cards": [
+          {
+            "title": "框架目标",
+            "desc": "指导 <code>Codex</code> 自动分析历史记录，识别并固化重复工作流，提升效率。",
+            "icon": "auto_awesome"
+          },
+          {
+            "title": "数据来源",
+            "desc": "回顾会话、<code>Memories</code> 等数据，挖掘高频、可复用的任务模式。",
+            "icon": "history"
+          },
+          {
+            "title": "筛选标准",
+            "desc": "任务至少出现 <strong>两次</strong>、输入稳定、有明确复用价值且能提升效率。",
+            "icon": "filter_list"
+          },
+          {
+            "title": "输出形式",
+            "desc": "以“技能”、子智能体或自动化工具等最小实用形式创建资产，避免冗余。",
+            "icon": "widgets"
+          },
+          {
+            "title": "核心流程",
+            "desc": "生成候选清单 → 执行创建 → 汇报结果与待验证项，形成闭环。",
+            "icon": "sync"
+          }
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "title": "格雷格·布罗克曼：那段差点让OpenAI覆灭的72小时",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://fs.blog/knowledge-project-podcast/greg-brockman",
+      "png": "06-格雷格·布罗克曼：那段差点让OpenAI覆灭的72小时.png",
+      "generated": {
+        "mainTitle": "格雷格·布罗克曼：那段差点让OpenAI覆灭的72小时",
+        "cards": [
+          {
+            "title": "导火索",
+            "desc": "OpenAI 董事会于 <strong>2023</strong> 年 <strong>11</strong> 月突然解雇 CEO <code>Sam Altman</code>，引发公司内部剧烈动荡。",
+            "icon": "gavel"
+          },
+          {
+            "title": "冲突升级",
+            "desc": "联合创始人格雷格·布罗克曼立即宣布辞职，与 <code>Altman</code> 共同离开，员工群情激愤。",
+            "icon": "people"
+          },
+          {
+            "title": "员工抗议",
+            "desc": "超过 <strong>700</strong> 名员工联名上书，要求董事会辞职并恢复 <code>Altman</code> 职位，否则集体跳槽微软。",
+            "icon": "groups"
+          },
+          {
+            "title": "微软介入",
+            "desc": "微软 CEO <code>Satya Nadella</code> 公开邀请 <code>Altman</code> 和布罗克曼领导新 AI 研究团队，为员工提供退路。",
+            "icon": "business"
+          },
+          {
+            "title": "戏剧转折",
+            "desc": "经过 <strong>72</strong> 小时紧急谈判，董事会最终妥协，<code>Altman</code> 和布罗克曼重返岗位，并改组董事会。",
+            "icon": "article"
+          },
+          {
+            "title": "治理反思",
+            "desc": "事件推动 OpenAI 引入微软观察员席位，重新审视非营利治理结构与商业化的平衡。",
+            "icon": "insights"
+          }
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "title": "Claude Code自动模式：多任务并行的关键技巧",
+      "source": "X：Boris Cherny (@bcherny)",
+      "url": "https://x.com/bcherny/status/2058519809214607704",
+      "png": "07-Claude-Code自动模式：多任务并行的关键技巧.png",
+      "generated": {
+        "mainTitle": "Claude Code 自动模式技巧",
+        "cards": [
+          {
+            "title": "自动模式",
+            "desc": "使用自动模式取消权限提示，实现多 <code>Claude</code> 并行：启动一个会话后，可并行运行另一个会话，大幅提升效率。",
+            "icon": "autorenew"
+          }
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "title": "Pixverse角色设计工作流测试",
+      "source": "X：PixVerse (@PixVerse_)",
+      "url": "https://x.com/PixVerse_/status/2058564994669727803",
+      "png": "08-Pixverse角色设计工作流测试.png",
+      "generated": {
+        "mainTitle": "PixVerse 角色设计流程",
+        "cards": [
+          {
+            "title": "视觉形象创建",
+            "desc": "使用 <code>GPT Image 2.0</code> 为角色 <code>Lucas</code> 创建静态概念图，从零生成视觉外观。",
+            "icon": "image"
+          },
+          {
+            "title": "动画制作",
+            "desc": "使用 <code>Seedance 2.0</code> 将静态形象转化为弹跳表演动画，实现电影级动态效果。",
+            "icon": "animation"
+          }
+        ]
+      }
+    }
+  ]
+}

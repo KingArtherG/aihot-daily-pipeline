@@ -1,0 +1,35 @@
+{
+  "mainTitle": "格雷格·布罗克曼：那段差点让OpenAI覆灭的72小时",
+  "cards": [
+    {
+      "title": "导火索",
+      "desc": "OpenAI 董事会于 <strong>2023</strong> 年 <strong>11</strong> 月突然解雇 CEO <code>Sam Altman</code>，引发公司内部剧烈动荡。",
+      "icon": "gavel"
+    },
+    {
+      "title": "冲突升级",
+      "desc": "联合创始人格雷格·布罗克曼立即宣布辞职，与 <code>Altman</code> 共同离开，员工群情激愤。",
+      "icon": "people"
+    },
+    {
+      "title": "员工抗议",
+      "desc": "超过 <strong>700</strong> 名员工联名上书，要求董事会辞职并恢复 <code>Altman</code> 职位，否则集体跳槽微软。",
+      "icon": "groups"
+    },
+    {
+      "title": "微软介入",
+      "desc": "微软 CEO <code>Satya Nadella</code> 公开邀请 <code>Altman</code> 和布罗克曼领导新 AI 研究团队，为员工提供退路。",
+      "icon": "business"
+    },
+    {
+      "title": "戏剧转折",
+      "desc": "经过 <strong>72</strong> 小时紧急谈判，董事会最终妥协，<code>Altman</code> 和布罗克曼重返岗位，并改组董事会。",
+      "icon": "article"
+    },
+    {
+      "title": "治理反思",
+      "desc": "事件推动 OpenAI 引入微软观察员席位，重新审视非营利治理结构与商业化的平衡。",
+      "icon": "insights"
+    }
+  ]
+}

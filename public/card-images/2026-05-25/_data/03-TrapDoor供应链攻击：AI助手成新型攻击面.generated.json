@@ -1,0 +1,25 @@
+{
+  "mainTitle": "TrapDoor供应链攻击",
+  "cards": [
+    {
+      "title": "攻击规模",
+      "desc": "<strong>34</strong>个恶意包同时袭击npm、PyPI和Crates.io三大注册中心。",
+      "icon": "bug_report"
+    },
+    {
+      "title": "攻击目标",
+      "desc": "窃取AI、安全、加密货币开发者的<code>SSH</code>密钥和云凭证。",
+      "icon": "lock"
+    },
+    {
+      "title": "攻击手法",
+      "desc": "向流行开源项目提交PR，植入被操纵的<code>CLAUDE.md</code>和<code>.cursorrules</code>文件。",
+      "icon": "code"
+    },
+    {
+      "title": "新型攻击面",
+      "desc": "AI助手（Claude Code、Cursor）首次被当作攻击面，将恶意文件视为指令执行。",
+      "icon": "auto_awesome"
+    }
+  ]
+}

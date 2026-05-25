@@ -1,0 +1,15 @@
+{
+  "mainTitle": "Luma Agents 发布 UGC 广告生成",
+  "cards": [
+    {
+      "title": "产品发布",
+      "desc": "<code>Luma Agents</code> 首次亮相，实现规模化生成真实 UGC 风格广告，用户可定义简报并设定风格。",
+      "icon": "new_releases"
+    },
+    {
+      "title": "核心功能",
+      "desc": "用户通过定义简报与设定风格，<code>Luma Agents</code> 能自动构建每一条 UGC 风格的广告内容，让广告显得真实。",
+      "icon": "auto_awesome"
+    }
+  ]
+}

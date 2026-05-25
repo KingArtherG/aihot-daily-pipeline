@@ -1,0 +1,25 @@
+{
+  "mainTitle": "OpenClaw 2026.5.22 发布",
+  "cards": [
+    {
+      "title": "发布概述",
+      "desc": "OpenClaw <strong>2026.5.22</strong> 更新上线，聚焦性能优化与安全加固，同步发布 GitHub Release。",
+      "icon": "new_releases"
+    },
+    {
+      "title": "路径精简",
+      "desc": "Gateway 与模型启动路径更精简，减少冗余流程，提升加载效率。",
+      "icon": "route"
+    },
+    {
+      "title": "响应加速",
+      "desc": "<code>/models</code> 接口响应时间降至约 <strong>5</strong> 毫秒，显著降低模型查询延迟。",
+      "icon": "speed"
+    },
+    {
+      "title": "安全加固",
+      "desc": "npm 包提供锁定依赖项，<code>Windows</code> 安装/更新路径更安全，减少意外风险。",
+      "icon": "lock"
+    }
+  ]
+}

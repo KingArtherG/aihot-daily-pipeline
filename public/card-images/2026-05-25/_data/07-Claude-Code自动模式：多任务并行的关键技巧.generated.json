@@ -1,0 +1,10 @@
+{
+  "mainTitle": "Claude Code 自动模式技巧",
+  "cards": [
+    {
+      "title": "自动模式",
+      "desc": "使用自动模式取消权限提示，实现多 <code>Claude</code> 并行：启动一个会话后，可并行运行另一个会话，大幅提升效率。",
+      "icon": "autorenew"
+    }
+  ]
+}
