@@ -65,7 +65,8 @@ python scripts\build_aihot_daily.py
 如果配置了 DeepSeek API Key，脚本会在拉取 AI HOT 后自动增加一层主编处理：
 
 - 从候选新闻里筛选更值得进入早报的 8-12 条
-- 给每条补充“为什么重要、关键事实、可能影响、信源备注”
+- 给每条补充“背景、细节拆解、为什么重要、关键事实、可能影响、信源备注”
+- 目标是生成更接近 Juya `BACKUP` 的长文字版素材，不是公众号排版、卡片文案或视频脚本
 - 生成 `data/enriched/YYYY-MM-DD.json`
 - 同步更新 `BACKUP/YYYY-MM-DD.md`、网页和卡片 JSON
 
@@ -76,6 +77,8 @@ ENRICH_WITH_LLM=1
 DEEPSEEK_API_KEY="你的 DeepSeek Key"
 LLM_MODEL="deepseek-v4-flash"
 ENRICH_MAX_ITEMS=12
+LLM_INPUT_ITEMS=30
+LLM_MAX_TOKENS=9000
 ```
 
 GitHub Actions 自动运行时，在仓库的 `Settings -> Secrets and variables -> Actions -> Secrets` 里新增：

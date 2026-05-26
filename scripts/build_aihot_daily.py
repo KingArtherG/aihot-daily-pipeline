@@ -63,6 +63,8 @@ class NewsItem:
     published_at: str | None = None
     score: int = 0
     why_it_matters: str = ""
+    background: str = ""
+    details: list[str] = field(default_factory=list)
     key_facts: list[str] = field(default_factory=list)
     impact: str = ""
     source_note: str = ""
@@ -364,10 +366,10 @@ def build_llm_payload(
         for index, item in enumerate(items, 1)
     ]
     system = (
-        "你是中文 AI 早报主编。你的任务是从候选新闻里筛选最值得进入早报的条目，"
-        "并基于输入材料写出可信、克制、可发布的中文扩写。"
-        "不要编造输入中没有的参数、价格、日期、融资额或公司表态；不确定就写需要回原文核对。"
-        "只返回 JSON，不要 Markdown，不要解释。"
+        "你是中文 AI 早报资料编辑。你的任务是把候选新闻整理成接近 Juya BACKUP 的长文字版素材，"
+        "用于信息归档和后续人工编辑，不是公众号排版、不是卡片文案、也不是视频脚本。"
+        "只能基于输入里的标题、摘要、来源、链接和信源备注扩写；不要编造参数、价格、日期、融资额、公司表态或原文未给出的细节。"
+        "遇到信息不足，要明确写“原文未展开，需要回原文核对”。只返回 JSON，不要 Markdown，不要解释。"
     )
     user = {
         "date": date,
@@ -378,17 +380,19 @@ def build_llm_payload(
             "avoid": ["重复事件", "纯营销口号", "信息不足且无法判断重要性的条目"],
         },
         "output_schema": {
-            "lead": "80-140字中文导语",
+            "lead": "100-180字中文导语，概括今日 AI 动态主线",
             "items": [
                 {
                     "index": "必须使用输入里的 index",
                     "title": "可轻微润色，但不要改事实",
-                    "summary": "一句话总结，35-80字",
+                    "summary": "一句话总结，50-90字",
                     "score": "1-100的重要性分",
-                    "why_it_matters": "为什么重要，80-180字",
-                    "key_facts": ["2-4条关键事实，每条不超过60字"],
-                    "impact": "对开发者/创业者/内容创作者/普通用户的影响，60-140字",
-                    "source_note": "一句话说明信源级别和是否需要核验",
+                    "background": "背景说明，80-160字；如果输入信息不足，说明需要核对原文",
+                    "details": ["2-4段细节拆解，每段50-120字；只写输入能支持的内容"],
+                    "why_it_matters": "为什么重要，100-220字",
+                    "key_facts": ["2-4条关键事实，每条不超过70字"],
+                    "impact": "可能影响，80-180字",
+                    "source_note": "一句话说明信源级别、可信度和是否需要核验",
                 }
             ],
         },
@@ -467,6 +471,8 @@ def apply_llm_enrichment(original_items: list[NewsItem], response: dict[str, Any
         if summary:
             item.summary = summary
         item.score = clamp_score(raw.get("score"))
+        item.background = str(raw.get("background") or "").strip()
+        item.details = clean_string_list(raw.get("details"), limit=4)
         item.why_it_matters = str(raw.get("why_it_matters") or "").strip()
         item.key_facts = clean_string_list(raw.get("key_facts"))
         item.impact = str(raw.get("impact") or "").strip()
@@ -485,10 +491,10 @@ def clamp_score(value: Any) -> int:
     return max(0, min(100, score))
 
 
-def clean_string_list(value: Any) -> list[str]:
+def clean_string_list(value: Any, limit: int = 4) -> list[str]:
     if not isinstance(value, list):
         return []
-    return [str(item).strip() for item in value if str(item).strip()][:4]
+    return [str(item).strip() for item in value if str(item).strip()][:limit]
 
 
 def source_tier(item: NewsItem) -> str:
@@ -637,8 +643,12 @@ def render_item_detail(
 
 
 def detail_paragraphs(item: NewsItem) -> list[str]:
-    if item.why_it_matters or item.key_facts or item.impact:
+    if item.background or item.details or item.why_it_matters or item.key_facts or item.impact:
         paragraphs: list[str] = []
+        if item.background:
+            paragraphs.append(item.background)
+        for detail in item.details:
+            paragraphs.append(detail)
         if item.why_it_matters:
             paragraphs.append(f"**为什么重要：**{item.why_it_matters}")
         if item.key_facts:
@@ -870,6 +880,8 @@ def write_cards(date: str, items: list[NewsItem], cards_dir: Path) -> None:
                 "category": CATEGORY_LABELS.get(item.category, "其他"),
                 "publishedAt": item.published_at,
                 "score": item.score,
+                "background": item.background,
+                "details": item.details,
                 "whyItMatters": item.why_it_matters,
                 "keyFacts": item.key_facts,
                 "impact": item.impact,
@@ -899,6 +911,8 @@ def write_enriched_data(date: str, lead: str, items: list[NewsItem], data_dir: P
                 "category": item.category,
                 "publishedAt": item.published_at,
                 "score": item.score,
+                "background": item.background,
+                "details": item.details,
                 "whyItMatters": item.why_it_matters,
                 "keyFacts": item.key_facts,
                 "impact": item.impact,
