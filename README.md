@@ -47,6 +47,44 @@ python scripts/build_aihot_daily.py
 
 - `daily`：使用 AI HOT 已整理好的日报，适合每天 08:00 之后运行
 - `selected`：使用最近一段时间的精选条目，适合滚动资讯流
+- `radar`：使用 AI News Radar 的 24 小时候选池
+- `hybrid`：先用 AI HOT 兜底，再合并 AI News Radar 候选池，推荐本地生产线使用
+
+如果你已经在本机部署了 `ai-news-radar`，可以这样运行：
+
+```powershell
+$env:AIHOT_SOURCE="hybrid"
+$env:RADAR_URL="C:\Users\KingArther\ai-news-radar\data\latest-24h.json"
+$env:SITE_TITLE="King AI 早报"
+$env:BASE_URL="https://KingArtherG.github.io/aihot-daily-pipeline/"
+python scripts\build_aihot_daily.py
+```
+
+## DeepSeek 筛选/扩写
+
+如果配置了 DeepSeek API Key，脚本会在拉取 AI HOT 后自动增加一层主编处理：
+
+- 从候选新闻里筛选更值得进入早报的 8-12 条
+- 给每条补充“为什么重要、关键事实、可能影响、信源备注”
+- 生成 `data/enriched/YYYY-MM-DD.json`
+- 同步更新 `BACKUP/YYYY-MM-DD.md`、网页和卡片 JSON
+
+本地运行时可以复制 `.env.example` 为 `.env`，然后填入：
+
+```bash
+ENRICH_WITH_LLM=1
+DEEPSEEK_API_KEY="你的 DeepSeek Key"
+LLM_MODEL="deepseek-v4-flash"
+ENRICH_MAX_ITEMS=12
+```
+
+GitHub Actions 自动运行时，在仓库的 `Settings -> Secrets and variables -> Actions -> Secrets` 里新增：
+
+```text
+DEEPSEEK_API_KEY
+```
+
+不配置 Key 也可以运行，只是会退回到普通 AI HOT 摘要版。
 
 ## 连接视频卡片工具
 

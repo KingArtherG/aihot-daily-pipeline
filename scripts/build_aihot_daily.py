@@ -7,7 +7,7 @@ import json
 import os
 import re
 import sys
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 from html import escape
@@ -37,6 +37,20 @@ CATEGORY_LABELS = {
     "": "其他",
 }
 CATEGORY_ORDER = ["ai-models", "ai-products", "industry", "paper", "tip", None]
+LLM_DEFAULT_BASE_URL = "https://api.deepseek.com"
+LLM_DEFAULT_MODEL = "deepseek-v4-flash"
+RADAR_DEFAULT_URL = "https://learnprompt.github.io/ai-news-radar/data/latest-24h.json"
+RADAR_CATEGORY_MAP = {
+    "model_release": "ai-models",
+    "ai_product_update": "ai-products",
+    "developer_tool": "tip",
+    "agent_workflow": "tip",
+    "research_paper": "paper",
+    "infra_compute": "industry",
+    "industry_business": "industry",
+    "curated_hotlist": "industry",
+    "ai_general": "industry",
+}
 
 
 @dataclass
@@ -47,10 +61,44 @@ class NewsItem:
     url: str
     category: str | None
     published_at: str | None = None
+    score: int = 0
+    why_it_matters: str = ""
+    key_facts: list[str] = field(default_factory=list)
+    impact: str = ""
+    source_note: str = ""
 
 
 def env(name: str, default: str) -> str:
     return os.environ.get(name, default).strip() or default
+
+
+def load_dotenv(path: Path) -> None:
+    if not path.exists():
+        return
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        name, value = line.split("=", 1)
+        name = name.strip()
+        value = value.strip().strip('"').strip("'")
+        if name and name not in os.environ:
+            os.environ[name] = value
+
+
+def secret_env(*names: str) -> str:
+    for name in names:
+        value = os.environ.get(name, "").strip()
+        if value:
+            return value
+    return ""
+
+
+def bool_env(name: str, default: bool) -> bool:
+    value = os.environ.get(name, "").strip().lower()
+    if not value:
+        return default
+    return value in {"1", "true", "yes", "on", "auto"}
 
 
 def fetch_json(path: str, params: dict[str, str] | None = None) -> dict[str, Any]:
@@ -60,6 +108,18 @@ def fetch_json(path: str, params: dict[str, str] | None = None) -> dict[str, Any
         headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
     )
     with urlopen(request, timeout=30) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def load_json_source(source: str, timeout: int = 60) -> dict[str, Any]:
+    if source.startswith("http://") or source.startswith("https://"):
+        return fetch_url_json(source, timeout)
+    return json.loads(Path(source).read_text(encoding="utf-8-sig"))
+
+
+def fetch_url_json(url: str, timeout: int = 60) -> dict[str, Any]:
+    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    with urlopen(request, timeout=timeout) as response:
         return json.loads(response.read().decode("utf-8"))
 
 
@@ -114,6 +174,32 @@ def normalize_selected_item(raw: dict[str, Any]) -> NewsItem:
     )
 
 
+def normalize_radar_item(raw: dict[str, Any]) -> NewsItem:
+    title = str(raw.get("title_zh") or raw.get("title_bilingual") or raw.get("title") or "").strip()
+    source = str(raw.get("source") or raw.get("site_name") or "").strip()
+    site_name = str(raw.get("site_name") or "").strip()
+    ai_score = raw.get("ai_score")
+    try:
+        score = int(float(ai_score) * 100)
+    except (TypeError, ValueError):
+        score = 0
+
+    label = str(raw.get("ai_label") or "").strip()
+    score_text = f"{score}/100" if score else "未标分"
+    source_note = f"AI News Radar：{site_name or source}，相关性 {score_text}，标签 {label or '未分类'}。"
+    summary = source_note
+    return NewsItem(
+        title=title,
+        summary=summary,
+        source=source or site_name,
+        url=str(raw.get("url") or "").strip(),
+        category=RADAR_CATEGORY_MAP.get(label, "industry"),
+        published_at=raw.get("published_at"),
+        score=score,
+        source_note=source_note,
+    )
+
+
 def load_daily_or_fallback(hours: int, take: int) -> tuple[str, str, list[NewsItem], str]:
     try:
         data = fetch_json("/api/public/daily")
@@ -144,6 +230,292 @@ def load_selected(hours: int, take: int) -> tuple[str, str, list[NewsItem], str]
     items = [item for item in items if item.title and item.url]
     lead = f"过去 {hours} 小时精选 AI 动态，共 {len(items)} 条。"
     return today_beijing(), lead, items, "selected"
+
+
+def load_radar(hours: int, take: int) -> tuple[str, str, list[NewsItem], str]:
+    url = env("RADAR_URL", RADAR_DEFAULT_URL)
+    threshold = float(env("RADAR_MIN_SCORE", "0.65"))
+    data = load_json_source(url, timeout=int(env("RADAR_TIMEOUT", "90")))
+    generated = parse_iso(data.get("generated_at"))
+    date = generated.astimezone(BEIJING).strftime("%Y-%m-%d") if generated else today_beijing()
+    window_hours = int(data.get("window_hours") or hours)
+    raw_items = data.get("items") or []
+    items = []
+    for raw in raw_items:
+        try:
+            ai_score = float(raw.get("ai_score") or 0)
+        except (TypeError, ValueError):
+            ai_score = 0
+        if raw.get("ai_is_related") is False or ai_score < threshold:
+            continue
+        item = normalize_radar_item(raw)
+        if item.title and item.url:
+            items.append(item)
+
+    items = dedupe_items(items)
+    items.sort(key=radar_rank_key, reverse=True)
+    lead = (
+        f"AI News Radar 过去 {window_hours} 小时从 {data.get('source_count', 0)} 个信源"
+        f"筛出 {len(items)} 条 AI 相关候选新闻。"
+    )
+    return date, lead, items[:take], "radar"
+
+
+def load_hybrid(hours: int, take: int) -> tuple[str, str, list[NewsItem], str]:
+    date, aihot_lead, aihot_items, aihot_source = load_daily_or_fallback(hours, take)
+    radar_items: list[NewsItem] = []
+    radar_lead = ""
+    try:
+        _, radar_lead, radar_items, _ = load_radar(hours, int(env("RADAR_TAKE", "80")))
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError, ValueError) as exc:
+        print(f"AI News Radar unavailable, using AI HOT only: {exc}", file=sys.stderr)
+
+    items = dedupe_items(aihot_items + radar_items)
+    if radar_items:
+        lead = (
+            f"综合 AI HOT 与 AI News Radar：AI HOT 提供 {len(aihot_items)} 条编辑精选，"
+            f"Radar 补充 {len(radar_items)} 条过去 {hours} 小时候选新闻。"
+        )
+    else:
+        lead = aihot_lead
+    return date, lead, items[: max(take, len(aihot_items))], f"hybrid-{aihot_source}"
+
+
+def dedupe_items(items: list[NewsItem]) -> list[NewsItem]:
+    seen_urls: set[str] = set()
+    seen_titles: set[str] = set()
+    deduped: list[NewsItem] = []
+    for item in items:
+        url_key = normalize_url_key(item.url)
+        title_key = normalize_title_key(item.title)
+        if url_key and url_key in seen_urls:
+            continue
+        if title_key and title_key in seen_titles:
+            continue
+        if url_key:
+            seen_urls.add(url_key)
+        if title_key:
+            seen_titles.add(title_key)
+        deduped.append(item)
+    return deduped
+
+
+def normalize_url_key(url: str) -> str:
+    return re.sub(r"[?#].*$", "", url.strip().lower()).rstrip("/")
+
+
+def normalize_title_key(title: str) -> str:
+    return re.sub(r"\s+", "", title.strip().lower())
+
+
+def radar_rank_key(item: NewsItem) -> tuple[int, float]:
+    published = parse_iso(item.published_at)
+    timestamp = published.timestamp() if published else 0
+    source_bonus = 8 if source_tier(item).startswith("A") else 0
+    return item.score + source_bonus, timestamp
+
+
+def enrich_with_llm(date: str, lead: str, items: list[NewsItem]) -> tuple[str, list[NewsItem]]:
+    api_key = secret_env("LLM_API_KEY", "DEEPSEEK_API_KEY")
+    enabled = bool_env("ENRICH_WITH_LLM", bool(api_key))
+    if not enabled or not api_key or not items:
+        return lead, items
+
+    input_limit = int(env("LLM_INPUT_ITEMS", "30"))
+    output_limit = int(env("ENRICH_MAX_ITEMS", "12"))
+    input_items = items[: max(1, input_limit)]
+    payload = build_llm_payload(date, lead, input_items, output_limit)
+
+    try:
+        response = call_llm(api_key, payload)
+        enriched = apply_llm_enrichment(items, response)
+    except Exception as exc:  # Keep the daily pipeline alive if the model/API fails.
+        print(f"LLM enrichment skipped: {exc}", file=sys.stderr)
+        return lead, items
+
+    if not enriched:
+        print("LLM enrichment returned no usable items; using original items.", file=sys.stderr)
+        return lead, items
+
+    new_lead = str(response.get("lead") or lead).strip()
+    print(f"LLM enrichment enabled: {len(enriched)} items selected.")
+    return new_lead or lead, enriched[:output_limit]
+
+
+def build_llm_payload(
+    date: str,
+    lead: str,
+    items: list[NewsItem],
+    output_limit: int,
+) -> dict[str, Any]:
+    source_items = [
+        {
+            "index": index,
+            "title": item.title,
+            "summary": item.summary,
+            "source": item.source,
+            "source_tier_hint": source_tier(item),
+            "url": item.url,
+            "category": item.category,
+            "published_at": item.published_at,
+            "radar_or_prior_score": item.score,
+            "source_note": item.source_note,
+        }
+        for index, item in enumerate(items, 1)
+    ]
+    system = (
+        "你是中文 AI 早报主编。你的任务是从候选新闻里筛选最值得进入早报的条目，"
+        "并基于输入材料写出可信、克制、可发布的中文扩写。"
+        "不要编造输入中没有的参数、价格、日期、融资额或公司表态；不确定就写需要回原文核对。"
+        "只返回 JSON，不要 Markdown，不要解释。"
+    )
+    user = {
+        "date": date,
+        "lead": lead,
+        "selection_rule": {
+            "max_items": output_limit,
+            "prefer": ["官方源", "重大模型/产品发布", "影响开发者或创作者的变化", "安全风险", "可操作技巧"],
+            "avoid": ["重复事件", "纯营销口号", "信息不足且无法判断重要性的条目"],
+        },
+        "output_schema": {
+            "lead": "80-140字中文导语",
+            "items": [
+                {
+                    "index": "必须使用输入里的 index",
+                    "title": "可轻微润色，但不要改事实",
+                    "summary": "一句话总结，35-80字",
+                    "score": "1-100的重要性分",
+                    "why_it_matters": "为什么重要，80-180字",
+                    "key_facts": ["2-4条关键事实，每条不超过60字"],
+                    "impact": "对开发者/创业者/内容创作者/普通用户的影响，60-140字",
+                    "source_note": "一句话说明信源级别和是否需要核验",
+                }
+            ],
+        },
+        "items": source_items,
+    }
+    return {"messages": [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(user, ensure_ascii=False)}]}
+
+
+def call_llm(api_key: str, payload: dict[str, Any]) -> dict[str, Any]:
+    base_url = env("LLM_BASE_URL", LLM_DEFAULT_BASE_URL).rstrip("/")
+    model = env("LLM_MODEL", LLM_DEFAULT_MODEL)
+    timeout = int(env("LLM_TIMEOUT", "90"))
+    body = {
+        "model": model,
+        "messages": payload["messages"],
+        "temperature": float(env("LLM_TEMPERATURE", "0.2")),
+        "max_tokens": int(env("LLM_MAX_TOKENS", "6000")),
+    }
+    request = Request(
+        f"{base_url}/chat/completions",
+        data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": USER_AGENT,
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")[:500]
+        raise RuntimeError(f"LLM API HTTP {exc.code}: {detail}") from exc
+
+    choices = data.get("choices") or []
+    if not choices:
+        raise RuntimeError("LLM API returned no choices")
+    content = str((choices[0].get("message") or {}).get("content") or "").strip()
+    if not content:
+        raise RuntimeError("LLM API returned empty content")
+    return json.loads(extract_json_object(content))
+
+
+def extract_json_object(text: str) -> str:
+    cleaned = text.strip()
+    if cleaned.startswith("```"):
+        cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
+        cleaned = re.sub(r"\s*```$", "", cleaned)
+    start = cleaned.find("{")
+    end = cleaned.rfind("}")
+    if start == -1 or end == -1 or end <= start:
+        raise ValueError("No JSON object found in LLM response")
+    return cleaned[start : end + 1]
+
+
+def apply_llm_enrichment(original_items: list[NewsItem], response: dict[str, Any]) -> list[NewsItem]:
+    by_index = {index: item for index, item in enumerate(original_items, 1)}
+    enriched: list[NewsItem] = []
+    seen: set[int] = set()
+    for raw in response.get("items") or []:
+        try:
+            index = int(raw.get("index"))
+        except (TypeError, ValueError):
+            continue
+        item = by_index.get(index)
+        if not item or index in seen:
+            continue
+        seen.add(index)
+
+        title = str(raw.get("title") or "").strip()
+        summary = str(raw.get("summary") or "").strip()
+        if title:
+            item.title = title
+        if summary:
+            item.summary = summary
+        item.score = clamp_score(raw.get("score"))
+        item.why_it_matters = str(raw.get("why_it_matters") or "").strip()
+        item.key_facts = clean_string_list(raw.get("key_facts"))
+        item.impact = str(raw.get("impact") or "").strip()
+        item.source_note = str(raw.get("source_note") or "").strip()
+        enriched.append(item)
+
+    enriched.sort(key=lambda item: item.score, reverse=True)
+    return enriched
+
+
+def clamp_score(value: Any) -> int:
+    try:
+        score = int(value)
+    except (TypeError, ValueError):
+        return 0
+    return max(0, min(100, score))
+
+
+def clean_string_list(value: Any) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    return [str(item).strip() for item in value if str(item).strip()][:4]
+
+
+def source_tier(item: NewsItem) -> str:
+    source = f"{item.source} {item.url}".lower()
+    official_markers = [
+        "openai.com",
+        "anthropic.com",
+        "deepmind.google",
+        "ai.googleblog.com",
+        "microsoft.com",
+        "nvidia.com",
+        "meta.com",
+        "huggingface.co",
+        "github.com",
+        "arxiv.org",
+        "qwenlm.github.io",
+        "deepseek.com",
+    ]
+    media_markers = ["techcrunch", "the verge", "bloomberg", "36kr", "机器之心", "量子位", "新智元"]
+    social_markers = ["x.com", "twitter.com", "youtube.com", "bilibili.com", "reddit.com", "hacker news"]
+    if any(marker in source for marker in official_markers):
+        return "A 官方/一手源"
+    if any(marker in source for marker in media_markers):
+        return "B 媒体源"
+    if any(marker in source for marker in social_markers):
+        return "C 社交/社区源"
+    return "D 待核验线索"
 
 
 def category_from_label(label: str) -> str | None:
@@ -199,7 +571,7 @@ def render_markdown(
     lines.extend(["## 概览", ""])
     if lead:
         lines.extend([lead, ""])
-    lines.extend([f"数据模式：{'日报' if source == 'daily' else '精选滚动资讯'}", ""])
+    lines.extend([f"数据模式：{source_label(source)}", ""])
 
     if featured:
         lines.extend(["### 要闻", ""])
@@ -219,6 +591,18 @@ def render_markdown(
     for index, item in indexed_items:
         lines.extend(render_item_detail(date, index, item, base_url, output_dir))
     return "\n".join(lines).rstrip() + "\n"
+
+
+def source_label(source: str) -> str:
+    if source == "daily":
+        return "AI HOT 日报"
+    if source == "selected":
+        return "AI HOT 精选滚动资讯"
+    if source == "radar":
+        return "AI News Radar"
+    if source.startswith("hybrid"):
+        return "AI HOT + AI News Radar"
+    return source
 
 
 def overview_line(index: int, item: NewsItem) -> str:
@@ -253,6 +637,19 @@ def render_item_detail(
 
 
 def detail_paragraphs(item: NewsItem) -> list[str]:
+    if item.why_it_matters or item.key_facts or item.impact:
+        paragraphs: list[str] = []
+        if item.why_it_matters:
+            paragraphs.append(f"**为什么重要：**{item.why_it_matters}")
+        if item.key_facts:
+            facts = "；".join(item.key_facts)
+            paragraphs.append(f"**关键事实：**{facts}。")
+        if item.impact:
+            paragraphs.append(f"**可能影响：**{item.impact}")
+        if item.source_note:
+            paragraphs.append(f"**信源备注：**{item.source_note}")
+        return paragraphs
+
     if not item.summary:
         source_text = f"这条信息来自 **{item.source}**。" if item.source else "AI HOT 暂未提供更长摘要。"
         return [f"{source_text} 建议打开原文确认完整细节。"]
@@ -472,11 +869,45 @@ def write_cards(date: str, items: list[NewsItem], cards_dir: Path) -> None:
                 "url": item.url,
                 "category": CATEGORY_LABELS.get(item.category, "其他"),
                 "publishedAt": item.published_at,
+                "score": item.score,
+                "whyItMatters": item.why_it_matters,
+                "keyFacts": item.key_facts,
+                "impact": item.impact,
+                "sourceNote": item.source_note,
             }
             for item in items
         ],
     }
     (cards_dir / f"{date}.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
+def write_enriched_data(date: str, lead: str, items: list[NewsItem], data_dir: Path) -> None:
+    enriched_dir = data_dir / "enriched"
+    enriched_dir.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "date": date,
+        "lead": lead,
+        "items": [
+            {
+                "title": item.title,
+                "summary": item.summary,
+                "source": item.source,
+                "url": item.url,
+                "category": item.category,
+                "publishedAt": item.published_at,
+                "score": item.score,
+                "whyItMatters": item.why_it_matters,
+                "keyFacts": item.key_facts,
+                "impact": item.impact,
+                "sourceNote": item.source_note,
+            }
+            for item in items
+        ],
+    }
+    (enriched_dir / f"{date}.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
@@ -538,6 +969,8 @@ def date_to_datetime(value: str) -> datetime:
 
 
 def main() -> int:
+    load_dotenv(Path(".env"))
+
     site_title = env("SITE_TITLE", "我的 AI 早报")
     author = env("AUTHOR_NAME", "AI Daily")
     base_url = env("BASE_URL", "")
@@ -548,13 +981,20 @@ def main() -> int:
     backup_dir = Path(env("BACKUP_DIR", "BACKUP"))
     output_dir = Path(env("OUTPUT_DIR", "public"))
     cards_dir = Path(env("CARDS_DIR", "cards"))
-    for directory in (backup_dir, output_dir, cards_dir):
+    data_dir = Path(env("DATA_DIR", "data"))
+    for directory in (backup_dir, output_dir, cards_dir, data_dir):
         directory.mkdir(parents=True, exist_ok=True)
 
     if source == "selected":
         date, lead, items, source_used = load_selected(hours, take)
+    elif source == "radar":
+        date, lead, items, source_used = load_radar(hours, take)
+    elif source == "hybrid":
+        date, lead, items, source_used = load_hybrid(hours, take)
     else:
         date, lead, items, source_used = load_daily_or_fallback(hours, take)
+
+    lead, items = enrich_with_llm(date, lead, items)
 
     markdown_text = render_markdown(date, site_title, lead, items, source_used, base_url, output_dir)
     (backup_dir / f"{date}.md").write_text(markdown_text, encoding="utf-8")
@@ -562,6 +1002,7 @@ def main() -> int:
     write_index(site_title, base_url, backup_dir, output_dir)
     write_rss(site_title, author, base_url, backup_dir, output_dir)
     write_cards(date, items, cards_dir)
+    write_enriched_data(date, lead, items, data_dir)
 
     print(f"Built {date}: {len(items)} items from {source_used}")
     return 0
