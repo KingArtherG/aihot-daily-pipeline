@@ -1038,9 +1038,11 @@ def render_markdown(
     issue_url = env("ISSUE_URL", "")
     cover_image_url = env("COVER_IMAGE_URL", "")
     if not cover_image_url:
-        cover_path = output_dir / "covers" / f"{date}.png"
-        if cover_path.exists():
-            cover_image_url = site_asset_url(base_url, f"covers/{date}.png")
+        for cover_name in (f"{date}-v4.png", f"{date}-clean.png", f"{date}.png"):
+            cover_path = output_dir / "covers" / cover_name
+            if cover_path.exists():
+                cover_image_url = site_asset_url(base_url, f"covers/{cover_name}")
+                break
     lines: list[str] = []
     if issue_url:
         lines.extend([f"# [{date}]({issue_url})", ""])
