@@ -6,15 +6,16 @@ from __future__ import annotations
 import json
 import os
 import re
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
-from html import escape
+from html import escape, unescape as html_unescape
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, urlencode, urljoin
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
@@ -68,6 +69,7 @@ class NewsItem:
     key_facts: list[str] = field(default_factory=list)
     impact: str = ""
     source_note: str = ""
+    images: list[str] = field(default_factory=list)
 
 
 def env(name: str, default: str) -> str:
@@ -77,12 +79,12 @@ def env(name: str, default: str) -> str:
 def load_dotenv(path: Path) -> None:
     if not path.exists():
         return
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
+    for raw_line in path.read_text(encoding="utf-8-sig").splitlines():
         line = raw_line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue
         name, value = line.split("=", 1)
-        name = name.strip()
+        name = name.strip().lstrip("\ufeff")
         value = value.strip().strip('"').strip("'")
         if name and name not in os.environ:
             os.environ[name] = value
@@ -101,6 +103,66 @@ def bool_env(name: str, default: bool) -> bool:
     if not value:
         return default
     return value in {"1", "true", "yes", "on", "auto"}
+
+
+def int_env(name: str, default: int) -> int:
+    try:
+        return int(env(name, str(default)))
+    except ValueError:
+        return default
+
+
+def extract_image_urls(raw: dict[str, Any]) -> list[str]:
+    image_fields = {
+        "image",
+        "imageUrl",
+        "image_url",
+        "cover",
+        "coverUrl",
+        "cover_url",
+        "thumbnail",
+        "thumbnailUrl",
+        "thumbnail_url",
+        "ogImage",
+        "og_image",
+        "twitterImage",
+        "twitter_image",
+        "media",
+        "images",
+    }
+    candidates: list[str] = []
+    for key in image_fields:
+        if key in raw:
+            collect_image_candidates(raw.get(key), candidates)
+    return dedupe_urls(candidates)
+
+
+def collect_image_candidates(value: Any, output: list[str]) -> None:
+    if isinstance(value, str):
+        clean = value.strip()
+        if clean.startswith("http://") or clean.startswith("https://"):
+            output.append(clean)
+        return
+    if isinstance(value, list):
+        for item in value:
+            collect_image_candidates(item, output)
+        return
+    if isinstance(value, dict):
+        for key in ("url", "src", "image", "imageUrl", "image_url", "large", "original"):
+            if key in value:
+                collect_image_candidates(value.get(key), output)
+
+
+def dedupe_urls(urls: list[str]) -> list[str]:
+    seen: set[str] = set()
+    result: list[str] = []
+    for url in urls:
+        key = normalize_url_key(url)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        result.append(url)
+    return result
 
 
 def fetch_json(path: str, params: dict[str, str] | None = None) -> dict[str, Any]:
@@ -123,6 +185,224 @@ def fetch_url_json(url: str, timeout: int = 60) -> dict[str, Any]:
     request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
     with urlopen(request, timeout=timeout) as response:
         return json.loads(response.read().decode("utf-8"))
+
+
+def enrich_source_images(date: str, items: list[NewsItem], data_dir: Path) -> None:
+    if not bool_env("FETCH_SOURCE_IMAGES", True):
+        return
+    max_items = int_env("SOURCE_IMAGE_MAX_ITEMS", 20)
+    per_item = int_env("SOURCE_IMAGE_PER_ITEM", 3)
+    timeout = int_env("SOURCE_IMAGE_TIMEOUT", 8)
+    cache = load_source_image_cache(date, data_dir)
+    changed = False
+
+    for item in items[:max_items]:
+        if len(item.images) >= per_item or not is_url(item.url):
+            item.images = dedupe_urls(item.images)[:per_item]
+            continue
+
+        cache_key = normalize_url_key(item.url)
+        cached = cache.get(cache_key)
+        if isinstance(cached, list):
+            item.images = dedupe_urls(item.images + [str(url) for url in cached])[:per_item]
+            continue
+
+        try:
+            found = fetch_source_image_urls(item.url, timeout=timeout)
+        except (HTTPError, URLError, TimeoutError, UnicodeError, ValueError) as exc:
+            print(f"Source image skipped: {item.url} ({exc})", file=sys.stderr)
+            found = []
+
+        cache[cache_key] = found
+        changed = True
+        item.images = dedupe_urls(item.images + found)[:per_item]
+
+    if changed:
+        save_source_image_cache(date, data_dir, cache)
+
+
+def capture_source_screenshots(
+    date: str,
+    items: list[NewsItem],
+    base_url: str,
+    output_dir: Path,
+    data_dir: Path,
+) -> None:
+    mode = os.environ.get("CAPTURE_SOURCE_SCREENSHOTS", "").strip().lower()
+    if mode not in {"1", "true", "yes", "on", "auto", "missing", "all"}:
+        return
+    script_path = Path(__file__).with_name("capture_source_screenshots.cjs")
+    if not script_path.exists():
+        return
+
+    max_items = int_env("SOURCE_SCREENSHOT_MAX_ITEMS", 12)
+    timeout = int_env("SOURCE_SCREENSHOT_TIMEOUT_MS", 18_000)
+    screenshot_dir = output_dir / "source-images" / date
+    screenshot_dir.mkdir(parents=True, exist_ok=True)
+
+    spec_items: list[dict[str, Any]] = []
+    for index, item in enumerate(items, 1):
+        if len(spec_items) >= max_items:
+            break
+        if not is_url(item.url):
+            continue
+        if should_skip_screenshot(item.url):
+            item.images = [
+                image for image in item.images if f"/source-images/{date}/" not in image
+            ]
+            continue
+        if item.images and mode != "all":
+            continue
+
+        file_name = f"{index:02d}-{slugify(item.title)}.png"
+        screenshot_path = screenshot_dir / file_name
+        public_url = site_asset_url(base_url, f"source-images/{date}/{file_name}")
+        if screenshot_path.exists():
+            item.images = dedupe_urls(item.images + [public_url])
+            continue
+        spec_items.append(
+            {
+                "index": index,
+                "title": item.title,
+                "url": item.url,
+                "fileName": file_name,
+            }
+        )
+
+    if not spec_items:
+        return
+
+    cache_dir = data_dir / "source-images"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    spec_path = cache_dir / f"{date}.screenshots.input.json"
+    result_path = cache_dir / f"{date}.screenshots.result.json"
+    spec_path.write_text(
+        json.dumps(
+            {
+                "date": date,
+                "outputDir": str(screenshot_dir.resolve()),
+                "timeoutMs": timeout,
+                "items": spec_items,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    env_vars = os.environ.copy()
+    sibling_playwright = Path.cwd().parent / "juya-news-card" / "node_modules" / "playwright"
+    if "PLAYWRIGHT_PACKAGE_PATH" not in env_vars and sibling_playwright.exists():
+        env_vars["PLAYWRIGHT_PACKAGE_PATH"] = str(sibling_playwright)
+
+    try:
+        completed = subprocess.run(
+            ["node", str(script_path), str(spec_path), str(result_path)],
+            cwd=Path.cwd(),
+            env=env_vars,
+            capture_output=True,
+            text=True,
+            timeout=max(30, int(timeout / 1000) * max(1, len(spec_items)) + 20),
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        print(f"Source screenshots skipped: {exc}", file=sys.stderr)
+        return
+
+    if completed.returncode != 0:
+        detail = (completed.stderr or completed.stdout).strip()[:800]
+        print(f"Source screenshots skipped: {detail}", file=sys.stderr)
+        return
+
+    try:
+        results = json.loads(result_path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return
+
+    by_index = {index: item for index, item in enumerate(items, 1)}
+    for result in results.get("items") or []:
+        if not result.get("ok"):
+            continue
+        try:
+            index = int(result.get("index"))
+        except (TypeError, ValueError):
+            continue
+        item = by_index.get(index)
+        file_name = str(result.get("fileName") or "").strip()
+        if item and file_name:
+            item.images = dedupe_urls(item.images + [site_asset_url(base_url, f"source-images/{date}/{file_name}")])
+
+
+def should_skip_screenshot(url: str) -> bool:
+    lowered = url.lower()
+    blocked_hosts = [
+        "://x.com/",
+        "://www.x.com/",
+        "://twitter.com/",
+        "://www.twitter.com/",
+    ]
+    return any(host in lowered for host in blocked_hosts)
+
+
+def load_source_image_cache(date: str, data_dir: Path) -> dict[str, list[str]]:
+    path = data_dir / "source-images" / f"{date}.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    if not isinstance(data, dict):
+        return {}
+    return {str(key): [str(url) for url in value] for key, value in data.items() if isinstance(value, list)}
+
+
+def save_source_image_cache(date: str, data_dir: Path, cache: dict[str, list[str]]) -> None:
+    cache_dir = data_dir / "source-images"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    (cache_dir / f"{date}.json").write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
+def fetch_source_image_urls(url: str, timeout: int = 8) -> list[str]:
+    request = Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml",
+        },
+    )
+    with urlopen(request, timeout=timeout) as response:
+        html = response.read(600_000).decode("utf-8", errors="replace")
+    return parse_meta_images(html, url)
+
+
+def parse_meta_images(html: str, base_url: str) -> list[str]:
+    images: list[str] = []
+    target_names = {"og:image", "og:image:url", "og:image:secure_url", "twitter:image", "twitter:image:src"}
+    for tag in re.findall(r"<meta\b[^>]*>", html, flags=re.IGNORECASE):
+        attrs = parse_html_attrs(tag)
+        name = (attrs.get("property") or attrs.get("name") or "").lower()
+        content = attrs.get("content") or ""
+        if name in target_names and content:
+            images.append(urljoin(base_url, html_unescape(content.strip())))
+
+    for tag in re.findall(r"<link\b[^>]*>", html, flags=re.IGNORECASE):
+        attrs = parse_html_attrs(tag)
+        rel = (attrs.get("rel") or "").lower()
+        href = attrs.get("href") or ""
+        if "image_src" in rel and href:
+            images.append(urljoin(base_url, html_unescape(href.strip())))
+    return dedupe_urls([url for url in images if is_url(url)])
+
+
+def parse_html_attrs(tag: str) -> dict[str, str]:
+    attrs: dict[str, str] = {}
+    for match in re.finditer(r"([:\w-]+)\s*=\s*(['\"])(.*?)\2", tag, flags=re.DOTALL):
+        attrs[match.group(1).lower()] = html_unescape(match.group(3))
+    return attrs
 
 
 def parse_iso(value: str | None) -> datetime | None:
@@ -162,6 +442,7 @@ def normalize_daily_item(raw: dict[str, Any], category: str | None) -> NewsItem:
         url=str(raw.get("sourceUrl") or raw.get("url") or "").strip(),
         category=category,
         published_at=raw.get("publishedAt"),
+        images=extract_image_urls(raw),
     )
 
 
@@ -173,6 +454,7 @@ def normalize_selected_item(raw: dict[str, Any]) -> NewsItem:
         url=str(raw.get("url") or "").strip(),
         category=raw.get("category"),
         published_at=raw.get("publishedAt"),
+        images=extract_image_urls(raw),
     )
 
 
@@ -199,6 +481,7 @@ def normalize_radar_item(raw: dict[str, Any]) -> NewsItem:
         published_at=raw.get("published_at"),
         score=score,
         source_note=source_note,
+        images=extract_image_urls(raw),
     )
 
 
@@ -324,7 +607,7 @@ def enrich_with_llm(date: str, lead: str, items: list[NewsItem]) -> tuple[str, l
         return lead, items
 
     input_limit = int(env("LLM_INPUT_ITEMS", "30"))
-    output_limit = int(env("ENRICH_MAX_ITEMS", "12"))
+    output_limit = int(env("ENRICH_MAX_ITEMS", "20"))
     input_items = items[: max(1, input_limit)]
     payload = build_llm_payload(date, lead, input_items, output_limit)
 
@@ -362,6 +645,7 @@ def build_llm_payload(
             "published_at": item.published_at,
             "radar_or_prior_score": item.score,
             "source_note": item.source_note,
+            "images": item.images,
         }
         for index, item in enumerate(items, 1)
     ]
@@ -369,6 +653,8 @@ def build_llm_payload(
         "你是中文 AI 早报资料编辑。你的任务是把候选新闻整理成接近 Juya BACKUP 的长文字版素材，"
         "用于信息归档和后续人工编辑，不是公众号排版、不是卡片文案、也不是视频脚本。"
         "只能基于输入里的标题、摘要、来源、链接和信源备注扩写；不要编造参数、价格、日期、融资额、公司表态或原文未给出的细节。"
+        "写法要像资讯资料包：短句、强事实、少评论、少泛化判断。"
+        "禁止使用“全球最大”“里程碑”“重塑格局”“迫使对手跟进”等没有输入依据的强判断；影响分析必须保守，并注明有待核验。"
         "遇到信息不足，要明确写“原文未展开，需要回原文核对”。只返回 JSON，不要 Markdown，不要解释。"
     )
     user = {
@@ -385,13 +671,13 @@ def build_llm_payload(
                 {
                     "index": "必须使用输入里的 index",
                     "title": "可轻微润色，但不要改事实",
-                    "summary": "一句话总结，50-90字",
+                    "summary": "一句话加粗摘要素材，50-110字，直接说明发生了什么、关键数字或功能",
                     "score": "1-100的重要性分",
-                    "background": "背景说明，80-160字；如果输入信息不足，说明需要核对原文",
-                    "details": ["2-4段细节拆解，每段50-120字；只写输入能支持的内容"],
-                    "why_it_matters": "为什么重要，100-220字",
-                    "key_facts": ["2-4条关键事实，每条不超过70字"],
-                    "impact": "可能影响，80-180字",
+                    "background": "第一段事实背景，60-130字；不要写空泛评价",
+                    "details": ["3-6段正文事实，每段45-110字；优先写参数、价格、版本、功能、时间、来源说法；只写输入能支持的内容"],
+                    "why_it_matters": "可选：1段看点，60-140字；没有足够依据就留空",
+                    "key_facts": ["可选：2-4条关键事实，每条不超过60字；不要重复正文"],
+                    "impact": "可选：1段后续影响，60-140字；避免夸张预测",
                     "source_note": "一句话说明信源级别、可信度和是否需要核验",
                 }
             ],
@@ -560,12 +846,21 @@ def render_markdown(
 ) -> str:
     card_gallery = output_dir / "card-images" / date / "index.html"
     card_gallery_url = site_asset_url(base_url, f"card-images/{date}/") if card_gallery.exists() else ""
-    lines = [
-        f"# {title} {date}",
-        "",
-        "> 自动生成自 AI HOT。AI 摘要可能存在误差，重要信息请以原文为准。",
-        "",
-    ]
+    issue_url = env("ISSUE_URL", "")
+    cover_image_url = env("COVER_IMAGE_URL", "")
+    lines: list[str] = []
+    if issue_url:
+        lines.extend([f"# [{date}]({issue_url})", ""])
+    if cover_image_url:
+        lines.extend([f"![]({cover_image_url})", ""])
+    lines.extend(
+        [
+            f"# {title} {date}",
+            "",
+            f"> 自动生成自 {source_label(source)}。AI 摘要可能存在误差，重要信息请以原文为准。",
+            "",
+        ]
+    )
     if card_gallery_url:
         lines.extend([f"**视频卡片**：[查看本期 PNG 卡片]({card_gallery_url})", ""])
 
@@ -626,11 +921,14 @@ def render_item_detail(
     heading = f"## [{item.title}]({item.url}) `#{index}`" if item.url else f"## {item.title} `#{index}`"
     lines = [heading]
     if item.summary:
-        lines.extend(["", f"> {item.summary}"])
+        lines.extend(["", f"> {summary_quote(item)}"])
 
     lines.append("")
     for paragraph in detail_paragraphs(item):
         lines.extend([paragraph, ""])
+
+    for image in item.images:
+        lines.extend([f"![]({image})", ""])
 
     card_image = card_image_url(date, index, base_url, output_dir)
     if card_image:
@@ -642,6 +940,21 @@ def render_item_detail(
     return lines
 
 
+def summary_quote(item: NewsItem) -> str:
+    summary = item.summary.strip()
+    source = short_source_name(item.source)
+    if not source or source.lower() in summary.lower()[:40]:
+        return summary
+    return f"**{source}** {summary}"
+
+
+def short_source_name(source: str) -> str:
+    clean = re.sub(r"（.*?）", "", source).strip()
+    clean = clean.split("：", 1)[0].strip() if "：" in clean else clean
+    clean = clean.split(":", 1)[0].strip() if ":" in clean else clean
+    return clean[:24]
+
+
 def detail_paragraphs(item: NewsItem) -> list[str]:
     if item.background or item.details or item.why_it_matters or item.key_facts or item.impact:
         paragraphs: list[str] = []
@@ -650,12 +963,12 @@ def detail_paragraphs(item: NewsItem) -> list[str]:
         for detail in item.details:
             paragraphs.append(detail)
         if item.why_it_matters:
-            paragraphs.append(f"**为什么重要：**{item.why_it_matters}")
-        if item.key_facts:
+            paragraphs.append(item.why_it_matters)
+        if item.key_facts and bool_env("SHOW_KEY_FACTS", False):
             facts = "；".join(item.key_facts)
             paragraphs.append(f"**关键事实：**{facts}。")
         if item.impact:
-            paragraphs.append(f"**可能影响：**{item.impact}")
+            paragraphs.append(item.impact)
         if item.source_note:
             paragraphs.append(f"**信源备注：**{item.source_note}")
         return paragraphs
@@ -687,6 +1000,12 @@ def detail_paragraphs(item: NewsItem) -> list[str]:
 def split_sentences(text: str) -> list[str]:
     chunks = re.findall(r"[^。！？!?]+[。！？!?]?", text.strip())
     return [chunk.strip() for chunk in chunks if chunk.strip()]
+
+
+def slugify(value: str, max_length: int = 42) -> str:
+    cleaned = re.sub(r"[^\w\u4e00-\u9fff-]+", "-", value.lower(), flags=re.UNICODE)
+    cleaned = re.sub(r"-+", "-", cleaned).strip("-")
+    return (cleaned or "source")[:max_length].strip("-") or "source"
 
 
 def card_image_url(date: str, index: int, base_url: str, output_dir: Path) -> str:
@@ -886,6 +1205,7 @@ def write_cards(date: str, items: list[NewsItem], cards_dir: Path) -> None:
                 "keyFacts": item.key_facts,
                 "impact": item.impact,
                 "sourceNote": item.source_note,
+                "images": item.images,
             }
             for item in items
         ],
@@ -917,6 +1237,7 @@ def write_enriched_data(date: str, lead: str, items: list[NewsItem], data_dir: P
                 "keyFacts": item.key_facts,
                 "impact": item.impact,
                 "sourceNote": item.source_note,
+                "images": item.images,
             }
             for item in items
         ],
@@ -1009,6 +1330,8 @@ def main() -> int:
         date, lead, items, source_used = load_daily_or_fallback(hours, take)
 
     lead, items = enrich_with_llm(date, lead, items)
+    enrich_source_images(date, items, data_dir)
+    capture_source_screenshots(date, items, base_url, output_dir, data_dir)
 
     markdown_text = render_markdown(date, site_title, lead, items, source_used, base_url, output_dir)
     (backup_dir / f"{date}.md").write_text(markdown_text, encoding="utf-8")

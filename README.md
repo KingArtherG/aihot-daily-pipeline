@@ -64,8 +64,9 @@ python scripts\build_aihot_daily.py
 
 如果配置了 DeepSeek API Key，脚本会在拉取 AI HOT 后自动增加一层主编处理：
 
-- 从候选新闻里筛选更值得进入早报的 8-12 条
-- 给每条补充“背景、细节拆解、为什么重要、关键事实、可能影响、信源备注”
+- 从候选新闻里筛选更值得进入早报的 18-20 条
+- 按 Juya `BACKUP` 的资料包口径补充摘要、事实背景、正文事实段落和信源备注
+- 自动尝试抓取原文 `og:image` / `twitter:image` 并插入 Markdown；如果开启截图兜底，会对缺图条目截取原文首屏
 - 目标是生成更接近 Juya `BACKUP` 的长文字版素材，不是公众号排版、卡片文案或视频脚本
 - 生成 `data/enriched/YYYY-MM-DD.json`
 - 同步更新 `BACKUP/YYYY-MM-DD.md`、网页和卡片 JSON
@@ -76,9 +77,15 @@ python scripts\build_aihot_daily.py
 ENRICH_WITH_LLM=1
 DEEPSEEK_API_KEY="你的 DeepSeek Key"
 LLM_MODEL="deepseek-v4-flash"
-ENRICH_MAX_ITEMS=12
+ENRICH_MAX_ITEMS=20
 LLM_INPUT_ITEMS=30
 LLM_MAX_TOKENS=9000
+FETCH_SOURCE_IMAGES=auto
+SOURCE_IMAGE_MAX_ITEMS=20
+SOURCE_IMAGE_PER_ITEM=3
+CAPTURE_SOURCE_SCREENSHOTS=auto
+SOURCE_SCREENSHOT_MAX_ITEMS=12
+SOURCE_SCREENSHOT_TIMEOUT_MS=18000
 ```
 
 GitHub Actions 自动运行时，在仓库的 `Settings -> Secrets and variables -> Actions -> Secrets` 里新增：
