@@ -15,7 +15,7 @@ from html import escape, unescape as html_unescape
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode, urljoin
+from urllib.parse import quote, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
@@ -51,6 +51,115 @@ RADAR_CATEGORY_MAP = {
     "industry_business": "industry",
     "curated_hotlist": "industry",
     "ai_general": "industry",
+}
+DOMESTIC_SOURCE_MARKERS = {
+    "36kr",
+    "aibase",
+    "aibase.com",
+    "alibaba",
+    "alibaba_qwen",
+    "baidu",
+    "baichuan",
+    "bilibili",
+    "cnblogs",
+    "csdn",
+    "deepseek",
+    "doubao",
+    "geekpark",
+    "ithome",
+    "ithome.com",
+    "jiqizhixin",
+    "juejin",
+    "leiphone",
+    "mp.weixin",
+    "oschina",
+    "qbitai",
+    "qbitai.com",
+    "qianzhan",
+    "qwen",
+    "qq.com",
+    "sensetime",
+    "sina",
+    "sohu",
+    "tencent",
+    "toutiao",
+    "weibo",
+    "weixin",
+    "xiaohongshu",
+    "zhihu",
+    "机器之心",
+    "量子位",
+    "新智元",
+    "爱范儿",
+    "阿里",
+    "百度",
+    "百川",
+    "豆包",
+    "商汤",
+    "腾讯",
+    "智谱",
+    "少数派",
+    "钛媒体",
+}
+BLOCKED_TOPIC_KEYWORDS = {
+    "religion": [
+        "pope",
+        "vatican",
+        "leo xiv",
+        "encyclical",
+        "church",
+        "religion",
+        "宗教",
+        "教皇",
+        "梵蒂冈",
+        "通谕",
+        "教会",
+    ],
+    "war": [
+        "war",
+        "warfare",
+        "military",
+        "defense",
+        "weapon",
+        "weapons",
+        "drone strike",
+        "army",
+        "navy",
+        "air force",
+        "战争",
+        "军事",
+        "军方",
+        "国防",
+        "武器",
+        "战场",
+        "作战",
+    ],
+    "law": [
+        "law",
+        "legal",
+        "lawsuit",
+        "court",
+        "judge",
+        "attorney",
+        "regulation",
+        "regulator",
+        "copyright",
+        "antitrust",
+        "government",
+        "policy",
+        "法律",
+        "法规",
+        "诉讼",
+        "起诉",
+        "法院",
+        "法庭",
+        "法官",
+        "监管",
+        "政策",
+        "版权",
+        "反垄断",
+        "政府",
+    ],
 }
 
 
@@ -471,7 +580,7 @@ def normalize_radar_item(raw: dict[str, Any]) -> NewsItem:
     label = str(raw.get("ai_label") or "").strip()
     score_text = f"{score}/100" if score else "未标分"
     source_note = f"AI News Radar：{site_name or source}，相关性 {score_text}，标签 {label or '未分类'}。"
-    summary = source_note
+    summary = source_note if bool_env("SHOW_SOURCE_NOTES", False) else ""
     return NewsItem(
         title=title,
         summary=summary,
@@ -539,10 +648,7 @@ def load_radar(hours: int, take: int) -> tuple[str, str, list[NewsItem], str]:
 
     items = dedupe_items(items)
     items.sort(key=radar_rank_key, reverse=True)
-    lead = (
-        f"AI News Radar 过去 {window_hours} 小时从 {data.get('source_count', 0)} 个信源"
-        f"筛出 {len(items)} 条 AI 相关候选新闻。"
-    )
+    lead = f"过去 {window_hours} 小时的 AI 动态集中在模型、产品、开发工具、研究和行业融资等方向。"
     return date, lead, items[:take], "radar"
 
 
@@ -557,13 +663,54 @@ def load_hybrid(hours: int, take: int) -> tuple[str, str, list[NewsItem], str]:
 
     items = dedupe_items(aihot_items + radar_items)
     if radar_items:
-        lead = (
-            f"综合 AI HOT 与 AI News Radar：AI HOT 提供 {len(aihot_items)} 条编辑精选，"
-            f"Radar 补充 {len(radar_items)} 条过去 {hours} 小时候选新闻。"
-        )
+        lead = f"过去 {hours} 小时的 AI 动态集中在模型升级、产品发布、开发工具、研究进展和行业融资等方向。"
     else:
         lead = aihot_lead
     return date, lead, items[: max(take, len(aihot_items))], f"hybrid-{aihot_source}"
+
+
+def filter_items_for_policy(items: list[NewsItem]) -> list[NewsItem]:
+    filtered = dedupe_items(items)
+    if bool_env("FOREIGN_SOURCES_ONLY", False):
+        filtered = [item for item in filtered if is_foreign_source(item)]
+    blocked_topics = env("EXCLUDE_TOPICS", "")
+    if blocked_topics:
+        filtered = [item for item in filtered if not has_blocked_topic(item, blocked_topics)]
+    return filtered
+
+
+def is_foreign_source(item: NewsItem) -> bool:
+    host = urlparse(item.url).netloc.lower().lstrip("www.")
+    if host.endswith(".cn") or ".com.cn" in host or ".cn/" in item.url.lower():
+        return False
+    if any(marker in host for marker in DOMESTIC_SOURCE_MARKERS):
+        return False
+    return bool(host)
+
+
+def has_blocked_topic(item: NewsItem, topic_spec: str) -> bool:
+    topics = [topic.strip().lower() for topic in re.split(r"[,，\s]+", topic_spec) if topic.strip()]
+    keyword_groups: list[str] = []
+    for topic in topics:
+        if topic in BLOCKED_TOPIC_KEYWORDS:
+            keyword_groups.extend(BLOCKED_TOPIC_KEYWORDS[topic])
+        else:
+            keyword_groups.append(topic)
+    haystack = " ".join(
+        [
+            item.title,
+            item.summary,
+            item.background,
+            item.why_it_matters,
+            item.impact,
+            item.source_note,
+            item.source,
+            item.url,
+        ]
+        + item.details
+        + item.key_facts
+    ).lower()
+    return any(keyword.lower() in haystack for keyword in keyword_groups)
 
 
 def dedupe_items(items: list[NewsItem]) -> list[NewsItem]:
@@ -608,14 +755,27 @@ def enrich_with_llm(date: str, lead: str, items: list[NewsItem]) -> tuple[str, l
 
     input_limit = int(env("LLM_INPUT_ITEMS", "30"))
     output_limit = int(env("ENRICH_MAX_ITEMS", "20"))
-    input_items = items[: max(1, input_limit)]
-    payload = build_llm_payload(date, lead, input_items, output_limit)
+    attempts = [
+        (input_limit, output_limit),
+        (min(input_limit, 30), min(output_limit, 12)),
+    ]
+    response: dict[str, Any] = {}
+    enriched: list[NewsItem] = []
+    last_error: Exception | None = None
+    for attempt_input_limit, attempt_output_limit in attempts:
+        input_items = items[: max(1, attempt_input_limit)]
+        payload = build_llm_payload(date, lead, input_items, attempt_output_limit)
+        try:
+            response = call_llm(api_key, payload)
+            enriched = apply_llm_enrichment(items, response)
+            if enriched:
+                output_limit = attempt_output_limit
+                break
+        except Exception as exc:  # Keep the daily pipeline alive if the model/API fails.
+            last_error = exc
 
-    try:
-        response = call_llm(api_key, payload)
-        enriched = apply_llm_enrichment(items, response)
-    except Exception as exc:  # Keep the daily pipeline alive if the model/API fails.
-        print(f"LLM enrichment skipped: {exc}", file=sys.stderr)
+    if last_error and not enriched:
+        print(f"LLM enrichment skipped: {last_error}", file=sys.stderr)
         return lead, items
 
     if not enriched:
@@ -637,25 +797,26 @@ def build_llm_payload(
         {
             "index": index,
             "title": item.title,
-            "summary": item.summary,
-            "source": item.source,
+            "summary": item.summary if bool_env("LLM_USE_SUMMARY", True) else "",
+            "source_domain": urlparse(item.url).netloc.lower().lstrip("www."),
             "source_tier_hint": source_tier(item),
-            "url": item.url,
             "category": item.category,
             "published_at": item.published_at,
             "radar_or_prior_score": item.score,
-            "source_note": item.source_note,
-            "images": item.images,
+            "has_image": bool(item.images),
         }
         for index, item in enumerate(items, 1)
     ]
     system = (
         "你是中文 AI 早报资料编辑。你的任务是把候选新闻整理成接近 Juya BACKUP 的长文字版素材，"
         "用于信息归档和后续人工编辑，不是公众号排版、不是卡片文案、也不是视频脚本。"
-        "只能基于输入里的标题、摘要、来源、链接和信源备注扩写；不要编造参数、价格、日期、融资额、公司表态或原文未给出的细节。"
+        "主要基于输入里的标题扩写，可参考摘要里的显式事实；不要编造参数、价格、日期、融资额、公司表态或输入未给出的细节。"
         "写法要像资讯资料包：短句、强事实、少评论、少泛化判断。"
+        "正文不要出现网址、链接、信源备注、来源说明、网站名，也不要写“原文/来源/据某媒体”。"
+        "不要复述输入导语里的生产工具名、候选条数、信源数量或采集方式。"
+        "不要选择或扩写宗教、战争、法律、监管、诉讼、政策类内容。"
         "禁止使用“全球最大”“里程碑”“重塑格局”“迫使对手跟进”等没有输入依据的强判断；影响分析必须保守，并注明有待核验。"
-        "遇到信息不足，要明确写“原文未展开，需要回原文核对”。只返回 JSON，不要 Markdown，不要解释。"
+        "遇到信息不足，就只做基于标题的保守解释，不要提醒读者去原文核对。只返回 JSON，不要 Markdown，不要解释。"
     )
     user = {
         "date": date,
@@ -663,7 +824,7 @@ def build_llm_payload(
         "selection_rule": {
             "max_items": output_limit,
             "prefer": ["官方源", "重大模型/产品发布", "影响开发者或创作者的变化", "安全风险", "可操作技巧"],
-            "avoid": ["重复事件", "纯营销口号", "信息不足且无法判断重要性的条目"],
+            "avoid": ["重复事件", "纯营销口号", "国内网站来源", "宗教", "战争", "法律", "监管", "诉讼", "政策"],
         },
         "output_schema": {
             "lead": "100-180字中文导语，概括今日 AI 动态主线",
@@ -674,11 +835,10 @@ def build_llm_payload(
                     "summary": "一句话加粗摘要素材，50-110字，直接说明发生了什么、关键数字或功能",
                     "score": "1-100的重要性分",
                     "background": "第一段事实背景，60-130字；不要写空泛评价",
-                    "details": ["3-6段正文事实，每段45-110字；优先写参数、价格、版本、功能、时间、来源说法；只写输入能支持的内容"],
+                    "details": ["3-6段正文事实，每段45-110字；优先写参数、价格、版本、功能、时间；只写输入能支持的内容"],
                     "why_it_matters": "可选：1段看点，60-140字；没有足够依据就留空",
                     "key_facts": ["可选：2-4条关键事实，每条不超过60字；不要重复正文"],
                     "impact": "可选：1段后续影响，60-140字；避免夸张预测",
-                    "source_note": "一句话说明信源级别、可信度和是否需要核验",
                 }
             ],
         },
@@ -697,6 +857,8 @@ def call_llm(api_key: str, payload: dict[str, Any]) -> dict[str, Any]:
         "temperature": float(env("LLM_TEMPERATURE", "0.2")),
         "max_tokens": int(env("LLM_MAX_TOKENS", "6000")),
     }
+    if bool_env("LLM_JSON_RESPONSE_FORMAT", True):
+        body["response_format"] = {"type": "json_object"}
     request = Request(
         f"{base_url}/chat/completions",
         data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
@@ -835,6 +997,33 @@ def group_indexed_items(
     return {key: value for key, value in grouped.items() if value}
 
 
+def build_lead_from_items(hours: int, items: list[NewsItem]) -> str:
+    if not items:
+        return f"过去 {hours} 小时，AI 动态较少，暂未筛出适合成稿的海外一线资讯。"
+    title_snippets = [clean_title_for_lead(item.title) for item in items[:8]]
+    title_text = "；".join(snippet for snippet in title_snippets if snippet)
+    themes = []
+    categories = {item.category for item in items}
+    if "ai-models" in categories:
+        themes.append("模型升级")
+    if "ai-products" in categories:
+        themes.append("产品发布")
+    if "tip" in categories:
+        themes.append("开发工具")
+    if "paper" in categories:
+        themes.append("研究进展")
+    if "industry" in categories:
+        themes.append("行业融资与平台动态")
+    theme_text = "、".join(themes) if themes else "模型、产品和行业动态"
+    return f"过去 {hours} 小时，AI 动态主要集中在{theme_text}。重点包括：{title_text}。"
+
+
+def clean_title_for_lead(title: str) -> str:
+    cleaned = re.sub(r"\s+", " ", title).strip()
+    cleaned = re.sub(r"`#\d+`", "", cleaned).strip()
+    return cleaned.rstrip("。")
+
+
 def render_markdown(
     date: str,
     title: str,
@@ -848,6 +1037,10 @@ def render_markdown(
     card_gallery_url = site_asset_url(base_url, f"card-images/{date}/") if card_gallery.exists() else ""
     issue_url = env("ISSUE_URL", "")
     cover_image_url = env("COVER_IMAGE_URL", "")
+    if not cover_image_url:
+        cover_path = output_dir / "covers" / f"{date}.png"
+        if cover_path.exists():
+            cover_image_url = site_asset_url(base_url, f"covers/{date}.png")
     lines: list[str] = []
     if issue_url:
         lines.extend([f"# [{date}]({issue_url})", ""])
@@ -899,8 +1092,9 @@ def source_label(source: str) -> str:
 
 
 def overview_line(index: int, item: NewsItem) -> str:
-    link = f" [↗]({item.url})" if item.url else ""
-    return f"- {item.title}{link} `#{index}`"
+    if bool_env("SHOW_ARTICLE_LINKS", False) and item.url:
+        return f"- {item.title} [↗]({item.url}) `#{index}`"
+    return f"- {item.title} `#{index}`"
 
 
 def render_item_detail(
@@ -910,7 +1104,10 @@ def render_item_detail(
     base_url: str,
     output_dir: Path,
 ) -> list[str]:
-    heading = f"## [{item.title}]({item.url}) `#{index}`" if item.url else f"## {item.title} `#{index}`"
+    if bool_env("SHOW_ARTICLE_LINKS", False) and item.url:
+        heading = f"## [{item.title}]({item.url}) `#{index}`"
+    else:
+        heading = f"## {item.title} `#{index}`"
     lines = [heading]
     if item.summary:
         lines.extend(["", f"> {summary_quote(item)}"])
@@ -926,7 +1123,7 @@ def render_item_detail(
     if card_image:
         lines.extend([f"![]({card_image})", ""])
 
-    if item.url:
+    if bool_env("SHOW_ARTICLE_LINKS", False) and item.url:
         lines.extend(["相关链接：", f"- [{item.url}]({item.url})", ""])
     lines.extend(["---", ""])
     return lines
@@ -934,6 +1131,8 @@ def render_item_detail(
 
 def summary_quote(item: NewsItem) -> str:
     summary = item.summary.strip()
+    if not bool_env("SHOW_SOURCE_NAMES", False):
+        return summary
     source = short_source_name(item.source)
     if not source or source.lower() in summary.lower()[:40]:
         return summary
@@ -961,13 +1160,12 @@ def detail_paragraphs(item: NewsItem) -> list[str]:
             paragraphs.append(f"**关键事实：**{facts}。")
         if item.impact:
             paragraphs.append(item.impact)
-        if item.source_note:
+        if item.source_note and bool_env("SHOW_SOURCE_NOTES", False):
             paragraphs.append(f"**信源备注：**{item.source_note}")
         return paragraphs
 
     if not item.summary:
-        source_text = f"这条信息来自 **{item.source}**。" if item.source else "AI HOT 暂未提供更长摘要。"
-        return [f"{source_text} 建议打开原文确认完整细节。"]
+        return [fallback_title_expansion(item.title)]
 
     sentences = split_sentences(item.summary)
     if not sentences:
@@ -984,9 +1182,17 @@ def detail_paragraphs(item: NewsItem) -> list[str]:
     if current:
         paragraphs.append(current)
 
-    if item.source and paragraphs:
+    if item.source and paragraphs and bool_env("SHOW_SOURCE_NAMES", False):
         paragraphs[0] = f"**{item.source}** 消息，{paragraphs[0]}"
     return paragraphs[:4]
+
+
+def fallback_title_expansion(title: str) -> str:
+    clean_title = title.strip() or "这条 AI 动态"
+    return (
+        f"{clean_title}。这条动态目前能确定的信息集中在标题本身：它涉及一个新的模型、产品、工具或行业变化，"
+        "适合先作为今日候选要闻保留。后续成稿时可以围绕它解决了什么问题、面向谁、可能改变哪类工作流继续补充。"
+    )
 
 
 def split_sentences(text: str) -> list[str]:
@@ -1321,7 +1527,15 @@ def main() -> int:
     else:
         date, lead, items, source_used = load_daily_or_fallback(hours, take)
 
+    before_filter_count = len(items)
+    items = filter_items_for_policy(items)
+    if before_filter_count != len(items):
+        print(f"Policy filter kept {len(items)}/{before_filter_count} items.")
+
     lead, items = enrich_with_llm(date, lead, items)
+    items = filter_items_for_policy(items)
+    if bool_env("REBUILD_LEAD_FROM_ITEMS", True):
+        lead = build_lead_from_items(hours, items)
     enrich_source_images(date, items, data_dir)
     capture_source_screenshots(date, items, base_url, output_dir, data_dir)
 

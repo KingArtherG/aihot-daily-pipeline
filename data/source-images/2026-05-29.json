@@ -11,7 +11,9 @@
     "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a1871a9d0a0bd93c860cda7_og-dynamic-workflows.jpg",
     "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg"
   ],
-  "https://x.com/perplexity_ai/status/2060013442720010598": [],
+  "https://x.com/perplexity_ai/status/2060013442720010598": [
+    "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-29/09-perplexity-computer-office.png"
+  ],
   "https://mistral.ai/news/search-toolkit": [
     "https://mistral.ai/cms-media/api/media/file/OG-Main-1.jpg"
   ],
@@ -47,5 +49,18 @@
   "https://x.com/openrouter/status/2060007875590697088": [],
   "https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus": [
     "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Building-1-meta.2e16d0ba.fill-1200x600.png"
+  ],
+  "https://www.marktechpost.com/2026/05/28/a-coding-guide-to-implement-a-pgvector-powered-semantic-hybrid-sparse-and-quantized-vector-search-system": [
+    "https://www.marktechpost.com/wp-content/uploads/2026/05/blog13-1-1-1024x731.png"
+  ],
+  "https://x.com/replit/status/2060052289155375532": [
+    "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-29/15-replit-secure-vibecoded-app.png"
+  ],
+  "https://developers.openai.com/codex/changelog": [
+    "https://developers.openai.com/codex/open-graph.png"
+  ],
+  "https://openai.com/index/braintrust": [],
+  "https://huggingface.co/blog/torch-profiler": [
+    "https://huggingface.co/blog/assets/torch-profiler/thumbnail.png"
   ]
 }
