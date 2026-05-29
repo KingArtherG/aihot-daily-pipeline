@@ -853,14 +853,7 @@ def render_markdown(
         lines.extend([f"# [{date}]({issue_url})", ""])
     if cover_image_url:
         lines.extend([f"![]({cover_image_url})", ""])
-    lines.extend(
-        [
-            f"# {title} {date}",
-            "",
-            f"> 自动生成自 {source_label(source)}。AI 摘要可能存在误差，重要信息请以原文为准。",
-            "",
-        ]
-    )
+    lines.extend([f"# {title} {date}", ""])
     if card_gallery_url:
         lines.extend([f"**视频卡片**：[查看本期 PNG 卡片]({card_gallery_url})", ""])
 
@@ -872,7 +865,6 @@ def render_markdown(
     lines.extend(["## 概览", ""])
     if lead:
         lines.extend([lead, ""])
-    lines.extend([f"数据模式：{source_label(source)}", ""])
 
     if featured:
         lines.extend(["### 要闻", ""])
