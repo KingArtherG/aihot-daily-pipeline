@@ -70,6 +70,7 @@ python scripts\build_aihot_daily.py
 - 目标是生成更接近 Juya `BACKUP` 的长文字版素材，不是公众号排版、卡片文案或视频脚本
 - 生成 `data/enriched/YYYY-MM-DD.json`
 - 同步更新 `BACKUP/YYYY-MM-DD.md`、网页和卡片 JSON
+- 公众号预览可放在 `public/wechat/YYYY-MM-DD-juya.html`，随 GitHub Pages 一起发布
 
 本地运行时可以复制 `.env.example` 为 `.env`，然后填入：
 
