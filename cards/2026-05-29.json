@@ -14,7 +14,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/4zrzovbb/website/0eaa0ed2dce9810169112e1c77de2585fcf1f5c2-2880x1620.jpg"
+      ]
     },
     {
       "title": "Grok Build 0.1 on API",
@@ -29,7 +32,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://x.ai/images/news/grok-build-0-1.webp"
+      ]
     },
     {
       "title": "Nano Banana Pro与Nano Banana 2正式发布",
@@ -44,7 +50,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "商汤发布信息图生成模型升级，增强多项核心能力",
@@ -59,7 +66,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "在Claude Code中引入动态工作流",
@@ -74,7 +82,11 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a1871a9d0a0bd93c860cda7_og-dynamic-workflows.jpg",
+        "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg"
+      ]
     },
     {
       "title": "Perplexity Computer现已集成微软Office套件",
@@ -89,7 +101,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "发布 Search Toolkit",
@@ -104,7 +117,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://mistral.ai/cms-media/api/media/file/OG-Main-1.jpg"
+      ]
     },
     {
       "title": "MiniMax M2.7 免费智能体编程限时开放",
@@ -119,7 +135,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "Replit Canvas：智能体设计工具发布",
@@ -134,7 +151,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "使用 Google Pay & Wallet Developer MCP server 加速你的集成工作流",
@@ -149,7 +167,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/pay-wallet-dev-mcp-thumb.2e16d0ba.fill-1200x600.jpg"
+      ]
     },
     {
       "title": "Sesame，这家由Oculus创始人创办的对话式AI初创公司，发布其iOS应用",
@@ -164,7 +185,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://techcrunch.com/wp-content/uploads/2026/05/crossing-the-uncanny-valley-of-voice-hero.webp?resize=1200,900"
+      ]
     },
     {
       "title": "MuleRun登陆阿里云市场，提供全天候AI劳动力",
@@ -179,7 +203,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "Anthropic 完成 650 亿美元 H 轮融资，估值达 9650 亿美元",
@@ -194,7 +219,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "DeepSeek计划在完成融资后立即申请科创板IPO",
@@ -209,7 +235,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "萨姆·阿尔特曼和达里奥·阿莫代伊都纷纷收回了关于AI将引发就业危机的预测",
@@ -224,7 +251,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://fortune.com/img-assets/wp-content/uploads/2026/05/GettyImages-2265445220-e1779827097282.jpg?resize=1200,600"
+      ]
     },
     {
       "title": "AI Now Summit 2026",
@@ -239,7 +269,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://mistral.ai/cms-media/api/media/file/Cover-Mistral-Wallpaper01.jpg"
+      ]
     },
     {
       "title": "Qwen3.7-Max 登顶 OpenRouter 热门大模型榜",
@@ -254,7 +287,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "OpenRouter 获得1.13亿美元B轮融资",
@@ -269,7 +303,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://openrouter.ai/dynamic-og?title=OpenRouter+Raises+%24113M+Series+B&description=OpenRouter+has+raised+a+%24113M+Series+B+led+by+CapitalG%2C+with+participation+from+NVentures%2C+ServiceNow+Ventures%2C+MongoDB+Ventures%2C+Snowflake+Ventures%2C+Databricks"
+      ]
     },
     {
       "title": "Apple 正努力将庞大的 Gemini 模型塞进 iPhone 以驱动新 Siri",
@@ -284,7 +321,10 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": [
+        "https://cdn.arstechnica.net/wp-content/uploads/2024/04/apple-google-logo-1152x648.jpg"
+      ]
     },
     {
       "title": "OpenAI 的前沿治理框架",
@@ -299,7 +339,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "hexoai开源SIA框架：AI智能体实现递归自我改进",
@@ -314,7 +355,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "SGLang 团队与 AMD 合作，使 AMD Instinct™ MI355X GPU 的大规模 DeepSeek-R1 分离式推理在总拥有成本上具备竞争力",
@@ -329,7 +371,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "人民日报专访华为何庭波：今年秋季的新麒麟手机芯片，性能等相比去年是“跳跃性”提升",
@@ -344,7 +387,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "英伟达推出 AI 框架 Polar，让 Codex 跑分暴涨 594.74%",
@@ -359,7 +403,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "pgvector驱动的语义、混合、稀疏与量化向量搜索系统构建编码指南",
@@ -374,7 +419,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "OpenRouter 支持模型现可选 Flex 与 Priority 服务层级",
@@ -389,7 +435,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "四步保障AI生成应用安全",
@@ -404,7 +451,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "社区如何利用Tunix和TPU训练Gemma学会“思考”",
@@ -419,7 +467,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "AI智能体时代下的安全变革",
@@ -434,7 +483,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     },
     {
       "title": "我们如何构建Cloudflare的数据平台及其上的AI智能体",
@@ -449,7 +499,8 @@
       "whyItMatters": "",
       "keyFacts": [],
       "impact": "",
-      "sourceNote": ""
+      "sourceNote": "",
+      "images": []
     }
   ]
 }
