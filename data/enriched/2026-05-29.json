@@ -1,82 +1,88 @@
 {
   "date": "2026-05-29",
-  "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Anthropic 完成 650 亿美元 H 轮融资，估值达 9650 亿美元；Claude Opus 4.8 发布：在编码、智能体技能与推理方面实现全面升级；在Claude Code中引入动态工作流；Windows 26.527 上的计算机使用和移动访问；Grok Build 0.1 on API；AI Now Summit 2026；OpenRouter 获得1.13亿美元B轮融资；SGLang 团队与 AMD 合作，使 AMD Instinct™ MI355X GPU 的大规模 DeepSeek-R1 分离式推理在总拥有成本上具备竞争力。",
+  "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Claude Opus 4.8 发布：在编码、智能体技能与推理方面实现全面升级；Grok Build 0.1 on API；Nano Banana Pro与Nano Banana 2正式发布；商汤发布信息图生成模型升级，增强多项核心能力；在Claude Code中引入动态工作流；Perplexity Computer现已集成微软Office套件；发布 Search Toolkit；MiniMax M2.7 免费智能体编程限时开放。",
   "items": [
     {
-      "title": "Anthropic 完成 650 亿美元 H 轮融资，估值达 9650 亿美元",
-      "summary": "Anthropic 完成 650 亿美元 H 轮融资，估值 9650 亿美元，年化收入突破 470 亿美元，资金将用于 AI 安全研究与算力扩展。",
-      "source": "Anthropic：Newsroom（网页）",
-      "url": "https://www.anthropic.com/news/series-h",
-      "category": "industry",
-      "publishedAt": null,
-      "score": 100,
-      "background": "Anthropic 宣布完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，投后估值达 9650 亿美元。公司表示其旗舰模型 Claude 的企业部署持续增长，年化收入已突破 470 亿美元。",
-      "details": [
-        "此轮融资将用于推进 AI 安全与可解释性研究、扩展算力以满足 Claude 的需求，并规模化产品与合作伙伴关系。",
-        "Anthropic 近期已显著扩大计算容量，并宣布 Claude 已登陆 AWS、Google Cloud 和 Microsoft Azure 三大云平台。"
-      ],
-      "whyItMatters": "Anthropic 的巨额融资表明投资者对 AI 安全与企业应用前景的信心，为模型研发和算力提供充足资金。",
-      "keyFacts": [
-        "融资 650 亿美元",
-        "估值 9650 亿美元",
-        "年化收入 470 亿美元",
-        "Claude 登陆三大云平台"
-      ],
-      "impact": "这轮融资将加速 Anthropic 的技术迭代和市场扩张，可能推动 AI 安全标准的发展。",
-      "sourceNote": "",
-      "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-29/01-anthropic-%E5%AE%8C%E6%88%90-650-%E4%BA%BF%E7%BE%8E%E5%85%83-h-%E8%BD%AE%E8%9E%8D%E8%B5%84-%E4%BC%B0%E5%80%BC%E8%BE%BE-9650-%E4%BA%BF%E7%BE%8E%E5%85%83.png"
-      ]
-    },
-    {
       "title": "Claude Opus 4.8 发布：在编码、智能体技能与推理方面实现全面升级",
-      "summary": "Anthropic 发布新一代模型 Claude Opus 4.8，在编码、智能体技能、推理和实用知识工作等基准测试中取得进步，价格与前代相同。",
+      "summary": "Anthropic 发布了新一代模型 Claude Opus 4.8，作为 Opus 4.7 的升级版本，其在编码、智能体技能、推理和实用知识工作等各项基准测试中均取得进步。Claude Opus 4.8 现已可用，价格与前代相同。同步推出的新功能包括：用户可控制任务投入程度、Claude Code 新增“动态工作流”特性，以及 Opus 4.8 的 2.5 倍速模式价格降低为以往的三分之一。早期测试者反馈其在智能体任务中的判断力更可靠、工具调用更高效。该模型在 Online-Mind2Web 测评中得分 84%，超越了 Opus 4.7 和 GPT-5.5。此外，其诚实度与对齐表现也得到提升，代码错误漏检率降低了约 75%。",
       "source": "Anthropic：Newsroom（网页）",
       "url": "https://www.anthropic.com/news/claude-opus-4-8",
       "category": "ai-models",
       "publishedAt": null,
-      "score": 95,
-      "background": "Anthropic 推出了新一代模型 Claude Opus 4.8，作为 Opus 4.7 的升级版本。该模型在编码、智能体技能、推理和实用知识工作等各项基准测试中均取得进步，现已可用，价格与前代相同。",
-      "details": [
-        "Claude Opus 4.8 在 Online-Mind2Web 测评中得分 84%，超越了 Opus 4.7 和 GPT-5.5。",
-        "同步推出的新功能包括：用户可控制任务投入程度、Claude Code 新增“动态工作流”特性。",
-        "Opus 4.8 的 2.5 倍速模式价格降低为以往的三分之一。",
-        "早期测试者反馈其在智能体任务中的判断力更可靠、工具调用更高效。"
-      ],
-      "whyItMatters": "Claude Opus 系列是 Anthropic 的旗舰模型，此次升级在多个关键指标上实现突破，尤其智能体能力和编码效率的提升对开发者影响较大。",
-      "keyFacts": [
-        "价格与前代相同",
-        "2.5倍速模式价格降至三分之一",
-        "代码错误漏检率降低约75%"
-      ],
-      "impact": "该模型有望进一步巩固 Anthropic 在企业级 AI 市场的竞争力，尤其是智能体任务可靠性的提升可能会加速企业部署。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
       "images": [
         "https://cdn.sanity.io/images/4zrzovbb/website/0eaa0ed2dce9810169112e1c77de2585fcf1f5c2-2880x1620.jpg"
       ]
     },
     {
+      "title": "Grok Build 0.1 on API",
+      "summary": "xAI 的最新编码模型 Grok Build 0.1 已通过 xAI API 进入公开测试阶段。该模型专为智能体编码任务训练，支持网页开发、调试和 MCP，同时也是驱动 Grok Build CLI 的同一模型。其推理速度超过 100 tokens/秒，定价为输入 $1/m tokens，输出 $2/m tokens。除编码外，它也适用于通用智能体及工具调用场景，并可通过 OpenRouter 和 Vercel AI Gateway 获取。",
+      "source": "xAI：News（网页）",
+      "url": "https://x.ai/news/grok-build-0-1",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://x.ai/images/news/grok-build-0-1.webp"
+      ]
+    },
+    {
+      "title": "Nano Banana Pro与Nano Banana 2正式发布",
+      "summary": "🍌 Nano Banana Pro [gemini-3-pro-image] 和 Nano Banana 2 [gemini-3.1-flash-image] 现已正式发布，可通过 Gemini API 投入生产使用。查看这些优秀的社区示例，了解两个模型的实际能力 🧵↓",
+      "source": "X：Google AI for Developers (@googleaidevs)",
+      "url": "https://x.com/googleaidevs/status/2060049962356916377",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "商汤发布信息图生成模型升级，增强多项核心能力",
+      "summary": "商汤科技介绍了其升级后的信息图生成模型 SenseNova-U1-8B-MoT-Infographic。该模型参数为8B，在四个关键维度进行了优化：文本准确性与可读性增强，减少了重复和不当放大；布局的一致性与合理性提升，背景更稳定；图表与示意图的质量提高；并新增了学术内容的渲染支持。推文提供了在 Hugging Face 上的模型页面链接及能力展示页面。",
+      "source": "X：商汤 SenseTime (@SenseTime_AI)",
+      "url": "https://x.com/SenseTime_AI/status/2060015749826240724",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
       "title": "在Claude Code中引入动态工作流",
-      "summary": "Claude Code 推出“动态工作流”功能，可在单个会话中并行运行数十到数百个子智能体处理复杂任务，结果呈现前进行验证。",
+      "summary": "Claude Code 推出“动态工作流”功能，使 Claude 能端到端处理复杂任务。该功能通过动态编写脚本，在单个会话中并行运行数十到数百个子智能体来完成工作，并会在结果呈现前进行验证。它适用于跨代码库的 bug 查找、大规模迁移（如将 Bun 从 Zig 移植到 Rust）等需要多角度分析的任务。该功能现已在研究预览阶段可用，支持 Claude Code CLI、桌面端、VS Code 扩展以及 API、Amazon Bedrock、Vertex AI 等平台，面向 Max、Team 及已启用的 Enterprise 计划用户。",
       "source": "Claude：Blog（网页）",
       "url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
       "category": "ai-products",
       "publishedAt": null,
-      "score": 90,
-      "background": "Claude Code 推出“动态工作流”功能，使 Claude 能端到端处理复杂任务。该功能通过动态编写脚本，在单个会话中并行运行数十到数百个子智能体来完成工作，并会在结果呈现前进行验证。",
-      "details": [
-        "适用于跨代码库的 bug 查找、大规模迁移等需要多角度分析的任务。",
-        "该功能现已在研究预览阶段可用。",
-        "支持 Claude Code CLI、桌面端、VS Code 扩展以及 API、Amazon Bedrock、Vertex AI 等平台。",
-        "面向 Max、Team 及已启用的 Enterprise 计划用户。"
-      ],
-      "whyItMatters": "动态工作流极大提升了 Claude 处理复杂工程任务的能力，将多个智能体并行协作，可能改变大型代码库维护和迁移的工作方式。",
-      "keyFacts": [
-        "并行运行数十到数百个子智能体",
-        "研究预览阶段",
-        "支持多平台"
-      ],
-      "impact": "若稳定下来，可能减少大型代码库重构和维护所需的人工干预，但仍在预览阶段，稳定性有待观察。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
       "images": [
         "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a1871a9d0a0bd93c860cda7_og-dynamic-workflows.jpg",
@@ -84,153 +90,18 @@
       ]
     },
     {
-      "title": "Windows 26.527 上的计算机使用和移动访问",
-      "summary": "OpenAI 发布关于在 Windows 26.527 系统上使用计算机和进行移动访问的技术内容。",
-      "source": "OpenAI Codex Changelog",
-      "url": "https://developers.openai.com/codex/changelog",
-      "category": "tip",
-      "publishedAt": "2026-05-29T00:00:00Z",
-      "score": 90,
-      "background": "来自 OpenAI 开发者文档，主题为 Windows 26.527 上的计算机使用和移动访问，可能涉及 Codex 或相关功能的支持。",
-      "details": [
-        "具体内容待深入阅读，但标题表明 OpenAI 正扩展对 Windows 平台的支持。",
-        "可能涉及 AI 助手在 Windows 上的操作能力。"
-      ],
-      "whyItMatters": "OpenAI 官方文档表明其正在开发 Windows 端的计算机控制功能，对开发者和企业用户有潜在影响。",
-      "keyFacts": [
-        "官方文档来自 developers.openai.com",
-        "主题：Windows 26.527 上的计算机使用和移动访问"
-      ],
-      "impact": "若实现，将扩展 AI 助手在桌面环境的实用性，但细节待核验。",
-      "sourceNote": "",
-      "images": [
-        "https://developers.openai.com/codex/open-graph.png"
-      ]
-    },
-    {
-      "title": "Grok Build 0.1 on API",
-      "summary": "xAI 的编码模型 Grok Build 0.1 通过 API 进入公开测试，支持网页开发、调试和 MCP，推理速度超 100 tokens/秒。",
-      "source": "xAI：News（网页）",
-      "url": "https://x.ai/news/grok-build-0-1",
-      "category": "ai-models",
-      "publishedAt": null,
-      "score": 85,
-      "background": "xAI 的最新编码模型 Grok Build 0.1 已通过 xAI API 进入公开测试阶段。该模型专为智能体编码任务训练，支持网页开发、调试和 MCP，同时也是驱动 Grok Build CLI 的同一模型。",
-      "details": [
-        "推理速度超过 100 tokens/秒。",
-        "定价为输入 $1/m tokens，输出 $2/m tokens。",
-        "除编码外，也适用于通用智能体及工具调用场景。",
-        "可通过 OpenRouter 和 Vercel AI Gateway 获取。"
-      ],
-      "whyItMatters": "xAI 推出的专注编码的模型，定价较低且推理速度快，为开发者提供了新的选择。",
-      "keyFacts": [
-        "推理速度 >100 tok/s",
-        "输入 $1/M，输出 $2/M",
-        "支持 OpenRouter 和 Vercel AI Gateway"
-      ],
-      "impact": "可能会在编码智能体领域吸引开发者尝试，但具体表现有待社区验证。",
-      "sourceNote": "",
-      "images": [
-        "https://x.ai/images/news/grok-build-0-1.webp"
-      ]
-    },
-    {
-      "title": "AI Now Summit 2026",
-      "summary": "Mistral AI 在 AI Now Summit 2026 上宣布工业 AI 解决方案、Vibe 智能体升级，并计划 2026 Q3 启用新数据中心。",
-      "source": "Mistral AI：News（网页）",
-      "url": "https://mistral.ai/news/ai-now-summit-2026",
-      "category": "industry",
-      "publishedAt": null,
-      "score": 85,
-      "background": "Mistral AI 在 AI Now Summit 2026 上宣布多项进展。其工业 AI 解决方案“Mistral for Industrial Engineering”整合了物理模型与工程知识，与空客、宝马集团和 ASML 合作。",
-      "details": [
-        "AI 智能体产品 Vibe 进行了升级，增强了推理和智能体任务能力。",
-        "公司计划在 2026 年第三季度启用位于 Les Ulis、功率达 10 MW 的新数据中心，专注推理操作以增强算力安全。"
-      ],
-      "whyItMatters": "Mistral 的工业合作与基础设施投资表明其在企业级市场和欧洲算力自主方面的布局。",
-      "keyFacts": [
-        "与空客、宝马、ASML 合作",
-        "Vibe 升级",
-        "10 MW 数据中心 2026 Q3 启用"
-      ],
-      "impact": "工业 AI 方案可能加速制造业数字化转型，数据中心增加算力储备。",
-      "sourceNote": "",
-      "images": [
-        "https://mistral.ai/cms-media/api/media/file/Cover-Mistral-Wallpaper01.jpg"
-      ]
-    },
-    {
-      "title": "OpenRouter 获得1.13亿美元B轮融资",
-      "summary": "AI 模型聚合平台 OpenRouter 完成 1.13 亿美元 B 轮融资，由 CapitalG 领投，多家机构跟投。",
-      "source": "OpenRouter：Announcements（RSS）",
-      "url": "https://openrouter.ai/announcements/series-b",
-      "category": "industry",
-      "publishedAt": null,
-      "score": 85,
-      "background": "AI 模型聚合平台 OpenRouter 宣布完成 1.13 亿美元 B 轮融资。本轮融资由 CapitalG 领投，NVentures、ServiceNow Ventures 等多家机构参投，现有投资者 Andreessen Horowitz 与 Menlo Ventures 也参与了本轮融资。",
-      "details": [
-        "OpenRouter 提供多个 AI 模型的统一 API 访问。",
-        "资金可能用于扩展模型支持范围和平台功能。"
-      ],
-      "whyItMatters": "OpenRouter 作为模型聚合平台，融资成功表明市场对多模型服务的需求增长。",
-      "keyFacts": [
-        "融资 1.13 亿美元",
-        "CapitalG 领投",
-        "a16z 等原有投资者跟投"
-      ],
-      "impact": "有助于 OpenRouter 提升基础设施和扩充模型库，可能使开发者更便利地切换模型。",
-      "sourceNote": "",
-      "images": [
-        "https://openrouter.ai/dynamic-og?title=OpenRouter+Raises+%24113M+Series+B&description=OpenRouter+has+raised+a+%24113M+Series+B+led+by+CapitalG%2C+with+participation+from+NVentures%2C+ServiceNow+Ventures%2C+MongoDB+Ventures%2C+Snowflake+Ventures%2C+Databricks"
-      ]
-    },
-    {
-      "title": "SGLang 团队与 AMD 合作，使 AMD Instinct™ MI355X GPU 的大规模 DeepSeek-R1 分离式推理在总拥有成本上具备竞争力",
-      "summary": "SGLang 与 AMD 合作优化，使 MI355X GPU 运行 DeepSeek-R1 推理成本比 B200 方案低 40%，每 GPU 吞吐量高 1.25 倍。",
-      "source": "LMSYS：Blog（Chatbot Arena 团队）",
-      "url": "https://www.lmsys.org/blog/2026-05-28-mori",
-      "category": "paper",
-      "publishedAt": null,
-      "score": 85,
-      "background": "SGLang 与 AMD 团队合作，通过全栈优化使 AMD Instinct™ MI355X GPU 在运行 DeepSeek-R1 大模型推理时实现了极具竞争力的总拥有成本。",
-      "details": [
-        "在 129 tok/s/user 的交互延迟下，成本为每百万 token $0.169。",
-        "比 NVIDIA B200（Dynamo TRT-LLM）方案低 5%，比 B200（SGLang）方案低 40%。",
-        "24 块 AMD GPU 达到 2,436 tok/s/GPU，比 48 块 GPU 的 B200 SGLang 方案每 GPU 吞吐量高 1.25 倍。",
-        "核心优化包括 MoRI 混合 FP4/FP8 量化全到全通信等。"
-      ],
-      "whyItMatters": "AMD 在推理领域实现了有竞争力的成本和吞吐量，可能改变大模型部署的硬件选择格局。",
-      "keyFacts": [
-        "成本 $0.169/M tokens",
-        "比 B200 SGLang 低 40%",
-        "每 GPU 吞吐量高 1.25 倍"
-      ],
-      "impact": "如果稳定性验证通过，AMD GPU 在推理场景的吸引力将大幅增加，可能降低对 NVIDIA 的依赖。",
-      "sourceNote": "",
-      "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-29/08-sglang-%E5%9B%A2%E9%98%9F%E4%B8%8E-amd-%E5%90%88%E4%BD%9C-%E4%BD%BF-amd-instinct-mi355x-gp.png"
-      ]
-    },
-    {
       "title": "Perplexity Computer现已集成微软Office套件",
-      "summary": "Perplexity Computer 集成 Microsoft Excel、Word、PowerPoint 和 Outlook，可在侧边栏中直接用于起草文档、建模和邮件处理。",
+      "summary": "Perplexity Computer现已登陆Microsoft Excel、Word、PowerPoint和Outlook。 您可以在应用程序的侧边栏中直接使用Computer来协调工作，起草文档、建模、制作演示文稿并处理电子邮件。 现已推出：https://www.perplexity.ai/hub/products/integrations/microsoft",
       "source": "X：Perplexity (@perplexity_ai)",
       "url": "https://x.com/perplexity_ai/status/2060013442720010598",
       "category": "ai-products",
       "publishedAt": null,
-      "score": 80,
-      "background": "Perplexity Computer 现已登陆 Microsoft Excel、Word、PowerPoint 和 Outlook。用户可以在应用程序的侧边栏中直接使用 Computer 来协调工作，起草文档、建模、制作演示文稿并处理电子邮件。",
-      "details": [
-        "该集成已正式推出。",
-        "Perplexity 官方提供了详细文档说明集成使用方法。"
-      ],
-      "whyItMatters": "将 AI 助手直接嵌入 Office 应用，大幅减少用户在工具间切换的成本，提升办公效率。",
-      "keyFacts": [
-        "支持 Excel、Word、PowerPoint、Outlook",
-        "在侧边栏使用",
-        "已正式发布"
-      ],
-      "impact": "可能会推动更多办公用户使用 Perplexity，并与其他 AI 办公助手竞争。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
       "images": [
         "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-29/09-perplexity-computer-office.png"
@@ -238,179 +109,401 @@
     },
     {
       "title": "发布 Search Toolkit",
-      "summary": "Mistral AI 发布 Search Toolkit 公共预览版，是一个整合数据摄取、检索和评估的开源搜索管道框架。",
+      "summary": "Mistral AI 发布了 Search Toolkit 的公共预览版。这是一个用于构建 AI 应用生产级搜索管道的可组合框架。该框架旨在解决团队在搭建搜索基础设施时，因数据摄取、检索和评估工具分散而耗费过多工程时间的问题。Search Toolkit 将这三者整合到单一框架与共享接口中，使团队能更专注于提升搜索质量。该工具开源，可部署在云端、本地或边缘环境，并支持企业搜索、RAG 等多种检索场景。",
       "source": "Mistral AI：News（网页）",
       "url": "https://mistral.ai/news/search-toolkit",
       "category": "ai-products",
       "publishedAt": null,
-      "score": 80,
-      "background": "Mistral AI 发布了 Search Toolkit 的公共预览版。这是一个用于构建 AI 应用生产级搜索管道的可组合框架，旨在解决团队因数据摄取、检索和评估工具分散而耗费过多工程时间的问题。",
-      "details": [
-        "Search Toolkit 将数据摄取、检索和评估整合到单一框架与共享接口中。",
-        "该工具开源，可部署在云端、本地或边缘环境。",
-        "支持企业搜索、RAG 等多种检索场景。"
-      ],
-      "whyItMatters": "为开发者提供统一的搜索框架，简化生产级搜索系统的搭建，尤其适合需要 RAG 的应用。",
-      "keyFacts": [
-        "开源",
-        "可部署在云端、本地或边缘",
-        "支持企业搜索和 RAG"
-      ],
-      "impact": "可能降低搜索功能开发的入门门槛，但作为预览版，成熟度有待验证。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
       "images": [
         "https://mistral.ai/cms-media/api/media/file/OG-Main-1.jpg"
       ]
     },
     {
-      "title": "Sesame，这家由Oculus创始人创办的对话式AI初创公司，发布其iOS应用",
-      "summary": "Sesame 发布 iOS 应用，提供更自然的来回交互对话体验，旨在让用户感觉更像在和真人对话。",
-      "source": "TechCrunch：AI（RSS）",
-      "url": "https://techcrunch.com/2026/05/28/sesame-the-conversational-ai-startup-from-oculus-founders-launches-its-ios-app",
+      "title": "MiniMax M2.7 免费智能体编程限时开放",
+      "summary": "在 @OpenHandsDev 上使用 MiniMax M2.7 进行免费智能体编程？ 是的，请给我！限时提供 ⚡👀",
+      "source": "X：MiniMax (@MiniMax_AI)",
+      "url": "https://x.com/MiniMax_AI/status/2060071852970844377",
       "category": "ai-products",
       "publishedAt": null,
-      "score": 80,
-      "background": "由 Oculus 创始人创办的 AI 初创公司 Sesame 发布了其 iOS 应用，该应用将对话式 AI 智能体带给公众。应用提供更自然的来回交互体验，设计上区别于传统聊天机器人。",
-      "details": [
-        "应用旨在让用户感觉更像在和真人对话。",
-        "目前仅限 iOS 平台。"
-      ],
-      "whyItMatters": "Sesame 的创始人背景引人关注，其对话式 AI 的交互体验可能区别于现有聊天机器人。",
-      "keyFacts": [
-        "创始人来自 Oculus",
-        "仅 iOS 应用",
-        "强调自然对话体验"
-      ],
-      "impact": "若体验出色，可能吸引用户尝试，但需观察市场反应。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
-      "images": [
-        "https://techcrunch.com/wp-content/uploads/2026/05/crossing-the-uncanny-valley-of-voice-hero.webp?resize=1200,900"
-      ]
+      "images": []
     },
     {
-      "title": "Braintrust如何用Codex将客户请求转化为代码",
-      "summary": "OpenAI 分享 Braintrust 使用 Codex 将客户请求自动转化为代码的案例。",
-      "source": "OpenAI News",
-      "url": "https://openai.com/index/braintrust",
-      "category": "tip",
-      "publishedAt": "2026-05-29T12:00:00Z",
-      "score": 80,
-      "background": "来自 OpenAI 官方案例，介绍 Braintrust 如何用 Codex 将客户请求转化为代码。",
-      "details": [
-        "具体实现方式为通过 Codex 理解自然语言请求并生成对应代码。",
-        "体现了 Codex 在客户服务自动化中的潜力。"
-      ],
-      "whyItMatters": "展示了大模型在自动生成代码方面的实际应用案例，有助于理解 Codex 的商业价值。",
-      "keyFacts": [
-        "Braintrust 使用 Codex",
-        "将客户请求转为代码"
-      ],
-      "impact": "可能激励更多企业探索类似自动化方案，但需考虑定制化难度。",
+      "title": "Replit Canvas：智能体设计工具发布",
+      "summary": "最好的设计工作不会在聊天框里发生。你需要空间来探索想法、创建变体并进行迭代。 认识新的 Replit Canvas。 你的智能体设计工具，用于构建精美的网站、应用、营销资产等。",
+      "source": "X：Replit (@Replit)",
+      "url": "https://x.com/Replit/status/2060097656207413613",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
-      "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-29/12-braintrust%E5%A6%82%E4%BD%95%E7%94%A8codex%E5%B0%86%E5%AE%A2%E6%88%B7%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8C%96%E4%B8%BA%E4%BB%A3%E7%A0%81.png"
-      ]
-    },
-    {
-      "title": "PyTorch 中的性能分析（第一部分）：torch.profiler 初学者指南",
-      "summary": "Hugging Face 发布 PyTorch 性能分析系列第一部分，面向 torch.profiler 的初学者指南。",
-      "source": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/torch-profiler",
-      "category": "industry",
-      "publishedAt": "2026-05-29T00:00:00Z",
-      "score": 80,
-      "background": "这是一篇来自 Hugging Face 的教程，属于 PyTorch 性能分析系列的第一部分，内容为 torch.profiler 初学者指南。",
-      "details": [
-        "面向希望优化 PyTorch 代码性能的开发者。",
-        "系列后续部分可能涉及更深入的分析工具和技巧。"
-      ],
-      "whyItMatters": "torch.profiler 是 PyTorch 官方性能分析工具，此指南帮助新手快速上手，对模型训练和推理优化有实用价值。",
-      "keyFacts": [
-        "系列第一部分",
-        "初学者指南",
-        "来自 Hugging Face"
-      ],
-      "impact": "有助于提升 PyTorch 社区的性能优化能力。",
-      "sourceNote": "",
-      "images": [
-        "https://huggingface.co/blog/assets/torch-profiler/thumbnail.png"
-      ]
+      "images": []
     },
     {
       "title": "使用 Google Pay & Wallet Developer MCP server 加速你的集成工作流",
-      "summary": "Google 推出 Pay & Wallet Developer MCP server，让 AI 开发助手安全连接到实时 API 与账户上下文，加速集成开发。",
+      "summary": "Google 推出 Google Pay & Wallet Developer MCP server，这是一款开放标准工具，旨在将 AI 开发助手和 IDE 安全连接到实时的 API 与账户上下文。开发者无需离开开发环境，即可搜索官方文档、验证 Wallet pass 定义、检查集成状态以及管理商户账户。该集成旨在通过减少上下文切换并提供实时、可靠的 AI 支持来减少开发摩擦，从而加速开发工作流。",
       "source": "Google Developers Blog（RSS）",
       "url": "https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server",
       "category": "ai-products",
       "publishedAt": null,
-      "score": 75,
-      "background": "Google 推出 Google Pay & Wallet Developer MCP server，这是一款开放标准工具，旨在将 AI 开发助手和 IDE 安全连接到实时的 API 与账户上下文。",
-      "details": [
-        "开发者无需离开开发环境，即可搜索官方文档、验证 Wallet pass 定义、检查集成状态以及管理商户账户。",
-        "该集成旨在减少上下文切换，提供实时、可靠的 AI 支持。"
-      ],
-      "whyItMatters": "为开发者提供便利的商户集成工具，减少在文档和代码间的切换时间。",
-      "keyFacts": [
-        "开放标准 MCP server",
-        "集成到 IDE 和 AI 助手中",
-        "支持文档搜索、pass 验证、状态检查"
-      ],
-      "impact": "有望提升集成开发效率，但使用效果取决于具体实现。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
       "images": [
         "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/pay-wallet-dev-mcp-thumb.2e16d0ba.fill-1200x600.jpg"
       ]
     },
     {
-      "title": "四步保障AI生成应用安全",
-      "summary": "一篇关于如何保障 vibecoded 应用安全的四步指南，涵盖使用 Replit 发布时避免安全漏洞的方法。",
-      "source": "X：Replit (@Replit)",
-      "url": "https://x.com/Replit/status/2060052289155375532",
-      "category": "tip",
+      "title": "Sesame，这家由Oculus创始人创办的对话式AI初创公司，发布其iOS应用",
+      "summary": "由Oculus创始人创办的AI初创公司Sesame发布了其iOS应用，该应用将对话式AI智能体带给公众。应用提供更自然的来回交互体验，设计上区别于传统聊天机器人，旨在让用户感觉更像在和真人对话。",
+      "source": "TechCrunch：AI（RSS）",
+      "url": "https://techcrunch.com/2026/05/28/sesame-the-conversational-ai-startup-from-oculus-founders-launches-its-ios-app",
+      "category": "ai-products",
       "publishedAt": null,
-      "score": 75,
-      "background": "本文介绍了如何用四步保障你的 vibecoded 应用安全，强调速度若无安全加持便是隐患。",
-      "details": [
-        "针对使用 Replit 发布应用时如何避免留下后门。",
-        "具体步骤以线程形式展开。"
-      ],
-      "whyItMatters": "随着 AI 生成代码增多，安全性日益重要，本指南帮助开发者快速检查常见安全风险。",
-      "keyFacts": [
-        "四步安全检查",
-        "针对 Replit 平台",
-        "关注后门防范"
-      ],
-      "impact": "提供简便的安全检查流程，可能减少低代码/无代码应用的安全事故。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
       "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-29/15-replit-secure-vibecoded-app.png"
+        "https://techcrunch.com/wp-content/uploads/2026/05/crossing-the-uncanny-valley-of-voice-hero.webp?resize=1200,900"
       ]
     },
     {
+      "title": "MuleRun登陆阿里云市场，提供全天候AI劳动力",
+      "summary": "在阿里云市场遇见 MuleRun——一个全天候的AI劳动力，用于研究、报告、代码、设计等。功能强大，适合个人使用；企业就绪，适合团队协作——支持SSO、RBAC、私有网络、团队知识管理和无缝集成。 想得更大。让 MuleRun 处理其余事务。 方案起价 $20/月 → https://int.alibabacloud.com/m/1000413520/ #AlibabaCloud #AIAgents #AIWorkforce #FutureOfWork #EnterpriseAI",
+      "source": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)",
+      "url": "https://x.com/alibaba_cloud/status/2059821825140367565",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Anthropic 完成 650 亿美元 H 轮融资，估值达 9650 亿美元",
+      "summary": "Anthropic 宣布完成由 Altimeter Capital 等领投的 650 亿美元 H 轮融资，投后估值达 9650 亿美元。公司表示其旗舰模型 Claude 的企业部署持续增长，年化收入已突破 470 亿美元。此轮融资将用于推进 AI 安全与可解释性研究、扩展算力以满足 Claude 的需求，并规模化产品与合作伙伴关系。Anthropic 近期已显著扩大计算容量，并宣布 Claude 已登陆 AWS、Google Cloud 和 Microsoft Azure 三大云平台。",
+      "source": "Anthropic：Newsroom（网页）",
+      "url": "https://www.anthropic.com/news/series-h",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "DeepSeek计划在完成融资后立即申请科创板IPO",
+      "summary": "独家：DeepSeek计划在完成当前约500亿美元（3500亿人民币）融资轮后，立即申请科创板（A股）IPO。 来源：参与本轮融资的一位大型基金经理。",
+      "source": "X：X.PIN (@thexpin)",
+      "url": "https://x.com/thexpin/status/2059947998302679059",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "萨姆·阿尔特曼和达里奥·阿莫代伊都纷纷收回了关于AI将引发就业危机的预测",
+      "summary": "",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://fortune.com/img-assets/wp-content/uploads/2026/05/GettyImages-2265445220-e1779827097282.jpg?resize=1200,600"
+      ]
+    },
+    {
+      "title": "AI Now Summit 2026",
+      "summary": "Mistral AI 在 AI Now Summit 2026 上宣布多项进展。其工业 AI 解决方案“Mistral for Industrial Engineering”整合了物理模型与工程知识，正与空客、宝马集团和 ASML 合作，加速工程设计与优化。AI 智能体产品 Vibe 进行了升级，增强了推理和智能体任务能力。此外，公司计划在 2026 年第三季度启用位于 Les Ulis、功率达 10 MW 的新数据中心，专注推理操作以增强算力安全。",
+      "source": "Mistral AI：News（网页）",
+      "url": "https://mistral.ai/news/ai-now-summit-2026",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://mistral.ai/cms-media/api/media/file/Cover-Mistral-Wallpaper01.jpg"
+      ]
+    },
+    {
+      "title": "Qwen3.7-Max 登顶 OpenRouter 热门大模型榜",
+      "summary": "Qwen3.7-Max 以 77.3B tokens 的使用量登顶 @OpenRouter 热门大语言模型榜单。 而我们才刚刚开始。 👇 https://int.alibabacloud.com/m/1000413314/",
+      "source": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)",
+      "url": "https://x.com/alibaba_cloud/status/2059918150997623004",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "OpenRouter 获得1.13亿美元B轮融资",
+      "summary": "AI模型聚合平台OpenRouter宣布完成1.13亿美元B轮融资。本轮融资由CapitalG领投，NVentures、ServiceNow Ventures等多家机构参投，现有投资者Andreessen Horowitz与Menlo Ventures也参与了本轮融资。",
+      "source": "OpenRouter：Announcements（RSS）",
+      "url": "https://openrouter.ai/announcements/series-b",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://openrouter.ai/dynamic-og?title=OpenRouter+Raises+%24113M+Series+B&description=OpenRouter+has+raised+a+%24113M+Series+B+led+by+CapitalG%2C+with+participation+from+NVentures%2C+ServiceNow+Ventures%2C+MongoDB+Ventures%2C+Snowflake+Ventures%2C+Databricks"
+      ]
+    },
+    {
+      "title": "Apple 正努力将庞大的 Gemini 模型塞进 iPhone 以驱动新 Siri",
+      "summary": "Apple 正尝试将大型 Gemini 模型集成到 iPhone 中，以支持全新的 Siri 功能。由于模型规模庞大，本地处理可能无法完全实现，因此一个云端组件很可能是必然的选择。",
+      "source": "Ars Technica：AI（RSS）",
+      "url": "https://arstechnica.com/ai/2026/05/apple-reportedly-trying-to-distill-googles-multi-trillion-parameter-gemini-ai-to-run-on-iphone",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.arstechnica.net/wp-content/uploads/2024/04/apple-google-logo-1152x648.jpg"
+      ]
+    },
+    {
+      "title": "OpenAI 的前沿治理框架",
+      "summary": "OpenAI 发布了“前沿治理框架”，阐述其 AI 安全、安全与风险管理实践如何与欧盟和加州新出台的法规要求对齐。该框架旨在规范其前沿模型的开发与部署流程。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/openai-frontier-governance-framework",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "hexoai开源SIA框架：AI智能体实现递归自我改进",
+      "summary": "hexoai开源了SIA（自我改进AI）框架。该框架展示了AI智能体不仅能优化其外部工作流（harness），还能通过任务反馈直接更新自身的模型权重，从而在领域知识和能力上实现自主提升，而非仅依赖人类提供的提示或工具改进。论文报告显示，SIA在LawBench基准上性能提升56.6%，在GPU kernels运行上耗时减少91.9%，在单细胞RNA去噪任务中相比基线提升502%。",
+      "source": "X：Rohan Paul (@rohanpaul_ai)",
+      "url": "https://x.com/rohanpaul_ai/status/2060063592448446778",
+      "category": "paper",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "SGLang 团队与 AMD 合作，使 AMD Instinct™ MI355X GPU 的大规模 DeepSeek-R1 分离式推理在总拥有成本上具备竞争力",
+      "summary": "SGLang 与 AMD 团队合作，通过一系列全栈优化，使 AMD Instinct™ MI355X GPU 在运行 DeepSeek-R1 大模型推理时实现了极具竞争力的总拥有成本。在 129 tok/s/user 的交互延迟下，其成本为每百万 token $0.169，比 NVIDIA B200（Dynamo TRT-LLM）方案低 5%，比 B200（SGLang）方案低 40%。吞吐量方面，24 块 AMD GPU 达到 2,436 tok/s/GPU，比使用 48 块 GPU 的 B200 SGLang 方案每 GPU 吞吐量高 1.25 倍。核心优化包括：MoRI 混合 FP4/FP8 量化全到全通信、MoRI-IO K…",
+      "source": "LMSYS：Blog（Chatbot Arena 团队）",
+      "url": "https://www.lmsys.org/blog/2026-05-28-mori",
+      "category": "paper",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "人民日报专访华为何庭波：今年秋季的新麒麟手机芯片，性能等相比去年是“跳跃性”提升",
+      "summary": "华为何庭波提出半导体新演进路径“韬（τ）定律”，以“时间缩微”（如逻辑折叠）替代“几何缩微”作为新指导原则。她表示，过去6年华为已基于此自主研发381款芯片。今年秋季将发布新的麒麟手机芯片，这是首个完整的“韬芯片”，其性能、集成度相比去年是“跳跃性”提升。",
+      "source": "IT之家（RSS）",
+      "url": "https://www.ithome.com/0/956/274.htm",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "英伟达推出 AI 框架 Polar，让 Codex 跑分暴涨 594.74%",
+      "summary": "英伟达研究团队开源了智能体强化学习框架 Polar。该框架无需重写现有智能体执行框架（如 Codex CLI、Claude Code、Qwen Code、Pi），通过在模型 API 边界放置智能体来接入 GRPO 训练。实验显示，基于 Qwen3.5-4B 模型，Polar 将 Codex 在 SWE-Bench Verified 上的 pass@1 分数从 3.8% 提升至 26.4%（增涨 594.74%）。效率上，其 prefix_merging 技术将训练步骤从 1185 次降至 218 次，速度提升约 5.39 倍，GPU 平均利用率从 20.4% 升至 87.7%。",
+      "source": "IT之家（RSS）",
+      "url": "https://www.ithome.com/0/956/293.htm",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
       "title": "pgvector驱动的语义、混合、稀疏与量化向量搜索系统构建编码指南",
-      "summary": "教程在 Google Colab 中构建 pgvector 实验环境，展示 PostgreSQL 作为向量数据库的使用方法，包括安装、编译和创建嵌入。",
+      "summary": "本教程在Google Colab中构建一个完整的pgvector实验环境，展示PostgreSQL如何作为向量数据库服务于现代AI应用。内容涵盖安装PostgreSQL、编译pgvector扩展、通过Psycopg建立连接，并注册向量类型以实现与Python的平滑集成。最后使用SentenceTransformers创建并存储嵌入向量。",
       "source": "MarkTechPost（RSS）",
       "url": "https://www.marktechpost.com/2026/05/28/a-coding-guide-to-implement-a-pgvector-powered-semantic-hybrid-sparse-and-quantized-vector-search-system",
       "category": "tip",
       "publishedAt": null,
-      "score": 70,
-      "background": "本教程在 Google Colab 中构建一个完整的 pgvector 实验环境，展示 PostgreSQL 如何作为向量数据库服务于现代 AI 应用。",
-      "details": [
-        "内容涵盖安装 PostgreSQL、编译 pgvector 扩展、通过 Psycopg 建立连接。",
-        "注册向量类型以实现与 Python 的平滑集成。",
-        "使用 SentenceTransformers 创建并存储嵌入向量。"
-      ],
-      "whyItMatters": "为开发者提供了实用的 pgvector 入门指南，便于在现有 PostgreSQL 基础上加入向量搜索功能。",
-      "keyFacts": [
-        "基于 Google Colab",
-        "使用 pgvector 扩展",
-        "结合 SentenceTransformers"
-      ],
-      "impact": "降低开发者学习和使用向量搜索的门槛，但仅限入门。",
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
       "sourceNote": "",
-      "images": [
-        "https://www.marktechpost.com/wp-content/uploads/2026/05/blog13-1-1-1024x731.png"
-      ]
+      "images": []
+    },
+    {
+      "title": "OpenRouter 支持模型现可选 Flex 与 Priority 服务层级",
+      "summary": "提示：您可以为支持的模型（OpenAI、Google Vertex 等）使用 Flex 和 Priority 层级。 定价信息请查看各模型页面。文档：https://openrouter.ai/docs/guides/features/service-tiers",
+      "source": "X：OpenRouter (@OpenRouter)",
+      "url": "https://x.com/OpenRouter/status/2060007875590697088",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "四步保障AI生成应用安全",
+      "summary": "如何用四步保障你的vibecoded应用安全 🔒 速度若无安全加持，便是隐患。以下是使用Replit发布应用时，如何避免留下后门的方法。 🧵展开阅读 ↓",
+      "source": "X：Replit (@Replit)",
+      "url": "https://x.com/Replit/status/2060052289155375532",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "社区如何利用Tunix和TPU训练Gemma学会“思考”",
+      "summary": "Google在Kaggle举办的Tunix黑客马拉松，挑战开发者利用TPU和有限算力，将小型基础模型转变为通用推理引擎。获胜团队通过多阶段后训练流程实现了这一目标，该流程结合了监督微调（SFT）与GRPO、SimPO等先进对齐技术。比赛结果表明，社区能够借助开源资源成功训练出高能力的结构化推理模型。",
+      "source": "Google Developers Blog（RSS）",
+      "url": "https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "AI智能体时代下的安全变革",
+      "summary": "Lemonade的CISO Jonathan Jaffe探讨了AI智能体时代的安全新挑战。他指出，AI对攻击者和防御者同样强大，但可被利用的漏洞窗口正在缩小，因为AI能更快地生成、审查和修补代码。为此，安全团队正向工程团队转型，例如Lemonade的安全部门均由工程师组成，并构建了包含智能体的内部AI平台。同时，每个智能体（单个终端上可能运行200到10000个）都需要被赋予身份，并在操作点由策略进行更复杂的管控，这超越了当前身份与访问管理系统的能力。",
+      "source": "Tomer Tunguz 博客（VC 分析）",
+      "url": "https://www.tomtunguz.com/jonathan-jaffe-office-hours-post-event",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "我们如何构建Cloudflare的数据平台及其上的AI智能体",
+      "summary": "Cloudflare构建了名为Town Lake的统一分析平台，并基于此开发了内部AI智能体Skipper。",
+      "source": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/our-unified-data-platform",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
     }
   ]
 }
