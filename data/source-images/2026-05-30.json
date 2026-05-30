@@ -1,28 +1,38 @@
 {
   "https://x.com/gdb/status/2060452095279415725": [],
-  "https://x.com/stepfun_ai/status/2060149124117475791": [],
-  "https://www.ithome.com/0/957/282.htm": [],
-  "https://qwen.ai/blog": [
-    "https://img.alicdn.com/imgextra/i1/O1CN013ltlI61OTOnTStXfj_!!6000000001706-55-tps-330-327.svg"
+  "https://openai.com/index/boston-childrens-hospital": [],
+  "https://x.com/openai/status/2060428604727771421": [],
+  "https://x.com/geminiapp/status/2060435981946503243": [],
+  "https://github.com/jmaczan/tiny-vllm": [
+    "https://opengraph.githubassets.com/eb116acb8fbcc340446e496d7ec0a36537dcbc9bdea8b3dde178dcc341689c5f/jmaczan/tiny-vllm"
   ],
   "https://x.com/gdb/status/2060486309886443787": [],
-  "https://x.com/geminiapp/status/2060435981946503243": [],
-  "https://x.com/openai/status/2060428604727771421": [],
+  "https://x.com/geminiapp/status/2060389565052096911": [],
+  "https://x.com/rohanpaul_ai/status/2060409504693645440": [],
   "https://openrouter.ai/announcements/guardrails": [
     "https://openrouter.ai/dynamic-og?title=Guardrails%3A+Protect+your+Agents%2C+Data%2C+and+Costs&description=Configurable+security+and+governance+tools+for+budget+enforcement%2C+zero+data+retention%2C+model+and+provider+restrictions%2C+prompt+injection+defense%2C+and+data+loss"
   ],
   "https://x.com/runwayml/status/2060453805519765548": [],
-  "https://x.com/openrouter/status/2060395056196936054": [],
   "https://x.com/chatgptapp/status/2060467129066070182": [],
-  "https://x.com/geminiapp/status/2060389565052096911": [],
-  "https://www.ithome.com/0/957/319.htm": [],
-  "https://openai.com/index/boston-childrens-hospital": [],
+  "https://x.com/shao__meng/status/2060167182777249886": [],
+  "https://x.com/openrouter/status/2060395056196936054": [],
+  "https://x.com/hongming731/status/2060487110906527820": [],
+  "https://x.com/drfeifei/status/2060404846734512205": [],
+  "https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled": [
+    "https://techcrunch.com/wp-content/uploads/2025/10/2244026103.jpg?resize=1200,800"
+  ],
   "https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs": [
     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/FutureLabs_social.max-1440x810.png"
   ],
-  "https://x.com/drfeifei/status/2060404846734512205": [],
-  "https://x.com/hongming731/status/2060487110906527820": [],
-  "https://x.com/rohanpaul_ai/status/2060409504693645440": [],
-  "https://x.com/berryxia/status/2060212428584202428": [],
-  "https://x.com/shao__meng/status/2060167182777249886": []
+  "https://developer.nvidia.com/blog/dynosim-simulating-the-pareto-frontier": [
+    "https://developer-blogs.nvidia.com/wp-content/uploads/2026/03/inference-press-dynamo-gtc26-4960950-1920x1080-1.webp",
+    "https://developer-blogs.nvidia.com/wp-content/uploads/2026/03/inference-press-dynamo-gtc26-4960950-1920x1080-1-660x370.png"
+  ],
+  "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans": [
+    "https://techcrunch.com/wp-content/uploads/2026/05/Scott-wu-headshot-e1780070238342.png?resize=1200,1004"
+  ],
+  "https://buildingbetter.tech/p/i-read-the-claude-code-source-code": [
+    "https://substackcdn.com/image/fetch/$s_!uQxS!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde864c42-7eee-46ec-af2d-c111064bc767_1920x1035.png",
+    "https://substackcdn.com/image/fetch/$s_!_U0o!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fthegurucoder.substack.com%2Fapi%2Fv1%2Fpost_preview%2F192864724%2Ftwitter.jpg%3Fversion%3D4"
+  ]
 }

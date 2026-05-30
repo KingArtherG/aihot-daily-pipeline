@@ -5,13 +5,13 @@
     <link>https://KingArtherG.github.io/aihot-daily-pipeline/</link>
     <description>King AI 早报 自动 RSS</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 30 May 2026 04:30:52 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 14:08:15 +0000</lastBuildDate>
     <item>
       <title>King AI 早报 2026-05-30</title>
       <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-05-30.html</link>
       <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-05-30.html</guid>
       <author>KingArtherG</author>
-      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：OpenAI推出实时翻译模型，支持70+语言输入；阶跃星辰 Step 3.7 Flash 发布，聚焦智能体效率；小米开源可控视频音效生成模型 ControlFoley，让声音“按你想要的来”；Qwen-VLA：从理解世界到在其中行动；Codex可自主管理对话线程与并行任务；Gemini Omni可将草图变为现实；Codex现已支持Windows端计算机使用功能；Guardrails：保护你的智能体、数据与成本。</description>
+      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：OpenAI推出实时翻译模型，支持70+语言输入；波士顿儿童医院利用AI解锁新诊断；Codex现已支持Windows端计算机使用功能；Gemini Omni可将草图变为现实；Show HN： Tiny-vLLM--基于 C 和 CUDA 的高性能大型语言模型推理引擎；Codex可自主管理对话线程与并行任务；Gemini 本月更新：全新界面与智能体助手；Kog团队实现极快推理速度：MI300X上3000 tokens/s。</description>
       <pubDate>Fri, 29 May 2026 16:00:00 +0000</pubDate>
     </item>
     <item>
