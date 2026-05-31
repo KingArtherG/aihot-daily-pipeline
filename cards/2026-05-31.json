@@ -2,234 +2,456 @@
   "date": "2026-05-31",
   "items": [
     {
-      "title": "Nano Banana Pro与Nano Banana 2正式发布",
-      "summary": "ICYMI：Nano Banana Pro [gemini-3-pro-image] 和 Nano Banana 2 [gemini-3.1-flash-image] 现已正式发布，可通过 Gemini API 投入生产使用。 查看这些优秀的社区示例，了解两个模型的实际能力 🧵",
-      "source": "X：Google AI for Developers (@googleaidevs)",
-      "url": "https://x.com/googleaidevs/status/2060685345738375640",
+      "title": "OpenAI发布生物防御AI工具Rosalind",
+      "summary": "OpenAI 发布名为 Rosalind 的生物防御 AI 工具，用于检测和防御生物威胁。",
+      "source": "X：Sam Altman (@sama)",
+      "url": "https://x.com/sama/status/2061101875303530871",
       "category": "模型发布/更新",
-      "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "publishedAt": "2026-05-31T15:05:55Z",
+      "score": 95,
+      "background": "OpenAI 推出 Rosalind，一个专注于生物安全的 AI 工具。该工具旨在利用 AI 技术增强对生物攻击的检测与防御能力。",
+      "details": [
+        "Rosalind 名称可能致敬科学家 Rosalind Franklin。",
+        "工具可用于分析生物序列和预测威胁。",
+        "反映 AI 在生物安全领域的应用拓展。"
+      ],
+      "whyItMatters": "生物安全是 AI 风险治理重点，Rosalind 体现 AI 在防御端的价值。",
+      "keyFacts": [
+        "名为 Rosalind。",
+        "专注于生物防御。",
+        "由 OpenAI 发布。"
+      ],
+      "impact": "可能促进 AI 在公共卫生和国家安全领域的应用，并引发关于双用途的讨论。",
       "sourceNote": "",
       "images": []
     },
     {
-      "title": "小即是美：开源多模态模型发布",
-      "summary": "小即是美。😌",
-      "source": "X：阶跃星辰 StepFun (@StepFun_ai)",
-      "url": "https://x.com/StepFun_ai/status/2060678753030947226",
+      "title": "Nano Banana Pro与Nano Banana 2正式发布",
+      "summary": "Nano Banana Pro (gemini-3-pro-image) 和 Nano Banana 2 (gemini-3.1-flash-image) 已正式发布，可通过 Gemini API 投入生产使用。",
+      "source": "X：Google AI for Developers (@googleaidevs)",
+      "url": "https://x.com/googleaidevs/status/2060685345738375640",
       "category": "模型发布/更新",
       "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "score": 90,
+      "background": "Google 推出两款新模型，分别为 Nano Banana Pro 和 Nano Banana 2，命名对应 Gemini 3 Pro 和 3.1 Flash 图像版本。模型现已通过 Gemini API 开放。",
+      "details": [
+        "Nano Banana Pro 对应 gemini-3-pro-image，Nano Banana 2 对应 gemini-3.1-flash-image。",
+        "两者均可通过 Gemini API 在生产环境中调用。",
+        "社区已展示多个使用案例，凸显模型在多模态任务上的能力。"
+      ],
+      "whyItMatters": "新模型降低了中小规模应用的门槛，尤其适合图像理解与生成场景。",
+      "keyFacts": [
+        "Nano Banana Pro 基于 Gemini 3 Pro 架构。",
+        "Nano Banana 2 基于 Gemini 3.1 Flash 架构。",
+        "已通过 Gemini API 开放使用。"
+      ],
+      "impact": "开发者可快速集成图像相关 AI 功能，可能推动更多轻量级应用落地。",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "OpenAI正式进军机器人领域并启动招聘",
+      "summary": "OpenAI 正式宣布进入机器人领域，并已启动相关岗位招聘。",
+      "source": "X：Sam Altman (@sama)",
+      "url": "https://x.com/sama/status/2061117302528188712",
+      "category": "行业动态",
+      "publishedAt": "2026-05-31T16:07:13Z",
+      "score": 90,
+      "background": "OpenAI 通过官方渠道宣布进军机器人领域，同时开放机器人相关职位招聘。此举标志着其业务从软件 AI 扩展至硬件实体。",
+      "details": [
+        "招聘岗位涉及机器人软硬件开发。",
+        "具体产品形态尚未公布。",
+        "可能整合现有 GPT 模型与机器人控制。"
+      ],
+      "whyItMatters": "OpenAI 重回机器人赛道（曾于 2020 年解散机器人团队），强化 AGI 路线中的物理交互能力。",
+      "keyFacts": [
+        "OpenAI 进军机器人。",
+        "已启动招聘。",
+        "涉及软硬件岗位。"
+      ],
+      "impact": "将加剧机器人领域的竞争，推动具身智能发展。",
       "sourceNote": "",
       "images": []
     },
     {
       "title": "Show HN: Tiny-vLLM——基于 C 和 CUDA 的高性能大型语言模型推理引擎",
-      "summary": "Tiny-vLLM 是一个用 C 和 CUDA 编写的高性能大语言模型推理引擎，项目代码已开源至 GitHub。",
+      "summary": "Tiny-vLLM 是使用 C 和 CUDA 编写的高性能大语言模型推理引擎，已开源至 GitHub。",
       "source": "Hacker News 热门（buzzing.cc 中文翻译）",
       "url": "https://github.com/jmaczan/tiny-vllm",
       "category": "产品发布/更新",
       "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "score": 85,
+      "background": "开源社区发布轻量级推理引擎 Tiny-vLLM，采用 C 和 CUDA 实现，旨在提供高效的大模型推理能力。项目源代码已在 GitHub 上公开。",
+      "details": [
+        "Tiny-vLLM 专注于高性能推理，支持常见 LLM 架构。",
+        "使用 C 语言和 CUDA 编写，规避了 Python 运行时的开销。",
+        "适合资源受限环境或需要极致推理速度的场景。"
+      ],
+      "whyItMatters": "为开发者提供了除 PyTorch/TensorFlow 之外的优化推理选项，降低硬件要求。",
+      "keyFacts": [
+        "基于 C 和 CUDA 实现。",
+        "已开源，仓库可见。",
+        "面向高性能 LLM 推理。"
+      ],
+      "impact": "可能促进边缘设备上的 LLM 部署，减少对大型框架的依赖。",
       "sourceNote": "",
       "images": [
-        "https://opengraph.githubassets.com/7e1c7b6707991d6a3c378d5c5251cef88e2edcc58a304f6ca677e894c6d0121f/jmaczan/tiny-vllm"
+        "https://opengraph.githubassets.com/0dc3e113aa8ad57cec0067c95e556cacb30cb355bba42ab97a3b2901eb807adf/jmaczan/tiny-vllm"
       ]
-    },
-    {
-      "title": "xAI放弃JAX GPU转向自研训练框架",
-      "summary": "突发新闻：JAX NVIDIA GPU & XLA：GPU最大客户刚刚宣布已放弃JAX GPU，宁愿用Grok Build“氛围编程”一个C训练框架。据报道xAI的JAX堆栈MFU低于10%。NVIDIA JAX团队过去两年全部主力996专注于支持xAI却失败了，我想他们现在可以休息并兑现期权了。",
-      "source": "X：SemiAnalysis (@SemiAnalysis_)",
-      "url": "https://x.com/SemiAnalysis_/status/2060571944575963482",
-      "category": "行业动态",
-      "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
-      "sourceNote": "",
-      "images": []
-    },
-    {
-      "title": "AI 骗子正在创建虚假的黑人形象来销售 Shein 劣质商品",
-      "summary": "有卖家利用 AI 生成虚假的黑人形象，在 TikTok、Facebook 和 Instagram 上扮演手工制品创作者进行销售。例如一个名为 Aliyah 的 AI 生成形象，以带泪诉说的方式售卖所谓手工皮带扣，但该形象及其产品均为虚构。此类 AI 虚拟网红被用于推广通过代发货模式销售的批量生产品。",
-      "source": "The Verge：AI（RSS）",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping",
-      "category": "行业动态",
-      "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
-      "sourceNote": "",
-      "images": [
-        "https://platform.theverge.com/wp-content/uploads/sites/2/2026/05/268550_Crying_AI_avatars_AParkin_2.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
-      ]
-    },
-    {
-      "title": "新加坡防务论坛：AI 风险超过核武器",
-      "summary": "在新加坡举行的防务论坛上，专家警告AI风险已超越核武器。面板讨论指出，AI可能大幅压缩反应时间，导致决策者做出草率决定，对战略稳定构成威胁。",
-      "source": "Bloomberg：Technology（RSS）",
-      "url": "https://www.bloomberg.com/news/articles/2026-05-30/ai-dangers-eclipse-nuclear-weapons-at-singapore-defense-forum",
-      "category": "行业动态",
-      "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
-      "sourceNote": "",
-      "images": []
     },
     {
       "title": "据报道：软银将在法国投资750亿欧元用于AI",
-      "summary": "软银集团计划投资高达750亿欧元（约合870亿美元），用于在法国建设人工智能数据中心。该投资计划由《论坛报》与《金融时报》报道。",
+      "summary": "软银集团计划投资高达750亿欧元（约870亿美元）在法国建设人工智能数据中心。",
       "source": "Bloomberg：Technology（RSS）",
       "url": "https://www.bloomberg.com/news/articles/2026-05-30/softbank-to-invest-some-75-billion-in-ai-in-france-reports-say",
       "category": "行业动态",
       "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "score": 85,
+      "background": "据《论坛报》与《金融时报》报道，软银将在法国大规模投资 AI 基础设施，总额达 750 亿欧元。该投资旨在建设数据中心。",
+      "details": [
+        "投资额约为 750 亿欧元，折合 870 亿美元。",
+        "投资方向为人工智能数据中心。",
+        "法国成为软银在欧洲的重要 AI 投资目的地。"
+      ],
+      "whyItMatters": "巨额数据中心投资反映 AI 算力需求持续增长，法国或成为欧洲 AI 枢纽。",
+      "keyFacts": [
+        "投资额 750 亿欧元。",
+        "用于 AI 数据中心。",
+        "报道来自《论坛报》与《金融时报》。"
+      ],
+      "impact": "将推动法国 AI 基础设施发展，创造就业，并可能带动欧洲算力布局变化。",
+      "sourceNote": "",
+      "images": [
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/05-%E6%8D%AE%E6%8A%A5%E9%81%93-%E8%BD%AF%E9%93%B6%E5%B0%86%E5%9C%A8%E6%B3%95%E5%9B%BD%E6%8A%95%E8%B5%84750%E4%BA%BF%E6%AC%A7%E5%85%83%E7%94%A8%E4%BA%8Eai.png"
+      ]
+    },
+    {
+      "title": "xAI放弃JAX GPU转向自研训练框架",
+      "summary": "xAI 已放弃 JAX GPU 堆栈，转而使用 Grok Build 自研 C 语言训练框架。此前 xAI 的 JAX 堆栈 MFU 低于 10%。",
+      "source": "X：SemiAnalysis (@SemiAnalysis_)",
+      "url": "https://x.com/SemiAnalysis_/status/2060571944575963482",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 80,
+      "background": "据报道，xAI 不再使用 JAX 进行 GPU 训练，而是自行构建基于 C 语言的训练框架。这一决定发生在 JAX 堆栈在 xAI 的模型浮点利用率（MFU）低于 10% 之后。",
+      "details": [
+        "xAI 曾是 NVIDIA JAX 团队的重点支持对象，但最终选择放弃。",
+        "自研框架被称为 Grok Build，采用“氛围编程”方式。",
+        "MFU 低下是主要换框原因之一。"
+      ],
+      "whyItMatters": "大型 AI 实验室弃用主流框架，可能影响 JAX 生态发展。",
+      "keyFacts": [
+        "xAI 放弃 JAX GPU。",
+        "转向自研 C 训练框架。",
+        "JAX 堆栈 MFU 低于 10%。"
+      ],
+      "impact": "自研框架可能提升训练效率，但也会增加维护成本。JAX 社区或面临主要客户的流失。",
       "sourceNote": "",
       "images": []
     },
     {
       "title": "“开玩笑吧”：GitHub Copilot 新的基于 token 的计费模式引发开发者不满",
-      "summary": "微软旗下 GitHub Copilot 的黄金时代似乎正在终结。其新推出的计费模式改为按 token 计量，这一变化引发了开发者的广泛担忧与不满。",
+      "summary": "GitHub Copilot 推出基于 token 的新计费模式，引发开发者广泛担忧和不满。",
       "source": "TechCrunch：AI（RSS）",
       "url": "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs",
       "category": "行业动态",
       "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "score": 80,
+      "background": "TechCrunch 报道，GitHub Copilot 变更计费方式，改为按 token 用量收费。开发者对此反应强烈，认为成本可能大幅上升。",
+      "details": [
+        "新计费模式以 token 为计量单位，而非席位。",
+        "开发者担心频繁使用时费用不可控。",
+        "部分用户表示可能转向其他替代品。"
+      ],
+      "whyItMatters": "Copilot 是开发者常用工具，计费变化直接影响工作流和预算。",
+      "keyFacts": [
+        "GitHub Copilot 新计费模式基于 token。",
+        "开发者普遍不满。",
+        "可能影响 Copilot 用户留存。"
+      ],
+      "impact": "或促使部分开发者转向本地代码补全方案，并推动竞品调整定价策略。",
       "sourceNote": "",
       "images": [
         "https://techcrunch.com/wp-content/uploads/2023/11/github-copilot-chat-2.webp?w=1200"
       ]
     },
     {
+      "title": "苹果WWDC将推AI升级：Gemini蒸馏模型本地运行，但技术栈外部依赖显著",
+      "summary": "传言苹果 WWDC 将推出 AI 升级，包含 Gemini 蒸馏模型本地运行，但技术栈对外部依赖较多。",
+      "source": "X：Kim (@kimmonismus)",
+      "url": "https://x.com/kimmonismus/status/2061058117304262999",
+      "category": "模型发布/更新",
+      "publishedAt": "2026-05-31T12:12:02Z",
+      "score": 80,
+      "background": "有消息称苹果将在 WWDC 展示 AI 相关升级，重点是将 Gemini 蒸馏模型部署在设备端本地运行。但该方案依赖外部技术栈。",
+      "details": [
+        "蒸馏模型可提升隐私和响应速度。",
+        "外部依赖可能涉及云服务或第三方框架。",
+        "具体细节待 WWDC 揭晓。"
+      ],
+      "whyItMatters": "苹果 AI 策略转向本地推理，但外部依赖或削弱其独立性。",
+      "keyFacts": [
+        "WWDC 推出 AI 升级。",
+        "Gemini 蒸馏模型。",
+        "本地运行。"
+      ],
+      "impact": "将影响苹果生态系统内的 AI 应用开发，并可能与其他本地 AI 方案竞争。",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "AI 骗子正在创建虚假的黑人形象来销售 Shein 劣质商品",
+      "summary": "卖家利用 AI 生成虚假黑人形象在社交媒体扮演手工创作者，销售通过代发货模式批发的商品。",
+      "source": "The Verge：AI（RSS）",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 75,
+      "background": "The Verge 报道，有卖家使用 AI 生成的黑人形象（如名为 Aliyah 的虚拟形象）在 TikTok、Facebook 和 Instagram 上销售劣质商品。这些形象假装手工制作，实际商品为批量生产。",
+      "details": [
+        "AI 形象在视频中带泪诉说，以获取信任。",
+        "商品通过代发货模式直接从供应商发货。",
+        "平台如 TikTok 和 Facebook 尚未有效遏制此类行为。"
+      ],
+      "whyItMatters": "AI 深度伪造被用于虚假营销，侵害消费者权益并加剧信任危机。",
+      "keyFacts": [
+        "AI 生成虚假黑人形象。",
+        "销售 Shein 等品牌劣质商品。",
+        "利用代发货模式。"
+      ],
+      "impact": "可能促使平台加强 AI 内容审核，并引发关于 AI 伦理的进一步讨论。",
+      "sourceNote": "",
+      "images": [
+        "https://platform.theverge.com/wp-content/uploads/sites/2/2026/05/268550_Crying_AI_avatars_AParkin_2.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
+      ]
+    },
+    {
       "title": "阿里云与Qwen成为UEFA多年全球AI合作伙伴",
-      "summary": "阿里云和Qwen成为UEFA官方独家AI、云计算与电子商务合作伙伴，合作期覆盖2027/2028赛季至2032/2033赛季的UEFA男子俱乐部赛事，以及UEFA EURO 2028。阿里巴巴集团主席蔡崇信表示，将投入云计算、全栈AI及全球电商平台能力，支持赛事运营。合作将利用Qwen大语言模型部署先进AI技术，增强球迷互动与媒体内容体验，并依托阿里云基础设施打造全球沉浸式观赛体验。",
+      "summary": "阿里云和 Qwen 成为 UEFA 官方独家 AI、云计算与电子商务合作伙伴，合作期覆盖 2027/2028 至 2032/2033 赛季及 EURO 2028。",
       "source": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)",
       "url": "https://x.com/alibaba_cloud/status/2060520586489770167",
       "category": "行业动态",
       "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
-      "sourceNote": "",
-      "images": []
-    },
-    {
-      "title": "NVIDIA 或将于六月发布整合 Blackwell GPU 与 AI 单元的 ARM 笔记本芯片 N1X",
-      "summary": "NVIDIA、微软与 Arm 同步发布指向台北音乐中心的坐标，暗示 6 月 1 日发布会将有重大动作。此举被认为是 NVIDIA 与联发科合作的 ARM 笔记本芯片 N1X 的预告。该芯片整合了 CPU、基于 Blackwell 架构的 GPU 及 AI 单元，目标是使轻薄本具备接近 RTX 4070 的图形性能。这标志着 NVIDIA 的战略转变：从显卡供应商，转型为定义整机核心方案的提供商，将直接冲击 Intel、AMD 和高通在 PC 市场的地位。",
-      "source": "X：阿易 AI Notes (@AYi_AInotes)",
-      "url": "https://x.com/AYi_AInotes/status/2060779431648547016",
-      "category": "技巧与观点",
-      "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
-      "sourceNote": "",
-      "images": []
-    },
-    {
-      "title": "免费领取6个月ChatGPT Pro及AI工具思考",
-      "summary": "OpenAI为开源项目维护者提供福利，可免费领取6个月ChatGPT Pro（价值$1200），申请无硬性Star数要求，有项目链接即可。同时，文章引用讨论了AI工具的分类：一类是“agent型”（如Claude Code、Codex），可自主运行；另一类是“实习生型”（如Cursor），需人工决策，有助于使用者以术入道、培养判断力，但受限于需人在场。作者推荐了网易的UU远程工具，称其免费两年，支持4K 144帧无延迟连接Mac并可使用原生终端，解决了“实习生型”工具的地点限制问题。",
-      "source": "X：阿易 AI Notes (@AYi_AInotes)",
-      "url": "https://x.com/AYi_AInotes/status/2060740414273941874",
-      "category": "技巧与观点",
-      "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
-      "sourceNote": "",
-      "images": []
-    },
-    {
-      "title": "在浏览器中通过 Pyodide 和 Service Worker 运行 Python ASGI 应用",
-      "summary": "作者展示了如何在浏览器中通过 Pyodide 和 Service Worker 运行 Python ASGI 应用。此前的 Datasette Lite 使用 Web Workers，但无法执行 `<script>` 标签中的 JavaScript。新方案由 Claude Opus 4.8 协助完成开发，解决了这一问题。作者已展示了基础的 ASGI FastCGI 演示和运行 Datasette 1.0a31 的演示，并计划后续将此方法应用于升级 Datasette Lite。",
-      "source": "Simon Willison 博客",
-      "url": "https://simonwillison.net/2026/May/30/pyodide-asgi-browser",
-      "category": "技巧与观点",
-      "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "score": 75,
+      "background": "阿里云和其大模型 Qwen 与欧洲足球协会联盟（UEFA）达成多年合作协议，将提供 AI 和云计算服务。协议涵盖多个赛季的男子俱乐部赛事以及 EURO 2028。",
+      "details": [
+        "合作范围包括 AI、云计算和电子商务。",
+        "Qwen 大语言模型将用于增强球迷互动和媒体内容。",
+        "阿里云提供全球基础设施支持。"
+      ],
+      "whyItMatters": "体育赛事与 AI 深度融合，展示大模型在娱乐行业的商业潜力。",
+      "keyFacts": [
+        "多年独家合作伙伴。",
+        "覆盖 2027/2028 至 2032/2033 赛季。",
+        "包含 EURO 2028。"
+      ],
+      "impact": "将推动 AI 在体育转播和球迷体验中的创新应用，并扩大阿里云在欧洲的影响力。",
       "sourceNote": "",
       "images": []
     },
     {
       "title": "随着成本飙升，美国企业开始对人工智能实施配给",
-      "summary": "由于运行和使用AI工具的成本持续飙升，美国企业正开始对人工智能的使用实施配给制。企业通过限制使用量、设置分层级审批流程等方式控制开支，以应对AI费用增长过快的问题。这种从广泛采用转向精细化管理的策略，标志着企业在AI应用上从追求速度转向注重成本效益。",
+      "summary": "由于 AI 成本持续上升，美国企业开始通过限制使用量、设置审批流程等方式对 AI 使用实施配给制。",
       "source": "Hacker News 热门（buzzing.cc 中文翻译）",
       "url": "https://www.wsj.com/tech/ai/corporate-america-is-starting-to-ration-ai-as-cost-skyrockets-1eb99d7a",
       "category": "技巧与观点",
       "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "score": 75,
+      "background": "美国媒体报道，面对运行 AI 工具的高昂成本，企业正从广泛采用转向精细化管理。配给措施包括限制 token 用量、分级审批等。",
+      "details": [
+        "企业关注 AI 成本效益比。",
+        "配给制旨在控制开支。",
+        "反映 AI 应用从探索期进入成本优化阶段。"
+      ],
+      "whyItMatters": "企业 AI 采用策略转向务实，可能影响 AI 工具的市场增长。",
+      "keyFacts": [
+        "AI 成本飙升。",
+        "企业实施配给制。",
+        "包括限制使用和审批流程。"
+      ],
+      "impact": "或促使 AI 提供商推出更灵活的定价方案，并加速成本优化技术的发展。",
+      "sourceNote": "",
+      "images": [
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/11-%E9%9A%8F%E7%9D%80%E6%88%90%E6%9C%AC%E9%A3%99%E5%8D%87-%E7%BE%8E%E5%9B%BD%E4%BC%81%E4%B8%9A%E5%BC%80%E5%A7%8B%E5%AF%B9%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%9E%E6%96%BD%E9%85%8D%E7%BB%99.png"
+      ]
+    },
+    {
+      "title": "NVIDIA 或将于六月发布整合 Blackwell GPU 与 AI 单元的 ARM 笔记本芯片 N1X",
+      "summary": "NVIDIA 与微软、Arm 暗示 6 月 1 日发布会，预计发布与联发科合作的 ARM 笔记本芯片 N1X，整合 CPU、Blackwell GPU 和 AI 单元。",
+      "source": "X：阿易 AI Notes (@AYi_AInotes)",
+      "url": "https://x.com/AYi_AInotes/status/2060779431648547016",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 70,
+      "background": "NVIDIA、微软和 Arm 在社交媒体发布指向台北音乐中心的坐标，预示 6 月 1 日有重大发布。传闻该芯片由 NVIDIA 与联发科合作开发，名为 N1X。",
+      "details": [
+        "N1X 将整合 CPU、基于 Blackwell 架构的 GPU 和 AI 单元。",
+        "目标是在轻薄本上提供接近 RTX 4070 的图形性能。",
+        "标志着 NVIDIA 从显卡供应商向整机核心方案提供商转变。"
+      ],
+      "whyItMatters": "若属实，将直接冲击 Intel、AMD 和高通在 PC 市场的地位。",
+      "keyFacts": [
+        "发布时间预计 6 月 1 日。",
+        "芯片为 ARM 架构。",
+        "整合 Blackwell GPU 和 AI 单元。"
+      ],
+      "impact": "可能重塑笔记本电脑芯片格局，推动 AI 在个人计算中的普及。",
       "sourceNote": "",
       "images": []
     },
     {
+      "title": "免费领取6个月ChatGPT Pro及AI工具思考",
+      "summary": "OpenAI 为开源项目维护者提供免费 6 个月 ChatGPT Pro（价值 $1200），申请无需硬性 Star 数。",
+      "source": "X：阿易 AI Notes (@AYi_AInotes)",
+      "url": "https://x.com/AYi_AInotes/status/2060740414273941874",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 70,
+      "background": "OpenAI 推出福利，开源项目维护者可免费领取 6 个月 ChatGPT Pro 订阅。申请要求仅需项目链接，无特定 Star 门槛。",
+      "details": [
+        "ChatGPT Pro 正常价值 $1200。",
+        "面向任何开源项目维护者。",
+        "文章还讨论了 AI 工具分类：agent 型（如 Claude Code）与实习生型（如 Cursor）。"
+      ],
+      "whyItMatters": "降低开发者使用高级 AI 工具的门槛，鼓励开源贡献。",
+      "keyFacts": [
+        "免费 6 个月 ChatGPT Pro。",
+        "价值 $1200。",
+        "开源维护者可申请。"
+      ],
+      "impact": "可能吸引更多开发者参与开源项目，并提升 OpenAI 在开发者社区的影响力。",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Show HN: mcpguard – 适用于 MCP 服务器的安全扫描工具和防火墙",
+      "summary": "mcpguard 是一款针对 MCP 服务器的安全扫描工具和防火墙，已开源至 GitHub。",
+      "source": "github.com",
+      "url": "https://github.com/GT-Projects256/mcpguard",
+      "category": "技巧与观点",
+      "publishedAt": "2026-05-31T16:11:25.211000Z",
+      "score": 70,
+      "background": "GitHub 上发布新工具 mcpguard，专门用于 MCP（Model Context Protocol）服务器的安全扫描与防护。它集成了防火墙功能。",
+      "details": [
+        "可扫描 MCP 服务器漏洞。",
+        "提供实时防火墙防护。",
+        "代码已开源。"
+      ],
+      "whyItMatters": "MCP 协议在 AI 代理中日益普及，安全工具需求上升。",
+      "keyFacts": [
+        "针对 MCP 服务器。",
+        "安全扫描和防火墙。",
+        "开源。"
+      ],
+      "impact": "有助于提高 AI 代理安全性，减少攻击面。",
+      "sourceNote": "",
+      "images": [
+        "https://opengraph.githubassets.com/56e3617ce7940d7cb556008d0480bf532f9c1fa51ebea1e77030620dc6437c18/GT-Projects256/mcpguard"
+      ]
+    },
+    {
+      "title": "在浏览器中通过 Pyodide 和 Service Worker 运行 Python ASGI 应用",
+      "summary": "开发者展示如何在浏览器中通过 Pyodide 和 Service Worker 运行 Python ASGI 应用，由 Claude Opus 4.8 辅助完成。",
+      "source": "Simon Willison 博客",
+      "url": "https://simonwillison.net/2026/May/30/pyodide-asgi-browser",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 65,
+      "background": "Simon Willison 在其博客上展示了一种新技术方案，利用 Pyodide 和 Service Worker 在浏览器端运行 Python ASGI 应用。此前方案使用 Web Workers 但无法执行 `<script>` 标签中的 JavaScript。",
+      "details": [
+        "新方案由 Claude Opus 4.8 协助开发。",
+        "已实现基础的 ASGI FastCGI 演示和 Datasette 1.0a31 演示。",
+        "计划用于升级 Datasette Lite。"
+      ],
+      "whyItMatters": "为在浏览器中运行 Python 服务端应用提供新路径，减少对后端依赖。",
+      "keyFacts": [
+        "使用 Pyodide 和 Service Worker。",
+        "Claude Opus 4.8 参与开发。",
+        "已运行 Datasette 演示。"
+      ],
+      "impact": "可能推动更多 Python Web 应用在客户端直接运行，提升开发和部署效率。",
+      "sourceNote": "",
+      "images": [
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/15-%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E9%80%9A%E8%BF%87-pyodide-%E5%92%8C-service-worker-%E8%BF%90%E8%A1%8C-python.png"
+      ]
+    },
+    {
+      "title": "Odysseus – 自托管人工智能工作区",
+      "summary": "Odysseus 是一个自托管的人工智能工作区项目，代码已开源。",
+      "source": "Hacker News (黑客新闻)",
+      "url": "https://github.com/pewdiepie-archdaemon/odysseus",
+      "category": "行业动态",
+      "publishedAt": "2026-05-31T15:50:34Z",
+      "score": 65,
+      "background": "GitHub 上出现自托管 AI 工作区 Odysseus，允许用户本地部署和管理 AI 工作环境。项目提供完整的开源代码。",
+      "details": [
+        "支持多种 AI 模型集成。",
+        "强调数据隐私和自主控制。",
+        "面向开发团队和个人。"
+      ],
+      "whyItMatters": "满足企业对 AI 数据主权和定制化的需求。",
+      "keyFacts": [
+        "自托管。",
+        "开源。",
+        "AI 工作区。"
+      ],
+      "impact": "可能吸引重视隐私的团队自建 AI 基础设施。",
+      "sourceNote": "",
+      "images": [
+        "https://opengraph.githubassets.com/bdd4f625e221adc20e070a7c519c8beac1bfd4947a67f190795f33473eaeed12/pewdiepie-archdaemon/odysseus"
+      ]
+    },
+    {
       "title": "最后一次技术面试",
-      "summary": "Steve Yegge 在 Medium 发表观点文章《最后一次技术面试》，探讨 AI 时代传统技术面试的意义变化。文章在 Hacker News 社区获得 100 分关注。",
+      "summary": "Steve Yegge 在 Medium 发表文章讨论 AI 时代传统技术面试的变化，获 Hacker News 100 分关注。",
       "source": "Hacker News 热门（buzzing.cc 中文翻译）",
       "url": "https://steve-yegge.medium.com/the-last-technical-interview-bc13ddcf4564",
       "category": "技巧与观点",
       "publishedAt": null,
-      "score": 0,
-      "background": "",
-      "details": [],
-      "whyItMatters": "",
-      "keyFacts": [],
-      "impact": "",
+      "score": 60,
+      "background": "前 Google 工程师 Steve Yegge 撰文《最后一次技术面试》，探讨 AI 辅助编程如何改变招聘流程。文章在 Hacker News 引发讨论。",
+      "details": [
+        "Yegge 认为传统面试无法有效评估 AI 工具使用能力。",
+        "建议面试应聚焦于问题定义和方案设计。",
+        "文章获得社区高分。"
+      ],
+      "whyItMatters": "为技术招聘在 AI 时代的变革提供观点。",
+      "keyFacts": [
+        "作者 Steve Yegge。",
+        "主题：AI 时代技术面试。",
+        "Hacker News 评分 100。"
+      ],
+      "impact": "可能推动企业重新设计技术面试流程。",
       "sourceNote": "",
-      "images": []
+      "images": [
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/17-%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95.png"
+      ]
+    },
+    {
+      "title": "Show HN: 为 AI 编程代理压缩截图",
+      "summary": "开源项目：压缩截图以优化 AI 编程代理的输入效率。",
+      "source": "github.com",
+      "url": "https://github.com/mgranados/screenshotter",
+      "category": "技巧与观点",
+      "publishedAt": "2026-05-31T15:39:30.687000Z",
+      "score": 60,
+      "background": "GitHub 上发布工具，专门用于压缩截图，减少 AI 编程代理处理图像时的资源消耗。旨在提升代理运行速度。",
+      "details": [
+        "适用于需要视觉输入的代码代理。",
+        "通过压缩减少 token 消耗。",
+        "可集成到现有工作流。"
+      ],
+      "whyItMatters": "降低 AI 编程代理的成本，使其更实用。",
+      "keyFacts": [
+        "压缩截图。",
+        "优化 AI 编程代理。",
+        "开源。"
+      ],
+      "impact": "有助于降低视觉语言模型的运行成本，扩大应用范围。",
+      "sourceNote": "",
+      "images": [
+        "https://opengraph.githubassets.com/784fc49c78fc97f278f29cce815bb3b5fe89097a7f453a54b01182729247b6d3/mgranados/screenshotter"
+      ]
     }
   ]
 }

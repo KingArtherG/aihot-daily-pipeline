@@ -1,22 +1,32 @@
 {
+  "https://x.com/sama/status/2061101875303530871": [],
   "https://x.com/googleaidevs/status/2060685345738375640": [],
-  "https://x.com/stepfun_ai/status/2060678753030947226": [],
+  "https://x.com/sama/status/2061117302528188712": [],
   "https://github.com/jmaczan/tiny-vllm": [
-    "https://opengraph.githubassets.com/7e1c7b6707991d6a3c378d5c5251cef88e2edcc58a304f6ca677e894c6d0121f/jmaczan/tiny-vllm"
+    "https://opengraph.githubassets.com/0dc3e113aa8ad57cec0067c95e556cacb30cb355bba42ab97a3b2901eb807adf/jmaczan/tiny-vllm"
   ],
-  "https://x.com/semianalysis_/status/2060571944575963482": [],
-  "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping": [
-    "https://platform.theverge.com/wp-content/uploads/sites/2/2026/05/268550_Crying_AI_avatars_AParkin_2.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
-  ],
-  "https://www.bloomberg.com/news/articles/2026-05-30/ai-dangers-eclipse-nuclear-weapons-at-singapore-defense-forum": [],
   "https://www.bloomberg.com/news/articles/2026-05-30/softbank-to-invest-some-75-billion-in-ai-in-france-reports-say": [],
+  "https://x.com/semianalysis_/status/2060571944575963482": [],
   "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs": [
     "https://techcrunch.com/wp-content/uploads/2023/11/github-copilot-chat-2.webp?w=1200"
   ],
+  "https://x.com/kimmonismus/status/2061058117304262999": [],
+  "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping": [
+    "https://platform.theverge.com/wp-content/uploads/sites/2/2026/05/268550_Crying_AI_avatars_AParkin_2.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
+  ],
   "https://x.com/alibaba_cloud/status/2060520586489770167": [],
+  "https://www.wsj.com/tech/ai/corporate-america-is-starting-to-ration-ai-as-cost-skyrockets-1eb99d7a": [],
   "https://x.com/ayi_ainotes/status/2060779431648547016": [],
   "https://x.com/ayi_ainotes/status/2060740414273941874": [],
+  "https://github.com/gt-projects256/mcpguard": [
+    "https://opengraph.githubassets.com/56e3617ce7940d7cb556008d0480bf532f9c1fa51ebea1e77030620dc6437c18/GT-Projects256/mcpguard"
+  ],
   "https://simonwillison.net/2026/may/30/pyodide-asgi-browser": [],
-  "https://www.wsj.com/tech/ai/corporate-america-is-starting-to-ration-ai-as-cost-skyrockets-1eb99d7a": [],
-  "https://steve-yegge.medium.com/the-last-technical-interview-bc13ddcf4564": []
+  "https://github.com/pewdiepie-archdaemon/odysseus": [
+    "https://opengraph.githubassets.com/bdd4f625e221adc20e070a7c519c8beac1bfd4947a67f190795f33473eaeed12/pewdiepie-archdaemon/odysseus"
+  ],
+  "https://steve-yegge.medium.com/the-last-technical-interview-bc13ddcf4564": [],
+  "https://github.com/mgranados/screenshotter": [
+    "https://opengraph.githubassets.com/784fc49c78fc97f278f29cce815bb3b5fe89097a7f453a54b01182729247b6d3/mgranados/screenshotter"
+  ]
 }
