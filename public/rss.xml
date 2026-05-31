@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <rss version="2.0">
   <channel>
     <title>King AI 早报</title>
@@ -7,12 +7,12 @@
     <language>zh-CN</language>
     <lastBuildDate>Sun, 31 May 2026 17:38:27 +0000</lastBuildDate>
     <item>
-      <title>King AI 早报 2026-05-31</title>
-      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-05-31.html</link>
-      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-05-31.html</guid>
+      <title>King AI 早报 2026-06-01</title>
+      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-06-01.html</link>
+      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-06-01.html</guid>
       <author>KingArtherG</author>
       <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、行业融资与平台动态。重点包括：OpenAI发布生物防御AI工具Rosalind；Nano Banana Pro与Nano Banana 2正式发布；OpenAI正式进军机器人领域并启动招聘；Show HN: Tiny-vLLM——基于 C 和 CUDA 的高性能大型语言模型推理引擎；据报道：软银将在法国投资750亿欧元用于AI；xAI放弃JAX GPU转向自研训练框架；“开玩笑吧”：GitHub Copilot 新的基于 token 的计费模式引发开发者不满；苹果WWDC将推AI升级：G</description>
-      <pubDate>Sat, 30 May 2026 16:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 May 2026 16:00:00 +0000</pubDate>
     </item>
     <item>
       <title>King AI 早报 2026-05-30</title>

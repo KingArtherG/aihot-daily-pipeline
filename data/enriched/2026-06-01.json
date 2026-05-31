@@ -1,5 +1,5 @@
-{
-  "date": "2026-05-31",
+﻿{
+  "date": "2026-06-01",
   "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、行业融资与平台动态。重点包括：OpenAI发布生物防御AI工具Rosalind；Nano Banana Pro与Nano Banana 2正式发布；OpenAI正式进军机器人领域并启动招聘；Show HN: Tiny-vLLM——基于 C 和 CUDA 的高性能大型语言模型推理引擎；据报道：软银将在法国投资750亿欧元用于AI；xAI放弃JAX GPU转向自研训练框架；“开玩笑吧”：GitHub Copilot 新的基于 token 的计费模式引发开发者不满；苹果WWDC将推AI升级：Gemini蒸馏模型本地运行，但技术栈外部依赖显著。",
   "items": [
     {
@@ -123,7 +123,7 @@
       "impact": "将推动法国 AI 基础设施发展，创造就业，并可能带动欧洲算力布局变化。",
       "sourceNote": "",
       "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/05-%E6%8D%AE%E6%8A%A5%E9%81%93-%E8%BD%AF%E9%93%B6%E5%B0%86%E5%9C%A8%E6%B3%95%E5%9B%BD%E6%8A%95%E8%B5%84750%E4%BA%BF%E6%AC%A7%E5%85%83%E7%94%A8%E4%BA%8Eai.png"
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-06-01/05-%E6%8D%AE%E6%8A%A5%E9%81%93-%E8%BD%AF%E9%93%B6%E5%B0%86%E5%9C%A8%E6%B3%95%E5%9B%BD%E6%8A%95%E8%B5%84750%E4%BA%BF%E6%AC%A7%E5%85%83%E7%94%A8%E4%BA%8Eai.png"
       ]
     },
     {
@@ -273,7 +273,7 @@
       "impact": "或促使 AI 提供商推出更灵活的定价方案，并加速成本优化技术的发展。",
       "sourceNote": "",
       "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/11-%E9%9A%8F%E7%9D%80%E6%88%90%E6%9C%AC%E9%A3%99%E5%8D%87-%E7%BE%8E%E5%9B%BD%E4%BC%81%E4%B8%9A%E5%BC%80%E5%A7%8B%E5%AF%B9%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%9E%E6%96%BD%E9%85%8D%E7%BB%99.png"
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-06-01/11-%E9%9A%8F%E7%9D%80%E6%88%90%E6%9C%AC%E9%A3%99%E5%8D%87-%E7%BE%8E%E5%9B%BD%E4%BC%81%E4%B8%9A%E5%BC%80%E5%A7%8B%E5%AF%B9%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%9E%E6%96%BD%E9%85%8D%E7%BB%99.png"
       ]
     },
     {
@@ -373,7 +373,7 @@
       "impact": "可能推动更多 Python Web 应用在客户端直接运行，提升开发和部署效率。",
       "sourceNote": "",
       "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/15-%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E9%80%9A%E8%BF%87-pyodide-%E5%92%8C-service-worker-%E8%BF%90%E8%A1%8C-python.png"
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-06-01/15-%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E9%80%9A%E8%BF%87-pyodide-%E5%92%8C-service-worker-%E8%BF%90%E8%A1%8C-python.png"
       ]
     },
     {
@@ -425,7 +425,7 @@
       "impact": "可能推动企业重新设计技术面试流程。",
       "sourceNote": "",
       "images": [
-        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-05-31/17-%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95.png"
+        "https://KingArtherG.github.io/aihot-daily-pipeline/source-images/2026-06-01/17-%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95.png"
       ]
     },
     {
