@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>King AI 早报 2026-06-20</title>
+  <link rel="alternate" type="application/rss+xml" href="https://KingArtherG.github.io/aihot-daily-pipeline/rss.xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+      background: #fbfbf8;
+      color: #1f2933;
+    }
+    a { color: #0f766e; }
+    h1 { font-size: 32px; line-height: 1.25; margin-bottom: 16px; }
+    h2 { margin-top: 36px; border-top: 1px solid #d9ded8; padding-top: 20px; }
+    h3 { margin: 24px 0 8px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    hr { border: 0; border-top: 1px solid #d9ded8; margin: 32px 0; }
+    blockquote {
+      margin: 20px 0;
+      padding: 12px 16px;
+      border-left: 4px solid #14b8a6;
+      background: #eef9f6;
+    }
+    li { margin: 16px 0; }
+    .nav { margin-bottom: 28px; color: #52606d; }
+    .nav a { margin-right: 16px; }
+    .archive li { margin: 8px 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111827; color: #e5e7eb; }
+      blockquote { background: #132f2d; }
+      h2, hr { border-color: #374151; }
+      a { color: #5eead4; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav"><a href="./">King AI 早报</a><a href="./rss.xml">RSS</a></nav>
+<h1>King AI 早报 2026-06-20</h1>
+<h2>概览</h2>
+<p>过去 24 小时，AI 动态主要集中在产品发布、开发工具、行业融资与平台动态。重点包括：阿里开源向量数据库Zvec，UCSD黄碧薇教授提出因果AI第四代范式；NVIDIA Research 发布 SpatialClaw：免训练空间推理框架；Cloudflare 为 AI 智能体推出临时账户；Claude Code v2.1.183 发布；Figure机器人数首超人类员工；JAWBONE Act：一项打击政府为压制合法网络言论而施压的新法案；AlphaFold 负责人 John Jumper 离职 Google DeepMind，加入 Anthropic；Humanize PPT v0.9：为演讲而生的开源PPT Skill。</p>
+<h3>要闻</h3>
+<ul>
+<li>阿里开源向量数据库Zvec，UCSD黄碧薇教授提出因果AI第四代范式 <code>#1</code></li>
+<li>NVIDIA Research 发布 SpatialClaw：免训练空间推理框架 <code>#2</code></li>
+<li>Cloudflare 为 AI 智能体推出临时账户 <code>#3</code></li>
+<li>Claude Code v2.1.183 发布 <code>#4</code></li>
+</ul>
+<h3>行业动态</h3>
+<ul>
+<li>Figure机器人数首超人类员工 <code>#5</code></li>
+<li>JAWBONE Act：一项打击政府为压制合法网络言论而施压的新法案 <code>#6</code></li>
+<li>AlphaFold 负责人 John Jumper 离职 Google DeepMind，加入 Anthropic <code>#7</code></li>
+</ul>
+<h3>技巧与观点</h3>
+<ul>
+<li>Humanize PPT v0.9：为演讲而生的开源PPT Skill <code>#8</code></li>
+<li>DeepSeek研究员开源AutoResearch：AI自主跑通285B模型RL研究闭环 <code>#9</code></li>
+<li>baoyu-design Skill迭代：修复导出样式与渐变丢失问题，支持AI配图导出PPTX <code>#10</code></li>
+<li>/youtube-notetaker：YT 视频转 Artifacts <code>#11</code></li>
+<li>Salesforce CodeGen教程：生成、验证并重排序Python函数（含单元测试与安全检查） <code>#12</code></li>
+<li>我们在 Elasticsearch 上构建了一个持久化代理内存层，其召回率为0.89 <code>#13</code></li>
+<li>OpenRouter vs LiteLLM：如何选择 LLM 网关 <code>#14</code></li>
+<li>AI中心的数据黑洞 <code>#15</code></li>
+</ul>
+<hr>
+<h2>阿里开源向量数据库Zvec，UCSD黄碧薇教授提出因果AI第四代范式 <code>#1</code></h2>
+<blockquote>阿里开源内部向量数据库Zvec，pip install zvec免费使用，对标Pinecone每月70美元能力。支持十亿向量毫秒级检索，无需单独起服务，全平台兼容；v0.5.0新增原生全文混合搜索。UCSD黄碧薇教授（causal-learn作者）提出AI四代范式：相关性小模型→因果小模型→相关性大模型（LLM）→因果大模型，认为当前正站在第四代门口。其创立的Aether AI完成首轮融资，致力于从视频中自动抽取物理规律，探索下一代因果AI范式。</blockquote>
+<p>阿里开源内部向量数据库Zvec，pip install zvec免费使用，对标Pinecone每月70美元能力。支持十亿向量毫秒级检索，无需单独起服务，全平台兼容；v0.5.0新增原生全文混合搜索。</p>
+<p>UCSD黄碧薇教授（causal-learn作者）提出AI四代范式：相关性小模型→因果小模型→相关性大模型（LLM）→因果大模型，认为当前正站在第四代门口。</p>
+<p>其创立的Aether AI完成首轮融资，致力于从视频中自动抽取物理规律，探索下一代因果AI范式。</p>
+<p><img src="https://pbs.twimg.com/media/HLJqU85XAAAzvdE.jpg:large" alt=""></p>
+<hr>
+<h2>NVIDIA Research 发布 SpatialClaw：免训练空间推理框架 <code>#2</code></h2>
+<blockquote>NVIDIA Research 发布 SpatialClaw，一个免训练的空间推理框架。它通过将代码作为动作接口，让智能体调用感知工具（Depth Anything 3、SAM 3）并自由组合输出，解决视觉语言模型在 3D 空间判断上的弱点。在 20 项基准测试中平均准确率达 59.9%，比近期智能体 SpaceTools 高 11.2 个百分点，比无工具基线高 6.5 点，比结构化工具调用高 3.2 点。框架无需重新训练，同一提示词和工具集可跨所有基准和骨干网络运行，支持 Qwen3.5/3.6 及 Gemma4 等 26B 至 397B 参数的模型。</blockquote>
+<p>NVIDIA Research 发布 SpatialClaw，一个免训练的空间推理框架。</p>
+<p>它通过将代码作为动作接口，让智能体调用感知工具（Depth Anything 3、SAM 3）并自由组合输出，解决视觉语言模型在 3D 空间判断上的弱点。</p>
+<p>在 20 项基准测试中平均准确率达 59.9%，比近期智能体 SpaceTools 高 11.2 个百分点，比无工具基线高 6.5 点，比结构化工具调用高 3.2 点。</p>
+<p>框架无需重新训练，同一提示词和工具集可跨所有基准和骨干网络运行，支持 Qwen3.5/3.6 及 Gemma4 等 26B 至 397B 参数的模型。</p>
+<hr>
+<h2>Cloudflare 为 AI 智能体推出临时账户 <code>#3</code></h2>
+<blockquote>Cloudflare 在 Workers 上推出临时账户（Temporary Accounts），允许 AI 智能体直接运行 <code>wrangler deploy --temporary</code>，在数秒内获取一个可用的实时 Worker，无需绕开面向人类设计的部署流程。该功能旨在降低智能体部署门槛。</blockquote>
+<p>Cloudflare 在 Workers 上推出临时账户（Temporary Accounts），允许 AI 智能体直接运行 <code>wrangler deploy --temporary</code>，在数秒内获取一个可用的实时 Worker，无需绕开面向人类设计的部署流程。</p>
+<p>该功能旨在降低智能体部署门槛。</p>
+<p><img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/60PB1NmcYFywT5TDlwDR0v/a9e72c980e108702e00b57343ea1ccb2/OG_Share_2024-2025-2026__39_.png" alt=""></p>
+<hr>
+<h2>Claude Code v2.1.183 发布 <code>#4</code></h2>
+<blockquote>Claude Code v2.1.183 增强了自动模式安全性：未经请求时阻止 <code>git reset --hard</code>、<code>git commit --amend</code>（非本轮提交）、<code>terraform destroy</code> 等破坏性命令。新增 <code>attribution.sessionUrl</code> 设置，可省略 claude.ai 会话链接；<code>/config --help</code> 列出所有速记键；<code>/config</code> 切换行为改为 Enter/Space 变更、Esc 保存退出。修复了 thinking 块导致 400 错误、子智能体 WebSearch 空结果、vim 模式光标滞留、Windows Terminal TUI 错乱、多插件技能重复、MCP …</blockquote>
+<p>Claude Code v2.1.183 增强了自动模式安全性：未经请求时阻止 <code>git reset --hard</code>、<code>git commit --amend</code>（非本轮提交）、<code>terraform destroy</code> 等破坏性命令。</p>
+<p>新增 <code>attribution.sessionUrl</code> 设置，可省略 claude.ai 会话链接；<code>/config --help</code> 列出所有速记键；<code>/config</code> 切换行为改为 Enter/Space 变更、Esc 保存退出。</p>
+<p>修复了 thinking 块导致 400 错误、子智能体 WebSearch 空结果、vim 模式光标滞留、Windows Terminal TUI 错乱、多插件技能重复、MCP …</p>
+<p><img src="https://opengraph.githubassets.com/0fe86e4b0a023af0fa67f3677c70854e2139221b412a34e80550fc854a1a3c01/anthropics/claude-code/releases/tag/v2.1.183" alt=""></p>
+<hr>
+<h2>Figure机器人数首超人类员工 <code>#5</code></h2>
+<blockquote>我们已超越理论阶段。 有史以来第一次，Figure的机器人数量超过了人类员工数量。</blockquote>
+<p>我们已超越理论阶段。有史以来第一次，Figure的机器人数量超过了人类员工数量。</p>
+<p><img src="https://pbs.twimg.com/media/HLNT5pka4AAhltl.jpg:large" alt=""></p>
+<hr>
+<h2>JAWBONE Act：一项打击政府为压制合法网络言论而施压的新法案 <code>#6</code></h2>
+<blockquote>上周，参议员Ted Cruz和Ron Wyden提出两党法案JAWBONE Act，为受政府胁迫的广播商、互动计算机服务商及AI提供商创建针对政府官员的联邦诉讼权，并建立政府与中间方就用户表达问题沟通的透明度体系。法案旨在应对政府施压私营公司审查受第一修正案保护的言论。EFF支持该法案，并举证：2025年6月联邦高官威胁起诉ICEBlock创建者，同年10月司法部长要求苹果下架该应用。EFF还提起信息自由诉讼，要求披露政府与苹果、谷歌、Meta的沟通记录。</blockquote>
+<p>上周，参议员Ted Cruz和Ron Wyden提出两党法案JAWBONE Act，为受政府胁迫的广播商、互动计算机服务商及AI提供商创建针对政府官员的联邦诉讼权，并建立政府与中间方就用户表达问题沟通的透明度体系。</p>
+<p>法案旨在应对政府施压私营公司审查受第一修正案保护的言论。EFF支持该法案，并举证：2025年6月联邦高官威胁起诉ICEBlock创建者，同年10月司法部长要求苹果下架该应用。</p>
+<p>EFF还提起信息自由诉讼，要求披露政府与苹果、谷歌、Meta的沟通记录。</p>
+<p><img src="https://www.eff.org/files/banner_library/intermediary-4.jpg" alt=""></p>
+<hr>
+<h2>AlphaFold 负责人 John Jumper 离职 Google DeepMind，加入 Anthropic <code>#7</code></h2>
+<blockquote>AlphaFold 团队负责人 John Jumper 宣布，在 Google DeepMind 工作近 9 年后决定离职，将加入 Anthropic（先休整一段时间）。DeepMind CEO Demis Hassabis 表示，过去 9 年与 Jumper 的非凡合作改变了世界，AlphaFold 展示了 AI 在科学与医学领域的巨大潜力，并为 AI 造福人类指明了方向。Jumper 回忆，Hassabis 在他博士毕业仅 6 个月后就大胆让他领导 AlphaFold 团队，感谢团队教会他如何做伟大的科学。</blockquote>
+<p>AlphaFold 团队负责人 John Jumper 宣布，在 Google DeepMind 工作近 9 年后决定离职，将加入 Anthropic（先休整一段时间）。</p>
+<p>DeepMind CEO Demis Hassabis 表示，过去 9 年与 Jumper 的非凡合作改变了世界，AlphaFold 展示了 AI 在科学与医学领域的巨大潜力，并为 AI 造福人类指明了方向。</p>
+<p>Jumper 回忆，Hassabis 在他博士毕业仅 6 个月后就大胆让他领导 AlphaFold 团队，感谢团队教会他如何做伟大的科学。</p>
+<p><img src="https://pbs.twimg.com/profile_images/1990472620614053888/xrAu0wQL_200x200.jpg" alt=""></p>
+<hr>
+<h2>Humanize PPT v0.9：为演讲而生的开源PPT Skill <code>#8</code></h2>
+<blockquote>Humanize PPT v0.9 是一款专为演讲场景设计的PPT Skill，核心通过AST（Audience, State, Transfer）逻辑重新编排大纲，将页面渲染外包给下游Skill。渲染前先输出4张真实预览页，并将图片、视频素材的占位与生成prompt写入大纲。新增质检环节自动修复常见渲染问题，并支持演讲模式：按S键在独立窗口显示演讲稿备注，按ESC键打开全局索引快速跳页。项目已开源至github.com/LearnPrompt/humanize-ppt，由卡尔 &amp; yc星辰开发。</blockquote>
+<p>Humanize PPT v0.9 是一款专为演讲场景设计的PPT Skill，核心通过AST（Audience, State, Transfer）逻辑重新编排大纲，将页面渲染外包给下游Skill。</p>
+<p>渲染前先输出4张真实预览页，并将图片、视频素材的占位与生成prompt写入大纲。新增质检环节自动修复常见渲染问题，并支持演讲模式：按S键在独立窗口显示演讲稿备注，按ESC键打开全局索引快速跳页。</p>
+<p>项目已开源至github.com/LearnPrompt/humanize-ppt，由卡尔 &amp; yc星辰开发。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/VNz1x8bH8Fx9EhBwibnGD1MHresqgbRia0fNClAFtBpicu1lUOOgL9cTo6ha0XWncFLH7x2sHxiaslCr0S5vq43CgqMiaNS4HHooyOaKlFhfcqe8/0?wx_fmt=jpeg" alt=""></p>
+<hr>
+<h2>DeepSeek研究员开源AutoResearch：AI自主跑通285B模型RL研究闭环 <code>#9</code></h2>
+<blockquote>DeepSeek研究员Deli Chen将AutoResearch协议开源，并发布Self-play综述论文。其AI智能体首次完全自主地在DeepSeek 285B模型上完成完整RL研究闭环——从实验设计、写代码、提交GPU任务、debug到结论总结，全程零人工干预。系统调用了GRPO工具，被视为持续学习研究的开端。</blockquote>
+<p>DeepSeek研究员Deli Chen将AutoResearch协议开源，并发布Self-play综述论文。</p>
+<p>其AI智能体首次完全自主地在DeepSeek 285B模型上完成完整RL研究闭环——从实验设计、写代码、提交GPU任务、debug到结论总结，全程零人工干预。系统调用了GRPO工具，被视为持续学习研究的开端。</p>
+<p><img src="https://pbs.twimg.com/media/HLJevC0XwAArF-x.jpg:large" alt=""></p>
+<hr>
+<h2>baoyu-design Skill迭代：修复导出样式与渐变丢失问题，支持AI配图导出PPTX <code>#10</code></h2>
+<blockquote>宝玉分享 baoyu-design Skill 的迭代过程：用户测试发现导出问题（样式表未铺满整页、渐变色丢失），他在本地复现后让 Agent 分析原因、给出解决方案并添加测试覆盖，修复后效果改善。该 Skill 可在制作 PPT、动画视频或网站时调用 AI 生图配图，支持 Codex 内置画图或配合 baoyu-image-gen Skill 调用 Codex CLI 画图，并能连同图片一起导出为 PPTX，在 PowerPoint/Keynote 中二次编辑。迭代循环：自己用 → 发现问题 → 让 Agent 分析 → 出方案 → 确认 → 更新 Skill。</blockquote>
+<p>宝玉分享 baoyu-design Skill 的迭代过程：用户测试发现导出问题（样式表未铺满整页、渐变色丢失），他在本地复现后让 Agent 分析原因、给出解决方案并添加测试覆盖，修复后效果改善。</p>
+<p>该 Skill 可在制作 PPT、动画视频或网站时调用 AI 生图配图，支持 Codex 内置画图或配合 baoyu-image-gen Skill 调用 Codex CLI 画图，并能连同图片一起导出为 PPTX，在 PowerPoint/Keynote 中二次编辑。</p>
+<p>迭代循环：自己用 → 发现问题 → 让 Agent 分析 → 出方案 → 确认 → 更新 Skill。</p>
+<p><img src="https://pbs.twimg.com/media/HLMkXCeXoAAOQVQ.jpg:large" alt=""></p>
+<hr>
+<h2>/youtube-notetaker：YT 视频转 Artifacts <code>#11</code></h2>
+<blockquote>YT 视频 -&gt; Artifacts 看看我如何使用新的 /youtube-notetaker 技能从 YT 视频生成 Artifacts。 捕获幻灯片、笔记、转录内容…… 快去试试 ↓</blockquote>
+<p>YT 视频 -&gt; Artifacts 看看我如何使用新的 /youtube-notetaker 技能从 YT 视频生成 Artifacts。捕获幻灯片、笔记、转录内容…… 快去试试 ↓</p>
+<p><img src="https://pbs.twimg.com/profile_images/939313677647282181/vZjFWtAn_200x200.jpg" alt=""></p>
+<hr>
+<h2>Salesforce CodeGen教程：生成、验证并重排序Python函数（含单元测试与安全检查） <code>#12</code></h2>
+<blockquote>本教程实现一个基于Salesforce CodeGen的端到端代码生成工作流。从HuggingFace加载CodeGen模型（支持350M、2B、codegen2-1B、codegen25-7b等版本），通过自然语言提示生成Python函数，随后进行函数提取、语法检查、静态安全检查、单元测试验证、best-of-N候选重排序、多步程序合成、提示词实验、基准可视化及导出。展示了CodeGen作为结构化代码生成流水线的能力，不仅完成代码补全，还能评估、筛选和组织生成结果。</blockquote>
+<p>本教程实现一个基于Salesforce CodeGen的端到端代码生成工作流。</p>
+<p>从HuggingFace加载CodeGen模型（支持350M、2B、codegen2-1B、codegen25-7b等版本），通过自然语言提示生成Python函数，随后进行函数提取、语法检查、静态安全检查、单元测试验证、best-of-N候选重排序、多步程序合成、提示词实验、基准可视化及导出。</p>
+<p>展示了CodeGen作为结构化代码生成流水线的能力，不仅完成代码补全，还能评估、筛选和组织生成结果。</p>
+<hr>
+<h2>我们在 Elasticsearch 上构建了一个持久化代理内存层，其召回率为0.89 <code>#13</code></h2>
+<blockquote>Agent Builder 正式上市（GA）。基于 Elasticsearch 的持久化内存层将记忆分为情景、语义、程序三类，分别存入独立索引，各设不同写速率与过期规则。召回采用 BM25 与 Jina v5 稠密向量的 RRF 融合，再经交叉编码器重排序。在 168 道 QA 题评估中，R@10 平均 0.89，零跨租户泄漏。该层可通过支持 MCP 协议的客户端访问，不绑定特定运行时，已开源至 GitHub。</blockquote>
+<p>Agent Builder 正式上市（GA）。基于 Elasticsearch 的持久化内存层将记忆分为情景、语义、程序三类，分别存入独立索引，各设不同写速率与过期规则。</p>
+<p>召回采用 BM25 与 Jina v5 稠密向量的 RRF 融合，再经交叉编码器重排序。在 168 道 QA 题评估中，R@10 平均 0.89，零跨租户泄漏。</p>
+<p>该层可通过支持 MCP 协议的客户端访问，不绑定特定运行时，已开源至 GitHub。</p>
+<p><img src="https://cdn.sanity.io/images/me0ej585/search-labs-import-testing/15fbc95df401906a7655ad1c9a7194b954bcce05-1280x720.png?rect=0,24,1280,672&amp;w=1200&amp;h=630" alt=""></p>
+<hr>
+<h2>OpenRouter vs LiteLLM：如何选择 LLM 网关 <code>#14</code></h2>
+<blockquote>OpenRouter 是托管在 Cloudflare 边缘的 LLM 网关，无需管理基础设施，收取 5.5% 平台费（前 100 万次请求免费），支持 70+ 提供商和自动故障转移。LiteLLM 是自部署代理（Docker/PostgreSQL/Redis），数据不离开内网，免费开源，但需承担基础设施成本（生产部署约数百美元/月）。当模型月支出超过约 $3,600（基础设施 $200/月）或 $9,100（基础设施 $500/月）时自托管更划算。LiteLLM 提供六种路由策略和自定义 Python 路由；OpenRouter 具备 SOC 2、GDPR 认证和零数据保留选项。两者可串联使用。</blockquote>
+<p>OpenRouter 是托管在 Cloudflare 边缘的 LLM 网关，无需管理基础设施，收取 5.5% 平台费（前 100 万次请求免费），支持 70+ 提供商和自动故障转移。</p>
+<p>LiteLLM 是自部署代理（Docker/PostgreSQL/Redis），数据不离开内网，免费开源，但需承担基础设施成本（生产部署约数百美元/月）。</p>
+<p>当模型月支出超过约 $3,600（基础设施 $200/月）或 $9,100（基础设施 $500/月）时自托管更划算。</p>
+<p>LiteLLM 提供六种路由策略和自定义 Python 路由；OpenRouter 具备 SOC 2、GDPR 认证和零数据保留选项。两者可串联使用。</p>
+<hr>
+<h2>AI中心的数据黑洞 <code>#15</code></h2>
+<blockquote>智能的一种定义是样本效率，但近年AI进步主要靠扩充数据分布和增加算力。强化学习本质是合成数据生成——投入大量算力通过验证器筛选“好”数据，再训练模型预测正确输出。这一过程需要每个领域和技能的海量人类专家示例，数据行业年收入已达数十亿美元。近日Epoch报告，开源模型仅落后前沿闭源模型4个月，原因在于数据可从公开API蒸馏，而超参数等不易复制。人类一生接触约2亿token，前沿模型训练在数十到数百T token之间，相差近百万倍——机器人、自动驾驶等领域同样存在巨大效率差距。</blockquote>
+<p>智能的一种定义是样本效率，但近年AI进步主要靠扩充数据分布和增加算力。强化学习本质是合成数据生成——投入大量算力通过验证器筛选“好”数据，再训练模型预测正确输出。这一过程需要每个领域和技能的海量人类专家示例，数据行业年收入已达数十亿美元。</p>
+<p>近日Epoch报告，开源模型仅落后前沿闭源模型4个月，原因在于数据可从公开API蒸馏，而超参数等不易复制。人类一生接触约2亿token，前沿模型训练在数十到数百T token之间，相差近百万倍——机器人、自动驾驶等领域同样存在巨大效率差距。</p>
+<p><img src="https://substackcdn.com/image/fetch/$s_!i2ZC!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F202734201%2F615de510-7827-403e-a419-9f9c3e755577%2Ftranscoded-1781887356.png" alt=""></p>
+<p><img src="https://substackcdn.com/image/fetch/$s_!sH06!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fdwarkesh.substack.com%2Fapi%2Fv1%2Fpost_preview%2F202734201%2Ftwitter.jpg%3Fversion%3D4" alt=""></p>
+<hr>
+</body>
+</html>
