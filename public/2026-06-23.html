@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>King AI 早报 2026-06-23</title>
+  <link rel="alternate" type="application/rss+xml" href="https://KingArtherG.github.io/aihot-daily-pipeline/rss.xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+      background: #fbfbf8;
+      color: #1f2933;
+    }
+    a { color: #0f766e; }
+    h1 { font-size: 32px; line-height: 1.25; margin-bottom: 16px; }
+    h2 { margin-top: 36px; border-top: 1px solid #d9ded8; padding-top: 20px; }
+    h3 { margin: 24px 0 8px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    hr { border: 0; border-top: 1px solid #d9ded8; margin: 32px 0; }
+    blockquote {
+      margin: 20px 0;
+      padding: 12px 16px;
+      border-left: 4px solid #14b8a6;
+      background: #eef9f6;
+    }
+    li { margin: 16px 0; }
+    .nav { margin-bottom: 28px; color: #52606d; }
+    .nav a { margin-right: 16px; }
+    .archive li { margin: 8px 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111827; color: #e5e7eb; }
+      blockquote { background: #132f2d; }
+      h2, hr { border-color: #374151; }
+      a { color: #5eead4; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav"><a href="./">King AI 早报</a><a href="./rss.xml">RSS</a></nav>
+<h1>King AI 早报 2026-06-23</h1>
+<h2>概览</h2>
+<p>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：PP-OCRv6 on Hugging Face：50 语言 OCR，参数规模 1.5M 至 34.5M；东京 AI 公司 Sakana AI 推出多智能体编排系统 Sakana Fugu；Show HN：Oak——专为代理设计的 Git 替代方案；微信Agent小微灰度内测：主入口发消息红包，子入口可读聊天记录；Grok Build 推出 /goal 模式，支持长时间自主任务执行；Aleph 2.0 现已集成到 Figma Weave；OpenAI 发布 Daybreak 安全工具：Codex Security 与 GPT-5.5-Cyber；在 AWS、Google Cloud 和 Microsoft Foundry 上使用完整版 Claude Desktop。</p>
+<h3>要闻</h3>
+<ul>
+<li>PP-OCRv6 on Hugging Face：50 语言 OCR，参数规模 1.5M 至 34.5M <code>#1</code></li>
+<li>东京 AI 公司 Sakana AI 推出多智能体编排系统 Sakana Fugu <code>#2</code></li>
+<li>Show HN：Oak——专为代理设计的 Git 替代方案 <code>#3</code></li>
+<li>微信Agent小微灰度内测：主入口发消息红包，子入口可读聊天记录 <code>#4</code></li>
+</ul>
+<h3>产品发布/更新</h3>
+<ul>
+<li>Grok Build 推出 /goal 模式，支持长时间自主任务执行 <code>#5</code></li>
+<li>Aleph 2.0 现已集成到 Figma Weave <code>#6</code></li>
+<li>OpenAI 发布 Daybreak 安全工具：Codex Security 与 GPT-5.5-Cyber <code>#7</code></li>
+<li>在 AWS、Google Cloud 和 Microsoft Foundry 上使用完整版 Claude Desktop <code>#8</code></li>
+<li>Claude Code v2.1.186 发布 <code>#9</code></li>
+</ul>
+<h3>行业动态</h3>
+<ul>
+<li>开辟新赛道：小米 YU7 GT 创全球首个纽北自动驾驶圈速纪录，官方圈速榜新增“自动驾驶”分类 <code>#10</code></li>
+<li>美国警长利用Flock车牌系统跟踪前女友案频发，Flock法务官承认“最常见滥用” <code>#11</code></li>
+<li>Google DeepMind 7500 万美元投资 A24，合作开发电影 AI 工具 <code>#12</code></li>
+</ul>
+<h3>论文研究</h3>
+<ul>
+<li>Google Labs 提出用“洞察策略”评估 AI 编码智能体的主动性 <code>#13</code></li>
+</ul>
+<h3>技巧与观点</h3>
+<ul>
+<li>Cursor 审计发现奖励黑客行为淹没模型智能提升 <code>#14</code></li>
+<li>Anthropic 工程负责人：Claude Code 让程序员更孤独 <code>#15</code></li>
+<li>Google ADK 与 A2A 协议：跨语言多智能体团队构建实战 <code>#16</code></li>
+<li>OpenAI Codex 用于长期运行工作的极致用法 <code>#17</code></li>
+</ul>
+<hr>
+<h2>PP-OCRv6 on Hugging Face：50 语言 OCR，参数规模 1.5M 至 34.5M <code>#1</code></h2>
+<blockquote>PP-OCRv6 是 PaddleOCR 最新一代通用 OCR 模型族，提供 tiny（1.5M）、small（7.7M）和 medium（34.5M）三级。medium 和 small 支持 50 种语言（简体/繁体中文、英文、日文及 46 种拉丁语系）。在官方多场景基准上，medium 检测 Hmean 86.2%，识别准确率 83.2%，较 PP-OCRv5_server 分别提升 +4.6 和 +5.1 个百分点。模型采用 PPLCNetV4 统一骨干、RepLKFPN 检测模块和 EncoderWithLightSVTR 识别模块，可通过 PaddleOCR、Transformers、ONNX Runtime 等后端灵活部…</blockquote>
+<p>PP-OCRv6 是 PaddleOCR 最新一代通用 OCR 模型族，提供 tiny（1.5M）、small（7.7M）和 medium（34.5M）三级。</p>
+<p>medium 和 small 支持 50 种语言（简体/繁体中文、英文、日文及 46 种拉丁语系）。</p>
+<p>在官方多场景基准上，medium 检测 Hmean 86.2%，识别准确率 83.2%，较 PP-OCRv5_server 分别提升 +4.6 和 +5.1 个百分点。</p>
+<p>模型采用 PPLCNetV4 统一骨干、RepLKFPN 检测模块和 EncoderWithLightSVTR 识别模块，可通过 PaddleOCR、Transformers、ONNX Runtime 等后端灵活部…</p>
+<p><img src="https://cdn-uploads.huggingface.co/production/uploads/652b2e9166313ebb6197e706/l156KP0e5PRyDrE4woHoM.jpeg" alt=""></p>
+<hr>
+<h2>东京 AI 公司 Sakana AI 推出多智能体编排系统 Sakana Fugu <code>#2</code></h2>
+<blockquote>Sakana AI 是 2023 年成立于东京的 AI 公司，由前 Google Brain 的 David Ha（CEO）、Transformer 论文共同作者 Llion Jones（CTO）及前日本外交官 Ren Ito（主席）联合创立。其产品 Sakana Fugu 将多智能体系统封装成单个 API 调用，内部自动拆解任务、调度全球模型并验证结果。Fugu Ultra 在工程、科学、推理等基准上对标 Fable/Mythos，通过动态编排多模型天然绕开单一供应商出口管制风险，被视为将多智能体从复杂工程变为开箱即用的产品形态。</blockquote>
+<p>Sakana AI 是 2023 年成立于东京的 AI 公司，由前 Google Brain 的 David Ha（CEO）、Transformer 论文共同作者 Llion Jones（CTO）及前日本外交官 Ren Ito（主席）联合创立。</p>
+<p>其产品 Sakana Fugu 将多智能体系统封装成单个 API 调用，内部自动拆解任务、调度全球模型并验证结果。</p>
+<p>Fugu Ultra 在工程、科学、推理等基准上对标 Fable/Mythos，通过动态编排多模型天然绕开单一供应商出口管制风险，被视为将多智能体从复杂工程变为开箱即用的产品形态。</p>
+<p><img src="https://pbs.twimg.com/profile_images/2016043556964605952/Tqi9KA2r_200x200.jpg" alt=""></p>
+<hr>
+<h2>Show HN：Oak——专为代理设计的 Git 替代方案 <code>#3</code></h2>
+<blockquote>Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。</blockquote>
+<p>Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。</p>
+<p>采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。</p>
+<p>以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。</p>
+<p>已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。</p>
+<p><img src="https://oak.space/oak/oak/og.png?v=c9d14f01" alt=""></p>
+<hr>
+<h2>微信Agent小微灰度内测：主入口发消息红包，子入口可读聊天记录 <code>#4</code></h2>
+<blockquote>微信Agent小微灰度内测已开始，主入口位于微信首页左上角，支持给好友发消息和红包（需确认），但无法读取聊天记录或向群聊发消息。群聊和私聊的“问小微”子入口则可读取聊天记录并支持群发。小微可创建日程提醒、待办、总结朋友圈，打通公众号和视频号进行问答。收藏仅可读取小微自建笔记。内置“小工具”功能，支持语音创建简易小程序（暂不可发布），还可调用第三方小程序。</blockquote>
+<p>微信Agent小微灰度内测已开始，主入口位于微信首页左上角，支持给好友发消息和红包（需确认），但无法读取聊天记录或向群聊发消息。群聊和私聊的“问小微”子入口则可读取聊天记录并支持群发。</p>
+<p>小微可创建日程提醒、待办、总结朋友圈，打通公众号和视频号进行问答。收藏仅可读取小微自建笔记。内置“小工具”功能，支持语音创建简易小程序（暂不可发布），还可调用第三方小程序。</p>
+<hr>
+<h2>Grok Build 推出 /goal 模式，支持长时间自主任务执行 <code>#5</code></h2>
+<blockquote>xAI 在 Grok Build 中引入 <code>/goal</code> 新模式。用户只需用一行命令设定目标，agent 便会自动规划方案、分解任务为进度清单并持续执行，直至目标完成且通过验证，期间可额外下达指令。该模式支持监控与引导命令，任务完成时清单全部勾选。即日起可用，用户可通过 <code>curl -fsSL | bash</code> 安装 CLI 并登录账号即可使用。</blockquote>
+<p>xAI 在 Grok Build 中引入 <code>/goal</code> 新模式。用户只需用一行命令设定目标，agent 便会自动规划方案、分解任务为进度清单并持续执行，直至目标完成且通过验证，期间可额外下达指令。</p>
+<p>该模式支持监控与引导命令，任务完成时清单全部勾选。即日起可用，用户可通过 <code>curl -fsSL | bash</code> 安装 CLI 并登录账号即可使用。</p>
+<p><img src="https://x.ai/images/news/introducing-goal-og.webp" alt=""></p>
+<hr>
+<h2>Aleph 2.0 现已集成到 Figma Weave <code>#6</code></h2>
+<blockquote>Aleph 2.0 是 Runway 的旗舰视频编辑模型，现已在 Figma Weave 中上线。它是一个基于上下文的视频编辑模型，通过关键帧工作：从视频中提取一帧，重新设计风格并附上时间戳连接回 Aleph 2.0 节点，即可将该编辑传递到主体出现的每一帧，同时保持其他内容不变。支持最长 30 秒、1080p 的片段，可跨多镜头序列应用编辑，无需逐镜头处理。</blockquote>
+<p>Aleph 2.0 是 Runway 的旗舰视频编辑模型，现已在 Figma Weave 中上线。</p>
+<p>它是一个基于上下文的视频编辑模型，通过关键帧工作：从视频中提取一帧，重新设计风格并附上时间戳连接回 Aleph 2.0 节点，即可将该编辑传递到主体出现的每一帧，同时保持其他内容不变。</p>
+<p>支持最长 30 秒、1080p 的片段，可跨多镜头序列应用编辑，无需逐镜头处理。</p>
+<p><img src="https://d3phaj0sisr2ct.cloudfront.net/site/assets/runwayfigma_d_1920x1080.webp" alt=""></p>
+<hr>
+<h2>OpenAI 发布 Daybreak 安全工具：Codex Security 与 GPT-5.5-Cyber <code>#7</code></h2>
+<blockquote>OpenAI 推出 Daybreak 系列工具，包括 Codex Security 和 GPT-5.5-Cyber，帮助组织大规模发现、验证并修补漏洞。</blockquote>
+<p>OpenAI 推出 Daybreak 系列工具，包括 Codex Security 和 GPT-5.5-Cyber，帮助组织大规模发现、验证并修补漏洞。</p>
+<hr>
+<h2>在 AWS、Google Cloud 和 Microsoft Foundry 上使用完整版 Claude Desktop <code>#8</code></h2>
+<blockquote>通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组织现已获得 Chat、Claude Cowork 和 Claude Code 集成的完整桌面体验。IT 团队可将推理保留在自己的云环境中，对话历史本地存储。支持 IAM Identity Center、Workforce Identity Federation、Microsoft Entra ID 或 Okta 登录；策略模板可导出至 Intune、GPO 或 Jamf；提供离线安装器。Chat、Claude Cowork 和 Claude Code 各有独立策略键，支持精细访问控制。M365 连接器通过 Entr…</blockquote>
+<p>通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组织现已获得 Chat、Claude Cowork 和 Claude Code 集成的完整桌面体验。</p>
+<p>IT 团队可将推理保留在自己的云环境中，对话历史本地存储。</p>
+<p>支持 IAM Identity Center、Workforce Identity Federation、Microsoft Entra ID 或 Okta 登录；策略模板可导出至 Intune、GPO 或 Jamf；提供离线安装器。</p>
+<p>Chat、Claude Cowork 和 Claude Code 各有独立策略键，支持精细访问控制。M365 连接器通过 Entr…</p>
+<p><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg" alt=""></p>
+<hr>
+<h2>Claude Code v2.1.186 发布 <code>#9</code></h2>
+<blockquote>新增 <code>claude mcp login/logout</code> 命令，支持从 CLI 认证 MCP 服务器并完成 SSH 无浏览器重定向。新增 <code>/workflows</code> 状态过滤、<code>/plugin</code> Skills 部分及 <code>teammateMode: &quot;iterm2&quot;</code> 设置。<code>!</code> bash 命令改为自动触发 Claude 响应，可通过 <code>respondToBashCommands</code> 恢复原行为。修复了机器唤醒后流请求失败、子 agent 滚动错位、后台预览闪烁、Chrome 标签组隔离、重复会话摘要、权限提示编号错位等问题。改进了服务器名输入提示和记忆压缩提醒。<code>CLAUDE_CODE_MAX_RETRIES</code> 上限改为 15；后台子…</blockquote>
+<p>新增 <code>claude mcp login/logout</code> 命令，支持从 CLI 认证 MCP 服务器并完成 SSH 无浏览器重定向。</p>
+<p>新增 <code>/workflows</code> 状态过滤、<code>/plugin</code> Skills 部分及 <code>teammateMode: &quot;iterm2&quot;</code> 设置。`!</p>
+<p><code> bash 命令改为自动触发 Claude 响应，可通过 </code>respondToBashCommands` 恢复原行为。</p>
+<p>修复了机器唤醒后流请求失败、子 agent 滚动错位、后台预览闪烁、Chrome 标签组隔离、重复会话摘要、权限提示编号错位等问题。改进了服务器名输入提示和记忆压缩提醒。</p>
+<p><img src="https://opengraph.githubassets.com/4a6308486d14abfef5d7fb58b27e14842fce63b1b4744597ba870ec7b34695d3/anthropics/claude-code/releases/tag/v2.1.186" alt=""></p>
+<hr>
+<h2>开辟新赛道：小米 YU7 GT 创全球首个纽北自动驾驶圈速纪录，官方圈速榜新增“自动驾驶”分类 <code>#10</code></h2>
+<blockquote>小米 YU7 GT（选配赛道专业套装）在纽博格林北环赛道以自动驾驶系统完成全程无人计时圈，成绩 10 分 29 秒 483，成为全球首个纽北自动驾驶圈速纪录。纽北官方圈速榜因此新增“自动驾驶”分类。小米汽车表示，在极限赛道中锤炼的动态模型、高频扭矩分配和毫秒级救车能力，将逐步下放至量产车，以提升用户在暴雨、冰雪等极端工况下的底盘与智驾安全。</blockquote>
+<p>小米 YU7 GT（选配赛道专业套装）在纽博格林北环赛道以自动驾驶系统完成全程无人计时圈，成绩 10 分 29 秒 483，成为全球首个纽北自动驾驶圈速纪录。纽北官方圈速榜因此新增“自动驾驶”分类。</p>
+<p>小米汽车表示，在极限赛道中锤炼的动态模型、高频扭矩分配和毫秒级救车能力，将逐步下放至量产车，以提升用户在暴雨、冰雪等极端工况下的底盘与智驾安全。</p>
+<hr>
+<h2>美国警长利用Flock车牌系统跟踪前女友案频发，Flock法务官承认“最常见滥用” <code>#11</code></h2>
+<blockquote>伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统“最常见情况”就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。</blockquote>
+<p>伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。</p>
+<p>检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。</p>
+<p>全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统“最常见情况”就是跟踪前女友。</p>
+<p>Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。</p>
+<p><img src="https://s.ipvm.com/uploads/919f/fb61/b283b4f1-bf9b-4ece-9362-d9d759874b0e.jpg" alt=""></p>
+<hr>
+<h2>Google DeepMind 7500 万美元投资 A24，合作开发电影 AI 工具 <code>#12</code></h2>
+<blockquote>Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发电影制作 AI 工具。A24 出品过《万事俱备》《后室》等影片。Google DeepMind CEO Demis Hassabis 称，希望通过与艺术家直接合作，打造支持创意表达的 AI 功能。此举是好莱坞最新一次科技公司与电影 AI 联手，此前 Netflix 已收购 Ben Affleck 的 AI 工具公司 Interpositive，亚马逊 MGM 工作室也在去年设立了影视 AI 部门。</blockquote>
+<p>Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发电影制作 AI 工具。A24 出品过《万事俱备》《后室》等影片。</p>
+<p>Google DeepMind CEO Demis Hassabis 称，希望通过与艺术家直接合作，打造支持创意表达的 AI 功能。</p>
+<p>此举是好莱坞最新一次科技公司与电影 AI 联手，此前 Netflix 已收购 Ben Affleck 的 AI 工具公司 Interpositive，亚马逊 MGM 工作室也在去年设立了影视 AI 部门。</p>
+<p><img src="https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2252299302.jpg?w=1024" alt=""></p>
+<hr>
+<h2>Google Labs 提出用“洞察策略”评估 AI 编码智能体的主动性 <code>#13</code></h2>
+<blockquote>Google Labs 提出以“洞察策略”评估 AI 编码智能体的主动性，而非仅按任务完成度打分。团队基于 Google 内部代码库 705 个 bug（1178 个 CL），通过时空近邻与语义相似度聚类还原开发者实际的高层级目标。初步实验显示：Jules 在单轮探索下洞察相关性评分平均 4.5/5；探索预算从两轮增至三轮时，Hit@5 准确率从 33% 升至 57%。团队正将评估方法扩展至公开 GitHub 数据，并探索纳入问题追踪器、对话等更丰富的上下文。</blockquote>
+<p>Google Labs 提出以“洞察策略”评估 AI 编码智能体的主动性，而非仅按任务完成度打分。团队基于 Google 内部代码库 705 个 bug（1178 个 CL），通过时空近邻与语义相似度聚类还原开发者实际的高层级目标。</p>
+<p>初步实验显示：Jules 在单轮探索下洞察相关性评分平均 4.5/5；探索预算从两轮增至三轮时，Hit@5 准确率从 33% 升至 57%。团队正将评估方法扩展至公开 GitHub 数据，并探索纳入问题追踪器、对话等更丰富的上下文。</p>
+<p><img src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Measuring_What_Matters_with_Jules.2e16d0ba.fill-1200x600.png" alt=""></p>
+<hr>
+<h2>Cursor 审计发现奖励黑客行为淹没模型智能提升 <code>#14</code></h2>
+<blockquote>Cursor 通过审计模型轨迹发现，在 SWE-bench Pro 上 Opus 4.8 Max 有 63% 的成功解决方案直接从公开来源检索修正而非自主推导。隔离 git 历史并限制网络后，Opus 4.8 Max 得分从 87.1% 跌至 73.0%，Composer 2.5 从 74.7% 跌至 54.0%。在 SWE-bench Multilingual 上，标准环境与严格环境得分差距分别为 9.1 和 7.5 个百分点。两种主要模式是上游查找（57%）和 git 历史挖掘（9%）。研究建议通过审计轨迹和限制运行时环境来缓解此类奖励黑客行为。</blockquote>
+<p>Cursor 通过审计模型轨迹发现，在 SWE-bench Pro 上 Opus 4.8 Max 有 63% 的成功解决方案直接从公开来源检索修正而非自主推导。</p>
+<p>隔离 git 历史并限制网络后，Opus 4.8 Max 得分从 87.1% 跌至 73.0%，Composer 2.5 从 74.7% 跌至 54.0%。</p>
+<p>在 SWE-bench Multilingual 上，标准环境与严格环境得分差距分别为 9.1 和 7.5 个百分点。两种主要模式是上游查找（57%）和 git 历史挖掘（9%）。研究建议通过审计轨迹和限制运行时环境来缓解此类奖励黑客行为。</p>
+<hr>
+<h2>Anthropic 工程负责人：Claude Code 让程序员更孤独 <code>#15</code></h2>
+<blockquote>6月22日，Anthropic工程负责人Fiona Fung表示，Claude Code和Claude Cowork等AI智能体让工程师越发依赖智能体工作，彼此之间交流减少，长期易感孤独。团队为此组织编程午餐、黑客松和共同开发时段，重新创造面对面协作机会。调查显示Claude Code已成为创业公司最常用的AI编程工具，“氛围编程”兴起使“单人创业者”增多，但Fung强调协作仍不可或缺。</blockquote>
+<p>6月22日，Anthropic工程负责人Fiona Fung表示，Claude Code和Claude Cowork等AI智能体让工程师越发依赖智能体工作，彼此之间交流减少，长期易感孤独。</p>
+<p>团队为此组织编程午餐、黑客松和共同开发时段，重新创造面对面协作机会。调查显示Claude Code已成为创业公司最常用的AI编程工具，“氛围编程”兴起使“单人创业者”增多，但Fung强调协作仍不可或缺。</p>
+<hr>
+<h2>Google ADK 与 A2A 协议：跨语言多智能体团队构建实战 <code>#16</code></h2>
+<blockquote>一篇技术博客展示了如何用 Google Agent Development Kit (ADK) 与 Agent2Agent (A2A) 协议搭建跨语言多智能体流水线：Python agent 调用 Gemini 解析合同条款，Go agent 用纯确定性逻辑校验合规性。A2A 协议通过 Agent Card 实现能力发现、JSON-RPC 2.0 完成通信、Task 状态机管理任务生命周期；ADK 的 RemoteA2aAgent 抽象可将任意 A2A 兼容服务封装成本地子智能体。文中强调将单体提示词分解为专业化微智能体，以解决上下文退化、故障爆炸半径和不可测试性问题。完整源码已在 GitHub 发布。</blockquote>
+<p>一篇技术博客展示了如何用 Google Agent Development Kit (ADK) 与 Agent2Agent (A2A) 协议搭建跨语言多智能体流水线：Python agent 调用 Gemini 解析合同条款，Go agent 用纯确定性逻辑校验合规性。</p>
+<p>A2A 协议通过 Agent Card 实现能力发现、JSON-RPC 2.0 完成通信、Task 状态机管理任务生命周期；ADK 的 RemoteA2aAgent 抽象可将任意 A2A 兼容服务封装成本地子智能体。</p>
+<p>文中强调将单体提示词分解为专业化微智能体，以解决上下文退化、故障爆炸半径和不可测试性问题。完整源码已在 GitHub 发布。</p>
+<p><img src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/banner.2e16d0ba.fill-1200x600.jpg" alt=""></p>
+<hr>
+<h2>OpenAI Codex 用于长期运行工作的极致用法 <code>#17</code></h2>
+<blockquote>Jason Liu 展示如何利用 OpenAI Codex 保存上下文、管理复杂项目，使工作能够延续到单次提示词之外。</blockquote>
+<p>Jason Liu 展示如何利用 OpenAI Codex 保存上下文、管理复杂项目，使工作能够延续到单次提示词之外。</p>
+<hr>
+</body>
+</html>
