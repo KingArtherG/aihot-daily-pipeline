@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>King AI 早报 2026-07-14</title>
+  <link rel="alternate" type="application/rss+xml" href="https://KingArtherG.github.io/aihot-daily-pipeline/rss.xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+      background: #fbfbf8;
+      color: #1f2933;
+    }
+    a { color: #0f766e; }
+    h1 { font-size: 32px; line-height: 1.25; margin-bottom: 16px; }
+    h2 { margin-top: 36px; border-top: 1px solid #d9ded8; padding-top: 20px; }
+    h3 { margin: 24px 0 8px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    hr { border: 0; border-top: 1px solid #d9ded8; margin: 32px 0; }
+    blockquote {
+      margin: 20px 0;
+      padding: 12px 16px;
+      border-left: 4px solid #14b8a6;
+      background: #eef9f6;
+    }
+    li { margin: 16px 0; }
+    .nav { margin-bottom: 28px; color: #52606d; }
+    .nav a { margin-right: 16px; }
+    .archive li { margin: 8px 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111827; color: #e5e7eb; }
+      blockquote { background: #132f2d; }
+      h2, hr { border-color: #374151; }
+      a { color: #5eead4; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav"><a href="./">King AI 早报</a><a href="./rss.xml">RSS</a></nav>
+<h1>King AI 早报 2026-07-14</h1>
+<h2>概览</h2>
+<p>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：腾讯混元发布 HyOCR-1.5：端到端 OCR 大模型全栈开源，推理提速 6.37 倍；德国AI协会发布开源模型Soofi S，在英语和德语基准测试中领先；Cloudflare 推出 Precursor：通过持续客户端信号检测 AI 智能体行为；xAI 官方 Grok CLI 被曝静默上传整个代码库及用户密钥；Meta 宣布扩建路易斯安那州数据中心至 5GW，总投资超 500 亿美元；黄仁勋：英伟达季度收入逼近千亿美元，Rubin Ultra 架构未延期；Hebbia 测试 Claude Fable 5：金融专用基准测试中准确率提升约 20%；Anthropic 研究：Claude 在不同模型与语言中的价值观表达。</p>
+<h3>要闻</h3>
+<ul>
+<li>腾讯混元发布 HyOCR-1.5：端到端 OCR 大模型全栈开源，推理提速 6.37 倍 <code>#1</code></li>
+<li>德国AI协会发布开源模型Soofi S，在英语和德语基准测试中领先 <code>#2</code></li>
+<li>Cloudflare 推出 Precursor：通过持续客户端信号检测 AI 智能体行为 <code>#3</code></li>
+<li>xAI 官方 Grok CLI 被曝静默上传整个代码库及用户密钥 <code>#4</code></li>
+</ul>
+<h3>行业动态</h3>
+<ul>
+<li>Meta 宣布扩建路易斯安那州数据中心至 5GW，总投资超 500 亿美元 <code>#5</code></li>
+<li>黄仁勋：英伟达季度收入逼近千亿美元，Rubin Ultra 架构未延期 <code>#6</code></li>
+<li>Hebbia 测试 Claude Fable 5：金融专用基准测试中准确率提升约 20% <code>#7</code></li>
+</ul>
+<h3>论文研究</h3>
+<ul>
+<li>Anthropic 研究：Claude 在不同模型与语言中的价值观表达 <code>#8</code></li>
+</ul>
+<h3>技巧与观点</h3>
+<ul>
+<li>OpenAI 面向普通用户发布提示词指南：从结果出发，少写步骤 <code>#9</code></li>
+<li>前沿模型实际成本：tokenizer 差异导致隐性涨价 <code>#10</code></li>
+<li>Seedream 5.0 Pro 测评：图像编辑门槛爆降 <code>#11</code></li>
+<li>AI 客户留存率介于手游与社交网络之间：前沿模型“王座”仅维持约 41 天，同等智能价格每年下降约 10 倍 <code>#12</code></li>
+</ul>
+<hr>
+<h2>腾讯混元发布 HyOCR-1.5：端到端 OCR 大模型全栈开源，推理提速 6.37 倍 <code>#1</code></h2>
+<blockquote>腾讯混元发布 HyOCR-1.5，这是端到端 OCR 大模型领域首个将训练、推理、模型权重完整开源的专家模型。仅 1B 参数，覆盖 8 种以上 text-centric 任务。引入 DFlash 投机解码框架，在 Transformers 下实现 6.37× 加速，vLLM 下 2.14× 加速，端到端推理达每页 1.408s。支持 4K 分辨率与 128K 上下文窗口，通过 Agentic Data Flow 扩展低资源 OCR（331 种语言）、古文字识别与多图问答能力。在 OmniDocBench v1.6 上以 94.74 分居端到端第一。</blockquote>
+<p>腾讯混元发布 HyOCR-1.5，这是端到端 OCR 大模型领域首个将训练、推理、模型权重完整开源的专家模型。仅 1B 参数，覆盖 8 种以上 text-centric 任务。</p>
+<p>引入 DFlash 投机解码框架，在 Transformers 下实现 6.37× 加速，vLLM 下 2.14× 加速，端到端推理达每页 1.408s。</p>
+<p>支持 4K 分辨率与 128K 上下文窗口，通过 Agentic Data Flow 扩展低资源 OCR（331 种语言）、古文字识别与多图问答能力。在 OmniDocBench v1.6 上以 94.74 分居端到端第一。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/7avdgR0YVzKKCFy98Z27IY2kN3G0XhC5hoicouVicKeU5W2ASjjvmMGezTribbtecibofXicq3daGiaicM79LqKl6NDo7bE7TChNQCIwaCRdiaNdZws/0?wx_fmt=jpeg" alt=""></p>
+<hr>
+<h2>德国AI协会发布开源模型Soofi S，在英语和德语基准测试中领先 <code>#2</code></h2>
+<blockquote>德国AI协会协调的研究联盟发布开源大语言模型Soofi S 30B-A3B。该模型总参数量316亿，每个token仅激活约32亿参数，采用Mamba-2与标准注意力层混合的MoE架构。模型完全在德国电信慕尼黑工业AI云上训练，训练数据中德语占比从第一阶段的7.2%提升至第二阶段的15.3%。在基准测试中，Soofi S在所有完全开源模型中取得英语和德语综合最高分，超越OLMo 3 32B和Apertus 70B。在HumanEval上得分73.8%，MBPP得分70.2，德语版MBPP得分84.2。上下文窗口支持最高100万token，在4万token长度下，生成吞吐量约为同规模稠密模型的8倍。模型权重已开源。</blockquote>
+<p>德国AI协会协调的研究联盟发布开源大语言模型Soofi S 30B-A3B。该模型总参数量316亿，每个token仅激活约32亿参数，采用Mamba-2与标准注意力层混合的MoE架构。</p>
+<p>模型完全在德国电信慕尼黑工业AI云上训练，训练数据中德语占比从第一阶段的7.2%提升至第二阶段的15.3%。在基准测试中，Soofi S在所有完全开源模型中取得英语和德语综合最高分，超越OLMo 3 32B和Apertus 70B。</p>
+<p>在HumanEval上得分73.8%，MBPP得分70.2，德语版MBPP得分84.2。上下文窗口支持最高100万token，在4万token长度下，生成吞吐量约为同规模稠密模型的8倍。模型权重已开源。</p>
+<p><img src="https://the-decoder.com/wp-content/uploads/2026/07/soofi-s-german-llm-nano-banana-pro.jpg" alt=""></p>
+<hr>
+<h2>Cloudflare 推出 Precursor：通过持续客户端信号检测 AI 智能体行为 <code>#3</code></h2>
+<blockquote>Cloudflare 发布 Precursor，一款用于机器人管理的新型持续行为验证引擎。它通过将用户会话级别的行为转化为机器人检测信号，能够更精确地识别高级自动化行为，同时减少对合法用户的干扰。Precursor 可全程追踪人类与 AI 智能体在完整用户旅程中的实际交互方式，提升检测精度并降低误报率。</blockquote>
+<p>Cloudflare 发布 Precursor，一款用于机器人管理的新型持续行为验证引擎。它通过将用户会话级别的行为转化为机器人检测信号，能够更精确地识别高级自动化行为，同时减少对合法用户的干扰。</p>
+<p>Precursor 可全程追踪人类与 AI 智能体在完整用户旅程中的实际交互方式，提升检测精度并降低误报率。</p>
+<p><img src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/4raPYKDa5ifslzx2izHKzA/4935a3d9476c0551f0d8f398663b2b9d/Introducing_Precursor-_detecting_agentic_behavior_with_continuous_client-side_signals-OG.png" alt=""></p>
+<hr>
+<h2>xAI 官方 Grok CLI 被曝静默上传整个代码库及用户密钥 <code>#4</code></h2>
+<blockquote>安全研究者发现，xAI 官方 Grok CLI（npm 包 <code>@xai-official/grok</code> 0.2.93 版）会在每轮任务前后，将当前工作目录打包为 <code>before_codebase.tar.gz</code> 和 <code>after_codebase.tar.gz</code>，通过独立旁路通道静默上传至 xAI 的 Google Cloud 仓库。验证显示，即使模型仅回复一个单词，上传依然发生。上传包还包含仓库外的 <code>~/.claude.json</code>、Claude Code 设置、全局 AGENTS 规则、30 多个 Skill 文件及一个 API 密钥。7 月 13 日凌晨，xAI 通过服务端远程开关新增 `disable_codebase_upl…</blockquote>
+<p>安全研究者发现，xAI 官方 Grok CLI（npm 包 <code>@xai-official/grok</code> 0.2.93 版）会在每轮任务前后，将当前工作目录打包为 <code>before_codebase.tar.gz</code> 和 <code>after_codebase.tar.gz</code>，通过独立旁路通道静默上传至 xAI 的 Google Cloud 仓库。</p>
+<p>验证显示，即使模型仅回复一个单词，上传依然发生。上传包还包含仓库外的 <code>~/.claude.json</code>、Claude Code 设置、全局 AGENTS 规则、30 多个 Skill 文件及一个 API 密钥。</p>
+<p>7 月 13 日凌晨，xAI 通过服务端远程开关新增 `disable_codebase_upl…</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/2jjfQoZLoqXq3v0LGrncHJsTM9ibw8ybIib5pGxiaqzO2XYeEfjGyGWI3ibSy6U9y9rgsbtUffnGu6RRynhnQ02iaPahUAc9ZL3F5mpg9C7HTUbc/0?wx_fmt=jpeg" alt=""></p>
+<hr>
+<h2>Meta 宣布扩建路易斯安那州数据中心至 5GW，总投资超 500 亿美元 <code>#5</code></h2>
+<blockquote>Meta 将其路易斯安那州数据中心算力扩至 5GW，总投资超 500 亿美元，为全球最大 AI 基础设施投资之一。Meta 承诺承担全部能源及水资源费用，并另投超 10 亿美元改善当地道路及供水系统。此外，Meta 与安特吉公司达成协议，为新建天然气发电厂、储能电池及核电增容项目提供资金支持。</blockquote>
+<p>Meta 将其路易斯安那州数据中心算力扩至 5GW，总投资超 500 亿美元，为全球最大 AI 基础设施投资之一。Meta 承诺承担全部能源及水资源费用，并另投超 10 亿美元改善当地道路及供水系统。</p>
+<p>此外，Meta 与安特吉公司达成协议，为新建天然气发电厂、储能电池及核电增容项目提供资金支持。</p>
+<hr>
+<h2>黄仁勋：英伟达季度收入逼近千亿美元，Rubin Ultra 架构未延期 <code>#6</code></h2>
+<blockquote>英伟达CEO黄仁勋在摩根士丹利路演中表示，公司季度营收即将逼近1000亿美元，且增长速度仍在加快。他否认下一代旗舰架构Rubin Ultra延期传闻，称其仍按计划于明年出货，当前机架设计调整仅为系统架构优化。一个此前主要依赖ASIC的前沿AI模型项目，如今英伟达GPU算力占比已接近50%，市场普遍指向Anthropic。英伟达预计本财年CPU业务收入约200亿美元，下一代Vera CPU将进军通用服务器市场。摩根士丹利维持英伟达“增持”评级，目标价288美元。</blockquote>
+<p>英伟达CEO黄仁勋在摩根士丹利路演中表示，公司季度营收即将逼近1000亿美元，且增长速度仍在加快。他否认下一代旗舰架构Rubin Ultra延期传闻，称其仍按计划于明年出货，当前机架设计调整仅为系统架构优化。</p>
+<p>一个此前主要依赖ASIC的前沿AI模型项目，如今英伟达GPU算力占比已接近50%，市场普遍指向Anthropic。英伟达预计本财年CPU业务收入约200亿美元，下一代Vera CPU将进军通用服务器市场。</p>
+<p>摩根士丹利维持英伟达“增持”评级，目标价288美元。</p>
+<hr>
+<h2>Hebbia 测试 Claude Fable 5：金融专用基准测试中准确率提升约 20% <code>#7</code></h2>
+<blockquote>为机构金融提供 AI 平台的 Hebbia 测试了 Claude Fable 5。在其金融专用基准测试中，Claude Fable 5 在文档问答与引证测试上实现了约 20% 的相对准确率提升，创下团队记录；在智能体测试中，它能同时处理多部分请求并逐一溯源。该模型还能从更广泛的数据中推理，得出值得深入分析的结论。Hebbia 正借助 Claude Fable 5 将 Matrix 平台的能力从提取信贷协议条款扩展到多步分析，如对比实时监控数据、标记风险并草拟内部备忘录。</blockquote>
+<p>为机构金融提供 AI 平台的 Hebbia 测试了 Claude Fable 5。</p>
+<p>在其金融专用基准测试中，Claude Fable 5 在文档问答与引证测试上实现了约 20% 的相对准确率提升，创下团队记录；在智能体测试中，它能同时处理多部分请求并逐一溯源。该模型还能从更广泛的数据中推理，得出值得深入分析的结论。</p>
+<p>Hebbia 正借助 Claude Fable 5 将 Matrix 平台的能力从提取信贷协议条款扩展到多步分析，如对比实时监控数据、标记风险并草拟内部备忘录。</p>
+<p><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a5517049b63b7cf53f17972_og_working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail.jpg" alt=""></p>
+<hr>
+<h2>Anthropic 研究：Claude 在不同模型与语言中的价值观表达 <code>#8</code></h2>
+<blockquote>Anthropic 发布研究，通过构建“价值观轴”量化 Claude 表达的价值倾向。研究将 3,000 余种价值观压缩为四个关键轴：顺从 vs 谨慎、温暖 vs 严谨、深度 vs 简洁、坦诚 vs 执行。分析显示，Claude Opus 4.6 更倾向顺从、严谨、简洁和执行，而 Opus 4.7 更倾向谨慎、严谨、深度和坦诚；Sonnet 4.6 被认为更温暖。跨语言对比中，Claude 在阿拉伯语和印地语中更倾向温暖，在英语和俄语中更倾向严谨。该方法可帮助理解训练决策与文化背景对模型价值观的影响。</blockquote>
+<p>Anthropic 发布研究，通过构建“价值观轴”量化 Claude 表达的价值倾向。研究将 3,000 余种价值观压缩为四个关键轴：顺从 vs 谨慎、温暖 vs 严谨、深度 vs 简洁、坦诚 vs 执行。</p>
+<p>分析显示，Claude Opus 4.6 更倾向顺从、严谨、简洁和执行，而 Opus 4.7 更倾向谨慎、严谨、深度和坦诚；Sonnet 4.6 被认为更温暖。</p>
+<p>跨语言对比中，Claude 在阿拉伯语和印地语中更倾向温暖，在英语和俄语中更倾向严谨。该方法可帮助理解训练决策与文化背景对模型价值观的影响。</p>
+<p><img src="https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Flower&amp;backgroundColor=heather" alt=""></p>
+<hr>
+<h2>OpenAI 面向普通用户发布提示词指南：从结果出发，少写步骤 <code>#9</code></h2>
+<blockquote>OpenAI 整合了一份面向普通用户的提示词指南，涵盖目标、上下文、输出格式和边界四个可选模块。指南建议以结果而非步骤开头，用一两条硬性规则替代逐步骤脚本。Chat 处理快速任务，基于 Codex 技术和 GPT-5.6 模型的 ChatGPT Work 负责多源、多步骤的复杂项目。Codex 新增 Steer（重定向当前运行）、Queue（排队下一条消息）和沙盒模式，支持 <code>/plan</code>、<code>/goal</code> 和 <code>/review</code> 等斜杠命令。用户无需一次性写对提示词，后续追问是预期调整方式。</blockquote>
+<p>OpenAI 整合了一份面向普通用户的提示词指南，涵盖目标、上下文、输出格式和边界四个可选模块。指南建议以结果而非步骤开头，用一两条硬性规则替代逐步骤脚本。</p>
+<p>Chat 处理快速任务，基于 Codex 技术和 GPT-5.6 模型的 ChatGPT Work 负责多源、多步骤的复杂项目。</p>
+<p>Codex 新增 Steer（重定向当前运行）、Queue（排队下一条消息）和沙盒模式，支持 <code>/plan</code>、<code>/goal</code> 和 <code>/review</code> 等斜杠命令。用户无需一次性写对提示词，后续追问是预期调整方式。</p>
+<p><img src="https://the-decoder.com/wp-content/uploads/2026/07/openai_chatgpt_pattern_logo.png" alt=""></p>
+<hr>
+<h2>前沿模型实际成本：tokenizer 差异导致隐性涨价 <code>#10</code></h2>
+<blockquote>同一份 TypeScript 文件在 GPT-5.x 上为 681 个 token，在 Claude 最新 tokenizer 下为 1,178 个，相差 1.73 倍。Anthropic 新 tokenizer 比旧版多产生约 30% 的 token，标价不变，构成隐性涨价。Claude Opus 4.6 与 Opus 4.8 标价同为 $5.00 / $25.00，但新 tokenizer 使同一代码的 token 数增加约 32%。Claude Sonnet 5 的 $2.00 / $10.00 为促销价，2026 年 8 月 31 日后恢复 $3.00 / $15.00，届时相同代码成本将比 Sonnet 4.6 高出约 3…</blockquote>
+<p>同一份 TypeScript 文件在 GPT-5.x 上为 681 个 token，在 Claude 最新 tokenizer 下为 1,178 个，相差 1.73 倍。</p>
+<p>Anthropic 新 tokenizer 比旧版多产生约 30% 的 token，标价不变，构成隐性涨价。</p>
+<p>Claude Opus 4.6 与 Opus 4.8 标价同为 $5.00 / $25.00，但新 tokenizer 使同一代码的 token 数增加约 32%。</p>
+<p>Claude Sonnet 5 的 $2.00 / $10.00 为促销价，2026 年 8 月 31 日后恢复 $3.00 / $15.00，届时相同代码成本将比 Sonnet 4.6 高出约 3…</p>
+<p><img src="https://playcode.io/assets/static/img/logo.png" alt=""></p>
+<hr>
+<h2>Seedream 5.0 Pro 测评：图像编辑门槛爆降 <code>#11</code></h2>
+<blockquote>字节跳动发布 Seedream 5.0 Pro，图像质量与提示词理解追平 GPT-Image 2.0，综合能力仅次于后者。核心亮点是“可编辑”交互：用户可在图上打点、画框、涂鸦，提示词中直接 @ 标记，实现精准局部编辑（如换沙发、改墙面颜色），其他区域不变。实测案例涵盖家装改造（一次替换六件家具）、商品图制作（键盘爆炸拆解图、标注卖点）、海报排版（框定位置生成文字）等场景，支持色卡配色和 SKU 换色。火山引擎已全量上线 API，即梦、豆包、Lumina 可体验。</blockquote>
+<p>字节跳动发布 Seedream 5.0 Pro，图像质量与提示词理解追平 GPT-Image 2.0，综合能力仅次于后者。</p>
+<p>核心亮点是“可编辑”交互：用户可在图上打点、画框、涂鸦，提示词中直接 @ 标记，实现精准局部编辑（如换沙发、改墙面颜色），其他区域不变。</p>
+<p>实测案例涵盖家装改造（一次替换六件家具）、商品图制作（键盘爆炸拆解图、标注卖点）、海报排版（框定位置生成文字）等场景，支持色卡配色和 SKU 换色。火山引擎已全量上线 API，即梦、豆包、Lumina 可体验。</p>
+<p><img src="https://pbs.twimg.com/profile_images/1636981205504786434/xDl77JIw_200x200.jpg" alt=""></p>
+<hr>
+<h2>AI 客户留存率介于手游与社交网络之间：前沿模型“王座”仅维持约 41 天，同等智能价格每年下降约 10 倍 <code>#12</code></h2>
+<blockquote>风险投资人 Tomer Tunguz 在其博客中分析称，AI 领域的客户留存率介于手机游戏与社交网络之间。前沿模型保持领先地位的平均时长约为 41 天，而同等智能水平的模型价格每年下降约 10 倍，这使得买家在每个技术周期中获得更强的议价能力。</blockquote>
+<p>风险投资人 Tomer Tunguz 在其博客中分析称，AI 领域的客户留存率介于手机游戏与社交网络之间。</p>
+<p>前沿模型保持领先地位的平均时长约为 41 天，而同等智能水平的模型价格每年下降约 10 倍，这使得买家在每个技术周期中获得更强的议价能力。</p>
+<p><img src="https://res.cloudinary.com/dzawgnnlr/image/upload/q_auto/f_auto/w_auto/tuotxua2iyemgil4ugsn" alt=""></p>
+<hr>
+</body>
+</html>
