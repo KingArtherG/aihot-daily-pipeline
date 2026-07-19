@@ -5,7 +5,15 @@
     <link>https://KingArtherG.github.io/aihot-daily-pipeline/</link>
     <description>King AI 早报 自动 RSS</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 18 Jul 2026 03:39:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 04:01:38 +0000</lastBuildDate>
+    <item>
+      <title>King AI 早报 2026-07-19</title>
+      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-07-19.html</link>
+      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-07-19.html</guid>
+      <author>KingArtherG</author>
+      <description>过去 24 小时，AI 动态主要集中在产品发布、开发工具。重点包括：Claude Code v2.1.214 发布：修复权限绕过、添加 EndConversation 工具与多项 Bash 权限检查改进；Index Ventures 联合创始人 Neil Rimer 认为 AI 财富将面临“再分配”。</description>
+      <pubDate>Sat, 18 Jul 2026 16:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>King AI 早报 2026-07-18</title>
       <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-07-18.html</link>
@@ -237,14 +245,6 @@
       <author>KingArtherG</author>
       <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：MolmoMotion：语言引导的3D运动预测模型；Grok 4.3 在 Amazon Bedrock 正式可用；Vercel 发布开源 AI 智能体框架 Eve：每个智能体就是一个文件目录；Omnigent开源：AI智能体团队元框架；Google发布99美元Gemini智能音箱；Wolfram 语言和 Mathematica 15 版发布：内置 AI 助手、符号音乐等新功能；阿里云发布HappyOyster 1.0：一句话生成可实时交互的数字世界</description>
       <pubDate>Wed, 17 Jun 2026 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>King AI 早报 2026-06-17</title>
-      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-06-17.html</link>
-      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-06-17.html</guid>
-      <author>KingArtherG</author>
-      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Cartesia 发布 Sonic 3.5 与 Ink 2 实时语音模型；Qwen-RobotManip：对齐解锁机器人操作基础模型的规模化能力；成本砍半，字节跳动推出 Seedance 2.0 Mini 视频生成模型；教育部“阳光志愿”信息服务系统全新升级上线：智能筛选志愿，数据权威可信；Google Cloud 推出 OKF v0.1：供应商中立的 Markdown 规范，为 AI 智能体提供结构化上下文；Copilot Cowork 全球正式</description>
-      <pubDate>Tue, 16 Jun 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

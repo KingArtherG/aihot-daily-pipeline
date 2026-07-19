@@ -1,0 +1,41 @@
+{
+  "date": "2026-07-19",
+  "items": [
+    {
+      "title": "Claude Code v2.1.214 发布：修复权限绕过、添加 EndConversation 工具与多项 Bash 权限检查改进",
+      "summary": "Claude Code v2.1.214 修复了 Windows PowerShell 5.1 中的权限检查绕过漏洞，以及 Bash 权限检查对超长命令（超过 10,000 字符）和 zsh 变量下标比较的误判问题。",
+      "source": "Claude Code：GitHub Releases（RSS）",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://opengraph.githubassets.com/3db363e5a270e1aa35a042d997b480e6344e350f7a492dd83d674499dd0dd9aa/anthropics/claude-code/releases/tag/v2.1.214"
+      ]
+    },
+    {
+      "title": "Index Ventures 联合创始人 Neil Rimer 认为 AI 财富将面临“再分配”",
+      "summary": "Index Ventures 联合创始人 Neil Rimer 表示，围绕 AI 积累的巨额财富将面临“某种形式的再分配”，无论是自愿还是强制。他呼吁科技领袖在推动自愿再分配中发挥主导作用。与此同时，美国慈善捐赠总额虽创新高，但捐赠人数持续下降，而加州正考虑对亿万富翁征收 5% 的一次性财富税。",
+      "source": "TechCrunch：AI（RSS）",
+      "url": "https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://techcrunch.com/wp-content/uploads/2026/07/Screenshot-2026-07-17-at-9.20.56-PM.png?resize=1200,739"
+      ]
+    }
+  ]
+}
