@@ -1,0 +1,292 @@
+{
+  "date": "2026-07-28",
+  "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Kimi K3 开源：2.8T MoE 模型与技术报告；Kimi K3 上线 Modal，支持无损加速推理；Kimi 发布视觉感知基准 PerceptionBench；SGLang 和 Miles 为月之暗面 2.8T 参数 Kimi K3 模型提供发布当日支持；Google AI Overviews 搜索结果出现率升至43%；NVIDIA 等多家行业领袖联合成立 Open Secure AI Alliance，推动 AI 安全与防御开源化；Cognizant 与 Anthropic 扩大合作，成为 Claude Partner Network 全球首要合作伙伴；Apple 提出 GH-ESD：面向实例级视觉任务的假设驱动错误切片发现方法。",
+  "items": [
+    {
+      "title": "Kimi K3 开源：2.8T MoE 模型与技术报告",
+      "summary": "Kimi 发布其最强模型 Kimi K3，这是一个 2.8T 参数的 MoE 模型，具备原生视觉理解和 1M token 上下文窗口。新架构实现了每单位计算 2.5 倍的智能提升。除模型权重外，Kimi 还开源了高性能注意力内核、MoE 通信库及大规模智能体运行环境基础设施。",
+      "source": "X：Kimi.ai (@Kimi_Moonshot)",
+      "url": "https://x.com/Kimi_Moonshot/status/2081760186235289764",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HOPlk-WbQAAMkwd.jpg:large"
+      ]
+    },
+    {
+      "title": "Kimi K3 上线 Modal，支持无损加速推理",
+      "summary": "很高兴 @modal 成为 Kimi K3 的 Day 0 发布合作伙伴！ 他们为 K3 的架构训练了自定义 DFlash 投机器，实现更快推理且无质量损失。",
+      "source": "X：Kimi.ai (@Kimi_Moonshot)",
+      "url": "https://x.com/Kimi_Moonshot/status/2081767591887122564",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HOPslU9bAAAm2OK.jpg:large"
+      ]
+    },
+    {
+      "title": "Kimi 发布视觉感知基准 PerceptionBench",
+      "summary": "Kimi.ai 发布 PerceptionBench，一个从当前前沿模型在 42 个基准上的失败模式中归纳出的视觉感知基准。该基准将视觉感知拆解为 10 种原子能力，并构建了 3000 道验证题，每道题只考察单一感知能力，无需推理或外部知识。",
+      "source": "X：Kimi.ai (@Kimi_Moonshot)",
+      "url": "https://x.com/Kimi_Moonshot/status/2081813202514681878",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HOQVg7tasAAVpoo.jpg:large"
+      ]
+    },
+    {
+      "title": "SGLang 和 Miles 为月之暗面 2.8T 参数 Kimi K3 模型提供发布当日支持",
+      "summary": "SGLang 和 Miles 为月之暗面开源的 2.8T 参数模型 Kimi K3 提供发布当日支持，分别负责推理和 RL 训练。K3 采用 69 层 KDA 线性注意力与 24 层 MLA 交错的混合架构，在 SGLang 上单卡 batch-1 解码速度达约 113 tok/s，结合 DSpark 推测解码可达约 423 tok/s。",
+      "source": "LMSYS：Blog（Chatbot Arena 团队）",
+      "url": "https://www.lmsys.org/blog/2026-07-27-kimi-k3-day0-support",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www.lmsys.org/blog/2026-07-27-kimi-k3-day0-support/opengraph-image?846984fa349aff93"
+      ]
+    },
+    {
+      "title": "Google AI Overviews 搜索结果出现率升至43%",
+      "summary": "Google AI Overviews 在搜索结果中的出现率一年内从15%升至43%，AI Mode月访问量从1.26亿增至2.79亿。用户搜索长度增加，正从短关键词转向更长的自然对话式查询。",
+      "source": "TechCrunch：AI（RSS）",
+      "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://techcrunch.com/wp-content/uploads/2024/05/Sundar-AI-Overviews-IO-2024.png?resize=1200,698"
+      ]
+    },
+    {
+      "title": "NVIDIA 等多家行业领袖联合成立 Open Secure AI Alliance，推动 AI 安全与防御开源化",
+      "summary": "NVIDIA、Microsoft、Hugging Face、IBM 等数十家机构联合成立 Open Secure AI Alliance，旨在通过开源模型、工具和框架构建可审查、可定制的 AI 安全防御体系。",
+      "source": "NVIDIA Blog（RSS）",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://blogs.nvidia.com/wp-content/uploads/2026/07/osaia-logo-garden_press-kit_1920x1080_V4.png"
+      ]
+    },
+    {
+      "title": "Cognizant 与 Anthropic 扩大合作，成为 Claude Partner Network 全球首要合作伙伴",
+      "summary": "Cognizant 与 Anthropic 扩大合作，成为 Claude Partner Network 中的 Global Premier Partner，并将 Claude 嵌入其 Flowsource 等平台。已有超过 3 万名员工完成 Claude 培训，其为一家生物制药公司构建的智能合约系统将合同审核时间缩短最高 40%，提取准确率超过 88%。",
+      "source": "Anthropic：Newsroom（网页）",
+      "url": "https://www.anthropic.com/news/cognizant-anthropic",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg"
+      ]
+    },
+    {
+      "title": "Apple 提出 GH-ESD：面向实例级视觉任务的假设驱动错误切片发现方法",
+      "summary": "Apple 机器学习研究团队提出 GH-ESD（Grounded Hypothesis-Driven Error Slice Discovery），一种针对目标检测与分割等实例级视觉任务的错误切片发现方法。现有方法主要适用于图像级分类，难以捕捉由上下文关系和空间视觉模式导致的实例级失败。GH-ESD 通过基于假设的驱动方式，系统性地发现模型在语义连贯子集上的系统性失效。",
+      "source": "Apple Machine Learning Research（RSS）",
+      "url": "https://machinelearning.apple.com/research/gh-esd",
+      "category": "paper",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png"
+      ]
+    },
+    {
+      "title": "用AI Skill自动生成可协作HTML PPT",
+      "summary": "Vista 基于 bento PPT 改造了一个 Skill，输入内容或主题即可自动生成可编辑、在线演示并支持协作的 HTML PPT。安装指令为 `npx skills add joeseesun/qiaomu-bento-ppt`，推荐使用 Kimi K3 或 Opus 4.8+ 等前端审美好的模型。",
+      "source": "X：Vista (@vista8)",
+      "url": "https://x.com/vista8/status/2081568902241513786",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HOM3GIoaEAAkM-L.jpg:large"
+      ]
+    },
+    {
+      "title": "GitHub Copilot 发布“Harness”工作流：用单一工具完成原型、规划、实现与代码审查",
+      "summary": "GitHub Copilot 推出“Harness”工作流，让开发者通过单一 AI 工具完成从原型设计、规划、实现到代码审查的完整软件开发流程，无需追逐多种新 AI 工具。该工作流强调实用性与集成性，旨在减少工具切换带来的效率损耗。",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-commit-logo.png"
+      ]
+    },
+    {
+      "title": "用Claude和Python构建技能驱动的金融分析智能体",
+      "summary": "本教程基于Anthropic的financial-services仓库，用纯Python复现其技能驱动架构。通过解析SKILL.md文件构建可搜索技能注册表，并创建可复用SkillAgent，将金融分析剧本注入Anthropic Messages API，支持迭代工具调用循环。",
+      "source": "MarkTechPost（RSS）",
+      "url": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "OpenAI 称越来越多员工用 ChatGPT 做其他岗位的工作",
+      "summary": "OpenAI 分析超 80 万条与工作相关的 ChatGPT 消息后发现，43.5% 的岗位特定查询涉及另一职业，营销和工程任务交叉最多。用户用 AI 处理合同审查、数据分析、网站故障排查等原由专家负责的工作。OpenAI 认为这是岗位职责正在变化的早期信号，该趋势在缺乏专业团队的小公司尤为明显。",
+      "source": "The Decoder：AI News（RSS）",
+      "url": "https://the-decoder.com/openai-says-more-workers-are-using-chatgpt-to-do-other-peoples-jobs",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/07/openai_logo_vis-2.png"
+      ]
+    },
+    {
+      "title": "GitHub Copilot app 入门指南：多 Agent 会话工作区与 Canvas 预览",
+      "summary": "GitHub Copilot app 将 AI 编码工具升级为多 Agent 会话工作区，支持同时管理多个任务线程而不丢失进度。用户可为每个会话绑定项目上下文，通过 `/create-canvas` 命令在浏览器 Canvas 中预览 UI 并直接点选修改，还能启用 Agent Merge 自动处理 PR 审查反馈和合并冲突。",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://github.blog/wp-content/uploads/2026/07/GIT1050_THUMB_CFB_C.png?fit=1280%2C720"
+      ]
+    },
+    {
+      "title": "浪费20亿Token后，我开源了帮Agent定义目标的Leader.skill",
+      "summary": "作者开源了Leader.skill，用于将模糊的人类需求转化为Agent可独立执行数小时的目标任务书。该Skill基于“目标七问”方法论，涵盖目的、完成态、反作弊、边界等维度，并推荐用Claude Fable 5或Kimi K3规划目标，再交由GPT-5.6 Sol或GLM-5.2等模型长程执行。项目已开源。",
+      "source": "公众号：数字生命卡兹克",
+      "url": "https://mp.weixin.qq.com/s/AwOk3di8m6eVeIUjzNftgg",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://mmbiz.qpic.cn/mmbiz_jpg/2jjfQoZLoqXjZUeQCG058VPSChgeZBhtibTJia0ISfnqCp8LZ8PLVYPVKYxich0neylQeric70lD7IF8GApRvMw4hQKEdtIZFiaeAPoYgxtVBbicw/0?wx_fmt=jpeg"
+      ]
+    },
+    {
+      "title": "Anthropic 澄清立场：从未主张全面禁止开源权重模型，支持芯片出口管制与安全测试",
+      "summary": "Anthropic CEO Dario Amodei 明确表示公司从未主张禁止开源权重模型，并认为不具备危险能力的开源权重模型是公共产品。他提出三项实际措施：对华芯片出口管制、打击工业级知识蒸馏、对所有足够强大的模型进行强制性安全测试。Amodei 指出，保护主义禁令无法解决其最担忧的国家安全威胁，包括威权政府利用更强大 AI 实现军事优势或深度监控。",
+      "source": "Anthropic：Newsroom（网页）",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/4zrzovbb/website/62993bb857986e2808c2a75024f384e7b85312b6-2400x1254.png"
+      ]
+    },
+    {
+      "title": "OpenRouter 新增图像生成模型专用 API 端点",
+      "summary": "OpenRouter 通过专用 `/api/v1/images` 端点提供图像生成模型服务，图像理解仍通过 `/chat/completions` 端点完成，两者共用同一 API Key 和计费体系。该平台同时公布了两种任务的完整接口合约，并修复了此前出现的“no endpoints found”错误。",
+      "source": "OpenRouter：Announcements（RSS）",
+      "url": "https://openrouter.ai/blog/tutorials/image-generation-models",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://openrouter.ai/blog/images/image-generation-models.png"
+      ]
+    }
+  ]
+}
