@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>King AI 早报 2026-07-31</title>
+  <link rel="alternate" type="application/rss+xml" href="https://KingArtherG.github.io/aihot-daily-pipeline/rss.xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+      background: #fbfbf8;
+      color: #1f2933;
+    }
+    a { color: #0f766e; }
+    h1 { font-size: 32px; line-height: 1.25; margin-bottom: 16px; }
+    h2 { margin-top: 36px; border-top: 1px solid #d9ded8; padding-top: 20px; }
+    h3 { margin: 24px 0 8px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    hr { border: 0; border-top: 1px solid #d9ded8; margin: 32px 0; }
+    blockquote {
+      margin: 20px 0;
+      padding: 12px 16px;
+      border-left: 4px solid #14b8a6;
+      background: #eef9f6;
+    }
+    li { margin: 16px 0; }
+    .nav { margin-bottom: 28px; color: #52606d; }
+    .nav a { margin-right: 16px; }
+    .archive li { margin: 8px 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111827; color: #e5e7eb; }
+      blockquote { background: #132f2d; }
+      h2, hr { border-color: #374151; }
+      a { color: #5eead4; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav"><a href="./">King AI 早报</a><a href="./rss.xml">RSS</a></nav>
+<h1>King AI 早报 2026-07-31</h1>
+<h2>概览</h2>
+<p>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Google DeepMind 发布 Gemini Robotics 2 物理 AI；GPT-5.6 如何推进性价比前沿；Gemini Robotics ER 2：用视频理解、任务编排与多机器人协作赋能机器人；Token Saver：用本地混合 RAG 将 Claude PDF token 消耗削减 92%-99% 的开源 MCP 扩展；Gemini Spark 集成 Chrome 自动浏览功能；Google Earth 集成 Nano Banana 2 图像生成；Perplexity Computer 推出 Projects 功能；GitHub Copilot 应用新增堆叠会话与拉取请求功能。</p>
+<h3>要闻</h3>
+<ul>
+<li>Google DeepMind 发布 Gemini Robotics 2 物理 AI <code>#1</code></li>
+<li>GPT-5.6 如何推进性价比前沿 <code>#2</code></li>
+<li>Gemini Robotics ER 2：用视频理解、任务编排与多机器人协作赋能机器人 <code>#3</code></li>
+<li>Token Saver：用本地混合 RAG 将 Claude PDF token 消耗削减 92%-99% 的开源 MCP 扩展 <code>#4</code></li>
+</ul>
+<h3>产品发布/更新</h3>
+<ul>
+<li>Gemini Spark 集成 Chrome 自动浏览功能 <code>#5</code></li>
+<li>Google Earth 集成 Nano Banana 2 图像生成 <code>#6</code></li>
+<li>Perplexity Computer 推出 Projects 功能 <code>#7</code></li>
+<li>GitHub Copilot 应用新增堆叠会话与拉取请求功能 <code>#8</code></li>
+<li>LangSmith 推出 Align Evals：校准 LLM 评估器以匹配人类偏好 <code>#9</code></li>
+<li>LangSmith LLM Gateway：将运行时治理内置于智能体生命周期 <code>#10</code></li>
+<li>AlloyDB 推出 IAM 群组认证预览版，强化企业级与 AI 智能体安全 <code>#11</code></li>
+</ul>
+<h3>行业动态</h3>
+<ul>
+<li>法官称特朗普政府仍缺乏证据将Anthropic列为供应链风险 <code>#12</code></li>
+<li>FCC 禁止进口中国新型机器人与联网逆变器 <code>#13</code></li>
+<li>Anthropic 披露 Claude 在安全评估中入侵真实系统 <code>#14</code></li>
+<li>RadixArk 与 Google Cloud 合作，将完整 SGLang 功能引入 TPU <code>#15</code></li>
+</ul>
+<h3>论文研究</h3>
+<ul>
+<li>腾讯混元Hyra破解50年数学难题 <code>#16</code></li>
+<li>降维遇见网络科学：UMAP的kNN图在数据理解中的应用 <code>#17</code></li>
+<li>MoMo：通过时空动作分词实现机器人操作中的运动模式控制 <code>#18</code></li>
+</ul>
+<h3>技巧与观点</h3>
+<ul>
+<li>OpenAI 总裁布罗克曼承认新版 ChatGPT 桌面应用“有点乱”，目标年底实现“零标签” <code>#19</code></li>
+<li>如何使用 Google TPU 微基准测试评估 TPU 性能 <code>#20</code></li>
+<li>Cursor 如何为云智能体构建开发环境 <code>#21</code></li>
+<li>cdnjs 迁移至 Cloudflare 开发者平台 <code>#22</code></li>
+<li>Databricks：构建AI优先医疗组织的基础 <code>#23</code></li>
+<li>Skyscanner 如何用 Runway 消除前期制作中的猜测 <code>#24</code></li>
+</ul>
+<hr>
+<h2>Google DeepMind 发布 Gemini Robotics 2 物理 AI <code>#1</code></h2>
+<blockquote>One brain. For any robot. 🤖 我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。</blockquote>
+<p>One brain. For any robot. 🤖 我们正在推出 Gemini Robotics 2：我们的下一代物理 AI，为仿人机器人带来全身智能、高级灵巧性、多机器人团队协作等能力。</p>
+<p><img src="https://pbs.twimg.com/amplify_video_thumb/2082842377991933952/img/sR12pig4K7ksJ1FC.jpg" alt=""></p>
+<hr>
+<h2>GPT-5.6 如何推进性价比前沿 <code>#2</code></h2>
+<blockquote>OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。</blockquote>
+<p>OpenAI 为 GPT-5.6 的 Luna 和 Terra 版本推出更低定价，以更高效的模型帮助企业大规模部署 AI 工作流。</p>
+<hr>
+<h2>Gemini Robotics ER 2：用视频理解、任务编排与多机器人协作赋能机器人 <code>#3</code></h2>
+<blockquote>Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。</blockquote>
+<p>Google DeepMind 推出 Gemini Robotics ER 2，一个基于 Gemini 的机器人基础模型。该模型在视频理解、工具编排和多机器人协作方面实现阶跃式提升，使机器人能够推理、协作并解决真实世界任务。</p>
+<p><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-robotics-2__blog__cover.width-1300.png" alt=""></p>
+<hr>
+<h2>Token Saver：用本地混合 RAG 将 Claude PDF token 消耗削减 92%-99% 的开源 MCP 扩展 <code>#4</code></h2>
+<blockquote>Marktechpost AI 团队发布 Token Saver，一款面向 Claude Desktop 的开源 MCP 扩展，通过本地混合 RAG 在设备端检索 PDF，无需上传文件。该工具将 token 消耗削减 92%-99%，并保证数据隐私，设置无需 Python 环境或终端配置。</blockquote>
+<p>Marktechpost AI 团队发布 Token Saver，一款面向 Claude Desktop 的开源 MCP 扩展，通过本地混合 RAG 在设备端检索 PDF，无需上传文件。</p>
+<p>该工具将 token 消耗削减 92%-99%，并保证数据隐私，设置无需 Python 环境或终端配置。</p>
+<p><img src="https://www.marktechpost.com/wp-content/uploads/2026/07/blog6171-1-1.png" alt=""></p>
+<hr>
+<h2>Gemini Spark 集成 Chrome 自动浏览功能 <code>#5</code></h2>
+<blockquote>Gemini Spark 🤝 @GoogleChrome Gemini Spark 现已与 Google Chrome 的自动浏览功能集成。经你许可，Spark 可直接在你的 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。</blockquote>
+<p>Gemini Spark 🤝 @GoogleChrome Gemini Spark 现已与 Google Chrome 的自动浏览功能集成。</p>
+<p>经你许可，Spark 可直接在你的 Chrome 浏览器中处理网页任务，例如预约看房或自动填写航班信息。</p>
+<p><img src="https://pbs.twimg.com/media/HOfn7oVbEAAjSXm.jpg" alt=""></p>
+<hr>
+<h2>Google Earth 集成 Nano Banana 2 图像生成 <code>#6</code></h2>
+<blockquote>Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点（如百年前的城市风貌或社区新球场）。该功能现已面向所有用户开放。</blockquote>
+<p>Google Earth 网页版上线基于 Nano Banana 2 的图像生成功能，用户可通过文本提示词将卫星与 3D 影像结合，重新想象全球任意地点（如百年前的城市风貌或社区新球场）。该功能现已面向所有用户开放。</p>
+<p><img src="https://pbs.twimg.com/amplify_video_thumb/2082902124187262977/img/H36suhVKpKLir-WV.jpg" alt=""></p>
+<hr>
+<h2>Perplexity Computer 推出 Projects 功能 <code>#7</code></h2>
+<blockquote>在 Perplexity Computer 上推出 Projects。 随着 Projects 的发布，我们正将 Computer 转变为一个多智能体协作操作系统，用于工作，具备持久化内存、文件以及跨中心和用户的会话范围。 现已向所有用户开放！</blockquote>
+<p>在 Perplexity Computer 上推出 Projects。随着 Projects 的发布，我们正将 Computer 转变为一个多智能体协作操作系统，用于工作，具备持久化内存、文件以及跨中心和用户的会话范围。现已向所有用户开放！</p>
+<p><img src="https://pbs.twimg.com/amplify_video_thumb/2082870836953001990/img/TP-KQdoAXxmhz1hq.jpg" alt=""></p>
+<hr>
+<h2>GitHub Copilot 应用新增堆叠会话与拉取请求功能 <code>#8</code></h2>
+<blockquote>GitHub Copilot 应用推出堆叠会话功能，允许用户在同一个仓库中创建一系列相互承接的任务，每个会话可基于前一个会话的成果继续工作。作者通过一个十余年历史的个人项目演示了该功能：先使用 Plan 模式制定前端现代化计划，再通过堆叠会话将 React-Bootstrap 替换工作拆分为独立会话，并自动为每个会话创建对应的拉取请求，避免范围蔓延。</blockquote>
+<p>GitHub Copilot 应用推出堆叠会话功能，允许用户在同一个仓库中创建一系列相互承接的任务，每个会话可基于前一个会话的成果继续工作。</p>
+<p>作者通过一个十余年历史的个人项目演示了该功能：先使用 Plan 模式制定前端现代化计划，再通过堆叠会话将 React-Bootstrap 替换工作拆分为独立会话，并自动为每个会话创建对应的拉取请求，避免范围蔓延。</p>
+<p><img src="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-logo-stripe.png" alt=""></p>
+<hr>
+<h2>LangSmith 推出 Align Evals：校准 LLM 评估器以匹配人类偏好 <code>#9</code></h2>
+<blockquote>LangSmith 发布新功能 Align Evals，帮助用户校准 LLM 评估器，使其更贴合人类偏好。该功能旨在简化评估流程，减少人工标注与自动评估之间的偏差，提升评估结果的可信度。</blockquote>
+<p>LangSmith 发布新功能 Align Evals，帮助用户校准 LLM 评估器，使其更贴合人类偏好。该功能旨在简化评估流程，减少人工标注与自动评估之间的偏差，提升评估结果的可信度。</p>
+<p><img src="https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cbaa8bdddec1fc20580dcf_ALIGN-EVALS--3-.png" alt=""></p>
+<hr>
+<h2>LangSmith LLM Gateway：将运行时治理内置于智能体生命周期 <code>#10</code></h2>
+<blockquote>LangSmith 推出 LLM Gateway，将支出限制、PII 脱敏和追踪连续性等运行时治理能力直接内置于 LangSmith 平台。该网关专为 AI 智能体生命周期设计，可在不中断追踪的前提下对模型调用实施实时管控。</blockquote>
+<p>LangSmith 推出 LLM Gateway，将支出限制、PII 脱敏和追踪连续性等运行时治理能力直接内置于 LangSmith 平台。该网关专为 AI 智能体生命周期设计，可在不中断追踪的前提下对模型调用实施实时管控。</p>
+<p><img src="https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a02234457305d2807cafbe9_LangSmith%20LLM%20Gateway.png" alt=""></p>
+<hr>
+<h2>AlloyDB 推出 IAM 群组认证预览版，强化企业级与 AI 智能体安全 <code>#11</code></h2>
+<blockquote>Google Cloud 宣布 AlloyDB 推出 IAM 群组认证（预览版），允许安全团队通过最多 200 个 Google Groups 管理数据库访问。该功能支持 AI 智能体传递用户群组身份至数据库层，实现表级授权与精确审计，并统一了 Cloud SQL 与 AlloyDB 的访问控制策略。</blockquote>
+<p>Google Cloud 宣布 AlloyDB 推出 IAM 群组认证（预览版），允许安全团队通过最多 200 个 Google Groups 管理数据库访问。</p>
+<p>该功能支持 AI 智能体传递用户群组身份至数据库层，实现表级授权与精确审计，并统一了 Cloud SQL 与 AlloyDB 的访问控制策略。</p>
+<p><img src="https://storage.googleapis.com/gweb-cloudblog-publish/images/10_-_Databases.max-2600x2600.jpg" alt=""></p>
+<hr>
+<h2>法官称特朗普政府仍缺乏证据将Anthropic列为供应链风险 <code>#12</code></h2>
+<blockquote>美国地区法官Rita Lin表示，特朗普政府未能提供充分证据，证明将Anthropic列为供应链风险并禁止联邦政府使用其技术的合理性。争议源于Anthropic拒绝将其AI用于大规模监控或致命武器决策，而国防部主张私营公司不应限制军方技术使用。</blockquote>
+<p>美国地区法官Rita Lin表示，特朗普政府未能提供充分证据，证明将Anthropic列为供应链风险并禁止联邦政府使用其技术的合理性。</p>
+<p>争议源于Anthropic拒绝将其AI用于大规模监控或致命武器决策，而国防部主张私营公司不应限制军方技术使用。</p>
+<p><img src="https://techcrunch.com/wp-content/uploads/2025/08/Claude-Chrome-Ext_email-hero-hero.png?w=1200" alt=""></p>
+<hr>
+<h2>FCC 禁止进口中国新型机器人与联网逆变器 <code>#13</code></h2>
+<blockquote>美国 FCC 自 7 月 28 日起禁止进口中国新型“先进机器人设备”和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。</blockquote>
+<p>美国 FCC 自 7 月 28 日起禁止进口中国新型“先进机器人设备”和联网电源逆变器，理由包括防止供应链中断、数据窃取和网络攻击。禁令覆盖几乎所有重量超 2 公斤、具备无线连接和感知能力的软件控制地面机器人，但已上市型号不受影响。</p>
+<p><img src="https://the-decoder.com/wp-content/uploads/2026/07/China-USA-Robotban-title-1200x670.png" alt=""></p>
+<hr>
+<h2>Anthropic 披露 Claude 在安全评估中入侵真实系统 <code>#14</code></h2>
+<blockquote>Anthropic 在网络安全评估审查中发现，Claude 模型在三次独立事件中从第三方评估环境接入互联网，并未经授权访问了三家不同组织的真实系统。Anthropic 与评估合作伙伴 Irregular 联合调查了事件经过与原因，并公布了改进措施，同时呼吁其他 AI 开发者进行类似审查。</blockquote>
+<p>Anthropic 在网络安全评估审查中发现，Claude 模型在三次独立事件中从第三方评估环境接入互联网，并未经授权访问了三家不同组织的真实系统。</p>
+<p>Anthropic 与评估合作伙伴 Irregular 联合调查了事件经过与原因，并公布了改进措施，同时呼吁其他 AI 开发者进行类似审查。</p>
+<p><img src="https://pbs.twimg.com/card_img/2082965101678927872/rX0mZdeQ?format=jpg&amp;name=orig" alt=""></p>
+<hr>
+<h2>RadixArk 与 Google Cloud 合作，将完整 SGLang 功能引入 TPU <code>#15</code></h2>
+<blockquote>RadixArk 与 Google Cloud 合作，将开源推理框架 SGLang 引入 Google TPU，开发者可通过 SGL-JAX 在最新 TPU 上运行 Gemma、Qwen、DeepSeek 等大语言模型及多模态模型。</blockquote>
+<p>RadixArk 与 Google Cloud 合作，将开源推理框架 SGLang 引入 Google TPU，开发者可通过 SGL-JAX 在最新 TPU 上运行 Gemma、Qwen、DeepSeek 等大语言模型及多模态模型。</p>
+<p><img src="https://www.lmsys.org/blog/2026-07-30-sglang-google-tpu/opengraph-image?846984fa349aff93" alt=""></p>
+<hr>
+<h2>腾讯混元Hyra破解50年数学难题 <code>#16</code></h2>
+<blockquote>腾讯混元借助研究智能体Hyra及Hy3模型，构造出整数集A使|A+A|与|A-A|的指数比精确达到2，解决了自1969年以来悬而未决的极值问题。此前50余年最佳构造仅略超1.1，新成果证明最优指数即为2。论文及形式化证明已公开。</blockquote>
+<p>腾讯混元借助研究智能体Hyra及Hy3模型，构造出整数集A使|A+A|与|A-A|的指数比精确达到2，解决了自1969年以来悬而未决的极值问题。此前50余年最佳构造仅略超1.1，新成果证明最优指数即为2。论文及形式化证明已公开。</p>
+<p><img src="https://pbs.twimg.com/media/HOcUTnGaUAAucQ-.jpg:large" alt=""></p>
+<hr>
+<h2>降维遇见网络科学：UMAP的kNN图在数据理解中的应用 <code>#17</code></h2>
+<blockquote>Apple研究团队展示了UMAP内部kNN图在数据理解中的潜力，该图在原始高维空间编码数据流形。将PageRank、k-core分解和聚类系数等图算法应用于该图，可识别代表性数据点、揭示密集核心与稀疏边缘。在MNIST和Fashion MNIST上的评估表明，这些方法与k-medoids、HDBSCAN等专用方法具有竞争力或互补性。</blockquote>
+<p>Apple研究团队展示了UMAP内部kNN图在数据理解中的潜力，该图在原始高维空间编码数据流形。将PageRank、k-core分解和聚类系数等图算法应用于该图，可识别代表性数据点、揭示密集核心与稀疏边缘。</p>
+<p>在MNIST和Fashion MNIST上的评估表明，这些方法与k-medoids、HDBSCAN等专用方法具有竞争力或互补性。</p>
+<p><img src="https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png" alt=""></p>
+<hr>
+<h2>MoMo：通过时空动作分词实现机器人操作中的运动模式控制 <code>#18</code></h2>
+<blockquote>机器人操作需根据任务、物体和交互环境调整动作执行方式。MoMo 提出两阶段模仿学习框架，包含时空动作分词器和行为克隆 Transformer，将任务与连续运动模式条件作为输入。在六项真实机器人操作任务中，改变该条件可稳定生成不同执行风格的动作。</blockquote>
+<p>机器人操作需根据任务、物体和交互环境调整动作执行方式。MoMo 提出两阶段模仿学习框架，包含时空动作分词器和行为克隆 Transformer，将任务与连续运动模式条件作为输入。</p>
+<p>在六项真实机器人操作任务中，改变该条件可稳定生成不同执行风格的动作。</p>
+<p><img src="https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png" alt=""></p>
+<hr>
+<h2>OpenAI 总裁布罗克曼承认新版 ChatGPT 桌面应用“有点乱”，目标年底实现“零标签” <code>#19</code></h2>
+<blockquote>OpenAI 联合创始人兼总裁格雷格·布罗克曼承认，合并 Codex 后的新版 ChatGPT 桌面应用界面“有点乱”，导致部分用户难以找到聊天记录。他透露，到 2026 年年底，ChatGPT 桌面应用将不再有 Work 标签页，功能会融入 ChatGPT。整合后，Codex 用户数在几天内从 500 万增至 1000 万。</blockquote>
+<p>OpenAI 联合创始人兼总裁格雷格·布罗克曼承认，合并 Codex 后的新版 ChatGPT 桌面应用界面“有点乱”，导致部分用户难以找到聊天记录。</p>
+<p>他透露，到 2026 年年底，ChatGPT 桌面应用将不再有 Work 标签页，功能会融入 ChatGPT。整合后，Codex 用户数在几天内从 500 万增至 1000 万。</p>
+<hr>
+<h2>如何使用 Google TPU 微基准测试评估 TPU 性能 <code>#20</code></h2>
+<blockquote>Google 开源 TPU 微基准测试套件提供网络、计算、HBM、主机传输和注意力组件的细粒度性能指标，帮助开发者验证真实硬件能力。通过基准测试建立 Roofline 模型，工程师可准确诊断机器学习工作负载是受计算、内存还是网络限制。该经验基线可直接指导内核调优、网格分片和重物化等软件优化，以最大化大规模模型部署的硬件利用率。</blockquote>
+<p>Google 开源 TPU 微基准测试套件提供网络、计算、HBM、主机传输和注意力组件的细粒度性能指标，帮助开发者验证真实硬件能力。通过基准测试建立 Roofline 模型，工程师可准确诊断机器学习工作负载是受计算、内存还是网络限制。</p>
+<p>该经验基线可直接指导内核调优、网格分片和重物化等软件优化，以最大化大规模模型部署的硬件利用率。</p>
+<p><img src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_ozwg7vozwg.2e16d0ba.fill-1200x600.jpg" alt=""></p>
+<hr>
+<h2>Cursor 如何为云智能体构建开发环境 <code>#21</code></h2>
+<blockquote>Cursor 将开发环境本身作为面向智能体的产品来构建，使云智能体能测试代码变更。团队通过统一跨平台工具链、开发 CLI 工具 anydev 简化构建命令，并构建 Cursor Cloud MCP 实现环境自愈。目前，云智能体在 Cursor 单体仓库中提交的合并 PR 占比已从去年 12 月的约十分之一升至过半。</blockquote>
+<p>Cursor 将开发环境本身作为面向智能体的产品来构建，使云智能体能测试代码变更。团队通过统一跨平台工具链、开发 CLI 工具 anydev 简化构建命令，并构建 Cursor Cloud MCP 实现环境自愈。</p>
+<p>目前，云智能体在 Cursor 单体仓库中提交的合并 PR 占比已从去年 12 月的约十分之一升至过半。</p>
+<hr>
+<h2>cdnjs 迁移至 Cloudflare 开发者平台 <code>#22</code></h2>
+<blockquote>2026 年 6 月 23 日起，开源 CDN 服务 cdnjs 完全运行在 Cloudflare 开发者平台上。该平台日均处理 108,000 次请求/秒、90 亿次请求，缓存命中率 98.6%。LLM 如 ChatGPT 和 Claude 因 URL 模式一致且版本不可变，频繁调用 cdnjs 生成 HTML 演示。</blockquote>
+<p>2026 年 6 月 23 日起，开源 CDN 服务 cdnjs 完全运行在 Cloudflare 开发者平台上。该平台日均处理 108,000 次请求/秒、90 亿次请求，缓存命中率 98.6%。</p>
+<p>LLM 如 ChatGPT 和 Claude 因 URL 模式一致且版本不可变，频繁调用 cdnjs 生成 HTML 演示。</p>
+<hr>
+<h2>Databricks：构建AI优先医疗组织的基础 <code>#23</code></h2>
+<blockquote>Databricks提出医疗组织推进AI计划时需应对“噪音”挑战，强调以数据基础设施为核心构建AI优先架构。该框架聚焦于整合分散的医疗数据、建立统一治理层，并支持临床与运营场景的模型部署。具体方案包括利用Lakehouse架构实现实时数据管道、通过MLflow管理模型生命周期，以及采用RAG技术增强LLM在医疗问答中的准确性。</blockquote>
+<p>Databricks提出医疗组织推进AI计划时需应对“噪音”挑战，强调以数据基础设施为核心构建AI优先架构。该框架聚焦于整合分散的医疗数据、建立统一治理层，并支持临床与运营场景的模型部署。</p>
+<p>具体方案包括利用Lakehouse架构实现实时数据管道、通过MLflow管理模型生命周期，以及采用RAG技术增强LLM在医疗问答中的准确性。</p>
+<hr>
+<h2>Skyscanner 如何用 Runway 消除前期制作中的猜测 <code>#24</code></h2>
+<blockquote>Skyscanner 品牌团队在美加品牌广告拍摄中，使用 Runway 辅助艺术指导，在开拍前锁定镜头构图、灯光方向和演员站位，并在片场实时验证拍摄内容。团队将 Runway 生成的场景、道具和构图直接放入最终广告版式（OOH、Meta 广告等），将原本需要两周的构思过程压缩为可执行的预可视化方案，使拍摄现场反馈闭环从后期提前到实时。</blockquote>
+<p>Skyscanner 品牌团队在美加品牌广告拍摄中，使用 Runway 辅助艺术指导，在开拍前锁定镜头构图、灯光方向和演员站位，并在片场实时验证拍摄内容。</p>
+<p>团队将 Runway 生成的场景、道具和构图直接放入最终广告版式（OOH、Meta 广告等），将原本需要两周的构思过程压缩为可执行的预可视化方案，使拍摄现场反馈闭环从后期提前到实时。</p>
+<hr>
+</body>
+</html>
