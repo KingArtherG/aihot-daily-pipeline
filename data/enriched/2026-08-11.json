@@ -1,0 +1,339 @@
+{
+  "date": "2026-08-11",
+  "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：SGLang 为 Muse Glimmer 提供 Day-0 支持，针对本地智能体工作流优化推理；Meta 发布开源模型 Muse Glimmer；OpenAI 推出 GPT-5.6-Cyber，面向授权漏洞研究的网络安全专用模型；OpenRouter 推出由市场智慧驱动的新版 Auto 路由器；千问开放平台上线：租房、寄快递、查理财等十余领域服务可对话办理；Qwen-MM-Plugins 让智能体原生支持多模态；OpenChamber：一个基于代理的开发环境；Claude Code 自动模式默认开启原理。",
+  "items": [
+    {
+      "title": "SGLang 为 Muse Glimmer 提供 Day-0 支持，针对本地智能体工作流优化推理",
+      "summary": "SGLang 与 Meta Superintelligence Labs 合作，为 30B 参数多模态模型 Muse Glimmer 提供 Day-0 支持，该模型拥有 128k+ token 上下文窗口。",
+      "source": "LMSYS：Blog（Chatbot Arena 团队）",
+      "url": "https://www.lmsys.org/blog/2026-08-10-meta-muse-glimmer",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www.lmsys.org/blog/2026-08-10-meta-muse-glimmer/opengraph-image?846984fa349aff93"
+      ]
+    },
+    {
+      "title": "Meta 发布开源模型 Muse Glimmer",
+      "summary": "推出 Muse Glimmer，一款开放权重、300 亿参数的模型，专为本地、常驻运行的智能体工作流优化。 与同尺寸领先模型相比，Muse Glimmer 在关键智能体用例和基准测试中表现出色，并设计为完全在消费级硬件（如 Mac 或配备高性能 GPU 的 PC）上运行。 秉承我们长期分享基础 AI 研究的传统，我们以宽松的 Apache 2.0 许可证发布模型权重。",
+      "source": "X：AI at Meta (@AIatMeta)",
+      "url": "https://x.com/AIatMeta/status/2086757844544811485",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HPWkSuDbkAExHc7.png:large"
+      ]
+    },
+    {
+      "title": "OpenAI 推出 GPT-5.6-Cyber，面向授权漏洞研究的网络安全专用模型",
+      "summary": "OpenAI 发布网络安全专用模型 GPT-5.6-Cyber，可通过 Daybreak Red 获取，用于授权的漏洞研究、漏洞验证和安全测试。该模型旨在应对网络防御窗口不断收窄的挑战，为安全研究人员提供专门工具。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "OpenRouter 推出由市场智慧驱动的新版 Auto 路由器",
+      "summary": "OpenRouter 基于每周超 55T token 的社区消费数据，推出新版 Auto 路由器（openrouter/auto），其模型选择在多数任务和成本档位上优于旧版。新路由器按约 30 种任务类型匹配近 7 天社区实际消费的模型，支持 cost_tier 参数（low 至 max）并遵循账户隐私设置。在 MMLU Pro 等基准上，新默认档位在多数领域以更低成本达到旧版同等性能。",
+      "source": "OpenRouter：Announcements（RSS）",
+      "url": "https://openrouter.ai/blog/announcements/introducing-the-new-auto-router",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://openrouter.ai/blog/images/auto-router-beta.png"
+      ]
+    },
+    {
+      "title": "千问开放平台上线：租房、寄快递、查理财等十余领域服务可对话办理",
+      "summary": "千问开放平台今日上线，面向生态伙伴和开发者开放手机、PC和AI眼镜三类终端的服务接入，首批覆盖物流运输、房产居住、本地生活、理财、汽车等十多个领域。用户可在对话中@相关服务或点击“圆点角标”进入智能体，完成从咨询、推荐到下单的完整流程。平台支持标准化协议接入、一键授权与端到端调测，并提供账号、AI支付、订单接入等基础设施。",
+      "source": "公众号：千问APP（阿里）",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488345&idx=1&sn=ef4e57c9c9350f9238d90211eb2dd453",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Qwen-MM-Plugins 让智能体原生支持多模态",
+      "summary": "👀 看见只是开始。 借助 Qwen-MM-Plugins，让你的智能体原生支持多模态——读取图片、视频和文档，编辑视频，处理 3D/CAD，以及更多。 从多模态模型 → 多模态智能体。🚀 观看实际效果：https://github.com/QwenLM/Qwen-MM-Plugins",
+      "source": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+      "url": "https://x.com/Alibaba_Qwen/status/2086664887560970531",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2086663463162830848/img/oOe-t00ty3R0DrL-.jpg"
+      ]
+    },
+    {
+      "title": "OpenChamber：一个基于代理的开发环境",
+      "summary": "OpenChamber 是一个基于代理的开发环境，可跨桌面、浏览器、手机和 VS Code 使用，支持会话目标、多模型并行运行与融合、变更走查、从 issue 到 PR 的完整流程及定时任务。该工具基于 OpenCode SDK，完全开源且免费，代码和会话内容均保存在本地，远程访问可通过 UI 密码和端到端加密的 Private Relay 保护。",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://openchamber.dev/",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://openchamber.dev/og-image.png"
+      ]
+    },
+    {
+      "title": "Claude Code 自动模式默认开启原理",
+      "summary": "我们最近将自动模式设为 Claude Code 的默认选项，这意味着你不再需要批准每一个操作。 但什么决定某个操作是否可以安全运行？看看它是如何工作的：",
+      "source": "X：Claude Devs (@ClaudeDevs)",
+      "url": "https://x.com/ClaudeDevs/status/2086844755770757531",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2086842756346085376/img/rMhj3J7TxFfxBNaN.jpg"
+      ]
+    },
+    {
+      "title": "Omnigent 上下文策略如何阻断“致命三重奏”组合攻击",
+      "summary": "Omnigent 的上下文策略（Contextual Policies）可阻断“致命三重奏”组合攻击——即多个看似无害的请求叠加后形成的恶意行为。该机制在单个请求层面不设防，而是在组合上下文中识别并拦截风险，从而在不牺牲正常功能的前提下提升安全性。",
+      "source": "Databricks：Blog（RSS）",
+      "url": "https://www.databricks.com/blog/innocent-until-combined-blocking-lethal-trifecta-omnigent-contextual-policies",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www.databricks.com/sites/default/files/2026-08/2026-08-Blog-Innocent-until-combined-Blocking-the-lethal-trifecta-with-Omnigent-Contextual-Policies-OG-1200x628-2x.png"
+      ]
+    },
+    {
+      "title": "Google 为 Google Ads 和 Google Analytics 推出新 AI 与智能体功能",
+      "summary": "Google 宣布在 Google Ads 和 Google Analytics 中新增 AI 与智能体体验，包括 Google Analytics 首页的 AI Overviews 智能摘要、Google Ads 首页的 AI 洞察卡片，以及 Ask Advisor 新增的基准对比功能，可将广告效果与同类商家匿名平均值比较。这些功能基于 Gemini 构建，目前面向英文账户开放 beta 测试。",
+      "source": "Google Blog：AI（RSS）",
+      "url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Advisor_Header.width-1300.jpg"
+      ]
+    },
+    {
+      "title": "英伟达联合六大机构融资5000亿美元建AI工厂",
+      "summary": "英伟达宣布与Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs和KKR合作，建立独立融资平台，动员超5000亿美元第三方资本支持AI基础设施建设。",
+      "source": "X：Jensen Huang (@JensenHuang)",
+      "url": "https://x.com/JensenHuang/status/2086934705207959965",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/profile_images/2080613261674962944/OMXX4RJ3_400x400.jpg"
+      ]
+    },
+    {
+      "title": "Zapier 如何用 ChatGPT Work 改造核心营销流程",
+      "summary": "Zapier 企业营销团队用 ChatGPT Work 自动化线索漏斗优化、营销素材搭建和报告生成，每月可对数千条线索执行 QA/QC，单人查看一条流失线索原本需 35 至 45 分钟。该系统每月为销售团队带来七位数管道价值，并生成高管仪表盘展示线索管道中的重复问题与每周趋势。团队得以将更多时间投入策略与创意工作，并计划未来设置常驻自动化循环。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/zapier",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Claude 未发布研究版将黎曼 zeta 函数零点下界从 41.6% 提升至 67.2%",
+      "summary": "Anthropic 员工让 Claude 尝试攻克黎曼猜想，虽未成功，但一个未发布的研究版 Claude 在相关问题上取得突破：将满足黎曼猜想的 zeta 函数零点比例下界从 41.6% 提升至 67.2%。",
+      "source": "Anthropic：Research（发表成果 · 网页）",
+      "url": "https://www.anthropic.com/research/riemann-zeta",
+      "category": "paper",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/4zrzovbb/website/ca772f1b34e5b58e38694538f017d63f5dd196d9-1200x630.jpg"
+      ]
+    },
+    {
+      "title": "tl;dv 逾18.1万段AI会议录音被公开暴露，可实时闯入他人通话",
+      "summary": "AI会议记录平台tl;dv的Firestore数据库因缺乏租户隔离，任何已认证用户可查询全部18.1万段会议记录，涉及84,312名用户、35,003个域名，含23国政府及多所高校会议。处于录制状态的约1,000场会议会暴露可加入的会议ID，研究者借此闯入马来西亚教育部及美国某大学创业团队的实时通话。该漏洞自2026年1月报告后6个月仍未修复，另有超1,000段会议内容为公开状态。",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://bobdahacker.com/blog/tldv-hack",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://bobdahacker.com/static/images/blogs/tldv/blogHeader.png"
+      ]
+    },
+    {
+      "title": "智能体真的会用电脑吗？a16z 用数据给出答案",
+      "summary": "a16z 数据显示，计算机操作智能体在 OSWorld-Verified 基准上的最佳成绩已从一年前的 42% 升至 85%，超过人类测试者约 72% 的水平，Claude Fable 5 以 85% 领先。",
+      "source": "a16z：News（RSS）",
+      "url": "https://www.a16z.news/p/can-agents-use-a-computer-yet-weve",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://substackcdn.com/image/fetch/$s_!kp2L!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52d9d1af-7866-420c-b3ef-c8b231806b2e_2844x1600.png",
+        "https://substackcdn.com/image/fetch/$s_!c-OT!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fa16z.substack.com%2Fapi%2Fv1%2Fpost_preview%2F210278979%2Ftwitter.jpg%3Fversion%3D4"
+      ]
+    },
+    {
+      "title": "扎克伯格：超级智能应人人可用",
+      "summary": "我相信每个人都应能使用超级智能，我撰写了一篇长文，阐述 Meta 为所有人构建积极未来的理念与价值观。http://meta.com/thefutureisforeveryone",
+      "source": "X：Mark Zuckerberg (@finkd)",
+      "url": "https://x.com/finkd/status/2086754845218726027",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/profile_images/77846223/profile_400x400.jpg"
+      ]
+    },
+    {
+      "title": "Linear 如何构建 Linear Agent：在系统提示词、工具设计与系统技能中划定边界",
+      "summary": "Linear Agent 的价值在于完成未预设的工作，因此团队未为其编写固定路径，而是通过系统提示词、工具设计、产品模型、运行范围及底层自定义 harness 划定边界。系统提示词聚焦沟通风格、硬性边界与产品概念解释；工具设计将约束编码进参数，使无效操作难以执行。团队还引入系统技能作为组合单元，按需渐进加载，避免一次性暴露过多上下文。",
+      "source": "Linear：Now（RSS）",
+      "url": "https://linear.app/now/how-we-built-linear-agent",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://webassets.linear.app/images/ornj730p/production/dae4b553082699cef05f6074d9e81b4c1cb187a4-2400x1350.jpg?q=95&auto=format&dpr=2"
+      ]
+    },
+    {
+      "title": "Forking-Sequences：一种统计与计算上更高效的多步预测训练范式",
+      "summary": "CMU 研究团队正式定义并系统评测了 forking-sequences 训练范式：它无需新增参数，在一次前向传播中跨所有预测创建日期编码解码整条序列。",
+      "source": "CMU：Machine Learning Blog",
+      "url": "https://blog.ml.cmu.edu/2026/08/10/forking-sequences-part-i-statistically-and-computationally-efficient-multi-horizon-forecasting",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "开源不等于开放权重：Gary Marcus 剖析两者本质差异",
+      "summary": "开放权重模型并非真正的开源，二者在透明度和可定制性上存在根本区别。开源软件公开完整源代码，允许任何人查看、修改和分支；而开放权重模型仅发布训练后的神经网络权重，用户无法访问原始训练数据、预处理方法或训练算法，也不能自由修改或深入调查。这导致开发者、监管者和科学家在使用开放权重模型时面临诸多限制，Meta 最新发布的开放权重模型即为例证。",
+      "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+      "url": "https://garymarcus.substack.com/p/open-source-is-not-the-same-as-open",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    }
+  ]
+}
