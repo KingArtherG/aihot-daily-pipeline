@@ -1,0 +1,53 @@
+{
+  "https://blogs.nvidia.com/blog/local-ai-open-source-models-agents-nemotron": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/08/raig-rolling-blog-local-ai-community-open-source.jpg"
+  ],
+  "https://www.lmsys.org/blog/2026-08-11-nemotron-3-5-lightning": [
+    "https://www.lmsys.org/blog/2026-08-11-nemotron-3-5-lightning/opengraph-image?846984fa349aff93"
+  ],
+  "https://mp.weixin.qq.com/s": [],
+  "https://x.com/runwayml/status/2087251184658657346": [
+    "https://pbs.twimg.com/amplify_video_thumb/2087250605584629760/img/vx9vWI8FSvujMLcx.jpg"
+  ],
+  "https://cloud.google.com/blog/products/databases/accelerate-postgresql-migrations-with-gemini-in-dms": [
+    "https://storage.googleapis.com/gweb-cloudblog-publish/images/Hero_Image_KjCoerO.max-1400x1400.jpg"
+  ],
+  "https://x.com/openaidevs/status/2087242829076791392": [
+    "https://pbs.twimg.com/amplify_video_thumb/2087242799876116480/img/QckSO_xWGXbcWze6.jpg"
+  ],
+  "https://www.databricks.com/blog/open-sourcing-metals-v2-databricks-java-and-scala-language-server-multi-million-line-codebases": [
+    "https://www.databricks.com/sites/default/files/2026-08/2026-05-blog-open-sourcing-metals-v2-databricks-java-and-scala-language-server-for-multi-million-line-codebases-og-1200x628-2x.png"
+  ],
+  "https://the-decoder.com/but-marinade-and-leaked-passwords-are-what-researchers-found-in-chatgpts-hidden-reasoning": [
+    "https://the-decoder.com/wp-content/uploads/2026/08/marinade.png"
+  ],
+  "https://www.ithome.com/0/988/239.htm": [],
+  "https://x.com/sundarpichai/status/2087222656819241292": [
+    "https://pbs.twimg.com/tweet_video_thumb/HPdMx57aUAA-2gh.jpg"
+  ],
+  "https://www.ithome.com/0/988/524.htm": [],
+  "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/08/800vdc.jpg"
+  ],
+  "https://garymarcus.substack.com/p/breaking-circular-financing-reaches": [],
+  "https://www.databricks.com/blog/electric-joins-databricks-bring-wasm-postgres-ai-agent-sandboxes": [
+    "https://www.databricks.com/sites/default/files/2026-08/databricks-electric.png"
+  ],
+  "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md": [
+    "https://opengraph.githubassets.com/2563e5be54ab21567f65be2a63a110eb91375b8b6e4e26cbd364ec2602d769df/trycua/cua"
+  ],
+  "https://www.lmsys.org/blog/2026-08-11-unified-radix-cache": [
+    "https://www.lmsys.org/blog/2026-08-11-unified-radix-cache/opengraph-image?846984fa349aff93"
+  ],
+  "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations": [
+    "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-1440x810.jpg"
+  ],
+  "https://www.theverge.com/ai-artificial-intelligence/977273/the-ai-takeover-of-mathematics-has-begun": [
+    "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/268684_OpenAI_claims_to_revolutionize_maths_CVirginia2.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
+  ],
+  "https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis": [],
+  "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm": [
+    "https://substackcdn.com/image/fetch/$s_!uT1l!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F547a610b-a6e9-40e0-a5f5-525f27a6f69f_768x384.jpeg",
+    "https://substackcdn.com/image/fetch/$s_!cdm4!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Flighthousenewsletter.substack.com%2Fapi%2Fv1%2Fpost_preview%2F208440988%2Ftwitter.jpg%3Fversion%3D4"
+  ]
+}
