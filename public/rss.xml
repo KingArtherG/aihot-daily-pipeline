@@ -5,7 +5,15 @@
     <link>https://KingArtherG.github.io/aihot-daily-pipeline/</link>
     <description>King AI 早报 自动 RSS</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 13 Aug 2026 03:04:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 03:03:21 +0000</lastBuildDate>
+    <item>
+      <title>King AI 早报 2026-08-14</title>
+      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-14.html</link>
+      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-14.html</guid>
+      <author>KingArtherG</author>
+      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座；Google DeepMind 推出 Gemini 3.7 Flash：面向编程与智能体的最强工作模型；MiniMax Music 3.0 发布：新一代开源权重、生产级全能音乐模型；DeepSeek Harness v0.1 开发者预览版发布；Cursor 推出 builds：云智能体启动速度提升至 3 倍；Google Sheets 推出 Sheets canva</description>
+      <pubDate>Thu, 13 Aug 2026 16:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>King AI 早报 2026-08-13</title>
       <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-13.html</link>
@@ -237,14 +245,6 @@
       <author>KingArtherG</author>
       <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：阿里发布 Qwen-Audio-3.0-Realtime，在 Artificial Analysis 语音推理子项中综合排名第一；Thinking Machines 发布多模态模型 Inkling；OpenAI 发布 GPT-Red：通过自动化红队测试提升模型鲁棒性；xAI 开源 Grok Build 编程智能体与终端界面；Telegram 无服务器架构；开源编程智能体内存方案发布，通过 SSH 同步；Grok Build 现已开源；金山办公推出 </description>
       <pubDate>Wed, 15 Jul 2026 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>King AI 早报 2026-07-15</title>
-      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-07-15.html</link>
-      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-07-15.html</guid>
-      <author>KingArtherG</author>
-      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Bonsai 27B：首款可在手机上运行的27B级多模态模型；商汤开源 SenseNova-Vision-7B-MoT 多任务视觉模型；腾讯混元 Hy3 量化版发布：1bit 版本单卡可部署，4bit 版本接近满血性能；Google 在 I/O Connect India 展示由 Tensor SoC 和 TPU 驱动的 Pixel 10 端侧 AI 未来；Codex 周活超700万，两月更新150+项；高德发布通用世界模型工坊 ABot-Worl</description>
-      <pubDate>Tue, 14 Jul 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
