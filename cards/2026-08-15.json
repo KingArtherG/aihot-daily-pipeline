@@ -1,0 +1,237 @@
+{
+  "date": "2026-08-15",
+  "items": [
+    {
+      "title": "dots3-note Preview 开源：280B 参数轻量模型，主打长程智能体与多模态推理",
+      "summary": "小红书技术开源 dots3-note Preview，这是 dots3 系列最轻量模型，总参数 280B、激活参数 16B，支持 512K 上下文及文本、视觉、语音多模态理解，并针对复杂推理和长程 Agent 任务优化。",
+      "source": "公众号：小红书技术（dots.llm）",
+      "url": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496140&idx=1&sn=5239a5fbb115c58d2ae0056bb32789ff",
+      "category": "模型发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Gemini 3.7 Flash 全面上线 Pro 与 Ultra 用户",
+      "summary": "Gemini 3.7 Flash 现已向 Gemini 聊天中的 Pro 和 Ultra 用户开放。该模型更新提升了多步骤任务的推理与准确性，如智能整合数十个文件和邮件为一份主文档。同时，Gemini Spark 也已运行于 3.7 Flash，通过改进对 Google Workspace 应用的工具调用，让个人 AI 智能体更精准。",
+      "source": "X：Gemini (@GeminiApp)",
+      "url": "https://x.com/GeminiApp/status/2088326407730692538",
+      "category": "模型发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/profile_images/1940093473564073984/jiafRcO0_400x400.png"
+      ]
+    },
+    {
+      "title": "DeepSeek V4 Pro 登陆硅基流动，1M 上下文",
+      "summary": "DeepSeek-V4-Pro-0813 正式上线硅基流动 SiliconFlow，提供 Day-0 支持，具备 1M 上下文窗口及低/高/最大三档推理强度，更侧重编码、工具调用与智能体工作流，仍保持 MIT 开源协议。定价为输入 $1.32/M、输出 $3.96/M、缓存命中 $0.44/M。同系列 DeepSeek-V4-Flash-0731 则面向追求速度与成本效益的日常生产场景。",
+      "source": "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+      "url": "https://x.com/SiliconFlowAI/status/2088127458558271885",
+      "category": "模型发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HPqCxVabkAAqHyB.jpg:large"
+      ]
+    },
+    {
+      "title": "Claude Code v2.1.233 发布：新增 GitLab MR 支持与内存 cgroup 限制",
+      "summary": "Claude Code v2.1.233 发布，为 --worktree 标志和 agents 视图新增 GitLab 合并请求 URL 支持，并添加可选的 forward_user_identity 网关设置以按用户归因支出。",
+      "source": "Claude Code：GitHub Releases（RSS）",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://opengraph.githubassets.com/33c643ffe7230e30c47e45abed0183078cf5e1acec1408e6914321466272cc39/anthropics/claude-code/releases/tag/v2.1.233"
+      ]
+    },
+    {
+      "title": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
+      "summary": "价格战让模型API的成本弹性成为现实，原先因账单压力转向中国厂商的用户，可能在OpenAI和Anthropic降价后重新比较能力与价格。",
+      "source": "Ars Technica：AI（RSS）",
+      "url": "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.arstechnica.net/wp-content/uploads/2026/08/GettyImages-2285566787-1152x648.jpg"
+      ]
+    },
+    {
+      "title": "Cursor 正式被 SpaceX 收购",
+      "summary": "Cursor 已被 SpaceX 正式收购，完成自 4 月启动的收购流程。合并后 Cursor 将获得全球最大 GPU 集群，以构建更强且运行成本更低的模型，从而以更低价格向客户提供更强大的模型。本周三发布的 Grok 4.6 是双方合作成果的早期体现。",
+      "source": "Cursor Blog",
+      "url": "https://cursor.com/blog/joining-spacex",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/uploads/close-og-image-1-B5D1caLmbVsj0JInrL2qKgXzLPMGoU.png"
+      ]
+    },
+    {
+      "title": "Claude 文本水印机制如何运作",
+      "summary": "未来 Claude 模型生成的文本将包含水印，用于判断文本由 Claude 撰写的可能性，这是 Anthropic 为遵守欧盟《AI 法案》而实施的变更。该方法基于 Google DeepMind 的 SynthID-Text 技术，对输出质量、创造力和可读性无实际影响，读者无法区分水印文本与普通文本，且不增加额外 token 或成本。",
+      "source": "Anthropic：Newsroom（网页）",
+      "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&backgroundColor=heather"
+      ]
+    },
+    {
+      "title": "印尼首个大学AI中心落成：UGM、Indosat与NVIDIA合作培养本地AI人才",
+      "summary": "印尼通信与数字事务部、Indosat、NVIDIA与加查马达大学（UGM）在日惹共同启动UGM Indosat NVIDIA AI技术中心（NVAITC），这是该国首个大学AI技术中心。",
+      "source": "NVIDIA Blog（RSS）",
+      "url": "https://blogs.nvidia.com/blog/ugm-indosat-nvidia-ai-technology-center",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://blogs.nvidia.com/wp-content/uploads/2026/08/Launching-Ceremony-2-1-scaled.jpeg"
+      ]
+    },
+    {
+      "title": "2026年夏季开源模型生态观察：中国前沿模型规模领先，AMD与NVIDIA主导发布量",
+      "summary": "2026年1至8月，Hugging Face公开模型仓库从243万增至296万，但85.6%的模型下载量不足200次，1.5%的仓库占据99.2%下载量。中国实验室月度最大开源模型参数规模在754B至2.78万亿之间，美国实验室七个月中五个月低于130B。AMD与NVIDIA各发布超200个新模型仓库，成为发布开源模型最多的机构。",
+      "source": "Hugging Face：Blog（RSS）",
+      "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://huggingface.co/blog/assets/state-of-open-models-summer-2026/thumbnail.png"
+      ]
+    },
+    {
+      "title": "Claude Code 会话如何最大化 token 价值",
+      "summary": "Claude Code 的 token 成本由模型、输入/输出 token 和提示缓存三因素决定，输出 token 价格约为输入的 5 倍。任务间运行 /clear 可减少无关上下文回传，降低 token 用量；会话中途切换模型或 effort 级别会破坏提示缓存，增加成本。",
+      "source": "Claude：Blog（网页）",
+      "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a7f1f51730ca89a4d571062_og_maximizing-the-value-of-your-claude-code-sessions.jpg"
+      ]
+    },
+    {
+      "title": "OpenRouter 视觉指南：如何通过 API 向多模态模型发送图像",
+      "summary": "OpenRouter 发布视觉指南，详解通过 Chat Completions API 向多模态模型发送图像的方法。请求体采用 messages 数组，用户消息的 content 包含 text 和 image_url 两部分，支持公开 URL 或 base64 数据 URL 两种格式，兼容 PNG、JPEG、WebP 和 GIF。",
+      "source": "OpenRouter：Announcements（RSS）",
+      "url": "https://openrouter.ai/blog/tutorials/send-image-to-llm",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://openrouter.ai/blog/images/send-image-to-llm.png"
+      ]
+    },
+    {
+      "title": "谁真的需要SOTA模型？OpenRouter数据显示84%token来自非前沿模型",
+      "summary": "OpenRouter数据显示，84%的模型token并非来自SOTA模型，用户最常用的六款模型性能约为前沿模型的77%，成本仅为Claude Fable 5的2.5%。8月10日当周，六款模型承载了80%流量，混合价格约$0.50/百万token，而Fable 5为$20。最佳开源模型性能已从一年前的48%提升至前沿模型的80%，企业正转向更小、微调或开源模型以优化性价比。",
+      "source": "Tomer Tunguz 博客（VC 分析）",
+      "url": "https://www.tomtunguz.com/model-release-exhaustion",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://res.cloudinary.com/dzawgnnlr/image/upload/q_auto/f_auto/w_auto/rsx2ontjda9jwc7qv9id"
+      ]
+    },
+    {
+      "title": "Databricks 如何在数据仓库中使用 AI_Functions：主要用例解析",
+      "summary": "Databricks 探讨在数据仓库中应用 AI_Functions 的主要场景，帮助组织在结构化数据之外处理非结构化数据。文章聚焦于如何通过该功能将 AI 能力直接集成到 SQL 工作流中，以扩展数据仓库的分析边界。具体用例与实现细节以原文为准。",
+      "source": "Databricks：Blog（RSS）",
+      "url": "https://www.databricks.com/blog/using-aifunctions-your-data-warehouse-top-use-cases",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www.databricks.com/sites/default/files/2026-08/2026-06-blog-Using-AI_Functions-in-Your-Data-Warehouse-Top-Use-Cases-OG-1200x628-2x.png"
+      ]
+    }
+  ]
+}
