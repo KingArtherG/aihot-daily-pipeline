@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-17",
+  "lead": "过去 24 小时，AI 动态主要集中在开发工具。重点包括：Qwen 3.8 27B 表现出色，但默认推理强度过高导致过度思考；The hyping of Anthropic’s IPO。",
+  "items": [
+    {
+      "title": "Qwen 3.8 27B 表现出色，但默认推理强度过高导致过度思考",
+      "summary": "阿里 Qwen 实验室发布 Apache 2 许可的 27B 参数视觉大模型 Qwen 3.8 27B，官方基准显示其超越前代 Qwen 3.6 27B 及闭源 Qwen 3.7-Plus。",
+      "source": "Simon Willison 博客",
+      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://static.simonwillison.net/static/2026/qwen-thinking-bicycle-27b.jpg"
+      ]
+    },
+    {
+      "title": "The hyping of Anthropic’s IPO",
+      "summary": "对 Anthropic IPO 静默期流传的 2028 年 1900 亿美元级营收预测，文章提示其多基于匿名信源和未披露算法，可帮助在追踪上市进展时区分已核实数据与传闻。",
+      "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+      "url": "https://garymarcus.substack.com/p/the-hyping-of-anthropics-ipo",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    }
+  ]
+}
