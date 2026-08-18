@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>King AI 早报 2026-08-18</title>
+  <link rel="alternate" type="application/rss+xml" href="https://KingArtherG.github.io/aihot-daily-pipeline/rss.xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+      background: #fbfbf8;
+      color: #1f2933;
+    }
+    a { color: #0f766e; }
+    h1 { font-size: 32px; line-height: 1.25; margin-bottom: 16px; }
+    h2 { margin-top: 36px; border-top: 1px solid #d9ded8; padding-top: 20px; }
+    h3 { margin: 24px 0 8px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    hr { border: 0; border-top: 1px solid #d9ded8; margin: 32px 0; }
+    blockquote {
+      margin: 20px 0;
+      padding: 12px 16px;
+      border-left: 4px solid #14b8a6;
+      background: #eef9f6;
+    }
+    li { margin: 16px 0; }
+    .nav { margin-bottom: 28px; color: #52606d; }
+    .nav a { margin-right: 16px; }
+    .archive li { margin: 8px 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111827; color: #e5e7eb; }
+      blockquote { background: #132f2d; }
+      h2, hr { border-color: #374151; }
+      a { color: #5eead4; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav"><a href="./">King AI 早报</a><a href="./rss.xml">RSS</a></nav>
+<h1>King AI 早报 2026-08-18</h1>
+<h2>概览</h2>
+<p>过去 24 小时，AI 动态主要集中在产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案；OpenRouter 推出 Activity 仪表盘与 Analytics API：按智能体、模型、请求追踪 AI 使用成本；OpenRouter 图像生成 API：代码优先的接入教程；AgentCore Payments 中间件为 LangChain 智能体提供 API 支付能力；Claude Code v2.1.234 发布：新增项目目录名变量与 GitLab MR 徽章，修复多项安全与稳定性问题；NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻；A 股迎来“人形机器人第一股”，宇树科技官宣 8 月 19 日科创板上市；404 Media 追踪珍本图书流向：亚马逊批量购书扫描用于 AI 训练后销毁。</p>
+<h3>要闻</h3>
+<ul>
+<li>Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案 <code>#1</code></li>
+<li>OpenRouter 推出 Activity 仪表盘与 Analytics API：按智能体、模型、请求追踪 AI 使用成本 <code>#2</code></li>
+<li>OpenRouter 图像生成 API：代码优先的接入教程 <code>#3</code></li>
+<li>AgentCore Payments 中间件为 LangChain 智能体提供 API 支付能力 <code>#4</code></li>
+</ul>
+<h3>产品发布/更新</h3>
+<ul>
+<li>Claude Code v2.1.234 发布：新增项目目录名变量与 GitLab MR 徽章，修复多项安全与稳定性问题 <code>#5</code></li>
+</ul>
+<h3>行业动态</h3>
+<ul>
+<li>NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻 <code>#6</code></li>
+<li>A 股迎来“人形机器人第一股”，宇树科技官宣 8 月 19 日科创板上市 <code>#7</code></li>
+<li>404 Media 追踪珍本图书流向：亚马逊批量购书扫描用于 AI 训练后销毁 <code>#8</code></li>
+<li>OpenAI 为 14 个独立项目提供资助，推动智能时代经济机遇与韧性研究 <code>#9</code></li>
+</ul>
+<h3>论文研究</h3>
+<ul>
+<li>PhotoScan：用智能手机照片估算胰岛素抵抗，精度接近DXA <code>#10</code></li>
+</ul>
+<h3>技巧与观点</h3>
+<ul>
+<li>OpenAI 如何用前沿智能加固自身防御：The Defender’s Window <code>#11</code></li>
+<li>如何禁用或避免侵入式 AI：一份覆盖 Windows、Chrome、Edge、Firefox 及主流应用的实用指南 <code>#12</code></li>
+<li>用 Google 的 Agent Development Kit 构建零信任 AI 智能体 <code>#13</code></li>
+<li>开源模型生态的未来：Nvidia 押注“教所有人炼 token” <code>#14</code></li>
+<li>同一集群利用率提升 33 个百分点：改变的是分配顺序 <code>#15</code></li>
+<li>ABC Legal 如何借助 Claude Managed Agents 让每位员工成为构建者 <code>#16</code></li>
+<li>当模型持续学习：测试时训练如何改变 AI 的记忆与成本 <code>#17</code></li>
+<li>SGLang 重构 CUDA Graph 支持，Breakable CUDA Graph 成 prefill 默认方案 <code>#18</code></li>
+</ul>
+<hr>
+<h2>Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案 <code>#1</code></h2>
+<blockquote>Cursor 今日起向所有付费计划用户开放 Origin 代码托管的早期测试版，提供仓库、拉取请求、代码浏览及 GitHub 同步功能。用户可创建以 cursor.com/codebase/ 为前缀的仓库，或将 GitHub 仓库同步至 Origin，双向同步评论与审查。Vercel、Depot 和 Buildkite 集成已可用，智能体功能即将推出。</blockquote>
+<p>Cursor 今日起向所有付费计划用户开放 Origin 代码托管的早期测试版，提供仓库、拉取请求、代码浏览及 GitHub 同步功能。</p>
+<p>用户可创建以 cursor.com/codebase/ 为前缀的仓库，或将 GitHub 仓库同步至 Origin，双向同步评论与审查。Vercel、Depot 和 Buildkite 集成已可用，智能体功能即将推出。</p>
+<p><img src="https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/og/og-origin-code-hosting-08-17-26-iibBEcxTigpnjXaBULY8Du327sx4P1.png" alt=""></p>
+<hr>
+<h2>OpenRouter 推出 Activity 仪表盘与 Analytics API：按智能体、模型、请求追踪 AI 使用成本 <code>#2</code></h2>
+<blockquote>OpenRouter 发布 Activity 仪表盘和 beta Analytics API，可按智能体、模型、请求维度查看支出、token 量、缓存命中率等指标，并支持下钻至单条请求日志。</blockquote>
+<p>OpenRouter 发布 Activity 仪表盘和 beta Analytics API，可按智能体、模型、请求维度查看支出、token 量、缓存命中率等指标，并支持下钻至单条请求日志。</p>
+<p><img src="https://openrouter.ai/blog/images/activity-dashboard.png" alt=""></p>
+<hr>
+<h2>OpenRouter 图像生成 API：代码优先的接入教程 <code>#3</code></h2>
+<blockquote>OpenRouter 推出专用图像生成 API，通过统一请求格式和单一密钥即可调用多个提供商的图像模型。开发者向 POST /api/v1/images 发送请求，响应中的 data[0].b64_json 包含 base64 编码的图像数据，解码后即可保存为本地文件。教程演示了 Python 和 JavaScript 两种实现，并支持通过 input_references 传入参考图像生成变体。</blockquote>
+<p>OpenRouter 推出专用图像生成 API，通过统一请求格式和单一密钥即可调用多个提供商的图像模型。</p>
+<p>开发者向 POST /api/v1/images 发送请求，响应中的 data[0].b64_json 包含 base64 编码的图像数据，解码后即可保存为本地文件。</p>
+<p>教程演示了 Python 和 JavaScript 两种实现，并支持通过 input_references 传入参考图像生成变体。</p>
+<p><img src="https://openrouter.ai/blog/images/image-generation.png" alt=""></p>
+<hr>
+<h2>AgentCore Payments 中间件为 LangChain 智能体提供 API 支付能力 <code>#4</code></h2>
+<blockquote>AgentCore Payments 中间件让 LangChain 智能体以确定性会话预算支付 API 费用。该中间件为 x402 支付签名，LangSmith 可追踪每一笔支付记录。</blockquote>
+<p>AgentCore Payments 中间件让 LangChain 智能体以确定性会话预算支付 API 费用。该中间件为 x402 支付签名，LangSmith 可追踪每一笔支付记录。</p>
+<p><img src="https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a81101d146af24c1f3cfd4b_Blog%20header-1.png" alt=""></p>
+<hr>
+<h2>Claude Code v2.1.234 发布：新增项目目录名变量与 GitLab MR 徽章，修复多项安全与稳定性问题 <code>#5</code></h2>
+<blockquote>Claude Code v2.1.234 新增可选 CLAUDE_CODE_PROJECT_DIR_NAME 环境变量、selection:clear 键绑定及 GitLab MR 徽章，并在用量限制重置后自动继续会话。</blockquote>
+<p>Claude Code v2.1.234 新增可选 CLAUDE_CODE_PROJECT_DIR_NAME 环境变量、selection:clear 键绑定及 GitLab MR 徽章，并在用量限制重置后自动继续会话。</p>
+<p><img src="https://opengraph.githubassets.com/ba39eb316cf6cee1236ef56aad4550651b557c8e6ee7506b61d311063174410e/anthropics/claude-code/releases/tag/v2.1.234" alt=""></p>
+<hr>
+<h2>NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻 <code>#6</code></h2>
+<blockquote>NVIDIA 宣布与 SB Energy 合作，锁定俄亥俄州 PORTS-Pike 科技园区的电力容量（LPS）以独家部署 NVIDIA 算力，OpenAI 将成为租户。</blockquote>
+<p>NVIDIA 宣布与 SB Energy 合作，锁定俄亥俄州 PORTS-Pike 科技园区的电力容量（LPS）以独家部署 NVIDIA 算力，OpenAI 将成为租户。</p>
+<p><img src="https://blogs.nvidia.com/wp-content/uploads/2026/08/partner-promo-pack-logo-lockup-openai-sbenergy-5590550_-press-1920x1080-1.png" alt=""></p>
+<hr>
+<h2>A 股迎来“人形机器人第一股”，宇树科技官宣 8 月 19 日科创板上市 <code>#7</code></h2>
+<blockquote>宇树科技宣布股票将于 2026 年 8 月 19 日在科创板上市，发行价 150.80 元/股，对应市值约 609.93 亿元，预计募资约 60.99 亿元。该公司 2023 至 2025 年营收分别为 1.59 亿元、3.93 亿元和 16.99 亿元，净利润分别为-1114.51 万元、9547.47 万元和 2.78 亿元，是全球少数实现盈利的高性能通用机器人公司。</blockquote>
+<p>宇树科技宣布股票将于 2026 年 8 月 19 日在科创板上市，发行价 150.80 元/股，对应市值约 609.93 亿元，预计募资约 60.99 亿元。</p>
+<p>该公司 2023 至 2025 年营收分别为 1.59 亿元、3.93 亿元和 16.99 亿元，净利润分别为-1114.51 万元、9547.47 万元和 2.78 亿元，是全球少数实现盈利的高性能通用机器人公司。</p>
+<hr>
+<h2>404 Media 追踪珍本图书流向：亚马逊批量购书扫描用于 AI 训练后销毁 <code>#8</code></h2>
+<blockquote>404 Media 通过在一本珍本图书中放置追踪设备，首次揭露亚马逊未公开的购书行动：批量购入大量书籍，扫描用于 AI 训练数据，随后销毁。追踪显示这些书最终被送往亚马逊的一处人工智能训练中心。</blockquote>
+<p>404 Media 通过在一本珍本图书中放置追踪设备，首次揭露亚马逊未公开的购书行动：批量购入大量书籍，扫描用于 AI 训练数据，随后销毁。追踪显示这些书最终被送往亚马逊的一处人工智能训练中心。</p>
+<p><img src="https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/2026/08/image3-2-1.png" alt=""></p>
+<hr>
+<h2>OpenAI 为 14 个独立项目提供资助，推动智能时代经济机遇与韧性研究 <code>#9</code></h2>
+<blockquote>OpenAI 宣布向 14 个由独立组织主导的项目提供总计 100 万美元资金及最高 100 万美元 API 额度，以推动 AI 进步下的经济机遇与社会韧性研究。</blockquote>
+<p>OpenAI 宣布向 14 个由独立组织主导的项目提供总计 100 万美元资金及最高 100 万美元 API 额度，以推动 AI 进步下的经济机遇与社会韧性研究。</p>
+<hr>
+<h2>PhotoScan：用智能手机照片估算胰岛素抵抗，精度接近DXA <code>#10</code></h2>
+<blockquote>Google Research 推出 PhotoScan，一种从智能手机 2D 照片直接估算三维身体成分的深度学习框架，可预测胰岛素抵抗，在临床研究中精度接近 DXA 扫描。</blockquote>
+<p>Google Research 推出 PhotoScan，一种从智能手机 2D 照片直接估算三维身体成分的深度学习框架，可预测胰岛素抵抗，在临床研究中精度接近 DXA 扫描。</p>
+<p><img src="https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg" alt=""></p>
+<hr>
+<h2>OpenAI 如何用前沿智能加固自身防御：The Defender’s Window <code>#11</code></h2>
+<blockquote>OpenAI 在 OpenAI-Hugging Face 事件后反思低估了模型真实网络攻击能力，正通过四大支柱强化自身安全：用 Codex 验证代码漏洞、用智能体优先分流安全告警、持续枚举攻击路径，并仅向可信防御者开放网络能力。文中演示 ChatGPT Work（基于 GPT-5.6 Sol）15 分钟发现个人网站 13 个问题并在一小时内完成修复。</blockquote>
+<p>OpenAI 在 OpenAI-Hugging Face 事件后反思低估了模型真实网络攻击能力，正通过四大支柱强化自身安全：用 Codex 验证代码漏洞、用智能体优先分流安全告警、持续枚举攻击路径，并仅向可信防御者开放网络能力。</p>
+<p>文中演示 ChatGPT Work（基于 GPT-5.6 Sol）15 分钟发现个人网站 13 个问题并在一小时内完成修复。</p>
+<hr>
+<h2>如何禁用或避免侵入式 AI：一份覆盖 Windows、Chrome、Edge、Firefox 及主流应用的实用指南 <code>#12</code></h2>
+<blockquote>一份面向希望减少技术环境中侵入式 AI 的用户的操作指南，涵盖 Adobe Acrobat、Android/Gemini、Apple Intelligence、Chrome、Edge、Firefox、DuckDuckGo、Google Workspace、Slack、WhatsApp 及 Windows 11/Copilot 等平台。</blockquote>
+<p>一份面向希望减少技术环境中侵入式 AI 的用户的操作指南，涵盖 Adobe Acrobat、Android/Gemini、Apple Intelligence、Chrome、Edge、Firefox、DuckDuckGo、Google Workspace、Slack、WhatsApp 及 Windows 11/Copilot 等平台。</p>
+<hr>
+<h2>用 Google 的 Agent Development Kit 构建零信任 AI 智能体 <code>#13</code></h2>
+<blockquote>Google 开源了基于 ADK 和 Gemini 的零信任客服与退货智能体示例，演示如何防御提示注入等攻击。该架构在 LLM 上下文之外通过三层硬性安全机制保障：硬件支持的加密签名确保数据库写入不可抵赖、gVisor 沙箱隔离动态代码执行、确定性语义网关校验业务逻辑。系统提示词只是软约束，无法作为安全边界。</blockquote>
+<p>Google 开源了基于 ADK 和 Gemini 的零信任客服与退货智能体示例，演示如何防御提示注入等攻击。</p>
+<p>该架构在 LLM 上下文之外通过三层硬性安全机制保障：硬件支持的加密签名确保数据库写入不可抵赖、gVisor 沙箱隔离动态代码执行、确定性语义网关校验业务逻辑。系统提示词只是软约束，无法作为安全边界。</p>
+<p><img src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_aom9btaom9.2e16d0ba.fill-1200x600.jpg" alt=""></p>
+<hr>
+<h2>开源模型生态的未来：Nvidia 押注“教所有人炼 token” <code>#14</code></h2>
+<blockquote>开源模型生态正日益依赖 Nvidia 的资助，其已投入 260 亿美元推动近乎开源的模型开发，以扩大推理芯片需求。若此路径不奏效，开源模型将转向效率、可修改性等长尾场景，与闭源模型分化。同时，基础模型训练门槛升高，开源社区兴趣正从全量训练转向对 DeepSeek V4 Flash、GLM 5.X 等模型的微调。</blockquote>
+<p>开源模型生态正日益依赖 Nvidia 的资助，其已投入 260 亿美元推动近乎开源的模型开发，以扩大推理芯片需求。若此路径不奏效，开源模型将转向效率、可修改性等长尾场景，与闭源模型分化。</p>
+<p>同时，基础模型训练门槛升高，开源社区兴趣正从全量训练转向对 DeepSeek V4 Flash、GLM 5.X 等模型的微调。</p>
+<p><img src="https://substackcdn.com/image/fetch/$s_!JGky!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8608bb9-bf33-46e6-8ffe-dcf75a851f9b_3182x1790.png" alt=""></p>
+<p><img src="https://substackcdn.com/image/fetch/$s_!iwfQ!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Frobotic.substack.com%2Fapi%2Fv1%2Fpost_preview%2F211568288%2Ftwitter.jpg%3Fversion%3D4" alt=""></p>
+<hr>
+<h2>同一集群利用率提升 33 个百分点：改变的是分配顺序 <code>#15</code></h2>
+<blockquote>Hugging Face 构建了一个约束感知的 GPU 分配器，并在七个基准场景中与 FIFO 调度器对比。在相同硬件和负载下，GPU 利用率最高提升 33 个百分点，优先级加权输出在全部场景中均上升，最高达 105%。分配器将实时推理需求按曲线而非峰值处理，批量任务按优先级跨整个调度周期排序，从而回收了预留闲置容量。</blockquote>
+<p>Hugging Face 构建了一个约束感知的 GPU 分配器，并在七个基准场景中与 FIFO 调度器对比。在相同硬件和负载下，GPU 利用率最高提升 33 个百分点，优先级加权输出在全部场景中均上升，最高达 105%。</p>
+<p>分配器将实时推理需求按曲线而非峰值处理，批量任务按优先级跨整个调度周期排序，从而回收了预留闲置容量。</p>
+<p><img src="https://cdn-uploads.huggingface.co/production/uploads/6a725daa5ca641a21ab61956/wOnyrU6-UQAM5hOwpaw3-.jpeg" alt=""></p>
+<hr>
+<h2>ABC Legal 如何借助 Claude Managed Agents 让每位员工成为构建者 <code>#16</code></h2>
+<blockquote>ABC Legal 为 1,100 名员工部署 Claude Enterprise 后，通过 Claude Managed Agents 将零散实验转变为受治理的智能体体系，截至 2026 年 7 月已上线 50 多个生产级智能体，部分覆盖的人工任务成本降低约 50%，约 310 名员工日常使用 Claude。</blockquote>
+<p>ABC Legal 为 1,100 名员工部署 Claude Enterprise 后，通过 Claude Managed Agents 将零散实验转变为受治理的智能体体系，截至 2026 年 7 月已上线 50 多个生产级智能体，部分覆盖的人工任务成本降低约 50%，约 310 名员工日常使用 Claude。</p>
+<p><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a834019da1fda63e77b2a20_og_how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents.jpg" alt=""></p>
+<hr>
+<h2>当模型持续学习：测试时训练如何改变 AI 的记忆与成本 <code>#17</code></h2>
+<blockquote>测试时训练（Test-time training）让模型在使用中持续更新权重，而非训练结束后冻结。相比标准 Transformer，其内存需求从随上下文线性增长变为恒定，斯坦福研究显示推理速度最高可提升 2.7 倍，且 In-Place TTT 无需重训即可将 4B 模型提升至 128k 上下文性能。但代价是每个用户需独立模型副本，服务成本转向算力与芯片，更适合编码助手等个性化场景。</blockquote>
+<p>测试时训练（Test-time training）让模型在使用中持续更新权重，而非训练结束后冻结。</p>
+<p>相比标准 Transformer，其内存需求从随上下文线性增长变为恒定，斯坦福研究显示推理速度最高可提升 2.7 倍，且 In-Place TTT 无需重训即可将 4B 模型提升至 128k 上下文性能。</p>
+<p>但代价是每个用户需独立模型副本，服务成本转向算力与芯片，更适合编码助手等个性化场景。</p>
+<p><img src="https://res.cloudinary.com/dzawgnnlr/image/upload/q_auto/f_auto/w_auto/nhifmhc3i6bhnolzjaqm" alt=""></p>
+<hr>
+<h2>SGLang 重构 CUDA Graph 支持，Breakable CUDA Graph 成 prefill 默认方案 <code>#18</code></h2>
+<blockquote>SGLang 重构 CUDA Graph 支持，通过 runner/backend 接口拆分使不同捕获策略可复用。其社区首创的 Breakable CUDA Graph（BCG）现为 prefill 默认方案，代码量仅为 torch.compile 方案的约四分之一（521 行对比 1,771 行），构建速度快 3.8–5.2 倍。</blockquote>
+<p>SGLang 重构 CUDA Graph 支持，通过 runner/backend 接口拆分使不同捕获策略可复用。</p>
+<p>其社区首创的 Breakable CUDA Graph（BCG）现为 prefill 默认方案，代码量仅为 torch.compile 方案的约四分之一（521 行对比 1,771 行），构建速度快 3.8–5.2 倍。</p>
+<p><img src="https://www.lmsys.org/blog/2026-08-17-advanced-cuda-graph/opengraph-image?846984fa349aff93" alt=""></p>
+<hr>
+</body>
+</html>
