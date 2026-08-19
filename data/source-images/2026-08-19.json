@@ -1,0 +1,44 @@
+{
+  "https://huggingface.co/blog/multi-vector-encoder": [
+    "https://huggingface.co/blog/assets/multi-vector-encoder/st-hf-lighton-thumbnail.png"
+  ],
+  "https://www.modular.com/blog/mojo-open-source": [
+    "https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6a84597ae2a73bd4973f801f_Mojo-OSS-Blog-Compressed.jpeg"
+  ],
+  "https://x.com/claudeai/status/2089806039088517356": [
+    "https://pbs.twimg.com/media/HQBxdhmXAAAEjuD.jpg:large"
+  ],
+  "https://openai.com/index/chatgpt-for-teens": [],
+  "https://cursor.com/blog/git-at-any-scale": [
+    "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/blog/blog-demo-animation-2ntJbzDU6xSEoHctbbXf2VUO4b2nxK.gif"
+  ],
+  "https://claude.com/blog/the-claude-science-product-guide": [
+    "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a847ff6ae9b69996852866d_og_the-claude-science-product-guide.jpg"
+  ],
+  "https://openai.com/index/strengthening-democratic-oversight-in-national-security": [],
+  "https://www.anthropic.com/research/claude-accelerates-protein-design": [
+    "https://cdn.sanity.io/images/4zrzovbb/website/e3758f1bc27af0786f4249cc1ab194fc2c6cce63-3840x2160.png"
+  ],
+  "https://huggingface.co/blog/ibm-research/altk-evolve-hmm": [
+    "https://cdn-uploads.huggingface.co/production/uploads/6435a1131860001f144239ea/j-n1Au9SJ2-RGkT9i98u4.jpeg"
+  ],
+  "https://machinelearning.apple.com/research/grpo-beyond-english": [
+    "https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png"
+  ],
+  "https://machinelearning.apple.com/research/mvicad2-delays-dilations": [
+    "https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png"
+  ],
+  "https://dev.to/googleai/designing-ai-evals-clarity-now-and-visualization-next-4eii": [
+    "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwlse5up3kqxu6ma8err7.webp"
+  ],
+  "https://openai.com/index/pacing-model-development-cyber-capabilities": [],
+  "https://claude.com/blog/ai-ci-cd-on-call": [
+    "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a84a8dee0d08841721bbc53_og_ai-ci-cd-on-call.jpg"
+  ],
+  "https://www.tomtunguz.com/birds-dont-fly-like-planes-neither-does-ai": [
+    "https://res.cloudinary.com/dzawgnnlr/image/upload/q_auto/f_auto/w_auto/vhirkml6naecrw2qdfda"
+  ],
+  "https://runwayml.com/news/customers/populous": [
+    "https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/08/081726-populous-52250684-ddde-4d30-a4fe-d480460a9e1f.png"
+  ]
+}
