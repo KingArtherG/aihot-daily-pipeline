@@ -5,7 +5,15 @@
     <link>https://KingArtherG.github.io/aihot-daily-pipeline/</link>
     <description>King AI 早报 自动 RSS</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 19 Aug 2026 01:56:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 01:55:38 +0000</lastBuildDate>
+    <item>
+      <title>King AI 早报 2026-08-20</title>
+      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-20.html</link>
+      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-20.html</guid>
+      <author>KingArtherG</author>
+      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Liquid AI 发布 LFM2.5 系列 QAD Q4_0 量化检查点，恢复 97% 精度损失；GLM-5.3上线：AA智能指数60分并列开源第一，成本更低；FastMetal 让 Mac 本地 30 秒生成视频；Google 搜索推出 5 项 AI 学习工具；Replit 推出由 GPT-5.6 Luna 驱动的 Free Mode，免费构建软件；Claude Code v2.1.236 发布：新增默认模型环境变量与跨会话闲置通知；Anthr</description>
+      <pubDate>Wed, 19 Aug 2026 16:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>King AI 早报 2026-08-19</title>
       <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-19.html</link>
@@ -237,14 +245,6 @@
       <author>KingArtherG</author>
       <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：小红书 dots 模型获 IMO 2026 满分金牌；通义千问发布 Qwen-Image-3.0 图像生成模型，核心关键词为“实”；Google DeepMind 发布三款新 Gemini 模型，但未包含 3.5 Pro；Google DeepMind 发布 Gemini 3.6 Flash、3.5 Flash-Lite 与 3.5 Flash Cyber 三款新模型；OpenAI 在 ChatGPT 中正式推出广告服务；OpenRouter 上线</description>
       <pubDate>Tue, 21 Jul 2026 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>King AI 早报 2026-07-21</title>
-      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-07-21.html</link>
-      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-07-21.html</guid>
-      <author>KingArtherG</author>
-      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：面壁智能发布首个具身智能成果 MiniCPM-Robot 系列模型，含 1.5B VLA 与 0.9B 跟踪模型；NVIDIA 发布 Cosmos 3 Edge：4B 参数开源世界模型，为机器人及边缘 AI 提供实时推理与动作生成；通义实验室发布 Qwen-Audio-3.0-TTS 实时语音合成模型；上海科学智能研究院开放科学多模态基础模型“神珍”；LoRA Speedrun 公开排行榜：6分05秒微调Qwen2.5-1.5B达GSM8K 61.</description>
-      <pubDate>Mon, 20 Jul 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
