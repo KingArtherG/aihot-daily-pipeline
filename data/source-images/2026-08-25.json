@@ -1,0 +1,42 @@
+{
+  "https://openai.com/index/gpt-5-6-in-kiro": [],
+  "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/08/end-to-end-tech-blog-agentic-perf-kv-1920x1080-5555700.jpg"
+  ],
+  "https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet": [
+    "https://engineering.fb.com/wp-content/uploads/2026/08/MetaRoCE-HERO-final.png"
+  ],
+  "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/08/nvidia-dsx-maxlps-fg-i4of6-d-scaled.jpg"
+  ],
+  "https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics": [
+    "https://engineering.fb.com/wp-content/uploads/2026/08/Meta-MTIA-300-Hero-final.png"
+  ],
+  "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/08/HotChips_2026_MKT_KV_Rubin_Rack_Family_Front_comp_4k_V004-2-1-1680x945.png"
+  ],
+  "https://mistral.ai/news/mistral-x-humain": [
+    "https://mistral.ai/cms-media/api/media/file/OG-mistral-main_1x.jpg"
+  ],
+  "https://www.langchain.com/blog/how-toyota-north-america-put-enterprise-ai-on-the-balance-sheet-with-deep-agents-and-langsmith": [
+    "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a8c85fbd5647be611402df9_toyota-customer-story.png"
+  ],
+  "https://machinelearning.apple.com/research/internalized-visual-thinking": [
+    "https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png"
+  ],
+  "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them": [
+    "https://techcrunch.com/wp-content/uploads/2026/08/Screenshot-2026-08-23-at-8.41.55-PM.png?w=729"
+  ],
+  "https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk": [
+    "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_p97vqmp97v.2e16d0ba.fill-1200x600.jpg"
+  ],
+  "https://www.databricks.com/blog/run-debug-and-scale-databricks-workloads-your-local-ide": [
+    "https://www.databricks.com/sites/default/files/2026-08/blog-og-Run-debug-and-scale-Databricks-workloads-from-your-local-IDE.png"
+  ],
+  "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good": [
+    "https://github.blog/wp-content/uploads/2026/08/header-1.png"
+  ],
+  "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": [
+    "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8c5c59795765514bd8fd82_og_how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-sales.jpg"
+  ]
+}
