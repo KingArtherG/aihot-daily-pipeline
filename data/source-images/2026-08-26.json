@@ -1,0 +1,54 @@
+{
+  "https://x.com/googleai/status/2092275116503707733": [
+    "https://pbs.twimg.com/media/HQkqcAOWQAABL15.jpg"
+  ],
+  "https://x.com/andrewyng/status/2092315079576555806": [
+    "https://pbs.twimg.com/profile_images/733174243714682880/oyG30NEH_400x400.jpg"
+  ],
+  "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it": [
+    "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a8dcb60a9e2ed84590a8b9e_og_claudes-memory-works-everywhere-and-you-decide-whats-in-it.jpg"
+  ],
+  "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra": [
+    "https://www.apple.com/newsroom/images/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/tile/Apple-Mac-Studio-hero-260825-lp.jpg.og.jpg?202608260058"
+  ],
+  "https://www.langchain.com/blog/making-data-ingestion-production-ready-a-langchain-powered-airbyte-destination": [
+    "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cbb1d4adb40d0919236580_5-social--18.png"
+  ],
+  "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro": [
+    "https://www.apple.com/newsroom/images/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/tile/Apple-Mac-mini-hero-260825-lp.jpg.og.jpg?202608260059"
+  ],
+  "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute": [
+    "https://www.apple.com/newsroom/images/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/tile/Apple-M6-and-M5-Ultra-hero-260825-lp.jpg.og.jpg?202608260059"
+  ],
+  "https://openai.com/index/introducing-admin-plugin": [],
+  "https://openai.com/index/jalapeno-first-results": [],
+  "https://www.anthropic.com/news/wellbeing-research-grants": [
+    "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20HeadFlower&backgroundColor=heather"
+  ],
+  "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia": [],
+  "https://research.google/blog/agenthands-generating-interactive-hand-gestures-for-spatially-grounded-agent-conversations-in-xr": [
+    "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg"
+  ],
+  "https://machinelearning.apple.com/research/starflow2-multimodal-generation": [
+    "https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png"
+  ],
+  "https://openrouter.ai/blog/tutorials/choose-best-ai-model": [
+    "https://openrouter.ai/blog/images/choose-best-ai-model.png"
+  ],
+  "https://openrouter.ai/blog/tutorials/video-generation-api": [
+    "https://openrouter.ai/blog/images/video-generation-api.png"
+  ],
+  "https://www.dwarkesh.com/p/dylan-patel-3": [
+    "https://substackcdn.com/image/fetch/$s_!-qQ2!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F212689635%2F1b81dde4-06ae-4bca-bb50-ba304b1762e9%2Ftranscoded-1787662695.png",
+    "https://substackcdn.com/image/fetch/$s_!cFnU!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fdwarkesh.substack.com%2Fapi%2Fv1%2Fpost_preview%2F212689635%2Ftwitter.jpg%3Fversion%3D4"
+  ],
+  "https://www.langchain.com/blog/benchmarking-question-answering-over-csv-data": [
+    "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cbb1bf03935dbc92e07318_photo-1580166463495-ab4d21922c22.jpeg"
+  ],
+  "https://www.langchain.com/blog/llms-and-sql": [
+    "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cbb24cba9d0fc7237831f8_photo-1532619675605-1ede6c2ed2b0.jpeg"
+  ],
+  "https://blog.google/products-and-platforms/products/search/home-decor-tips": [
+    "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VelvetSofa_BlogOverride.width-1300.jpg"
+  ]
+}
