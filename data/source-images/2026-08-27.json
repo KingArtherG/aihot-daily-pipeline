@@ -1,0 +1,48 @@
+{
+  "https://mp.weixin.qq.com/s": [],
+  "https://qwen.ai/blog": [
+    "https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png"
+  ],
+  "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe": [
+    "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-1300.jpg"
+  ],
+  "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring": [
+    "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg"
+  ],
+  "https://claude.com/blog/claude-in-chrome-generally-available": [
+    "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69050ff880f9a5c13932b7df_og_claude-for-chrome.jpg"
+  ],
+  "https://claude.com/blog/cowork-built-in-browser": [
+    "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69027547e3e5c830cb5d0a37_og_claude-is-now-available-in-microsoft-365-copilot.jpg"
+  ],
+  "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/08/gpu-architecture-corp-blog-nvhbm-1280x680-5547600.jpg"
+  ],
+  "https://www.databricks.com/blog/introducing-governance-hub-intelligent-account-level-governance-over-your-databricks-estate": [
+    "https://www.databricks.com/sites/default/files/2026-08/2026-08-Blog-Introducing-Governance-Hub-Intelligent-account-level-governance-over-your-Databricks-estate-OG-1200x628-2x.png"
+  ],
+  "https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu": [
+    "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_xub7wcxub7.2e16d0ba.fill-1200x600.jpg"
+  ],
+  "https://www.youtube.com/watch": [],
+  "https://openai.com/index/hugging-face-incident-and-the-road-ahead": [],
+  "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda": [
+    "https://i.guim.co.uk/img/media/4c5be9b6f1682a9aafe9cbdc94c89a258fa5cec5/999_0_5001_4000/master/5001.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=e4f8b5b0eb4778568ef5affd89f99ad4"
+  ],
+  "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand": [
+    "https://techcrunch.com/wp-content/uploads/2026/08/jense-nvidi-chip-GettyImages-2266485392.jpg?resize=1200,800"
+  ],
+  "https://www.ithome.com/0/994/791.htm": [],
+  "https://linear.app/now/sharing-growth-with-the-people-building-linear": [
+    "https://webassets.linear.app/images/ornj730p/production/244447ef3e1e087465b233bc2338abfdc02ef498-2400x1350.png?q=95&auto=format&dpr=2"
+  ],
+  "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts": [],
+  "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html": [],
+  "https://www.anthropic.com/research/enabling-independent-research": [
+    "https://www.anthropic.com/api/opengraph-illustration?name=Object%20LampBooks&backgroundColor=heather"
+  ],
+  "https://openai.com/index/learning-never-stops": [],
+  "https://machinelearning.apple.com/research/idea-prune-pipeline": [
+    "https://mlr.cdn-apple.com/media/Home_1200x630_48225d82e9.png"
+  ]
+}
