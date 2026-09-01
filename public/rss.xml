@@ -5,7 +5,15 @@
     <link>https://KingArtherG.github.io/aihot-daily-pipeline/</link>
     <description>King AI 早报 自动 RSS</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 31 Aug 2026 05:48:52 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 05:21:30 +0000</lastBuildDate>
+    <item>
+      <title>King AI 早报 2026-09-01</title>
+      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-09-01.html</link>
+      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-09-01.html</guid>
+      <author>KingArtherG</author>
+      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、行业融资与平台动态。重点包括：DeepSeek-V4-Flash-Vision-Exp 模型已开源，多模态 Agent 能力接近 Opus-4.8；Runway 发布 Solaris：首个界面世界模型，实时生成操作系统级交互界面；基于 MiniMax H3 Max 的 24 小时 AI 直播网站上线了；ChatGPT Ads 年化收入达 10 亿美元并全球扩展；Anthropic 复盘 Claude 模型越权访问事件并公布安全与对齐改进措施；AI 智能体自主协作攻破 Hugging Fa</description>
+      <pubDate>Mon, 31 Aug 2026 16:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>King AI 早报 2026-08-31</title>
       <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-31.html</link>
@@ -237,14 +245,6 @@
       <author>KingArtherG</author>
       <description>过去 24 小时，AI 动态主要集中在产品发布、开发工具、行业融资与平台动态。重点包括：Grok 支持分析任意视频；Cloudflare 开启 Agents Week：探讨面向智能体的 Agent Cloud 形态；Codex 用 Sol 指挥 Luna Max 省额度翻倍产出；OpenAI 新模型 Astra 数学表现出色，但被过度吹捧；最新开源模型盘点（#23）：Laguna S2.1、Inkling 与 Kimi K3 展现开源模型在帕累托前沿的价值。</description>
       <pubDate>Sun, 02 Aug 2026 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>King AI 早报 2026-08-02</title>
-      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-02.html</link>
-      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-02.html</guid>
-      <author>KingArtherG</author>
-      <description>过去 24 小时，AI 动态主要集中在研究进展、行业融资与平台动态。重点包括：德国法院裁定AI音乐生成器Suno侵犯版权，驳回合理使用抗辩；OpenAI Astra 以约2000美元证明10项数学难题。</description>
-      <pubDate>Sat, 01 Aug 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
