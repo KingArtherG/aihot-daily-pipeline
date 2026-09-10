@@ -5,7 +5,15 @@
     <link>https://KingArtherG.github.io/aihot-daily-pipeline/</link>
     <description>King AI 早报 自动 RSS</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 09 Sep 2026 04:54:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 04:56:12 +0000</lastBuildDate>
+    <item>
+      <title>King AI 早报 2026-09-10</title>
+      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-09-10.html</link>
+      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-09-10.html</guid>
+      <author>KingArtherG</author>
+      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：OpenAI 发布 GPT-6 Astra，面向专业工作场景；Apple 发布首款折叠屏 iPhone Duo，起售价 $1,999；Apple 发布 iPhone 18 Pro 与 iPhone 18 Pro Max；OpenRouter 推出美国区域路由，与去年上线的 EU 路由配套保障数据驻留；Apple 发布 Apple Watch Series 12，搭载全新 Health Sensing System 与 S11 芯片；纽约大学教授质疑</description>
+      <pubDate>Wed, 09 Sep 2026 16:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>King AI 早报 2026-09-09</title>
       <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-09-09.html</link>
@@ -237,14 +245,6 @@
       <author>KingArtherG</author>
       <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：NVIDIA 推出 Nemotron 3.5 Lightning，加速本地智能体任务；SGLang 宣布 Day-0 支持 NVIDIA Nemotron 3.5 Lightning；Ling-3.0-tiny 正式开源：1.3B 激活参数如何进入真实任务；Runway Seedance 2.5 上线，支持50角色参考；Gemini 助力 Database Migration Service 加速 PostgreSQL 迁移；ChatGPT 桌面端</description>
       <pubDate>Tue, 11 Aug 2026 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>King AI 早报 2026-08-11</title>
-      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-11.html</link>
-      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-08-11.html</guid>
-      <author>KingArtherG</author>
-      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：SGLang 为 Muse Glimmer 提供 Day-0 支持，针对本地智能体工作流优化推理；Meta 发布开源模型 Muse Glimmer；OpenAI 推出 GPT-5.6-Cyber，面向授权漏洞研究的网络安全专用模型；OpenRouter 推出由市场智慧驱动的新版 Auto 路由器；千问开放平台上线：租房、寄快递、查理财等十余领域服务可对话办理；Qwen-MM-Plugins 让智能体原生支持多模态；OpenChamber：一个基于代</description>
-      <pubDate>Mon, 10 Aug 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
