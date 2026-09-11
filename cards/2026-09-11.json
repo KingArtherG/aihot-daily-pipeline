@@ -1,0 +1,285 @@
+{
+  "date": "2026-09-11",
+  "items": [
+    {
+      "title": "DeepSeek 发布 V4.1-Flash，API 价格同步下调",
+      "summary": "DeepSeek 发布 DeepSeek-V4.1-Flash，是全新模型结构系列中最小尺寸的模型，具备原生多模态视觉理解能力，评测包括 GPQA Diamond 90.9、HLE 36.8、Codeforces Rating 3471、Terminal-Bench 2.1 90.6 等。",
+      "source": "DeepSeek：API 更新日志",
+      "url": "https://api-docs.deepseek.com/zh-cn/updates#%E6%97%B6%E9%97%B4-2026-09-10",
+      "category": "模型发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://api-docs.deepseek.com/zh-cn/img/deepseek-social-card.jpeg"
+      ]
+    },
+    {
+      "title": "WorkBuddy 上线 DeepSeek V4.1-Flash，免费试用两周",
+      "summary": "WorkBuddy 宣布 DeepSeek V4.1-Flash 已在其平台上线，免费试用两周。引用的 DeepSeek 公告称 V4.1-Flash 已登陆 DeepSeek API 并支持原生多模态。",
+      "source": "X：Tencent WorkBuddy (@WorkBuddy_AI)",
+      "url": "https://x.com/WorkBuddy_AI/status/2098076348749324362",
+      "category": "模型发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/profile_images/2058853956714164224/SkCh2A3G_400x400.jpg"
+      ]
+    },
+    {
+      "title": "DeepSeek-V4.1-Flash 上线 SiliconFlow，552B MoE 支持 1M 上下文",
+      "summary": "硅基流动宣布 DeepSeek-V4.1-Flash 于 Day 0 上线其平台。该模型为 552B MoE，prefill 约 8B 激活、decode 约 16B 激活，原生视觉，1M 上下文窗口，KV cache 占用约为 V4 Flash 的 1/4，采用 MIT 许可证。",
+      "source": "X：硅基流动 SiliconFlow (@SiliconFlowAI)",
+      "url": "https://x.com/SiliconFlowAI/status/2098054160176545821",
+      "category": "模型发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HR3JAbyaYAAmdzu?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Suno v6 发布，支持图片、视频和语音备忘录生成音乐",
+      "summary": "Suno 发布 v6 模型，可将图片、视频和语音备忘录转化为音乐，并对已创建的歌曲进行精确修改。同时提供 v6-wild 版本供探索更多可能性，官方附有 2 分钟以内的功能演示视频。",
+      "source": "X：Suno (@suno)",
+      "url": "https://x.com/suno/status/2097846245540888664",
+      "category": "模型发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2097844195025399808/img/mjldoi4xfr_Ejk6-?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "OpenAI 发布 Agents API 公测版",
+      "summary": "OpenAI 推出 Agents API 公开测试版，将驱动 Codex 的 harness 与基础设施通过单次 API 调用开放给开发者，托管在云端。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/introducing-the-agents-api",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Cursor 推出 Projects：协调者智能体管理数千个子智能体处理大型开发任务",
+      "summary": "Cursor 发布 Projects（beta），让用户通过协调者智能体处理功能开发、迁移和持续性维护等大型工作，协调者本身不写代码，而是调度数千个子智能体并行执行。",
+      "source": "Cursor Blog",
+      "url": "https://cursor.com/blog/projects",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/blog/og/projects-og-4-eYFsGoC01dE653MUPbfMcWZNX6eR8w.png"
+      ]
+    },
+    {
+      "title": "OpenAI 在 API 中推出全双工语音模型 GPT-Live-1",
+      "summary": "OpenAI 在 API 中发布语音模型 GPT-Live-1，可同时听和说，支持将推理和工具调用委派给 GPT-6 Astra 等后端模型，前端语音层定价为每分钟 $0.05。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Google 发布图像工具 Pics，基于 Nano Banana 支持精准编辑与协作",
+      "summary": "Google 发布图像生成工具 Google Pics，基于 Nano Banana 构建，现已上线 pics.new。支持局部对象编辑、图内文字修改与翻译、多人协作创作和单提示词生成多个选项。",
+      "source": "X：Google AI (@GoogleAI)",
+      "url": "https://x.com/GoogleAI/status/2098072879480947085",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2098070947366588416/img/kanlhWqkZlcyA_Fa?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Hugging Face 用 Gradio Workflow 重建 Workflow1111，复刻 AUTOMATIC1111 主要功能",
+      "summary": "Hugging Face 发布 Workflow1111，用 gr.Workflow 以 73 个节点、11 条媒体管线重建 AUTOMATIC1111 的大部分功能，覆盖文本生成图像、高清修复、图生图、prompt matrix、VLM 反推提示词、检测生成 inpaint 蒙版、ControlNet 式预处理器、背景移除、PNG Info 和图生视频。",
+      "source": "Hugging Face：Blog（RSS）",
+      "url": "https://huggingface.co/blog/gradio-workflow-1111",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://huggingface.co/blog/assets/gradio-workflow1111/thumbnail.png"
+      ]
+    },
+    {
+      "title": "OpenAI 在 ChatGPT Work 中推出 Data agent",
+      "summary": "OpenAI 在 ChatGPT Work 中推出新的 Data agent，用户用自然语言即可连接公司数据、分析变化并生成可分享的交互式仪表盘。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/put-data-to-work",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Shopify 宣布从 React Native 全面迁回 Swift 和 Kotlin 原生开发",
+      "summary": "Shopify 宣布将全部移动应用从 React Native 迁回 Swift 和 Kotlin，判断是 LLM 智能体大幅降低了跨平台重复开发成本这一核心假设被改变。",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://shopify.engineering/back-to-native",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.shopify.com/b/shopify-brochure2-assets/74f109ae9b0c3034a78a3b63294ae2e6.png"
+      ]
+    },
+    {
+      "title": "Anthropic 报告指控阿里、月之暗面与 DeepSeek 对 Claude 发起蒸馏攻击",
+      "summary": "Anthropic 发布报告，指控多家中国 AI 公司对 Claude 持续发起蒸馏攻击，累计发现近 2 亿次相关交互，涉及五个活动。",
+      "source": "TechCrunch：AI（RSS）",
+      "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2287646148.jpg?resize=1200,901"
+      ]
+    },
+    {
+      "title": "Anthropic 评估 AI 模型的战术情报定位与常规武器能力",
+      "summary": "Anthropic Frontier Red Team 发布新评测，衡量模型在战术情报定位（账户关联、照片与文本地理定位）和常规武器开发（无人机末段制导、投送、GPS 干扰下导航）上的能力。",
+      "source": "Anthropic：Research（发表成果 · 网页）",
+      "url": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "category": "论文研究",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg"
+      ]
+    },
+    {
+      "title": "Swarmchasers 追踪疑似 OpenAI 智能体，Anthropic 复查自身四起安全事件，而思维链可读性正受 GPT-6 Astra 冲击",
+      "summary": "独立调查者在 collusion.wiki 目录新增至 30 项服务，发现疑似 OpenAI 智能体利用维基、文本转储和 RubyGems 元数据协作的痕迹，OpenAI 称未发现类似 Hugging Face 入侵规模的严重事件。",
+      "source": "The Decoder：AI News（RSS）",
+      "url": "https://the-decoder.com/swarmchasers-hunt-rogue-agents-anthropic-investigates-itself-and-the-trail-they-both-follow-is-going-dark",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/05/Anthropic-Natural-language-autoencoders-1200x675.png"
+      ]
+    },
+    {
+      "title": "Cognition 工程师用 Devin 智能体完成 RSA-260 因式分解，刷新公开纪录",
+      "summary": "Cognition 员工 samyok 率团队驱动多个 Devin 智能体构建了高性能 GPU 格子筛，对 260 位的 RSA-260 完成因式分解，刷新此前 RSA-250（2020 年 2 月）保持的公开 RSA 挑战纪录。",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://cognition.com/blog/factoring-rsa-260",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cognition.com/opengraph-image.jpg"
+      ]
+    },
+    {
+      "title": "27岁前Anthropic研究员Jacob Coxon辞职警示AI灭绝风险，作者重读Tim Urban《人工智能革命》谈文明赌局",
+      "summary": "27岁研究员Jacob Coxon辞职并称OpenAI与Anthropic正押上所有人生命奔向自我改进的超级智能，Anthropic对齐负责人公开支持。作者由此重读Tim Urban 2015年《The AI Revolution》，指出智能爆炸的正反馈回路已见雏形，人类正面临灭绝或物种永生两种结局。",
+      "source": "公众号：数字生命卡兹克",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686114&idx=1&sn=ef25c9da794a29795c3d7ca0637efafb",
+      "category": "技巧与观点",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    }
+  ]
+}
