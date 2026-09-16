@@ -1,0 +1,219 @@
+{
+  "date": "2026-09-16",
+  "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、行业融资与平台动态。重点包括：Google DeepMind 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking；生数科技发布 Vidu S2：含 Avatar 与 Editing 双模型，探索空间视频；Google 发布 TranslateGemma 等多语言 AI 成果，语言技术覆盖 300 多种语言；Claude for Small Business 新增 43 个工作流和 27 个集成，并推出免费培训计划；Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元；Gergely Orosz 探访 OpenAI：Codex 驱动的智能体软件工厂；Anthropic 与 OpenAI 提议协调放缓前沿 AI 开发，Cohere CEO 等批评者质疑其真实动机；404 Media 曝光 OpenAI 莉莉计划：人工审核 ChatGPT 聊天记录以优化模型。",
+  "items": [
+    {
+      "title": "Google DeepMind 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking",
+      "summary": "Google DeepMind 发布 Gemini 3.8 Live 与 Gemini 3.8 Live Extended Thinking 两个近实时语音对话模型，主打语音智能体和复杂任务执行。",
+      "source": "Google DeepMind：Blog（RSS）",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-8_live___keyword__blog-social.width-1300.png"
+      ]
+    },
+    {
+      "title": "生数科技发布 Vidu S2：含 Avatar 与 Editing 双模型，探索空间视频",
+      "summary": "生数科技正式发布 Vidu S2，包含面向数字角色实时交互的 Vidu S2-Avatar 和面向视频流实时编辑的 Vidu S2-Editing，并探索面向 VR 头显的实时空间视频生成与编辑。",
+      "source": "公众号：生数科技（Vidu·视频）",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzkzMDQ5NTQwMQ%3D%3D&mid=2247489246&idx=2&sn=b23b39da69f6c75594eccac11854111f",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Google 发布 TranslateGemma 等多语言 AI 成果，语言技术覆盖 300 多种语言",
+      "summary": "Google 宣布其语言技术已支持超过 300 种语言、覆盖全球 86% 人口，并发布 TranslateGemma 轻量开源翻译模型（基于 Gemini 训练、支持 55 种语言、可离线运行）。",
+      "source": "Google Blog：AI（RSS）",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_languages_blog_social.width-1300.png"
+      ]
+    },
+    {
+      "title": "Claude for Small Business 新增 43 个工作流和 27 个集成，并推出免费培训计划",
+      "summary": "Anthropic 为 Claude for Small Business 新增 43 个工作流和 27 个集成，覆盖 Shopify、Salesforce、Stripe、Gusto 等，该产品自 5 月上线以来安装量超过 90 万次。工作流默认处于审批模式，所有发送、发布或付款需用户确认；今秋将在 10 个美国城市举办免费工作坊，14 个集成伙伴从 9 月底到 11 月各举办一场免费网络研讨会。",
+      "source": "Claude：Blog（网页）",
+      "url": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6aa96d1d8800d47f264507d6_og_claude-for-small-business-launches-new-workflows-integrations-and-training-programs.jpg"
+      ]
+    },
+    {
+      "title": "Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+      "summary": "Perplexity CEO Aravind Srinivas 宣布自研键值数据库 CobbleDB，替代 AWS DynamoDB 用于快速网页内容抓取，迁移后每年最多可节省一亿美元。该项目由两名工程师和数百个持续运行的 Computer 智能体在两个月内完成核心基础设施，官方研究称热存储批次读取延迟较 DynamoDB 全分布下降约 5 倍（P50 从 31.4ms 降至 5.60ms）。",
+      "source": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+      "url": "https://x.com/AravSrinivas/status/2099957318935028173",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/profile_images/2099903483457703936/U-W6QQk__400x400.jpg"
+      ]
+    },
+    {
+      "title": "Gergely Orosz 探访 OpenAI：Codex 驱动的智能体软件工厂",
+      "summary": "Gergely Orosz 实地探访 OpenAI 总部并访谈七位工程师与工程负责人，发现自约一月起 Codex 和 ChatGPT Work 已成为公司几乎所有工作的基础。",
+      "source": "Pragmatic Engineer（RSS）",
+      "url": "https://newsletter.pragmaticengineer.com/p/openai-software-factory",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://substackcdn.com/image/fetch/$s_!Eiw9!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1e73721e-e4d8-473f-a5a1-b6211c14f6ca_2048x1762.png",
+        "https://substackcdn.com/image/fetch/$s_!oq6D!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fpragmaticengineer.substack.com%2Fapi%2Fv1%2Fpost_preview%2F215812293%2Ftwitter.jpg%3Fversion%3D4"
+      ]
+    },
+    {
+      "title": "Anthropic 与 OpenAI 提议协调放缓前沿 AI 开发，Cohere CEO 等批评者质疑其真实动机",
+      "summary": "Anthropic CEO Dario Amodei 呼吁行业与政府协调放缓前沿 AI 开发，并寻求反垄断豁免，Sam Altman 与 Elon Musk 表示同意。",
+      "source": "The Decoder：AI News（RSS）",
+      "url": "https://the-decoder.com/not-everyone-is-convinced-that-big-ais-proposed-development-slowdown-is-really-about-safety",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/06/openai_anthropic_white_house.png"
+      ]
+    },
+    {
+      "title": "404 Media 曝光 OpenAI 莉莉计划：人工审核 ChatGPT 聊天记录以优化模型",
+      "summary": "404 Media 披露 OpenAI 内部代号为莉莉计划（Project Lily）的项目，由时薪超 50 美元的提示词审核员查看匿名化后的真实用户聊天记录，评判回复是否切题、是否存在 AI 式话术和谄媚口吻。",
+      "source": "IT之家（RSS）",
+      "url": "https://www.ithome.com/1/002/750.htm",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Arena 更新 Image-to-WebDev 榜单：GPT-6 Astra 以 1733 分登顶",
+      "summary": "Arena 更新 Image-to-WebDev 排行榜，纳入四个新评测模型。GPT-6 Astra (Max) 以 1733 分居第一，领先 GPT-5.6 Sol (xHigh) 129 分；Claude Fable 5.1 (Max) 以 1710 分排第二，Muse Spark 1.3 (Max) 1645 分第四，GLM-5.3-Flash 1588 分第十。",
+      "source": "X：Arena (@arena)",
+      "url": "https://x.com/arena/status/2099971741993050236",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HSSYGPDa0AAv4Ia?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Artificial Analysis 评测：GPT-Live-1 以 81.5 分登顶 Speech to Speech Index",
+      "summary": "Artificial Analysis 发布 Speech to Speech Index，OpenAI 的 GPT-Live-1 以 81.5 分（Astra 后端，medium 推理强度）排名第一，超过 Grok Voice Think Fast 2.0 High 的 81.3；Sol 后端配置得 80.1 排第三。",
+      "source": "X：Artificial Analysis (@ArtificialAnlys)",
+      "url": "https://x.com/ArtificialAnlys/status/2099698254414029207",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HSOf9TgaMAADy5w?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Trail of Bits 批评 1Password 的 AI 补丁基准存在误导，并发布两个补丁验证 Agent 技能",
+      "summary": "Trail of Bits 发文批评 1Password 8月6日发布的 FLAWED 报告，称其 26% 的 AI 干净修复率受四项实验设计选择影响而失真，包括刻意指示智能体应用错误修复的提示词占 22% 数据、36% 的试验禁止编译测试，以及不同推理档位设置。",
+      "source": "Trail of Bits：AI安全研究",
+      "url": "https://blog.trailofbits.com/2026/09/15/1passwords-ai-patching-benchmark-is-misleading",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://blog.trailofbits.com/2026/09/15/1passwords-ai-patching-benchmark-is-misleading/1password-socialbanner-dark-v2.png"
+      ]
+    },
+    {
+      "title": "Vercel 将 inbound 销售团队从 10 人压缩至 1.25 人，AI 销售开发智能体年成本仅数千美元",
+      "summary": "Vercel COO Jeanne DeWitt Grosser 在 The Information 访谈中表示，公司 inbound 销售开发已实现 90% 自动化，团队从 10 人压缩至 1.25 人。",
+      "source": "Tomer Tunguz 博客（VC 分析）",
+      "url": "https://tomtunguz.com/single-digit-thousand-dollar-ai-sdr",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://res.cloudinary.com/dzawgnnlr/image/upload/q_auto/f_auto/w_auto/sdkyyk2sxeojnsqlrns6"
+      ]
+    }
+  ]
+}
