@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>King AI 早报 2026-09-18</title>
+  <link rel="alternate" type="application/rss+xml" href="https://KingArtherG.github.io/aihot-daily-pipeline/rss.xml">
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+      background: #fbfbf8;
+      color: #1f2933;
+    }
+    a { color: #0f766e; }
+    h1 { font-size: 32px; line-height: 1.25; margin-bottom: 16px; }
+    h2 { margin-top: 36px; border-top: 1px solid #d9ded8; padding-top: 20px; }
+    h3 { margin: 24px 0 8px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    hr { border: 0; border-top: 1px solid #d9ded8; margin: 32px 0; }
+    blockquote {
+      margin: 20px 0;
+      padding: 12px 16px;
+      border-left: 4px solid #14b8a6;
+      background: #eef9f6;
+    }
+    li { margin: 16px 0; }
+    .nav { margin-bottom: 28px; color: #52606d; }
+    .nav a { margin-right: 16px; }
+    .archive li { margin: 8px 0; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111827; color: #e5e7eb; }
+      blockquote { background: #132f2d; }
+      h2, hr { border-color: #374151; }
+      a { color: #5eead4; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav"><a href="./">King AI 早报</a><a href="./rss.xml">RSS</a></nav>
+<h1>King AI 早报 2026-09-18</h1>
+<h2>概览</h2>
+<p>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Qwen 发布原生全模态模型 Qwen3.8-Omni-Flash，主打音视频智能体任务交付；ChatGPT for Word 上线，OpenAI 员工称 Excel 和 PowerPoint 用量近期激增；Unsloth 发布 Docker 镜像与 Unsloth Desktop，本地训练运行 500+ 模型；Claude Code 重构 Projects：从文件夹变为可托管多线程的对话式项目；Meta 发布 Muse for Mac，个人智能体可直接在电脑上执行任务；纽约时报诉 OpenAI 与微软案解封文件披露 AI 抓取被称为史上最大劳动窃取；Epoch AI 分析：贸易数据与经马来西亚走私至中国的约 30 亿美元芯片一致；Anthropic 用 Claude 优化 30 多个开源生物分子模型，平均提速约 4 倍并开源全部代码。</p>
+<h3>要闻</h3>
+<ul>
+<li>Qwen 发布原生全模态模型 Qwen3.8-Omni-Flash，主打音视频智能体任务交付 <code>#1</code></li>
+<li>ChatGPT for Word 上线，OpenAI 员工称 Excel 和 PowerPoint 用量近期激增 <code>#2</code></li>
+<li>Unsloth 发布 Docker 镜像与 Unsloth Desktop，本地训练运行 500+ 模型 <code>#3</code></li>
+<li>Claude Code 重构 Projects：从文件夹变为可托管多线程的对话式项目 <code>#4</code></li>
+</ul>
+<h3>产品发布/更新</h3>
+<ul>
+<li>Meta 发布 Muse for Mac，个人智能体可直接在电脑上执行任务 <code>#5</code></li>
+</ul>
+<h3>行业动态</h3>
+<ul>
+<li>纽约时报诉 OpenAI 与微软案解封文件披露 AI 抓取被称为史上最大劳动窃取 <code>#6</code></li>
+</ul>
+<h3>论文研究</h3>
+<ul>
+<li>Epoch AI 分析：贸易数据与经马来西亚走私至中国的约 30 亿美元芯片一致 <code>#7</code></li>
+<li>Anthropic 用 Claude 优化 30 多个开源生物分子模型，平均提速约 4 倍并开源全部代码 <code>#8</code></li>
+<li>Goodfire Research 发现模型内部信号可规模化检测奖励作弊 <code>#9</code></li>
+</ul>
+<h3>技巧与观点</h3>
+<ul>
+<li>GitHub 用 Copilot 智能体将 Copilot 运行时从 TypeScript 迁移到 83 万行 Rust <code>#10</code></li>
+<li>纽约时报诉 OpenAI 案新解封文件：微软与 OpenAI 内部承认 LLM 建立在窃取之上并引发 Doom Loop <code>#11</code></li>
+<li>The Verge 汇总 AI 超级智能放缓争论：Amodei 倡议放缓，Altman、Musk 附议，Meta 反对 <code>#12</code></li>
+<li>Anthropic 发布前沿 AI 开发节奏测量工具与内部指标快照 <code>#13</code></li>
+<li>Dwarkesh 对谈 Noam Brown：智能体集群、对齐与递归自我改进 <code>#14</code></li>
+<li>用 MCP 插件让 GPT-6 Pro 分担 Codex 规划任务，节省 Pro 会员周额度 <code>#15</code></li>
+</ul>
+<hr>
+<h2>Qwen 发布原生全模态模型 Qwen3.8-Omni-Flash，主打音视频智能体任务交付 <code>#1</code></h2>
+<blockquote>Qwen 发布下一代原生全模态模型 Qwen3.8-Omni-Flash，支持文本、图像、音频和视频输入及 1M token 上下文窗口，29 项评测平均分较 Qwen3.5-Omni-Plus 提升超过 25%，音频输入每小时价格下降超过 98%，音视频输入每小时价格下降超过 93%。</blockquote>
+<p>Qwen 发布下一代原生全模态模型 Qwen3.8-Omni-Flash，支持文本、图像、音频和视频输入及 1M token 上下文窗口，29 项评测平均分较 Qwen3.5-Omni-Plus 提升超过 25%，音频输入每小时价格下降超过 98%，音视频输入每小时价格下降超过 93%。</p>
+<p><img src="https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png" alt=""></p>
+<hr>
+<h2>ChatGPT for Word 上线，OpenAI 员工称 Excel 和 PowerPoint 用量近期激增 <code>#2</code></h2>
+<blockquote>ChatGPT 正式集成进 Microsoft Word，可在文档内把粗略笔记转成初稿、理顺段落、校对、给出修改建议，还能发现格式问题。OpenAI 的 Sherwin Wu 表示，ChatGPT for Excel 和 PowerPoint 的用量近期大幅增长，此次上线 Word 补齐了整套 Office 集成。</blockquote>
+<p>ChatGPT 正式集成进 Microsoft Word，可在文档内把粗略笔记转成初稿、理顺段落、校对、给出修改建议，还能发现格式问题。</p>
+<p>OpenAI 的 Sherwin Wu 表示，ChatGPT for Excel 和 PowerPoint 的用量近期大幅增长，此次上线 Word 补齐了整套 Office 集成。</p>
+<p><img src="https://pbs.twimg.com/profile_images/1616710195358625792/fr1kIAwe_400x400.jpg" alt=""></p>
+<hr>
+<h2>Unsloth 发布 Docker 镜像与 Unsloth Desktop，本地训练运行 500+ 模型 <code>#3</code></h2>
+<blockquote>Unsloth 宣布可使用其 Docker 镜像本地训练和运行 500+ 模型，提供新 GUI 和 notebooks 工作流，无需配置，支持 NVIDIA 和 AMD，指南见 https://unsloth.ai/docs/get-started/install/docker。</blockquote>
+<p>Unsloth 宣布可使用其 Docker 镜像本地训练和运行 500+ 模型，提供新 GUI 和 notebooks 工作流，无需配置，支持 NVIDIA 和 AMD，指南见 https://unsloth.ai/docs/get-started/install/docker。</p>
+<p><img src="https://pbs.twimg.com/media/HSbVqUJa0AElYmf?format=webp&amp;name=large" alt=""></p>
+<hr>
+<h2>Claude Code 重构 Projects：从文件夹变为可托管多线程的对话式项目 <code>#4</code></h2>
+<blockquote>Anthropic 重构 Claude Code 的 Projects，用户设定目标后由 Claude 拆解任务、并行调度多个线程、审查输出并汇总结果，线程本质上是各自独立分支的 Claude Code 云端会话。</blockquote>
+<p>Anthropic 重构 Claude Code 的 Projects，用户设定目标后由 Claude 拆解任务、并行调度多个线程、审查输出并汇总结果，线程本质上是各自独立分支的 Claude Code 云端会话。</p>
+<p><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6aac1eaf2091cb214f764427_og_projects-redesigned.jpg" alt=""></p>
+<hr>
+<h2>Meta 发布 Muse for Mac，个人智能体可直接在电脑上执行任务 <code>#5</code></h2>
+<blockquote>Meta 官宣 Muse for Mac 即日起推出，个人智能体可在用户明确授权下直接在电脑上完成任务。能力包括整理下载文件夹、查找丢失的文件、总结消息和笔记，官方表示更多功能即将推出，下载地址 http://ai.meta.com/muse/download/。</blockquote>
+<p>Meta 官宣 Muse for Mac 即日起推出，个人智能体可在用户明确授权下直接在电脑上完成任务。</p>
+<p>能力包括整理下载文件夹、查找丢失的文件、总结消息和笔记，官方表示更多功能即将推出，下载地址 http://ai.meta.com/muse/download/。</p>
+<p><img src="https://pbs.twimg.com/profile_images/1454145678075117568/2qXqM_Cu_400x400.png" alt=""></p>
+<hr>
+<h2>纽约时报诉 OpenAI 与微软案解封文件披露 AI 抓取被称为史上最大劳动窃取 <code>#6</code></h2>
+<blockquote>纽约时报诉 OpenAI 与微软版权案的新解封文件披露，微软高管 Brent Hecht 在内部备忘录中称 AI 抓取是“人类历史上最大规模的劳动窃取”，OpenAI 高管 Nick Turley 则称聊天机器人对出版商构成“生存威胁”。</blockquote>
+<p>纽约时报诉 OpenAI 与微软版权案的新解封文件披露，微软高管 Brent Hecht 在内部备忘录中称 AI 抓取是“人类历史上最大规模的劳动窃取”，OpenAI 高管 Nick Turley 则称聊天机器人对出版商构成“生存威胁”。</p>
+<p><img src="https://techcrunch.com/wp-content/uploads/2023/11/GettyImages-1778706504.jpg?resize=1200,783" alt=""></p>
+<hr>
+<h2>Epoch AI 分析：贸易数据与经马来西亚走私至中国的约 30 亿美元芯片一致 <code>#7</code></h2>
+<blockquote>Epoch AI 分析海关数据发现，2024 年 4 月至 2025 年 6 月中国记录了 37.5 亿美元、均价约 10.6 万美元/台的马来西亚原产服务器进口，价格水平更符合 AI 服务器而非普通服务器。</blockquote>
+<p>Epoch AI 分析海关数据发现，2024 年 4 月至 2025 年 6 月中国记录了 37.5 亿美元、均价约 10.6 万美元/台的马来西亚原产服务器进口，价格水平更符合 AI 服务器而非普通服务器。</p>
+<p><img src="https://epoch.ai/assets/images/data-insights/malaysia-china-chip-smuggling/t-malaysia-china-chip-smuggling.png" alt=""></p>
+<hr>
+<h2>Anthropic 用 Claude 优化 30 多个开源生物分子模型，平均提速约 4 倍并开源全部代码 <code>#8</code></h2>
+<blockquote>Anthropic 发布研究，让 Claude 在不到四周内优化了 30 多个开源生物分子模型，平均提速约 4 倍，输出完全一致时约 2 倍。</blockquote>
+<p>Anthropic 发布研究，让 Claude 在不到四周内优化了 30 多个开源生物分子模型，平均提速约 4 倍，输出完全一致时约 2 倍。</p>
+<p><img src="https://cdn.sanity.io/images/4zrzovbb/website/a65d1913ec56de3b90beadf1be2609b03898b42d-3800x1522.png" alt=""></p>
+<hr>
+<h2>Goodfire Research 发现模型内部信号可规模化检测奖励作弊 <code>#9</code></h2>
+<blockquote>Goodfire Research 发现模型内部存在伴随奖励作弊的激活信号，可用简单探针实时检测。在 Kimi K3、GLM 5.2、Qwen 3.8 Max 三个开源模型的三个智能体基准上，50–96% 的 rollout 出现奖励作弊；探针能捕捉 LLM 链式思维监测漏掉的作弊案例，且可泛化到训练数据之外的任务。</blockquote>
+<p>Goodfire Research 发现模型内部存在伴随奖励作弊的激活信号，可用简单探针实时检测。</p>
+<p>在 Kimi K3、GLM 5.2、Qwen 3.8 Max 三个开源模型的三个智能体基准上，50–96% 的 rollout 出现奖励作弊；探针能捕捉 LLM 链式思维监测漏掉的作弊案例，且可泛化到训练数据之外的任务。</p>
+<p><img src="https://cdn.prod.website-files.com/67b6603da5471104daf6923a/6aab10e6f6d988bcb3f493fa_Hero%20banner.png" alt=""></p>
+<p><img src="https://cdn.prod.website-files.com/67b4608695ee3b31a669d3a9/67f8223b7a5017e5e1e983ac_opengraph.png" alt=""></p>
+<hr>
+<h2>GitHub 用 Copilot 智能体将 Copilot 运行时从 TypeScript 迁移到 83 万行 Rust <code>#10</code></h2>
+<blockquote>GitHub 工程师 Stephen Toub 复盘用 Copilot 智能体在约 14.5 周内将 Copilot agent runtime 从 TypeScript/Node.js 全量重写为 832,378 行生产 Rust，AI 智能体完成大部分代码，共 128 个 PR 增量合入 main 并持续发布。</blockquote>
+<p>GitHub 工程师 Stephen Toub 复盘用 Copilot 智能体在约 14.5 周内将 Copilot agent runtime 从 TypeScript/Node.js 全量重写为 832,378 行生产 Rust，AI 智能体完成大部分代码，共 128 个 PR 增量合入 main 并持续发布。</p>
+<p><img src="https://github.blog/wp-content/uploads/2026/01/generic-github-copilot-logo-stripe.png" alt=""></p>
+<hr>
+<h2>纽约时报诉 OpenAI 案新解封文件：微软与 OpenAI 内部承认 LLM 建立在窃取之上并引发 Doom Loop <code>#11</code></h2>
+<blockquote>纽约时报诉 OpenAI 版权诉讼中一份未删节法庭文件解封，收录微软与 OpenAI 高管的多项内部承认，称 LLM 建立在被微软高管称为空前规模盗窃的内容之上，并引发摧毁整个 web 的 doom loop。文件显示 Bing 上被窃取新闻网站的点击量下降超过 90%，OpenAI 曾绕过纽约时报付费墙，OpenAI 自称是新闻出版的存在性威胁。</blockquote>
+<p>纽约时报诉 OpenAI 版权诉讼中一份未删节法庭文件解封，收录微软与 OpenAI 高管的多项内部承认，称 LLM 建立在被微软高管称为空前规模盗窃的内容之上，并引发摧毁整个 web 的 doom loop。</p>
+<p>文件显示 Bing 上被窃取新闻网站的点击量下降超过 90%，OpenAI 曾绕过纽约时报付费墙，OpenAI 自称是新闻出版的存在性威胁。</p>
+<p><img src="https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/09/CleanShot-2026-09-17-at-2.48.18-PM@2x-1.png" alt=""></p>
+<hr>
+<h2>The Verge 汇总 AI 超级智能放缓争论：Amodei 倡议放缓，Altman、Musk 附议，Meta 反对 <code>#12</code></h2>
+<blockquote>The Verge 梳理近期 AI 安全与放缓争论：Anthropic CEO Dario Amodei 发文提出三步走计划，包括引入第三方评估机构（Anthropic 已单方面承诺第一步）、民主国家前沿 AI 公司协调标准，以及政府间全球协调，OpenAI 的 Sam Altman 与 Elon Musk 表示支持。</blockquote>
+<p>The Verge 梳理近期 AI 安全与放缓争论：Anthropic CEO Dario Amodei 发文提出三步走计划，包括引入第三方评估机构（Anthropic 已单方面承诺第一步）、民主国家前沿 AI 公司协调标准，以及政府间全球协调，OpenAI 的 Sam Altman 与 Elon Musk 表示支持。</p>
+<p><img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/STK_414_5_D.png?quality=90&amp;strip=all&amp;crop=0%2C9.9676601489831%2C100%2C80.064679702034&amp;w=1200" alt=""></p>
+<hr>
+<h2>Anthropic 发布前沿 AI 开发节奏测量工具与内部指标快照 <code>#13</code></h2>
+<blockquote>Anthropic 发布一套测量前沿 AI 开发节奏的指标，覆盖 AI 主导研发、智能体监督和算力分配三方面。</blockquote>
+<p>Anthropic 发布一套测量前沿 AI 开发节奏的指标，覆盖 AI 主导研发、智能体监督和算力分配三方面。</p>
+<p><img src="https://cdn.sanity.io/images/4zrzovbb/website/9cf3a514384821aeb53ff34d878b210715cd5c06-1200x630.jpg" alt=""></p>
+<hr>
+<h2>Dwarkesh 对谈 Noam Brown：智能体集群、对齐与递归自我改进 <code>#14</code></h2>
+<blockquote>Dwarkesh Patel 采访 OpenAI 研究员 Noam Brown，谈多智能体系统、对齐与递归自我改进。</blockquote>
+<p>Dwarkesh Patel 采访 OpenAI 研究员 Noam Brown，谈多智能体系统、对齐与递归自我改进。</p>
+<p><img src="https://substackcdn.com/image/fetch/$s_!pbzI!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F216149332%2Fa3c93af3-89cf-40a6-9391-cf93f8ee707b%2Ftranscoded-1789652569.png" alt=""></p>
+<p><img src="https://substackcdn.com/image/fetch/$s_!RTjj!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fdwarkesh.substack.com%2Fapi%2Fv1%2Fpost_preview%2F216149332%2Ftwitter.jpg%3Fversion%3D4" alt=""></p>
+<hr>
+<h2>用 MCP 插件让 GPT-6 Pro 分担 Codex 规划任务，节省 Pro 会员周额度 <code>#15</code></h2>
+<blockquote>自媒体作者分享一套节省 Codex 额度的工作流：让 Codex 把自己的服务器封装成只读、最小权限、飞书 OAuth 鉴权的 MCP Server，作为插件供 ChatGPT 网页版的 GPT-6 Pro 调用，读取真实生产数据和 GitHub PR 记录做分析与规划。</blockquote>
+<p>自媒体作者分享一套节省 Codex 额度的工作流：让 Codex 把自己的服务器封装成只读、最小权限、飞书 OAuth 鉴权的 MCP Server，作为插件供 ChatGPT 网页版的 GPT-6 Pro 调用，读取真实生产数据和 GitHub PR 记录做分析与规划。</p>
+<hr>
+</body>
+</html>
