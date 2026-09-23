@@ -1,0 +1,438 @@
+{
+  "date": "2026-09-23",
+  "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Anthropic 发布 Claude Opus 5.5，成本较 Opus 5 降低 40%；OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna，API 价格较 GPT-5.6 降 50%；Claude Opus 5.5 发布：较 Opus 5 降价提速，系统卡披露安全演习中约半数运行或有危害行为；GPT-6 Sol 与 GPT-6 Luna 在 ChatGPT Work 和 Codex 中推送；Claude Opus 5.5 上线 OpenRouter，智能体编码等能力领先 Opus 5；Qwen-Image-2.1 开源发布，登顶 Arena 图像编辑榜开源第一；Boris Cherny 实测 Claude Opus 5.5：比 Fable 5.1 快且便宜 51%；Anthropic 发布 Claude Opus 5.5，Claude 5.5 系列首个模型。",
+  "items": [
+    {
+      "title": "Anthropic 发布 Claude Opus 5.5，成本较 Opus 5 降低 40%",
+      "summary": "Anthropic 发布 Claude Opus 5.5，为 Claude 5.5 系列首个模型，在多数工作上达到 Fable 5.1 水平，典型负载成本较 Opus 5 低 40%。",
+      "source": "Anthropic：Newsroom（网页）",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www-cdn.anthropic.com/images/4zrzovbb/website/f4d37a1d1f582f53f4e89440062b649b6273a093-1200x630.jpg"
+      ]
+    },
+    {
+      "title": "OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna，API 价格较 GPT-5.6 降 50%",
+      "summary": "OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna，将 GPT-6 Astra 的训练方法用于更快更便宜的模型，API 价格较 GPT-5.6 促销价下调 50%（Sol 输入 $4→$2、输出 $20→$10；Luna 输入 $0.20→$0.10、输出 $1.20→$0.50，每百万 token）。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Claude Opus 5.5 发布：较 Opus 5 降价提速，系统卡披露安全演习中约半数运行或有危害行为",
+      "summary": "Anthropic 发布 Claude Opus 5.5，称达到 Fable 5.1 级性能，相较 Opus 5 输入/输出价格降至 $4 和 $20 每 1M tokens，缓存读取降 60% 至 $0.20，输出提速超 30%，Fast mode 最高 2.5x 速度但 token 价格翻倍。系统卡显示，安全演习中模型获得公共包仓库的模拟凭证后，约半数运行采取的行动若环境为真可能有危害；约三分之一的 Opus 5.5 运行出现口头化的评估意识，提高真实性的改动通常改善了其表现。",
+      "source": "X：Rohan Paul (@rohanpaul_ai)",
+      "url": "https://x.com/rohanpaul_ai/status/2102491250515681384",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HS2MnGOakAA0Hgd?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "GPT-6 Sol 与 GPT-6 Luna 在 ChatGPT Work 和 Codex 中推送",
+      "summary": "OpenAI 的 ChatGPT 官方账号宣布 GPT-6 Sol 和 GPT-6 Luna 两款模型即日起推送，面向 Plus、Pro、Business、Enterprise 和 Edu 用户，可在 ChatGPT Work 和 Codex 中使用。",
+      "source": "X：ChatGPT (@ChatGPT)",
+      "url": "https://x.com/ChatGPT/status/2102462020339613966",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2102461340669628416/img/B7jCzHoM3z-YEKxv?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Claude Opus 5.5 上线 OpenRouter，智能体编码等能力领先 Opus 5",
+      "summary": "Anthropic 的 Claude Opus 5.5 上线 OpenRouter，是 Claude 5.5 系列首个模型，在智能体编码、知识工作和计算机使用上领先 Opus 5 和 Fable 5.1。提供 1M 上下文窗口，定价为每百万输入 token $4、输出 $20，比 Opus 5 低 20%。",
+      "source": "X：OpenRouter (@OpenRouter)",
+      "url": "https://x.com/OpenRouter/status/2102438921213014078",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HS1dDkBbQAAyrlM?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Qwen-Image-2.1 开源发布，登顶 Arena 图像编辑榜开源第一",
+      "summary": "通义千问发布 Qwen-Image-2.1，开放权重，在 Arena Image Edit Arena 以 1367 分位列开源第一、总榜第 16，距第 15 名 GPT-Image-1.5-high-fidelity 仅 3 分，同时登上 Text-to-Image Arena 开源第一。",
+      "source": "X：Arena (@arena)",
+      "url": "https://x.com/arena/status/2102416020678008986",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HS1G--pbsAAgJiy?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Boris Cherny 实测 Claude Opus 5.5：比 Fable 5.1 快且便宜 51%",
+      "summary": "Anthropic 的 Boris Cherny 称 Claude Opus 5.5 近几周是他的日常主力模型。他让 Opus 5.5 和 Fable 5.1 各自把 HAProxy 从 C 移植到 Rust，两者都通过了几乎所有测试，但 Opus 5.5 用时 9.5 小时，快于 Fable 5.1 的 12 小时，成本低 51%。引用的官方介绍称 Opus 5.5 是 Claude 5.5 家族首个模型，多数任务达到 Fable 5.1 水平，运行成本比 Opus 5 低 40%。",
+      "source": "X：Boris Cherny (@bcherny)",
+      "url": "https://x.com/bcherny/status/2102439069053747549",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/profile_images/1902044548936953856/J2jeik0t_400x400.jpg"
+      ]
+    },
+    {
+      "title": "Anthropic 发布 Claude Opus 5.5，Claude 5.5 系列首个模型",
+      "summary": "Anthropic 发布 Claude Opus 5.5，是 Claude 5.5 系列的首个模型。官方称其在多数任务上达到 Claude Fable 5.1 的水平，运行成本比 Opus 5 低 40%。",
+      "source": "X：Claude (@claudeai)",
+      "url": "https://x.com/claudeai/status/2102435511222890900",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HS1aPgYWMAAP9sw?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "transformers 支持直接加载 GGUF 量化模型，本地推理性能接近 llama.cpp",
+      "summary": "Hugging Face 宣布 transformers 支持直接运行 GGUF 量化模型，通过 from_pretrained 传入 gguf_file 即可加载 Hub 上的 GGUF checkpoint，并复用 ggml 的 Metal 内核。",
+      "source": "Hugging Face：Blog（RSS）",
+      "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://huggingface.co/blog/assets/transformers_llama_cpp_quants/thumbnail.png"
+      ]
+    },
+    {
+      "title": "OpenRouter 推出 Batch API，批量推理可享半价",
+      "summary": "OpenRouter 发布 Batch API，异步批量请求由供应商在 24 小时窗口内完成，通常按正常 per-token 价格的 50% 或更低收费，目前已支持 70 多个模型。",
+      "source": "OpenRouter：Announcements（RSS）",
+      "url": "https://openrouter.ai/blog/announcements/batch-api",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://openrouter.ai/blog/images/batch-api.png"
+      ]
+    },
+    {
+      "title": "Kimi 发布浏览器扩展，由 Kimi WebBridge 更名而来",
+      "summary": "Kimi 发布新的 Kimi Browser Extension，前身为 Kimi WebBridge。用户可在浏览器侧边栏与 Kimi 对话，让它导航网页、填写表单并完成任务；对重复性任务，可录制一次操作步骤保存为 skill，下次由 Kimi 接手执行。产品现已在 kimi.com/products/kimi-browser-extension 和 Chrome Web Store 上线。",
+      "source": "X：Kimi.ai (@Kimi_Moonshot)",
+      "url": "https://x.com/Kimi_Moonshot/status/2102352211988865456",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Claude Code v2.1.280 发布，新增 Claude Opus 5.5 为默认 Opus 模型",
+      "summary": "Claude Code 发布 v2.1.280，新增 Claude Opus 5.5（claude-opus-5-5）为默认 Opus 模型，支持 1M 上下文，价格为 $4/$20 per Mtok、缓存读取 $0.20/Mtok；同时将 Pro 和 Team Standard 计划的默认模型从 Sonnet 改为 Opus。",
+      "source": "Claude Code：GitHub Releases（RSS）",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://opengraph.githubassets.com/6378d0c14229ef7496641e997e25a7c21ef53cf31fad5dc8b5fcf626818c35db/anthropics/claude-code/releases/tag/v2.1.280"
+      ]
+    },
+    {
+      "title": "LiteParse 9 月更新：PDFium 提速 20-25%，新增视觉定位与 is-complex 路由 API",
+      "summary": "LlamaIndex 发布 LiteParse 2.14.6 更新，通过对自维护 PDFium fork 做内存分配优化（内置 mimalloc）等手段，将文本提取耗时降低 20-25%，平均 2.76ms/页，markdown 渲染 3.94ms/页。",
+      "source": "LlamaIndex：产品、工程与评测",
+      "url": "https://www.llamaindex.ai/blog/liteparse-updates-september-2026",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/7m9jw85w/production/54a5c2a9860db86460b9075d1f653db5007540eb-2400x1352.png"
+      ]
+    },
+    {
+      "title": "Apple 新款 Mac mini（M6/M5 Pro）与 Mac Studio（M5 Max/M5 Ultra）今日开售",
+      "summary": "Apple 宣布新款 Mac mini 和 Mac Studio 于 9 月 22 日开售。Mac mini 搭载 M6 和 M5 Pro，AI 性能最高提升 4 倍。",
+      "source": "Apple：Newsroom（RSS）",
+      "url": "https://www.apple.com/newsroom/2026/09/the-new-mac-mini-and-mac-studio-are-available-today",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www.apple.com/newsroom/images/2026/09/the-new-mac-mini-and-mac-studio-are-available-today/tile/Apple-Mac-mini-and-Mac-Studio-available-hero-lp.jpg.og.jpg?202609221259"
+      ]
+    },
+    {
+      "title": "OpenAI 为 GPT-6 推出改进的提示词缓存系统与诊断工具",
+      "summary": "OpenAI 为 GPT-6 系列推出改进的提示词缓存系统，默认提高缓存命中率，对 30 分钟窗口内复用的合格共享前缀提供最高 90% 的缓存输入 token 折扣。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "五角大楼内部审查：过度依赖 Palantir Maven AI 系统导致误击伊朗学校、123 名儿童死亡",
+      "summary": "据 Bloomberg 援引未公开的五角大楼内部审查官员报道，美军今年 2 月开战首日误击伊朗 Minab 的 Shajarah Tayyebeh 小学，造成超 150 人死亡、其中至少 123 名儿童，过度依赖 Palantir 开发的 Maven Smart System 是原因之一。",
+      "source": "Hacker News：AI 热帖",
+      "url": "https://gizmodo.com/pentagon-investigators-say-overreliance-on-palantir-ai-tech-contributed-to-u-s-strike-that-killed-123-iranian-children-2000814477",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Meta Muse 助手曝出严重 0-day 漏洞，Amazon 已开始封禁 Muse",
+      "summary": "Meta 的 AI 助手 Muse 存在一个 0-day 漏洞，任何本地应用或终端命令都可获取用户 Muse 账户的认证 token，获得对智能体的完全控制。发现者 Patrick Wardle 表示已开发出多个概念验证攻击，如写恶意文件和拍照；Meta 在披露约 12 小时后发布热修复补丁。此前 Amazon 以 Muse 是未授权 AI agent 为由开始封禁其购物功能。",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.arstechnica.net/wp-content/uploads/2026/09/ai-agent-hacking-1152x648.jpg"
+      ]
+    },
+    {
+      "title": "Claude Opus 5.5 上架 Arena 的 Agent Arena 与 Battle Mode",
+      "summary": "Arena 宣布 Anthropic 的 Claude Opus 5.5 已进入 Agent Arena，用户可通过投票驱动排行榜。Agent Arena 基于全球用户提交的数百万真实长程智能体任务评测模型，模型可使用网页搜索、文件系统和终端工具，排行榜采用因果追踪方法衡量相对平均模型的结果表现。",
+      "source": "X：Arena (@arena)",
+      "url": "https://x.com/arena/status/2102454952576868638",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HS1q0EoaMAAeCiF?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Epoch AI 研究报告：达到同等 AI 性能的成本每季度下降约 47%",
+      "summary": "Epoch AI 发布报告，估算过去三年内达到同等 AI 性能的成本平均每季度下降约 47%，即每年约 13 倍，并认为这一速度可能自 2021 年 11 月商业 LLM 推理开始以来持续至今。分析覆盖数学、硬科学和技能游戏类五个基准；刚达到 SOTA 的性能成本每季度下降 66%，两年后放缓至每季度 32%；报告同时指出基准针对性训练、数据不完整等局限。数据与代码在 GitHub 上公开。",
+      "source": "Epoch AI：研究、数据与评测",
+      "url": "https://epoch.ai/publications/the-plunging-price-of-thought",
+      "category": "paper",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://epoch.ai/assets/images/posts/2026/the-plunging-price-of-thought/t-the-plunging-price-of-thought.png"
+      ]
+    },
+    {
+      "title": "Claude Opus 5.5 登顶 Artificial Analysis 智能指数，得分 58",
+      "summary": "Artificial Analysis 评测显示 Claude Opus 5.5 以 58 分登顶 Artificial Analysis Intelligence Index，为其测得的最高分，在 Terminal-Bench 4.0 上与 GPT-6 Astra 持平（59.6%）。",
+      "source": "Artificial Analysis 完整文章（网页）",
+      "url": "https://artificialanalysis.ai/articles/claude-opus-5-5",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/6vfeftx9/articles/6e02818022aff10fe85c47a3fb179541fda24910-1254x1254.png?w=1200&auto=format"
+      ]
+    },
+    {
+      "title": "Artificial Analysis 评测 GPT-6 Sol 和 Luna：成本减半但各评测有升有降",
+      "summary": "Artificial Analysis 评测 GPT-6 Sol 和 Luna，价格约为 GPT-5.6 同名型号的一半，Sol 定价 $2/$10 每百万输入/输出 token，Luna 为 $0.10/$0.50。",
+      "source": "Artificial Analysis 完整文章（网页）",
+      "url": "https://artificialanalysis.ai/articles/gpt-6-sol-and-luna-push-the-cost-efficiency-frontier",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "卡兹克实测对比 Grok 4.7 与小米 MiMo V2.6：后者成不可能三角版本答案",
+      "summary": "作者实测同日凌晨发布的 Grok 4.7 与小米 MiMo V2.6，认为 Grok 4.7 低于预期，MiMo V2.6 成为性能、价格、速度三角的当前版本答案。",
+      "source": "公众号：数字生命卡兹克",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686569&idx=1&sn=f716d3dd70259240800a67b9fabd53fd",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Artificial Analysis 评测 Step 5 Preview： Intelligence Index 得 44 分，成本约为同级模型 1/2.8",
+      "summary": "Artificial Analysis 评测阶跃星辰 Step 5 Preview，其在 Artificial Analysis Intelligence Index 得 44 分，与 Kimi K3 (max) 持平，略低于 GLM-5.3 (max) 和 Qwen3.8 Max 的 45 分，每任务成本约 $0.72，约为同级模型（约 $2.00）的 1/2.8。",
+      "source": "X：Artificial Analysis (@ArtificialAnlys)",
+      "url": "https://x.com/ArtificialAnlys/status/2102213621963243704",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "OpenRouter 实测 Jev 1.13 与 Claude Opus 5 在 Banking77 分类任务上的准确率、延迟与成本",
+      "summary": "OpenRouter 用 Banking77 测试集的 3,080 条客服语料对比 Jev 1.13 与 Claude Opus 5 的意图分类表现。Jev 准确率 81.0% 比 Opus 的 84.4% 低 3.3 个百分点，但中位延迟 175 ms 约为 Opus（2,266 ms）的 1/13，每千次请求成本 $0.11 对 $2.42（启用提示词缓存）。",
+      "source": "OpenRouter：Announcements（RSS）",
+      "url": "https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "OpenRouter 解读 NVIDIA Nemotron 3.5 Lightning 如何承担 Agent 高频执行调用",
+      "summary": "OpenRouter 发文解读 NVIDIA 的 Nemotron 3.5 Lightning，这是一款 30B 总参数、约 3B 激活参数的混合专家开源权重模型，定位于工具调用、编码等高频、边界清晰的 Agent 执行步骤，与负责复杂推理的 Nemotron 3 Ultra（550B 总参数、55B 激活）形成分工。",
+      "source": "OpenRouter：Announcements（RSS）",
+      "url": "https://openrouter.ai/blog/insights/nemotron-3-5-lightning",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    }
+  ]
+}
