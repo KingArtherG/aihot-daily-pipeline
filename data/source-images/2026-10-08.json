@@ -1,0 +1,37 @@
+{
+  "https://www.anthropic.com/claude-haiku-5-5": [
+    "https://www-cdn.anthropic.com/images/4zrzovbb/website/89e9b0fbfe0181f6ca565d913686ce8e49b5e9c2-1200x630.jpg"
+  ],
+  "https://openai.com/index/gpt-6-for-everyone": [],
+  "https://x.com/claudedevs/status/2107895957933408429": [
+    "https://pbs.twimg.com/card_img/2107438653102317568/-NvdhifV?format=webp&name=medium"
+  ],
+  "https://x.com/thsottiaux/status/2107574912349303197": [
+    "https://pbs.twimg.com/profile_images/2093807917833281537/2yBgpwVV_400x400.jpg"
+  ],
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.293": [
+    "https://opengraph.githubassets.com/b1fed6c2fe312a54f44918106e83d012a118501f051c017e7a7afe3d4455ee69/anthropics/claude-code/releases/tag/v2.1.293"
+  ],
+  "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/10/nvidia-rtx-spark-microsoft-event-3840x2160-1-scaled.png"
+  ],
+  "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform": [
+    "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/THUMBNAIL_BLOG.width-1300.png"
+  ],
+  "https://www.404media.co/undue-emotional-weight": [
+    "https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/10/glitchjustice--1-.png"
+  ],
+  "https://research.google/blog/does-better-work-always-mean-better-workers": [
+    "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg"
+  ],
+  "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses": [
+    "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/10/AgentLightning-TWLIFB-1200x627-1.jpg"
+  ],
+  "https://x.com/google/status/2107836410254291345": [
+    "https://pbs.twimg.com/media/HUCIBOPXMAArKc8?format=webp&name=large"
+  ],
+  "https://www.a16z.news/p/why-texas-is-making-data-centers": [
+    "https://substackcdn.com/image/fetch/$s_!uicL!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5654d2a-733a-4c78-8193-45cb71796592_4266x2400.png",
+    "https://substackcdn.com/image/fetch/$s_!hXb8!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fa16z.substack.com%2Fapi%2Fv1%2Fpost_preview%2F218936642%2Ftwitter.jpg%3Fversion%3D4"
+  ]
+}
