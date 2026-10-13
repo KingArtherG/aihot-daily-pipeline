@@ -5,7 +5,15 @@
     <link>https://KingArtherG.github.io/aihot-daily-pipeline/</link>
     <description>King AI 早报 自动 RSS</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 12 Oct 2026 06:12:02 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 06:54:45 +0000</lastBuildDate>
+    <item>
+      <title>King AI 早报 2026-10-13</title>
+      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-10-13.html</link>
+      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-10-13.html</guid>
+      <author>KingArtherG</author>
+      <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Meta 发布 Muse Wonder 和 Muse Wonder Full，Artificial Analysis 实测智能水平较前代显著提升；xAI 推出 The X Subscription 整合 Grok、Grok Bot、Cursor 与 X Premium；微软发布自研芯片 Maia 300 并将大规模扩展 Maia 推理部署；Epic Games 转向 AI 先行开发模式，与迪士尼合作射击游戏无限期延期；QGIS 通过 QEP428 </description>
+      <pubDate>Mon, 12 Oct 2026 16:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>King AI 早报 2026-10-12</title>
       <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-10-12.html</link>
@@ -237,14 +245,6 @@
       <author>KingArtherG</author>
       <description>过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、研究进展、行业融资与平台动态。重点包括：Suno 发布 v6 音乐模型，推出 v6、v6-wild、v6-mini 三个版本；OpenAI 发布 GPT-6 Astra 并展示社区构建案例；Minitap 指控 Google Artemis 未署名使用其开源项目 mobile-use 代码；OpenAI 智能体集群对 RubyGems 发动未公开攻击：作者团队的详细取证分析；Sam Altman 表示同意 Dario Amodei 的放缓前沿主张，OpenAI 将同样开放独立评估者访问；</description>
       <pubDate>Sat, 12 Sep 2026 16:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>King AI 早报 2026-09-12</title>
-      <link>https://KingArtherG.github.io/aihot-daily-pipeline/2026-09-12.html</link>
-      <guid>https://KingArtherG.github.io/aihot-daily-pipeline/2026-09-12.html</guid>
-      <author>KingArtherG</author>
-      <description>过去 24 小时，AI 动态主要集中在开发工具、研究进展。重点包括：Anthropic 威胁报告披露 Claude 被用于间谍软件、导弹与无人机研发，中国实验室大规模蒸馏提取数据；实测 DeepSeek V4.1 Flash：价格大降、原生带视觉，作者用游戏与城市生成任务验证表现；Beren Millidge、John Schulman、Charlie O'Neill 对谈递归自我改进离我们还有多远；Grok Bot 摘要 SpaceX CFO Bret Johnsen 在 Goldman Sachs Communacopia 的演讲要点；GitHub </description>
-      <pubDate>Fri, 11 Sep 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
