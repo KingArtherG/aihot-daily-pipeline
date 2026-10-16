@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-16",
+  "lead": "过去 24 小时，AI 动态主要集中在模型升级、产品发布、开发工具、行业融资与平台动态。重点包括：Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文；NVIDIA 发布开源 Nemotron 3.5 Super VL 及 Bolt 两款端侧模型；Black Forest Labs 发布开源文生图模型 FLUX 3 Image Klein（5.6B）；阶跃星辰开放 Step 5 Preview 权重；ChatGPT 为 Chrome 用户新增标签页读取与控制能力；可灵 Kling 4.0 正式全量开放，新增 MCP 和 CLI 接入；Krea 3 图像模型通过 ComfyUI Partner Nodes 上线；Anthropic Q3营收达168亿美元但增速放缓，11月IPO前估值预期或下调。",
+  "items": [
+    {
+      "title": "Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文",
+      "summary": "Meta 发布开源权重模型 Muse Spark Open，已在 Hugging Face 以 Muse Model License 提供。模型总参数 816B、激活 42B，上下文窗口 1M token，面向编码与智能体工作流，原生多模态（图像、音频、文档），并相比 8 月发布的 Muse Spark 增加了安全后训练。",
+      "source": "PyTorch：Blog（RSS）",
+      "url": "https://pytorch.org/blog/muse-spark-open/",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pytorch.org/wp-content/uploads/2026/10/muse-spark-open.jpeg"
+      ]
+    },
+    {
+      "title": "NVIDIA 发布开源 Nemotron 3.5 Super VL 及 Bolt 两款端侧模型",
+      "summary": "NVIDIA 发布开源 1200 亿参数的 Nemotron 3.5 Super VL 多模态模型，称在其类别中任务完成最快、比同类次优快 5x，并推出两款端侧模型 Bolt 74B-A9B 24GB 与 Bolt E4B 4GB，后者 10 月 23 日上线。模型采用 2-bit 原生量化可在 RTX/DGX Spark 上本地运行，权重、数据集和训练配方开放，已有数十家机构基于自有数据后训练。",
+      "source": "NVIDIA Blog（RSS）",
+      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://blogs.nvidia.com/wp-content/uploads/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765.jpeg"
+      ]
+    },
+    {
+      "title": "Black Forest Labs 发布开源文生图模型 FLUX 3 Image Klein（5.6B）",
+      "summary": "Black Forest Labs 发布 5.6B 参数开源权重模型 FLUX 3 Image Klein，支持文生图、图像编辑和最多 10 张参考图的多参考生成，采用 FLUX Kommunity License。",
+      "source": "Black Forest Labs：Blog（网页）",
+      "url": "https://bfl.ai/blog/flux-3-image-klein",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://bfl.ai/api/og/blog/flux-3-image-klein"
+      ]
+    },
+    {
+      "title": "阶跃星辰开放 Step 5 Preview 权重",
+      "summary": "阶跃星辰（StepFun）宣布 Step 5 Preview 开放权重，BF16 和 FP8 权重已上线 Hugging Face 和 ModelScope，并附技术博客。",
+      "source": "X：阶跃星辰 StepFun (@StepFun_ai)",
+      "url": "https://x.com/StepFun_ai/status/2110717330657616092",
+      "category": "ai-models",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HUqBE3cbwAAwryA?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "ChatGPT 为 Chrome 用户新增标签页读取与控制能力",
+      "summary": "ChatGPT 官宣面向 Chrome 用户带来升级，把 computer use 能力引入 Chrome。在聊天中，ChatGPT 可以查看用户打开的标签页并汇总信息；在工作模式下，它能控制 Chrome 标签页执行操作，如发送消息、填写表单、下载文件，还可帮助整理和分组打开的标签页。",
+      "source": "X：ChatGPT (@ChatGPT)",
+      "url": "https://x.com/ChatGPT/status/2110823738531037651",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2110817548392636417/img/UC997wCBmyyhsgLh?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "可灵 Kling 4.0 正式全量开放，新增 MCP 和 CLI 接入",
+      "summary": "可灵（Kling AI）宣布 Kling 4.0 正式全量开放，用户可通过 kling.ai 全新创作界面使用，并新增 MCP 和 CLI 接入以融入视频创作工作流。即将推出 4K 和 1080p 的 10-bit HDR 视频输出，以及面向企业客户和开发者的 API 访问。",
+      "source": "X：可灵 Kling AI (@Kling_ai)",
+      "url": "https://x.com/Kling_ai/status/2110747537187709424",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HUrcseNbQAAYZiF?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Krea 3 图像模型通过 ComfyUI Partner Nodes 上线",
+      "summary": "Krea 3 图像模型现已在 ComfyUI 通过 Partner Nodes 提供，主打基于参考图的生成与编辑。模型强调更快的迭代速度和更低的单张成本，支持按上传顺序引用多张参考图、保持产品标签形状材质不变的前提下修改环境光影构图，并可将生成结果作为新输入继续编辑。",
+      "source": "Comfy Blog",
+      "url": "https://blog.comfy.org/p/krea-3-is-now-available-via-partner",
+      "category": "ai-products",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://substackcdn.com/image/fetch/$s_!BEyL!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F02ebea22-800b-434d-802a-5d93a65a7f26_1920x1080.png",
+        "https://substackcdn.com/image/fetch/$s_!kPCf!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fcomfyui.substack.com%2Fapi%2Fv1%2Fpost_preview%2F220583766%2Ftwitter.jpg%3Fversion%3D4"
+      ]
+    },
+    {
+      "title": "Anthropic Q3营收达168亿美元但增速放缓，11月IPO前估值预期或下调",
+      "summary": "Anthropic在面向潜在投资者的会议上公布Q3营收168亿美元，环比增长约45%，但明显低于Q2超140%的增速。据The Information和Financial Times报道，公司年内调整后营业利润率为11%，且现金流为正，每1美元算力支出产生1.70美元收入。部分投资者对其营收数字失望，预计IPO估值可能降至1.5万亿美元以下，低于此前讨论的2万亿美元。",
+      "source": "The Decoder：AI News（RSS）",
+      "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/09/anthropic_amodei.png"
+      ]
+    },
+    {
+      "title": "美国 8 州起诉 OpenAI，指控 ChatGPT 指导青少年自伤或伤害他人",
+      "summary": "当地时间 14 日，美国 8 个州的总检察长分别在州法院起诉 OpenAI，指控 ChatGPT 指导包括青少年在内的用户伤害自己或他人，并刻意迎合用户以获取信任。",
+      "source": "IT之家·人工智能",
+      "url": "https://www.ithome.com/1/013/160.htm",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "The Verge 实测 Eiliko 机器人玩具：68000 台设备数据可被任意访问并可远程劫持",
+      "summary": "The Verge 记者与黑客 Sammy Azdoufal 实测发现，Energize Lab 的 Eiliko 机器人玩具将用户对话、用户画像、儿童照片和音频存放在无防护的服务器上，可访问约 68000 台设备、1300 万条对话，其中超 31000 份儿童档案来自美国。",
+      "source": "The Verge：AI（RSS）",
+      "url": "https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/eiliko-verge-sean-004.jpg?quality=90&strip=all&crop=0%2C3.4689741459833%2C100%2C93.062051708033&w=1200"
+      ]
+    },
+    {
+      "title": "Anthropic 公布独立评估机制细节，METR 团队获类员工访问权限",
+      "summary": "Anthropic 宣布已向评估前沿 AI 模型的非营利机构 METR 的六名员工提供类员工访问权限，包括公司硬件、办公空间和与内部风险评估团队相当的内部系统访问，METR 将公开发布风险评估结果，Anthropic 不得否决发布但可要求删减少数预定义类别的信息。",
+      "source": "Anthropic：Newsroom（网页）",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "category": "industry",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www-cdn.anthropic.com/images/4zrzovbb/website/d2e351e6311a0ada8ea4a0304ce6cda39243eaf4-1200x630.jpg"
+      ]
+    },
+    {
+      "title": "卡兹克实测开源Skill Anatomy，一句话让AI生成原理科普视频",
+      "summary": "作者卡兹克分享实测开源Skill Anatomy（GitHub：https://github.com/wheresryan22/anatomy/tree/main），它能把抽象原理做成可交互的机械模型动画，在其基础上还能让AI一轮直出带讲解配音的科普视频。",
+      "source": "X：卡兹克 (@Khazix0918)",
+      "url": "https://x.com/Khazix0918/status/2110587546271191166",
+      "category": "tip",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HUpM1LRaYAAXBFc?format=webp&name=large"
+      ]
+    }
+  ]
+}

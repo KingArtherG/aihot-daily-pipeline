@@ -1,0 +1,37 @@
+{
+  "https://pytorch.org/blog/muse-spark-open": [
+    "https://pytorch.org/wp-content/uploads/2026/10/muse-spark-open.jpeg"
+  ],
+  "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl": [
+    "https://blogs.nvidia.com/wp-content/uploads/2026/10/FIRST-agentic-ai-nemotron-3.5-super-vl-blog-1920x1080-5783765.jpeg"
+  ],
+  "https://bfl.ai/blog/flux-3-image-klein": [
+    "https://bfl.ai/api/og/blog/flux-3-image-klein"
+  ],
+  "https://x.com/stepfun_ai/status/2110717330657616092": [
+    "https://pbs.twimg.com/media/HUqBE3cbwAAwryA?format=webp&name=large"
+  ],
+  "https://x.com/chatgpt/status/2110823738531037651": [
+    "https://pbs.twimg.com/amplify_video_thumb/2110817548392636417/img/UC997wCBmyyhsgLh?format=webp&name=large"
+  ],
+  "https://x.com/kling_ai/status/2110747537187709424": [
+    "https://pbs.twimg.com/media/HUrcseNbQAAYZiF?format=webp&name=large"
+  ],
+  "https://blog.comfy.org/p/krea-3-is-now-available-via-partner": [
+    "https://substackcdn.com/image/fetch/$s_!BEyL!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F02ebea22-800b-434d-802a-5d93a65a7f26_1920x1080.png",
+    "https://substackcdn.com/image/fetch/$s_!kPCf!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fcomfyui.substack.com%2Fapi%2Fv1%2Fpost_preview%2F220583766%2Ftwitter.jpg%3Fversion%3D4"
+  ],
+  "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo": [
+    "https://the-decoder.com/wp-content/uploads/2026/09/anthropic_amodei.png"
+  ],
+  "https://www.ithome.com/1/013/160.htm": [],
+  "https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab": [
+    "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/eiliko-verge-sean-004.jpg?quality=90&strip=all&crop=0%2C3.4689741459833%2C100%2C93.062051708033&w=1200"
+  ],
+  "https://www.anthropic.com/news/an-update-on-independent-evaluators": [
+    "https://www-cdn.anthropic.com/images/4zrzovbb/website/d2e351e6311a0ada8ea4a0304ce6cda39243eaf4-1200x630.jpg"
+  ],
+  "https://x.com/khazix0918/status/2110587546271191166": [
+    "https://pbs.twimg.com/media/HUpM1LRaYAAXBFc?format=webp&name=large"
+  ]
+}
