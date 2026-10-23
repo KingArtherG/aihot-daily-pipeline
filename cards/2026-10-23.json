@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-23",
+  "items": [
+    {
+      "title": "OpenAI 正式发布 Decisions API，面向低延迟低成本小决策",
+      "summary": "OpenAI 宣布基于 GPT-6 Luna 的 Decisions API 正式可用，用于分类、路由、评分等有界答案问题，速度最高比通过 Responses API 使用 GPT-6 Luna 快 10x。",
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "url": "https://openai.com/index/decisions-api",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": []
+    },
+    {
+      "title": "Claude 网页、桌面和移动端将默认启用 auto mode",
+      "summary": "Claude 官方宣布，下周起 Pro、Max 和 Team 套餐在 Claude 网页、桌面和移动端应用中的会话将默认以 auto mode 运行。auto mode 不再逐步请求用户批准，而是由自动检查拦截高风险操作，用户可随时切回手动模式。其引用的 Claude Code 更新提到 auto mode 用独立分类器审查 shell 命令，测试中拦截了 89% 的危险命令，手动批准为 14%。",
+      "source": "X：Claude (@claudeai)",
+      "url": "https://x.com/claudeai/status/2113360845409583307",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/profile_images/1950950107937185792/QOfEjFoJ_400x400.jpg"
+      ]
+    },
+    {
+      "title": "Replit 发布 Monitoring Agent，为应用提供可自动修复并部署的值班智能体",
+      "summary": "Replit 发布 Monitoring Agent，为应用提供相当于自主值班工程师的监控智能体。它可以读取生产日志和指标调查错误、变慢和部署失败，在启用 autofix 后验证修复并邮件汇报，启用 auto-publish 后可自动部署修复。该能力建立在早前上线的 App Monitoring 之上，用户可在应用的 Publishing 设置中开启。",
+      "source": "Replit：Blog（RSS）",
+      "url": "https://replit.com/blog/replit-monitoring-agent",
+      "category": "产品发布/更新",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://cdn.sanity.io/images/bj34pdbp/migration/d5813975d778851053019144628b568b031069d1-1600x900.png?w=1200&h=630&fit=max&fm=jpg"
+      ]
+    },
+    {
+      "title": "AI 挖出潜伏十几年的 PHP 底层漏洞，PHP2Shell 事件全景复盘",
+      "summary": "作者复盘 PHP2Shell 事件：两个 CVSS 满分定为 9.2 分的 PHP 远程代码执行漏洞（CVE-2026-109618 和 CVE-2026-109619）在补丁发布前泄露，攻击演示视频外流，多国政府网站预防性下线，OpenAI 认领漏洞由 GPT-5.6 Sol 辅助发现。",
+      "source": "X：卡兹克 (@Khazix0918)",
+      "url": "https://x.com/Khazix0918/status/2113096414469464281",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HVM5sL7akAARk9I?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Bloomberg 报道 DeepSeek 新一轮融资约 150 亿美元",
+      "summary": "据 Bloomberg，DeepSeek 最新一轮融资约 150 亿美元，为中国最大规模私募融资之一。谈判期间融资目标至少两次上调，从约 75 亿美元提高到 120 亿美元；CATL 和腾讯是最大投资方之一，CATL 据报出资约 15 亿美元。投前估值约 748 亿美元，加上 6 月完成的首轮超 75 亿美元，DeepSeek 约 6 个月内共募资约 225 亿美元。",
+      "source": "X：Rohan Paul (@rohanpaul_ai)",
+      "url": "https://x.com/rohanpaul_ai/status/2113106318659928525",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HVNCgoYakAEStkp?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "WSJ：马斯克希望以 AI 为核心推动 SpaceX 与 Tesla 合并",
+      "summary": "WSJ 报道，马斯克希望以 AI 为核心将估值约 $2T 的 SpaceX 与约 $1.5T 的 Tesla 合并。SpaceX 的 AI 业务已成其最大业务，Q3 营收 $7.56B（一年前仅 $813M），季度 $19.6B 资本开支中超过 $16.4B 投向 AI，推动 SpaceX 实现季度利润 $4.4B（上年同期亏损 $1.05B）。",
+      "source": "X：Rohan Paul (@rohanpaul_ai)",
+      "url": "https://x.com/rohanpaul_ai/status/2113107154219741231",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://pbs.twimg.com/media/HVNDlElbYAAEwvI?format=webp&name=large"
+      ]
+    },
+    {
+      "title": "Anthropic 将 Agent Skills 开放标准捐赠给 Linux Foundation 旗下 Agentic AI Foundation",
+      "summary": "Anthropic 宣布把 Agent Skills 开放标准捐赠给 Linux Foundation 旗下的 Agentic AI Foundation（AAIF），此前已向其捐赠 MCP。",
+      "source": "Anthropic：Newsroom（网页）",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg"
+      ]
+    },
+    {
+      "title": "Anthropic 股权表内幕：风投迟到多年，如今无人持股超 2%",
+      "summary": "Newcomer 长文复盘 Anthropic 从 OpenAI 出走团队到即将 IPO 的股权演变。据投资人文件和多位知情人士，多年来风投因公司治理结构和安全优先路线而观望，目前没有任何风投机构持股超过 2%，Anthropic 曾向投资人明确将单一投资人持股控制在该水平以避免话语权集中。",
+      "source": "Newcomer 新闻长文（RSS）",
+      "url": "https://www.newcomer.co/p/the-story-of-anthropics-cap-table",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://substackcdn.com/image/fetch/$s_!AaqP!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6de6192a-9d93-4c72-b161-06000a886e00_3744x1961.jpeg",
+        "https://substackcdn.com/image/fetch/$s_!JHs6!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fnewcomer.substack.com%2Fapi%2Fv1%2Fpost_preview%2F221552664%2Ftwitter.jpg%3Fversion%3D4"
+      ]
+    },
+    {
+      "title": "Wiz 披露 ARTEX 智能体被 Storm-0940 用于攻击 IT 和软件厂商",
+      "summary": "Wiz 披露 2026 年 10 月有攻击者使用开源自主渗透测试框架 ARTEX 针对多家 IT 和软件厂商，活动与微软报告的中国国家级关联组织 Storm-0940 重叠，并已扩展到其他软件领域的供应链攻击尝试。",
+      "source": "Wiz：Research（安全研究）",
+      "url": "https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors",
+      "category": "行业动态",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www.datocms-assets.com/75231/1792671028-threat-update-blue-wireframe_custom.jpeg?fm=webp"
+      ]
+    },
+    {
+      "title": "Microsoft AI 发布 SDBench 基准与 MAI-DxO 诊断系统，登 Science",
+      "summary": "Microsoft AI 发布 Sequential Diagnosis Benchmark（SDBench）和 AI 诊断系统 MAI-DxO，论文发表于 Science。",
+      "source": "Microsoft AI：官方博客（网页）",
+      "url": "https://microsoft.ai/news/building-medical-superintelligence/",
+      "category": "论文研究",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://microsoft.ai/wp-content/uploads/2026/10/health_v5_stat_typeset.webp"
+      ]
+    },
+    {
+      "title": "METR 与 Redwood Research 红队测试 OpenAI 内部智能体监控系统，发现多个漏洞",
+      "summary": "METR 与 Redwood Research 各派一名员工，于 7 月 21 日至 8 月 11 日对 OpenAI 内部失准监测系统开展三周高权限试点压力测试，产出 61 页内部报告。",
+      "source": "Redwood Research：Blog（RSS）",
+      "url": "https://blog.redwoodresearch.org/p/red-teaming-openais-internal-agent",
+      "category": "论文研究",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://substackcdn.com/image/fetch/$s_!InmY!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1b14c334-829d-4cc7-8ac1-e1cc6b0cc15f_1080x1080.png",
+        "https://substackcdn.com/image/fetch/$s_!tm_l!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fredwoodresearch.substack.com%2Fapi%2Fv1%2Fpost_preview%2F221646914%2Ftwitter.jpg%3Fversion%3D4"
+      ]
+    },
+    {
+      "title": "Anthropic 用 Claude 对 123 个开源库完成汇编级形式化安全证明",
+      "summary": "Anthropic 与 Theorem 合作，用 Claude 将 OSS-Fuzz 模糊测试转化为规格，对 123 个开源库的 239 个入口点证明了任意 64 MB 以下输入不崩溃，生成约 1.8 亿行 Rocq 证明。",
+      "source": "Anthropic：Research（发表成果 · 网页）",
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "category": "论文研究",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://www-cdn.anthropic.com/images/4zrzovbb/website/80cf520cb540989c3643907f004b2514ec4d01f1-1200x630.jpg"
+      ]
+    }
+  ]
+}
