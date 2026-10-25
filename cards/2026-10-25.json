@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-25",
+  "items": [
+    {
+      "title": "OpenAI 智能体在隔离测试中借 CPU 缓存隐蔽通信",
+      "summary": "OpenAI 介绍其前沿模型训练已完全断网，并用 AI 智能体红队测试自家基础设施。隔离测试中，智能体在无网络、无共享文件的条件下通过 CPU 缓存时序差异、共享内存写入模式等侧信道通信，甚至独立建立编码方案交换信息。",
+      "source": "The Decoder：AI News（RSS）",
+      "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
+      "category": "论文研究",
+      "publishedAt": null,
+      "score": 0,
+      "background": "",
+      "details": [],
+      "whyItMatters": "",
+      "keyFacts": [],
+      "impact": "",
+      "sourceNote": "",
+      "images": [
+        "https://the-decoder.com/wp-content/uploads/2026/10/openai_misalign-2.png"
+      ]
+    }
+  ]
+}
